@@ -1,5 +1,6 @@
 progreso.json
 progreso.json.tmp
+progreso/
 backups/
 __pycache__/
 node_modules/

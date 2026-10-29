@@ -100,7 +100,7 @@ function ejercicioBusqueda(cont, e, usarAyuda) {
     const r = B.METODOS[k].fn(t);
     if (r.iteraciones) {
       zona.append(h('p', { class: 'suave' }, 'Completá cada iteración. Las listas se escriben separadas por comas; en abiertos, con el valor entre paréntesis: C(3), B(5). Para A* escribí el valor de f ya sumado.'));
-      const tabla = h('table', { class: 'tabla' }, h('thead', {}, h('tr', {}, h('th', {}, 'It.'), h('th', {}, 'Nodo actual'), h('th', {}, '¿Solución?'), h('th', {}, 'Abiertos'), h('th', {}, 'Cerrados'), h('th', {}, ''))));
+      const tabla = h('table', { class: 'tabla tabla-iter' }, h('thead', {}, h('tr', {}, h('th', {}, 'It.'), h('th', {}, 'Nodo actual'), h('th', {}, '¿Solución?'), h('th', {}, 'Abiertos'), h('th', {}, 'Cerrados'), h('th', {}, ''))));
       const tb = h('tbody');
       for (const it of r.iteraciones) {
         const inA = h('input', { type: 'text', size: 3, 'aria-label': `Nodo actual iteración ${it.num}` });
@@ -115,12 +115,12 @@ function ejercicioBusqueda(cont, e, usarAyuda) {
           res.textContent = bien.every(Boolean) ? 'bien' : 'revisá lo marcado en rojo';
         };
         const ver = () => { usarAyuda(); inA.value = it.actual; inS.value = it.esSolucion ? 'si' : 'no'; inO.value = ab || '(vacía)'; inC.value = it.cerrados.join(', '); ok(); };
-        tb.append(h('tr', {}, h('td', {}, it.num), h('td', {}, inA), h('td', {}, inS), h('td', {}, inO), h('td', {}, inC),
-          h('td', {}, h('button', { class: 'boton secundario', type: 'button', onclick: ok }, 'Comprobar'), ' ', h('button', { class: 'boton secundario', type: 'button', onclick: ver }, 'Ver'), ' ', res)));
+        tb.append(h('tr', {}, h('td', { 'data-l': 'Iteración' }, it.num), h('td', { 'data-l': 'Actual' }, inA), h('td', { 'data-l': '¿Solución?' }, inS), h('td', { 'data-l': 'Abiertos' }, inO), h('td', { 'data-l': 'Cerrados' }, inC),
+          h('td', { class: 'acc' }, h('button', { class: 'boton secundario', type: 'button', onclick: ok }, 'Comprobar'), ' ', h('button', { class: 'boton secundario', type: 'button', onclick: ver }, 'Ver'), ' ', res)));
       }
       tabla.append(tb);
       zona.append(h('div', { class: 'envoltura-tabla' }, tabla));
-      zona.append(h('p', {}, r.solucion ? `Termina en la solución ${r.solucion}.` : 'No llega a ninguna solución.'));
+      zona.append(botonRevelar('¿Dónde termina?', () => h('p', {}, r.solucion ? `Termina en la solución ${r.solucion}.` : 'No llega a ninguna solución.'), usarAyuda));
     } else {
       const campos = [];
       if (r.generados) campos.push(['Nodos generados', r.generados]);
@@ -225,18 +225,13 @@ function campoGrupos(lab, grupos, arbol, usarAyuda) {
 
 // ---------------- Protocolos ----------------
 function ejercicioProtocolo(cont, e, usarAyuda) {
-  const mitad = Math.ceil(e.lineas.length / 2);
-  const t = h('table', { class: 'matriz', style: 'text-align:left;font-family:var(--serif)' });
-  for (let i = 0; i < mitad; i++) {
-    const j = i + mitad;
-    t.append(h('tr', {}, h('td', {}, i + 1), h('td', { style: 'text-align:left' }, e.lineas[i]), h('td', {}, j < e.lineas.length ? j + 1 : ''), h('td', { style: 'text-align:left' }, e.lineas[j] || '')));
-  }
-  cont.append(h('h2', {}, 'Transcripción'), h('div', { class: 'envoltura-tabla' }, t));
+  const t = h('ol', { class: 'transcripcion' }, ...e.lineas.map(l => h('li', {}, l)));
+  cont.append(h('h2', {}, 'Transcripción'), h('div', { class: 'hoja' }, t));
   const clave = 'ia-notas-' + e.id;
-  let previo = '';
-  try { previo = localStorage.getItem(clave) || ''; } catch { /* sin almacenamiento */ }
-  const notas = h('textarea', { rows: 10, style: 'width:100%', placeholder: 'Escribí acá tu tabla CCV, relaciones, sinónimos, metacomentarios, incertidumbres y reglas. Se guarda en este navegador.' }, previo);
-  notas.addEventListener('input', () => { try { localStorage.setItem(clave, notas.value); } catch { /* nada */ } });
+  let previo = P.nota(clave);
+  if (!previo) { try { previo = localStorage.getItem(clave) || ''; } catch { /* sin almacenamiento */ } }
+  const notas = h('textarea', { rows: 10, style: 'width:100%', placeholder: 'Escribí acá tu tabla CCV, relaciones, sinónimos, metacomentarios, incertidumbres y reglas. Se guarda con tu progreso.' }, previo);
+  notas.addEventListener('input', () => P.setNota(clave, notas.value));
   cont.append(h('h2', {}, 'Tu análisis'),
     h('p', { class: 'chico suave' }, 'Seguí las etapas: tabla de conceptos-características-valores, relaciones implícitas, búsqueda (estados y operadores), sinónimos, metacomentarios, incertidumbres y reglas.'),
     notas,

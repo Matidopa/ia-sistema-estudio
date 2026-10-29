@@ -32,9 +32,10 @@ function simBusqueda(cont) {
   const ant = h('button', { class: 'boton secundario', type: 'button' }, 'Anterior');
   const sig = h('button', { class: 'boton', type: 'button' }, 'Siguiente paso');
   const contador = h('span', { class: 'chico' });
+  const play = h('button', { class: 'boton secundario', type: 'button' }, 'Reproducir');
   cont.append(h('p', { class: 'bajada' }, 'Elegí un árbol y un método y avanzá de a una iteración. En amarillo, los nodos abiertos; en verde, los cerrados; con borde grueso azul, el nodo actual.'),
     h('div', { class: 'hoja fila' }, h('label', { class: 'campo' }, 'Árbol', selA), h('label', { class: 'campo' }, 'Método', selM)),
-    h('div', { class: 'sim' }, h('div', {}, lienzo, info), h('div', {}, h('div', { class: 'acciones' }, ant, sig, contador), pasos)));
+    h('div', { class: 'sim' }, h('div', {}, lienzo, info), h('div', {}, h('div', { class: 'acciones' }, ant, sig, play, contador), pasos)));
   let t = null, r = null, paso = 0, total = 0;
   function cargar() {
     const v = selA.value;
@@ -47,11 +48,14 @@ function simBusqueda(cont) {
     r = B.METODOS[selM.value].fn(t);
     total = r.iteraciones ? r.iteraciones.length : (r.visitados || r.recorrido).length;
     paso = 0;
-    info.textContent = `Cuanto ${t.mejor} es el valor, más deseable. Soluciones: ${Object.keys(t.nodos).filter(k => t.nodos[k].sol).join(', ')}. Resultado: ${r.solucion ? 'llega a ' + r.solucion : 'no llega a ninguna solución'}.`;
+    parar();
     pintar();
   }
   function pintar() {
     contador.textContent = `${paso} de ${total}`;
+    info.textContent = `Cuanto ${t.mejor} es el valor, más deseable. Soluciones: ${Object.keys(t.nodos).filter(k => t.nodos[k].sol).join(', ')}.` +
+      (paso >= total ? ` Resultado: ${r.solucion ? 'llega a ' + r.solucion : 'no llega a ninguna solución'}.` : ' Avanzá hasta el final para ver el resultado.');
+    play.textContent = reproduciendo ? 'Pausa' : paso >= total ? 'Repetir' : 'Reproducir';
     ant.disabled = paso === 0; sig.disabled = paso >= total;
     const dib = { ...t, nodos: Object.fromEntries(Object.entries(t.nodos).map(([k, n]) => [k, { ...n, h: n.h >= INF ? '∞' : n.h }])) };
     pasos.innerHTML = '';
@@ -70,8 +74,19 @@ function simBusqueda(cont) {
       if (r.recorrido && r.visitados) pasos.append(h('div', { class: 'paso' }, h('b', {}, 'Con retrocesos: '), r.recorrido.join(', ')));
     }
   }
-  ant.addEventListener('click', () => { paso = Math.max(0, paso - 1); pintar(); });
-  sig.addEventListener('click', () => { paso = Math.min(total, paso + 1); pintar(); });
+  let reproduciendo = null;
+  function parar() { clearInterval(reproduciendo); reproduciendo = null; }
+  play.addEventListener('click', () => {
+    if (reproduciendo) { parar(); pintar(); return; }
+    if (paso >= total) paso = 0;
+    reproduciendo = setInterval(() => {
+      if (!document.body.contains(play) || paso >= total) { parar(); if (document.body.contains(play)) pintar(); return; }
+      paso++; pintar();
+    }, 1100);
+    pintar();
+  });
+  ant.addEventListener('click', () => { parar(); paso = Math.max(0, paso - 1); pintar(); });
+  sig.addEventListener('click', () => { parar(); paso = Math.min(total, paso + 1); pintar(); });
   selA.addEventListener('change', cargar);
   selM.addEventListener('change', correr);
   cargar();

@@ -1,19 +1,28 @@
 import * as P from './progreso.js';
 import * as D from './datos.js';
-import { h, barra, tarjetaPregunta, mezclar, anexoDe } from './componentes.js';
+import { h, barra, mezclar, articuloTeoria } from './componentes.js';
 import { vistaCatedra, vistaEjercicio } from './vistas/catedra.js';
 import { vistaSimuladores } from './vistas/simuladores.js';
+import { vistaBienvenida } from './vistas/bienvenida.js';
+import { vistaExpres, vistaPasoExpres, bloqueFaltante } from './vistas/expres.js';
+import { sesion, pistaTeclado } from './vistas/sesion.js';
+import { examen, armarSimulacro } from './vistas/examen.js';
 import { generarPreguntaAlgoritmica, TIPOS_ALGORITMICOS } from './generadores.js';
+import { iniciarMarco, pintarGuardado, guardarConAviso, cerrarApp, aviso } from './shell.js';
+import * as PL from './plan.js';
 
 const $main = () => document.getElementById('principal');
-const NOMBRE_BLOQUE = { u5: 'Métodos de Búsqueda', u4: 'Emparrillado', u3: 'Análisis de Protocolos', u9: 'Lógica' };
 
 // ---------------- Navegación ----------------
 const RUTAS = [
   [/^#\/?$/, vistaInicio],
+  [/^#\/bienvenida(\?.*)?$/, vistaBienvenida],
+  [/^#\/expres$/, vistaExpres],
+  [/^#\/expres\/([\w-]+)$/, vistaPasoExpres],
   [/^#\/ruta$/, vistaRuta],
   [/^#\/unidad\/([\w-]+)$/, vistaUnidad],
   [/^#\/practica(\?.*)?$/, vistaPractica],
+  [/^#\/examen$/, vistaExamen],
   [/^#\/parciales$/, vistaParciales],
   [/^#\/parcial\/([\w-]+)(\?.*)?$/, vistaParcial],
   [/^#\/repaso$/, vistaRepaso],
@@ -23,30 +32,46 @@ const RUTAS = [
   [/^#\/ajustes$/, vistaAjustes],
 ];
 
+let navegando = 0;
 async function navegar() {
-  const hash = location.hash || '#/';
+  let hash = location.hash || '#/';
+  // Sin usuario (o sin modo elegido) se pasa primero por la bienvenida
+  if (!P.usuarioActual() || (!P.modoEstudio() && !hash.startsWith('#/bienvenida'))) {
+    if (!hash.startsWith('#/bienvenida')) { history.replaceState(null, '', '#/bienvenida'); hash = '#/bienvenida'; }
+  }
+  document.body.classList.toggle('modo-bienvenida', hash.startsWith('#/bienvenida'));
+  const yo = ++navegando;
   const main = $main();
   main.innerHTML = '';
+  main.classList.remove('entra'); void main.offsetWidth; main.classList.add('entra');
+  let encontrada = false;
   for (const [re, fn] of RUTAS) {
     const m = hash.match(re);
     if (m) {
-      try { await fn(main, ...m.slice(1)); } catch (e) { console.error(e); main.append(h('p', { class: 'vacio' }, 'Algo falló al mostrar esta sección: ' + e.message)); }
+      encontrada = true;
+      try { await fn(main, ...m.slice(1)); } catch (e) { console.error(e); main.append(h('div', { class: 'vacio' }, 'Algo falló al mostrar esta sección: ' + e.message)); }
       break;
     }
   }
+  if (!encontrada) main.append(h('div', { class: 'vacio' }, 'No existe esta sección. ', h('a', { href: '#/' }, 'Volver al inicio')));
+  if (yo !== navegando) return;
   marcarNav();
   window.scrollTo(0, 0);
   main.focus({ preventScroll: true });
 }
 function parametros(q) { return Object.fromEntries(new URLSearchParams((q || '').replace(/^\?/, ''))); }
+const refrescar = () => navegar();
 
 function marcarNav() {
   const hash = location.hash || '#/';
+  const modo = P.usuarioActual() ? P.modoEstudio() : null;
   document.querySelectorAll('.nav a').forEach(a => {
     const k = a.getAttribute('href');
-    const activo = k === '#/' ? hash === '#/' || hash === '' : hash.startsWith(k);
+    const activo = k === '#/' ? hash === '#/' || hash === '' : hash.startsWith(k) || (k === '#/ruta' && hash.startsWith('#/unidad')) || (k === '#/parciales' && hash.startsWith('#/parcial/'));
     if (activo) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    a.classList.toggle('modo-activo', !!modo && a.dataset.modo === modo);
   });
+  if (!P.usuarioActual()) return;
   const rep = P.paraRepasar().length;
   const c = document.getElementById('cuenta-repaso');
   if (c) { c.textContent = rep; c.hidden = rep === 0; }
@@ -57,19 +82,13 @@ function pintarRutaMini() {
   const ul = document.getElementById('ruta-mini');
   if (!ul) return;
   ul.innerHTML = '';
+  const hash = location.hash;
   for (const u of D.RUTA.unidades) {
-    const hecha = !!P.estadoUnidad(u.id).aprobada;
-    ul.append(h('li', { class: hecha ? 'hecha' : '' }, h('a', { href: `#/unidad/${u.id}` }, h('span', { class: 'punto' }), `${u.num}. ${u.corto}`)));
+    const e = P.estadoUnidad(u.id);
+    const actual = hash === `#/unidad/${u.id}`;
+    ul.append(h('li', { class: (e.aprobada ? 'hecha' : e.leida ? 'leida' : '') + (actual ? ' actual' : '') },
+      h('a', { href: `#/unidad/${u.id}`, 'aria-current': actual ? 'page' : null }, h('span', { class: 'punto' }), `${u.num}. ${u.corto}`)));
   }
-}
-
-function pintarGuardado() {
-  const el = document.getElementById('guardado');
-  if (!el) return;
-  const st = P.estado();
-  const donde = P.modoGuardado() === 'servidor' ? 'en progreso.json' : 'en este navegador (abrí la app con iniciar.bat para guardar en archivo)';
-  el.className = 'guardado' + (st === 'error' ? ' error' : '');
-  el.innerHTML = st === 'guardando' ? 'Guardando…' : st === 'error' ? '<b>No se pudo guardar.</b> ¿Cerraste la ventana del servidor?' : `<b>Progreso guardado</b> ${donde}`;
 }
 
 // ---------------- Estadísticas ----------------
@@ -81,71 +100,102 @@ function statsUnidad(uid) {
   return { total: todas.length, reales: reales.length, generadas: gen.length, hechas, bien };
 }
 function statsGlobal() {
-  const preg = Object.values(P.get().preguntas);
-  const hechas = preg.filter(p => p.intentos).length;
-  const bien = preg.filter(p => p.ultimaBien).length;
   const reales = D.PARCIALES.preguntas.filter(p => (P.estadoPregunta(p.id) || {}).intentos).length;
-  return { hechas, bien, reales, totalReales: D.PARCIALES.preguntas.length };
+  const examenesReales = D.PARCIALES.examenes.filter(e => P.intentosExamen(e.id).length).length;
+  return { reales, totalReales: D.PARCIALES.preguntas.length, examenesReales };
 }
 
-// ---------------- Inicio ----------------
+// ---------------- Inicio: qué hacer hoy ----------------
+function siguienteCompleto() {
+  return D.RUTA.unidades.find(u => !P.estadoUnidad(u.id).aprobada) || null;
+}
 function vistaInicio(main) {
-  const s = statsGlobal();
-  const siguiente = D.RUTA.unidades.find(u => !P.estadoUnidad(u.id).aprobada) || D.RUTA.unidades[0];
+  const modo = P.modoEstudio();
+  const u = P.usuarioActual();
   const rep = P.paraRepasar().length;
-  const examenesHechos = Object.keys(P.get().examenes).length;
+  const s = statsGlobal();
+  const racha = P.racha(), hoy = P.respuestasHoy();
+  const META = 20;
+  let hoyBloque;
+  if (modo === 'expres') {
+    const r = PL.resumenExpres();
+    const sig = PL.siguientePasoExpres();
+    hoyBloque = h('div', { class: 'destacada' },
+      h('p', { class: 'previo' }, `Modo exprés · paso ${Math.min(r.hechos + 1, r.pasos.length)} de ${r.pasos.length}`),
+      sig ? h('h2', {}, sig.titulo) : h('h2', {}, '¡Terminaste el plan exprés!'),
+      h('p', {}, sig ? `${sig.detalle} Te lleva ≈ ${PL.fmtMin(sig.minutos)}. Te queda ≈ ${PL.fmtMin(r.restante)} de plan.` : 'Mirá abajo lo que te queda del camino completo para seguir sin repetir.'),
+      h('div', { class: 'barra-destacada' }, h('span', { style: `width:${Math.round(100 * r.hechos / r.pasos.length)}%` })),
+      h('div', { class: 'acciones', style: 'margin:16px 0 0' },
+        sig ? h('a', { class: 'boton', href: `#/expres/${sig.id}` }, r.hechos ? 'Seguir con este paso' : 'Empezar el plan') : h('a', { class: 'boton', href: '#/examen' }, 'Hacer otro simulacro'),
+        h('a', { class: 'boton secundario', href: '#/expres' }, 'Ver el plan'),
+        rep ? h('a', { class: 'boton secundario', href: '#/repaso' }, `Repasar ${rep}`) : null));
+  } else {
+    const sig = siguienteCompleto();
+    const aprob = D.RUTA.unidades.filter(x => P.estadoUnidad(x.id).aprobada).length;
+    hoyBloque = h('div', { class: 'destacada' },
+      h('p', { class: 'previo' }, `Modo completo · ${aprob} de ${D.RUTA.unidades.length} unidades aprobadas`),
+      sig ? h('h2', {}, `${sig.num}. ${sig.titulo}`) : h('h2', {}, '¡Aprobaste todas las unidades!'),
+      h('p', {}, sig ? `${sig.resumen} ≈ ${sig.minutos} min de lectura + chequeo de 5 preguntas.` : 'Ahora lo que más suma es rendir simulacros y repasar lo que erraste.'),
+      h('div', { class: 'barra-destacada' }, h('span', { style: `width:${Math.round(100 * aprob / D.RUTA.unidades.length)}%` })),
+      h('div', { class: 'acciones', style: 'margin:16px 0 0' },
+        sig ? h('a', { class: 'boton', href: `#/unidad/${sig.id}` }, P.estadoUnidad(sig.id).leida ? 'Seguir con esta unidad' : 'Estudiar esta unidad') : h('a', { class: 'boton', href: '#/examen' }, 'Hacer un simulacro'),
+        rep ? h('a', { class: 'boton secundario', href: '#/repaso' }, `Repasar ${rep} pendiente${rep > 1 ? 's' : ''}`) : null));
+  }
+  const est = PL.estimacion();
   main.append(
     h('div', { class: 'columna' },
-      h('h1', {}, 'Inteligencia Artificial, de cero al parcial'),
-      h('p', { class: 'bajada' }, 'Seguí la ruta en orden: cada unidad tiene la teoría explicada desde cero, un ejemplo resuelto, las trampas que más se repiten en los parciales y práctica. Después medite con los parciales reales.'),
-      h('div', { class: 'destacada' },
-        h('p', { class: 'previo' }, 'Seguí por acá'),
-        h('h2', {}, `${siguiente.num}. ${siguiente.titulo}`),
-        h('p', { style: 'margin:0 0 18px' }, siguiente.resumen),
-        h('div', { class: 'acciones', style: 'margin:0' },
-          h('a', { class: 'boton', href: `#/unidad/${siguiente.id}` }, 'Estudiar esta unidad'),
-          rep ? h('a', { class: 'boton secundario', href: '#/repaso' }, `Repasar ${rep} pendiente${rep > 1 ? 's' : ''}`) : null)),
-      h('h2', {}, 'Cómo vas'),
-      h('div', { class: 'grilla' },
-        tarjetaDato(`${s.reales} de ${s.totalReales}`, 'preguntas de parciales reales respondidas', s.reales / s.totalReales),
-        tarjetaDato(s.hechas ? `${Math.round(100 * s.bien / s.hechas)}%` : '—', 'de acierto en la última respuesta de cada pregunta', s.hechas ? s.bien / s.hechas : 0, true),
-        tarjetaDato(`${examenesHechos} de ${D.PARCIALES.examenes.length}`, 'parciales completos rendidos como simulacro', examenesHechos / D.PARCIALES.examenes.length)),
-      h('h2', {}, 'Por unidad'),
-      tablaUnidades()));
+      h('div', { class: 'saludo' },
+        h('div', {}, h('p', { class: 'previo-titulo' }, saludo() + ', ' + u.nombre), h('h1', {}, 'Qué hacer hoy')),
+        h('a', { class: 'chip-modo', href: '#/bienvenida?modo=1', title: 'Cambiar de modo' }, modo === 'expres' ? '⚡ Modo exprés' : '📚 Modo completo', h('span', { class: 'chico' }, ' · cambiar'))),
+      hoyBloque,
+      h('div', { class: 'grilla mini-datos' },
+        tarjetaDato(racha ? `${racha} día${racha > 1 ? 's' : ''}` : '—', racha ? 'seguidos estudiando' : 'Respondé una pregunta hoy para arrancar tu racha', null),
+        tarjetaDato(`${Math.min(hoy, META)}/${META}`, hoy >= META ? 'Meta de hoy cumplida' : 'preguntas hoy (meta diaria)', Math.min(1, hoy / META), true),
+        tarjetaDato(`${s.reales}/${s.totalReales}`, 'preguntas reales respondidas', s.reales / s.totalReales),
+        tarjetaDato(est.cubierto >= 10 ? `≈ ${est.esperado}/25` : '—', est.cubierto >= 10 ? `estimado en un parcial (sobre ${est.cubierto} preguntas de temas que practicaste)` : 'Practicá más temas para ver tu nota estimada', est.cubierto >= 10 ? est.esperado / 25 : 0, true)),
+      h('div', { class: 'titulo-seccion' }, h('h2', {}, 'Tu dominio por tema'), h('p', { class: 'chico suave' }, 'Ordenado por cuántas preguntas toma en los parciales recientes. Tocá un tema para practicarlo.')),
+      mapaDominio(),
+      modo === 'expres' && PL.resumenExpres().terminado ? bloqueFaltante(true) : null,
+      h('div', { class: 'accesos' },
+        acceso('#/examen', 'Simulacro de parcial', '25 preguntas mezcladas como en el parcial real, con cronómetro'),
+        acceso('#/practica', 'Práctica libre', 'Por tema, reales o generadas, con corrección al instante'),
+        acceso('#/simuladores', 'Simuladores', 'Búsqueda iteración por iteración, emparrillado y ruleta'),
+        acceso('#/catedra', 'Ejercicios de la cátedra', 'Las guías prácticas para resolver paso a paso'))));
 }
+function saludo() { const hr = new Date().getHours(); return hr < 6 ? 'Buenas noches' : hr < 13 ? 'Buen día' : hr < 20 ? 'Buenas tardes' : 'Buenas noches'; }
 function tarjetaDato(valor, texto, frac, verde) {
-  return h('div', { class: 'hoja dato' }, h('div', { class: 'valor' }, valor), h('p', { class: 'chico suave', style: 'margin:2px 0 10px' }, texto), barra(frac, verde));
+  return h('div', { class: 'hoja dato' }, h('div', { class: 'valor' }, valor), h('p', { class: 'chico suave', style: 'margin:2px 0 10px' }, texto), frac === null ? null : barra(frac, verde));
 }
-function tablaUnidades() {
-  const t = h('table', { class: 'tabla' }, h('thead', {}, h('tr', {}, h('th', {}, 'Unidad'), h('th', {}, 'Teoría'), h('th', {}, 'Preguntas hechas'), h('th', {}, 'Acierto'), h('th', {}, 'En parciales'))));
-  const tb = h('tbody');
-  for (const u of D.RUTA.unidades) {
-    const s = statsUnidad(u.id), e = P.estadoUnidad(u.id);
-    tb.append(h('tr', {},
-      h('td', {}, h('a', { href: `#/unidad/${u.id}` }, `${u.num}. ${u.titulo}`)),
-      h('td', {}, e.aprobada ? h('span', { class: 'etiqueta ok' }, 'aprobada') : e.leida ? h('span', { class: 'etiqueta' }, 'leída') : '—'),
-      h('td', {}, `${s.hechas} / ${s.total}`),
-      h('td', {}, s.hechas ? `${Math.round(100 * s.bien / s.hechas)}%` : '—'),
-      h('td', { class: 'suave chico' }, u.peso || '')));
-  }
-  t.append(tb);
-  return h('div', { class: 'envoltura-tabla' }, t);
+function acceso(href, t, d) { return h('a', { class: 'acceso hoja', href }, h('b', {}, t), h('span', { class: 'chico suave' }, d)); }
+function mapaDominio() {
+  const fr = PL.frecuencias();
+  const ids = D.RUTA.unidades.map(u => u.id).filter(k => fr[k] && fr[k].total > 0).sort((a, b) => fr[b].reciente - fr[a].reciente || fr[b].historico - fr[a].historico);
+  return h('div', { class: 'mapa-dominio' }, ...ids.map(k => {
+    const u = D.unidad(k), d = PL.dominio(k);
+    const peso = fr[k].reciente;
+    return h('a', { class: 'baldosa nivel-' + d.nivel, href: `#/practica?u=${k}&f=ambas&filtro=${d.nivel === 'sin-ver' ? 'nuevas' : 'todas'}&n=10` },
+      h('span', { class: 'b-nombre' }, u.corto),
+      h('span', { class: 'b-nivel' }, PL.NIVEL_TXT[d.nivel] + (d.n ? ` · ${Math.round(d.frac * 100)}%` : '')),
+      h('span', { class: 'b-peso' }, peso >= 0.5 ? `≈${String(Math.round(peso * 2) / 2).replace('.', ',')} por parcial` : 'casi no se toma'));
+  }));
 }
 
 // ---------------- Ruta ----------------
 function vistaRuta(main) {
-  const actual = D.RUTA.unidades.find(u => !P.estadoUnidad(u.id).aprobada);
+  const actual = siguienteCompleto();
   const ol = h('ol', { class: 'ruta' });
   for (const u of D.RUTA.unidades) {
     const e = P.estadoUnidad(u.id), s = statsUnidad(u.id);
     ol.append(h('li', { class: (e.aprobada ? 'hecha ' : '') + (actual && actual.id === u.id ? 'actual' : '') },
-      h('span', { class: 'nodo', 'aria-hidden': 'true' }, u.num),
-      h('a', { class: 'titulo', href: `#/unidad/${u.id}` }, u.titulo),
-      h('div', { class: 'meta' }, `${u.peso || ''}${u.peso ? ' · ' : ''}${u.minutos} min de lectura · ${s.reales} preguntas reales · ${s.generadas} de práctica`),
+      h('span', { class: 'nodo', 'aria-hidden': 'true' }, e.aprobada ? '✓' : u.num),
+      h('a', { class: 'titulo', href: `#/unidad/${u.id}` }, `${u.num}. ${u.titulo}`),
+      h('div', { class: 'meta' }, `${u.peso || ''}${u.peso ? ' · ' : ''}${u.minutos} min de lectura · ${s.reales} preguntas reales · ${s.generadas} de práctica`,
+        e.aprobada ? h('span', { class: 'etiqueta ok' }, e.viaExpres && !e.leida ? 'aprobada en exprés · falta la teoría completa' : 'aprobada') : e.leida ? h('span', { class: 'etiqueta' }, 'leída') : null),
       h('p', { style: 'margin:4px 0 0', class: 'chico' }, u.resumen)));
   }
   main.append(h('div', { class: 'columna texto' },
-    h('h1', {}, 'La ruta'),
+    P.modoEstudio() === 'expres' ? h('p', { class: 'previo-titulo' }, 'Estás en modo exprés: esto es el camino completo, por si querés más detalle') : h('p', { class: 'previo-titulo' }, 'Modo completo'),
+    h('h1', {}, 'La ruta completa'),
     h('p', { class: 'bajada' }, D.RUTA.intro),
     ol));
 }
@@ -153,90 +203,121 @@ function vistaRuta(main) {
 // ---------------- Unidad ----------------
 async function vistaUnidad(main, uid) {
   const u = D.unidad(uid);
-  if (!u) { main.append(h('p', { class: 'vacio' }, 'No existe esa unidad.')); return; }
-  const md = await D.texto('teoria/' + u.archivo);
-  const html = window.marked.parse(md);
+  if (!u) { main.append(h('div', { class: 'vacio' }, 'No existe esa unidad.')); return; }
+  const mdTxt = await D.texto('teoria/' + u.archivo);
   const s = statsUnidad(uid);
   const e = P.estadoUnidad(uid);
   const idx = D.RUTA.unidades.indexOf(u);
   const sig = D.RUTA.unidades[idx + 1], ant = D.RUTA.unidades[idx - 1];
-  const art = h('article', { class: 'teoria', html });
-  // notas al margen: blockquotes que empiezan con "Trampa:"
-  art.querySelectorAll('blockquote').forEach(bq => {
-    const t = bq.textContent.trim();
-    if (/^trampa:/i.test(t)) { bq.className = 'nota-margen'; bq.innerHTML = bq.innerHTML.replace(/Trampa:\s*/i, ''); }
-  });
+  const art = articuloTeoria(mdTxt);
+  // índice de secciones
+  const hs = [...art.querySelectorAll('h2')];
+  hs.forEach((x, i) => { x.id = `s-${i}`; });
+  const indice = hs.length > 2 ? h('nav', { class: 'indice-teoria', 'aria-label': 'En esta unidad' }, h('p', {}, 'En esta unidad'),
+    h('ol', {}, ...hs.map(x => h('li', {}, h('a', { href: '#', onclick: ev => { ev.preventDefault(); x.scrollIntoView({ behavior: 'smooth' }); } }, x.textContent))),
+      h('li', { class: 'ir-chequeo' }, h('a', { href: '#', onclick: ev => { ev.preventDefault(); document.getElementById('chequeo').scrollIntoView({ behavior: 'smooth' }); } }, 'Chequeo de la unidad →')))) : null;
   if (!e.leida) P.marcarUnidad(uid, { leida: true });
-
+  const lectura = h('div', { class: 'progreso-lectura', 'aria-hidden': 'true' }, h('span'));
   const chequeo = h('div');
-  main.append(h('div', { class: 'columna' },
-    h('p', { class: 'chico suave', style: 'margin:0 0 4px' }, h('a', { href: '#/ruta' }, 'Ruta'), ` / Unidad ${u.num}`),
-    h('h1', {}, u.titulo),
-    h('p', { class: 'bajada' }, u.resumen),
-    h('div', { class: 'acciones' },
-      h('a', { class: 'boton secundario', href: `#/practica?u=${uid}&f=ia` }, `Práctica generada (${s.generadas})`),
-      h('a', { class: 'boton secundario', href: `#/practica?u=${uid}&f=real` }, `Preguntas reales de este tema (${s.reales})`)),
-    art,
-    h('h2', {}, 'Chequeo de la unidad'),
-    h('p', { class: 'suave' }, 'Cinco preguntas al azar de esta unidad. Con 4 de 5 bien la unidad queda aprobada en la ruta.'),
+  main.append(lectura, h('div', { class: 'columna con-indice' },
+    h('div', { class: 'unidad-cabeza' },
+      h('p', { class: 'miga chico suave' }, h('a', { href: '#/ruta' }, 'Ruta'), ` / Unidad ${u.num}`),
+      h('h1', {}, u.titulo),
+      h('p', { class: 'bajada' }, u.resumen),
+      h('div', { class: 'fila-meta' }, h('span', { class: 'etiqueta' }, `${u.minutos} min de lectura`), u.peso ? h('span', { class: 'etiqueta' }, u.peso) : null,
+        e.aprobada ? h('span', { class: 'etiqueta ok' }, 'aprobada') : null),
+      h('div', { class: 'acciones' },
+        h('a', { class: 'boton secundario', href: `#/practica?u=${uid}&f=real` }, `Preguntas reales (${s.reales})`),
+        h('a', { class: 'boton secundario', href: `#/practica?u=${uid}&f=ia` }, `Práctica generada (${s.generadas})`),
+        h('button', { class: 'boton secundario', type: 'button', onclick: () => document.getElementById('chequeo').scrollIntoView({ behavior: 'smooth' }) }, 'Ir al chequeo'))),
+    h('div', { class: 'unidad-cuerpo' }, art, indice),
+    h('h2', { id: 'chequeo' }, 'Chequeo de la unidad'),
+    h('p', { class: 'suave' }, 'Cinco preguntas de esta unidad, priorizando las que todavía no acertaste. Con 4 de 5 bien la unidad queda aprobada (también cuenta para el modo exprés).'),
     chequeo,
-    h('div', { class: 'acciones' },
-      ant ? h('a', { class: 'boton secundario', href: `#/unidad/${ant.id}` }, `Anterior: ${ant.corto}`) : null,
-      sig ? h('a', { class: 'boton', href: `#/unidad/${sig.id}` }, `Siguiente: ${sig.corto}`) : null)));
+    h('div', { class: 'acciones nav-unidad' },
+      ant ? h('a', { class: 'boton secundario', href: `#/unidad/${ant.id}` }, `← ${ant.corto}`) : null,
+      sig ? h('a', { class: 'boton', href: `#/unidad/${sig.id}` }, `${sig.corto} →`) : null)));
   armarChequeo(chequeo, uid);
+  const barraL = lectura.firstChild;
+  const onScroll = () => {
+    if (!document.body.contains(art)) { removeEventListener('scroll', onScroll); return; }
+    const r = art.getBoundingClientRect();
+    const frac = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - innerHeight)));
+    barraL.style.width = `${Math.round(frac * 100)}%`;
+  };
+  addEventListener('scroll', onScroll, { passive: true });
 }
 
 function armarChequeo(cont, uid) {
   cont.innerHTML = '';
-  const pool = mezclar([...D.generadasDeUnidad(uid), ...D.realesDeUnidad(uid).filter(p => !p.img_completa)]).slice(0, 5);
-  if (!pool.length) { cont.append(h('p', { class: 'vacio' }, 'Esta unidad todavía no tiene preguntas.')); return; }
-  const respuestas = {};
-  const tarjetas = pool.map((p, i) => tarjetaPregunta(p, { modo: 'examen', numero: i + 1, onRespuesta: (id, n) => { respuestas[id] = n; } }));
-  const res = h('div');
-  const btn = h('button', { class: 'boton', type: 'button' }, 'Corregir chequeo');
-  btn.addEventListener('click', () => {
-    tarjetas.forEach(t => t.corregir());
-    const bien = pool.filter(p => respuestas[p.id] === p.correcta).length;
-    const aprobada = bien >= Math.min(4, pool.length);
-    if (aprobada) P.marcarUnidad(uid, { aprobada: true, chequeo: bien });
-    res.innerHTML = '';
-    res.append(h('div', { class: 'hoja' }, h('h3', { style: 'margin-top:0' }, `${bien} de ${pool.length} bien. ${aprobada ? 'Unidad aprobada.' : 'Repasá lo que fallaste y probá otra vez.'}`),
-      h('button', { class: 'boton secundario', type: 'button', onclick: () => armarChequeo(cont, uid) }, 'Otro chequeo')));
-    btn.disabled = true;
-    pintarRutaMini();
+  // Prioriza preguntas que nunca acertaste; evita repetir la misma familia
+  const base = [...D.generadasDeUnidad(uid), ...D.realesDeUnidad(uid).filter(p => !p.img_completa)];
+  const peso = p => { const e = P.estadoPregunta(p.id); return (!e ? 2 : e.ultimaBien ? 0 : 1.5) + Math.random(); };
+  const orden = mezclar(base).sort((a, b) => peso(b) - peso(a));
+  const fams = new Set(), pool = [];
+  for (const p of orden) { const f = PL.familia(p); if (p.tipo === 'real' && fams.has(f)) continue; fams.add(f); pool.push(p); if (pool.length >= 5) break; }
+  if (!pool.length) { cont.append(h('div', { class: 'vacio' }, 'Esta unidad todavía no tiene preguntas.')); return; }
+  sesion(cont, pool, {
+    titulo: 'Chequeo de la unidad',
+    onFin: r => {
+      const aprobada = r.bien >= Math.min(4, pool.length);
+      if (aprobada) { P.marcarUnidad(uid, { aprobada: true, chequeo: r.bien }); aviso('¡Unidad aprobada!'); }
+      pintarRutaMini();
+    },
+    accionesFin: r => {
+      const aprobada = r.bien >= Math.min(4, pool.length);
+      const idx = D.RUTA.unidades.findIndex(x => x.id === uid);
+      const sig = D.RUTA.unidades[idx + 1];
+      return [
+        h('p', { class: 'chico', style: 'width:100%;margin:0' }, aprobada ? '✓ Unidad aprobada.' : 'Necesitás 4 de 5 para aprobarla. Mirá las explicaciones y probá otra vez.'),
+        aprobada && sig ? h('a', { class: 'boton', href: `#/unidad/${sig.id}` }, `Siguiente: ${sig.corto}`) : null,
+        h('button', { class: aprobada ? 'boton secundario' : 'boton', type: 'button', onclick: () => armarChequeo(cont, uid) }, 'Otro chequeo'),
+      ];
+    },
   });
-  cont.append(...tarjetas, h('div', { class: 'acciones' }, btn), res);
 }
 
 // ---------------- Práctica ----------------
 function vistaPractica(main, q) {
   const prm = parametros(q);
   const unidades = prm.u ? prm.u.split(',') : [];
-  const fuente = prm.f || 'ambas'; // real | ia | ambas
+  let fuente = prm.f || 'ambas'; // real | ia | ambas | algo
   const filtro = prm.filtro || 'todas'; // todas | nuevas | falladas
   const cuantas = +(prm.n || 10);
+  const tiposAlgo = TIPOS_ALGORITMICOS.filter(t => !unidades[0] || t.unidad === unidades[0]);
 
-  const form = h('form', { class: 'hoja fila' },
-    h('label', { class: 'campo' }, 'Unidad', selectUnidades(unidades[0] || '')),
+  const form = h('form', { class: 'hoja fila form-practica' },
+    h('label', { class: 'campo' }, 'Tema', selectUnidades(unidades[0] || '')),
     h('label', { class: 'campo' }, 'De dónde', h('select', { name: 'f' },
-      opt('ambas', 'Reales + generadas', fuente), opt('real', 'Solo parciales reales', fuente), opt('ia', 'Solo generadas por IA', fuente), opt('algo', 'Ejercicios nuevos de búsqueda/emparrillado', fuente))),
+      opt('ambas', 'Reales + generadas', fuente), opt('real', 'Solo parciales reales', fuente), opt('ia', 'Solo generadas por IA', fuente), opt('algo', 'Ejercicios nuevos (búsqueda, emparrillado, ruleta, métricas, difusa)', fuente))),
     h('label', { class: 'campo' }, 'Cuáles', h('select', { name: 'filtro' }, opt('todas', 'Todas', filtro), opt('nuevas', 'Las que nunca hice', filtro), opt('falladas', 'Las que erré', filtro))),
     h('label', { class: 'campo' }, 'Cantidad', h('select', { name: 'n' }, ...[5, 10, 20, 40].map(n => opt(String(n), String(n), String(cuantas))))),
-    h('button', { class: 'boton', type: 'submit' }, 'Empezar'));
+    h('button', { class: 'boton', type: 'submit' }, q ? 'Otra tanda' : 'Empezar'));
   form.addEventListener('submit', ev => {
     ev.preventDefault();
     const fd = new FormData(form);
-    location.hash = `#/practica?u=${fd.get('u')}&f=${fd.get('f')}&filtro=${fd.get('filtro')}&n=${fd.get('n')}`;
+    const nuevo = `#/practica?u=${fd.get('u')}&f=${fd.get('f')}&filtro=${fd.get('filtro')}&n=${fd.get('n')}`;
+    if (location.hash === nuevo) navegar(); else location.hash = nuevo;
   });
-  main.append(h('div', { class: 'columna texto' }, h('h1', {}, 'Práctica'),
-    h('p', { class: 'bajada' }, 'Elegí una unidad (o todas, mezcladas como en el parcial). Cada respuesta se corrige al instante y queda guardada en tu progreso.'), form));
-
-  if (!q) return;
-  let pool;
+  const col = h('div', { class: 'columna texto' }, h('h1', {}, 'Práctica'));
+  main.append(col);
+  if (!q) {
+    col.append(h('p', { class: 'bajada' }, 'Elegí un tema (o todos, mezclados como en el parcial). Cada respuesta se corrige al instante, con la explicación, y queda guardada en tu progreso.'), form, pistaTeclado());
+    return;
+  }
+  // con la sesión empezada, el formulario queda plegado arriba
+  const u0 = unidades[0] ? D.unidad(unidades[0]) : null;
+  col.append(h('details', { class: 'plegable-form' }, h('summary', {}, `${u0 ? u0.corto : 'Todos los temas'} · ${{ ambas: 'reales + generadas', real: 'reales', ia: 'generadas', algo: 'ejercicios nuevos' }[fuente]} · ${{ todas: 'todas', nuevas: 'nunca hechas', falladas: 'erradas' }[filtro]} — cambiar`), form));
+  let pool, aviso2 = null;
   if (fuente === 'algo') {
-    const tipos = TIPOS_ALGORITMICOS.filter(t => !unidades[0] || t.unidad === unidades[0]);
-    pool = Array.from({ length: cuantas }, () => generarPreguntaAlgoritmica(tipos[Math.floor(Math.random() * tipos.length)] || TIPOS_ALGORITMICOS[0]));
-  } else {
+    if (!tiposAlgo.length) {
+      aviso2 = h('p', { class: 'nota-info' }, `${u0 ? u0.corto : 'Este tema'} no tiene ejercicios generados por algoritmo (hay para Búsqueda, Emparrillado, Algoritmos Genéticos, Machine Learning y Lógica difusa). Te muestro preguntas reales y generadas del tema.`);
+      fuente = 'ambas';
+    } else {
+      pool = Array.from({ length: cuantas }, () => generarPreguntaAlgoritmica(tiposAlgo[Math.floor(Math.random() * tiposAlgo.length)]));
+    }
+  }
+  if (!pool) {
     pool = [];
     if (fuente !== 'ia') pool.push(...D.PARCIALES.preguntas);
     if (fuente !== 'real') pool.push(...D.GENERADAS.preguntas);
@@ -245,44 +326,36 @@ function vistaPractica(main, q) {
     if (filtro === 'falladas') pool = pool.filter(p => { const e = P.estadoPregunta(p.id); return e && e.aciertos < e.intentos; });
     pool = mezclar(pool).slice(0, cuantas);
   }
-  sesion(main.firstChild, pool, 'No hay preguntas con ese filtro. Probá con "Todas".');
+  if (aviso2) col.append(aviso2);
+  sesion(col, pool, {
+    vacio: filtro === 'nuevas' ? '¡Ya hiciste todas las de este filtro! Probá con "Las que erré" o con "Todas".' : filtro === 'falladas' ? 'No tenés preguntas erradas con este filtro. ¡Bien ahí!' : 'No hay preguntas con ese filtro. Probá con "Todas".',
+    accionesFin: () => [h('button', { class: 'boton', type: 'button', onclick: () => navegar() }, 'Otra tanda'), h('a', { class: 'boton secundario', href: '#/repaso' }, 'Ir a Repaso')],
+  });
 }
 function opt(v, t, sel) { return h('option', { value: v, selected: v === sel }, t); }
 function selectUnidades(sel) {
-  return h('select', { name: 'u' }, h('option', { value: '' }, 'Todas mezcladas'), ...D.RUTA.unidades.map(u => opt(u.id, `${u.num}. ${u.corto}`, sel)));
+  return h('select', { name: 'u' }, h('option', { value: '' }, 'Todos mezclados'), ...D.RUTA.unidades.map(u => opt(u.id, `${u.num}. ${u.corto}`, sel)));
 }
 
-// Sesión de preguntas de a una, con corrección inmediata
-function sesion(cont, pool, msgVacio) {
-  if (!pool.length) { cont.append(h('p', { class: 'vacio' }, msgVacio)); return; }
-  let i = 0, bien = 0;
-  const zona = h('div'), pie = h('div', { class: 'acciones' });
-  const progreso = h('p', { class: 'suave chico' });
-  cont.append(progreso, zona, pie);
-  function mostrar() {
-    zona.innerHTML = ''; pie.innerHTML = '';
-    progreso.textContent = `Pregunta ${i + 1} de ${pool.length} · ${bien} bien hasta ahora`;
-    const p = pool[i];
-    const tarjeta = tarjetaPregunta(p, { modo: 'inmediato', onRespuesta: (id, n, c) => {
-      if (n === c) bien++;
-      progreso.textContent = `Pregunta ${i + 1} de ${pool.length} · ${bien} bien hasta ahora`;
-      pie.innerHTML = '';
-      pie.append(i + 1 < pool.length
-        ? h('button', { class: 'boton', type: 'button', onclick: () => { i++; mostrar(); } }, 'Siguiente')
-        : h('button', { class: 'boton', type: 'button', onclick: fin }, 'Ver resultado'));
-      pie.querySelector('button').focus();
-    } });
-    zona.append(tarjeta);
+// ---------------- Simulacro mezclado ----------------
+function vistaExamen(main) {
+  const dist = PL.distribucion(25);
+  const ints = P.intentosExamen('simulacro');
+  const col = h('div', { class: 'columna' },
+    h('h1', {}, 'Simulacro de parcial'),
+    h('p', { class: 'bajada' }, '25 preguntas reales, mezcladas con la misma distribución por tema que los parciales recientes. Las de Protocolos, Emparrillado y Búsqueda vienen en bloque con su anexo, como en el parcial. Corregís al final.'),
+    h('div', { class: 'hoja distribucion' },
+      h('h3', { style: 'margin-top:0' }, 'Cómo se reparte'),
+      h('div', { class: 'chips' }, ...Object.entries(dist).sort((a, b) => b[1] - a[1]).map(([k, n]) => h('span', { class: 'chip' }, `${D.unidad(k).corto}: ${n}`))),
+      h('div', { class: 'acciones', style: 'margin-bottom:0' }, h('button', { class: 'boton', type: 'button', onclick: empezar }, 'Empezar simulacro'),
+        h('span', { class: 'chico suave' }, 'Cronómetro de referencia · índice de preguntas · marcá las dudosas para revisar'))),
+    ints.length ? h('div', {}, h('h2', {}, 'Tus simulacros'), h('ul', { class: 'historial' }, ...ints.slice(-8).reverse().map(x => h('li', {}, h('b', {}, `${x.bien}/${x.total}`), ` · ${new Date(x.fecha).toLocaleString('es-AR', { dateStyle: 'short', timeStyle: 'short' })}${x.minutos ? ` · ${x.minutos} min` : ''}`)))) : null);
+  main.append(col);
+  function empezar() {
+    col.innerHTML = '';
+    col.append(h('h1', {}, 'Simulacro de parcial'));
+    examen(col, armarSimulacro(25), { eid: 'simulacro', accionesFin: () => [h('button', { class: 'boton secundario', type: 'button', onclick: () => navegar() }, 'Otro simulacro')] });
   }
-  function fin() {
-    zona.innerHTML = ''; pie.innerHTML = '';
-    progreso.textContent = '';
-    zona.append(h('div', { class: 'hoja' }, h('span', { class: 'nota-final' }, `${bien}/${pool.length}`),
-      h('p', {}, bien === pool.length ? 'Impecable.' : 'Las que erraste quedaron en Repaso: van a volver a aparecer en los próximos días.'),
-      h('div', { class: 'acciones' }, h('button', { class: 'boton', type: 'button', onclick: () => navegar() }, 'Otra tanda'), h('a', { class: 'boton secundario', href: '#/repaso' }, 'Ir a Repaso'))));
-    marcarNav();
-  }
-  mostrar();
 }
 
 // ---------------- Parciales reales ----------------
@@ -291,19 +364,20 @@ function vistaParciales(main) {
   for (const e of D.PARCIALES.examenes) (grupos[e.periodo] = grupos[e.periodo] || []).push(e);
   const cont = h('div', { class: 'columna' },
     h('h1', {}, 'Parciales reales'),
-    h('p', { class: 'bajada' }, `${D.PARCIALES.examenes.length} parciales distintos (${D.PARCIALES.preguntas.length} preguntas) con la respuesta oficial. Cada pregunta indica de qué parcial y letra viene. Rendilos como simulacro y te queda registrado cuáles hiciste y con qué nota.`));
+    h('p', { class: 'bajada' }, `${D.PARCIALES.examenes.length} parciales (${D.PARCIALES.preguntas.length} preguntas) con la respuesta oficial. Rendilos como simulacro, con cronómetro y anexo al costado, y te queda registrado cuáles hiciste y con qué nota.`),
+    h('p', {}, h('a', { class: 'boton secundario', href: '#/examen' }, 'O hacé un simulacro mezclado de 25')));
   for (const per of Object.keys(grupos).sort().reverse()) {
-    const t = h('table', { class: 'tabla' }, h('thead', {}, h('tr', {}, h('th', {}, 'Parcial'), h('th', {}, 'Formato'), h('th', {}, 'Tu mejor nota'), h('th', {}, 'Rendido'), h('th', {}, ''))));
+    const t = h('table', { class: 'tabla' }, h('thead', {}, h('tr', {}, h('th', {}, 'Parcial'), h('th', { class: 'ocultar-movil' }, 'Formato'), h('th', {}, 'Tu mejor nota'), h('th', { class: 'ocultar-movil' }, 'Rendido'), h('th', {}, ''))));
     const tb = h('tbody');
     for (const e of grupos[per]) {
       const ints = P.intentosExamen(e.id);
       const mejor = ints.length ? Math.max(...ints.map(x => x.bien)) : null;
       tb.append(h('tr', {},
         h('td', {}, h('a', { href: `#/parcial/${e.id}` }, `${e.dia} · ${e.tema}`)),
-        h('td', { class: 'chico suave' }, e.formato),
+        h('td', { class: 'chico suave ocultar-movil' }, e.formato),
         h('td', {}, mejor === null ? '—' : `${mejor} / ${e.preguntas.length}`),
-        h('td', { class: 'chico' }, ints.length ? `${ints.length} ${ints.length === 1 ? "vez" : "veces"}, última ${new Date(ints[ints.length - 1].fecha).toLocaleDateString('es-AR')}` : h('span', { class: 'suave' }, 'nunca')),
-        h('td', {}, h('a', { class: 'boton secundario', href: `#/parcial/${e.id}` }, ints.length ? 'Rendir de nuevo' : 'Rendir'))));
+        h('td', { class: 'chico ocultar-movil' }, ints.length ? `${ints.length} ${ints.length === 1 ? 'vez' : 'veces'}, última ${new Date(ints[ints.length - 1].fecha).toLocaleDateString('es-AR')}` : h('span', { class: 'suave' }, 'nunca')),
+        h('td', {}, h('a', { class: 'boton secundario chico-boton', href: `#/parcial/${e.id}` }, ints.length ? 'Otra vez' : 'Rendir'))));
     }
     t.append(tb);
     cont.append(h('h2', {}, tituloPeriodo(per)), h('div', { class: 'envoltura-tabla' }, t));
@@ -314,55 +388,32 @@ const tituloPeriodo = per => per === '2025' ? '2025' : per.replace(/(\d{4})-(\d)
 
 function vistaParcial(main, eid, q) {
   const e = D.examen(eid);
-  if (!e) { main.append(h('p', { class: 'vacio' }, 'No existe ese parcial.')); return; }
+  if (!e) { main.append(h('div', { class: 'vacio' }, 'No existe ese parcial.')); return; }
   const prm = parametros(q);
   const modo = prm.modo || null;
   const preguntas = e.preguntas.map(id => D.porId[id]);
-  const cont = h('div', { class: 'columna texto' },
-    h('p', { class: 'chico suave', style: 'margin:0 0 4px' }, h('a', { href: '#/parciales' }, 'Parciales'), ' / ', e.titulo),
+  const cont = h('div', { class: 'columna' },
+    h('p', { class: 'miga chico suave' }, h('a', { href: '#/parciales' }, 'Parciales'), ' / ', e.titulo),
     h('h1', {}, e.titulo),
     h('p', { class: 'suave chico' }, `Archivo original: ${e.archivo_original}`));
   main.append(cont);
   if (!modo) {
+    const porU = {};
+    for (const p of preguntas) porU[p.unidad] = (porU[p.unidad] || 0) + 1;
     cont.append(h('p', { class: 'bajada' }, `${preguntas.length} preguntas de opción múltiple. Elegí cómo rendirlo:`),
-      h('div', { class: 'acciones' },
-        h('a', { class: 'boton', href: `#/parcial/${eid}?modo=simulacro` }, 'Simulacro: corrijo al final'),
-        h('a', { class: 'boton secundario', href: `#/parcial/${eid}?modo=guiado` }, 'Pregunta por pregunta, con corrección inmediata')),
+      h('div', { class: 'chips' }, ...Object.entries(porU).sort((a, b) => b[1] - a[1]).map(([k, n]) => h('span', { class: 'chip' }, `${D.unidad(k).corto}: ${n}`))),
+      h('div', { class: 'opciones-modo' },
+        h('a', { class: 'tarjeta-opcion', href: `#/parcial/${eid}?modo=simulacro` }, h('b', {}, 'Simulacro'), h('span', {}, 'Como el día del parcial: respondés todo y corregís al final. Con cronómetro e índice.')),
+        h('a', { class: 'tarjeta-opcion', href: `#/parcial/${eid}?modo=guiado` }, h('b', {}, 'Guiado'), h('span', {}, 'Corrección y explicación inmediata en cada pregunta. Para aprender.'))),
       historial(eid));
     return;
   }
-  // anexos arriba (como en el parcial)
-  const anexos = Object.entries(e.anexos);
-  if (anexos.length) cont.append(h('h2', {}, 'Anexos'), ...anexos.map(([k, a]) => h('details', { class: 'anexo' }, h('summary', {}, a.titulo.replace(/\s+/g, ' ')), h('img', { src: '../contenido/' + a.img, alt: a.titulo }))));
-  const respuestas = {};
-  const tarjetas = preguntas.map((p, i) => tarjetaPregunta(p, { modo: modo === 'guiado' ? 'inmediato' : 'examen', numero: p.letra, mostrarRef: false, anexo: false, onRespuesta: (id, n) => { respuestas[id] = n; } }));
-  cont.append(h('h2', {}, 'Preguntas'), ...tarjetas);
-  const res = h('div');
-  const inicio = Date.now();
-  const btn = h('button', { class: 'boton', type: 'button' }, 'Terminar y corregir');
-  btn.addEventListener('click', () => {
-    const sinResp = preguntas.filter(p => !respuestas[p.id]).length;
-    if (sinResp && !confirm(`Te quedan ${sinResp} sin responder. ¿Corrijo igual?`)) return;
-    tarjetas.forEach(t => t.corregir(modo !== 'guiado'));
-    const bien = preguntas.filter(p => respuestas[p.id] === p.correcta).length;
-    const porUnidad = {};
-    for (const p of preguntas) { const k = p.unidad; porUnidad[k] = porUnidad[k] || [0, 0]; porUnidad[k][1]++; if (respuestas[p.id] === p.correcta) porUnidad[k][0]++; }
-    P.registrarExamen(eid, { bien, total: preguntas.length, modo, minutos: Math.round((Date.now() - inicio) / 60000), respuestas });
-    res.innerHTML = '';
-    res.append(h('div', { class: 'hoja' }, h('span', { class: 'nota-final' }, `${bien}/${preguntas.length}`),
-      h('h3', {}, 'Por tema'),
-      h('ul', {}, ...Object.entries(porUnidad).map(([k, [b, t]]) => { const u = D.unidad(k); return h('li', {}, `${u ? u.titulo : k}: ${b} de ${t}`); })),
-      h('p', { class: 'chico suave' }, 'Bajá para ver la corrección de cada pregunta. Las que erraste quedaron en Repaso.')));
-    btn.disabled = true;
-    res.scrollIntoView({ behavior: 'smooth' });
-    marcarNav();
-  });
-  cont.append(h('div', { class: 'acciones' }, btn), res);
+  examen(cont, preguntas, { eid, modo: modo === 'guiado' ? 'guiado' : 'simulacro', accionesFin: () => [h('a', { class: 'boton secundario', href: '#/parciales' }, 'Volver a los parciales')] });
 }
 function historial(eid) {
   const ints = P.intentosExamen(eid);
   if (!ints.length) return h('p', { class: 'suave' }, 'Todavía no lo rendiste.');
-  return h('div', {}, h('h2', {}, 'Tus intentos'), h('ul', {}, ...ints.map(x => h('li', {}, `${new Date(x.fecha).toLocaleString('es-AR')}: ${x.bien}/${x.total} (${x.modo === 'simulacro' ? 'simulacro' : 'guiado'}${x.minutos ? `, ${x.minutos} min` : ''})`))));
+  return h('div', {}, h('h2', {}, 'Tus intentos'), h('ul', { class: 'historial' }, ...ints.map(x => h('li', {}, h('b', {}, `${x.bien}/${x.total}`), ` · ${new Date(x.fecha).toLocaleString('es-AR', { dateStyle: 'short', timeStyle: 'short' })} · ${x.modo === 'guiado' ? 'guiado' : 'simulacro'}${x.minutos ? `, ${x.minutos} min` : ''}`))));
 }
 
 // ---------------- Repaso ----------------
@@ -372,49 +423,73 @@ function vistaRepaso(main) {
   const cont = h('div', { class: 'columna texto' }, h('h1', {}, 'Repaso'),
     h('p', { class: 'bajada' }, 'Acá vuelven las preguntas que erraste. Cada vez que la acertás, tarda más en volver (1, 3, 7 y 16 días). Si la errás, vuelve a empezar. Es la forma más eficiente de fijar lo que te cuesta.'));
   main.append(cont);
-  sesion(cont, pool.slice(0, 30), 'No tenés nada pendiente para hoy. Cuando erres preguntas en la práctica o en un parcial, aparecen acá.');
+  if (pool.length > 30) cont.append(h('p', { class: 'chico suave' }, `Tenés ${pool.length} pendientes: te muestro las 30 más urgentes.`));
+  sesion(cont, pool.slice(0, 30), {
+    vacio: 'No tenés nada pendiente para hoy. Cuando erres preguntas en la práctica o en un parcial, aparecen acá en el momento justo para repasarlas.',
+    origen: 'repaso',
+    accionesFin: () => [h('button', { class: 'boton', type: 'button', onclick: () => navegar() }, 'Seguir repasando'), h('a', { class: 'boton secundario', href: '#/' }, 'Volver al inicio')],
+  });
 }
 
 // ---------------- Ajustes ----------------
 function vistaAjustes(main) {
   const inp = h('input', { type: 'file', accept: 'application/json', hidden: true });
   inp.addEventListener('change', async () => {
-    try { await P.importar(inp.files[0]); alert('Progreso importado.'); navegar(); } catch (e) { alert(e.message); }
+    try { const ok = await P.importar(inp.files[0]); aviso(ok ? 'Progreso importado y guardado.' : 'Importado, pero no se pudo guardar todavía.', ok ? 'ok' : 'error'); navegar(); } catch (e) { aviso(e.message, 'error', 5000); }
   });
   const tema = P.get().ajustes.tema || 'auto';
   const sel = h('select', {}, opt('auto', 'Según el sistema', tema), opt('claro', 'Claro', tema), opt('oscuro', 'Oscuro', tema));
   sel.addEventListener('change', () => { P.get().ajustes.tema = sel.value; aplicarTema(); P.guardar(); });
+  const u = P.usuarioActual();
+  const modo = P.modoEstudio();
+  const servidor = P.modoGuardado() === 'servidor';
   main.append(h('div', { class: 'columna texto' }, h('h1', {}, 'Ajustes'),
-    h('h2', {}, 'Dónde está tu progreso'),
-    h('p', {}, P.modoGuardado() === 'servidor'
-      ? 'Se guarda en el archivo progreso.json, en la carpeta del sistema. Además se hace una copia por día en la carpeta backups. Ese archivo no se sube a GitHub: es solo tuyo.'
-      : 'Abriste la app sin el servidor, así que el progreso se guarda en este navegador. Para guardarlo en un archivo, abrí la app con iniciar.bat.'),
-    h('div', { class: 'acciones' },
-      h('button', { class: 'boton secundario', type: 'button', onclick: () => P.exportar() }, 'Descargar copia del progreso'),
-      h('button', { class: 'boton secundario', type: 'button', onclick: () => inp.click() }, 'Importar progreso'), inp),
-    h('h2', {}, 'Apariencia'), h('label', { class: 'campo' }, 'Tema', sel),
-    h('h2', {}, 'Empezar de cero'),
-    h('p', { class: 'suave' }, 'Borra todas tus respuestas, notas de parciales y unidades aprobadas. Antes descargá una copia por las dudas.'),
-    h('button', { class: 'boton secundario', type: 'button', onclick: () => { if (confirm('¿Borrar todo tu progreso? No se puede deshacer.')) { P.reiniciar(); navegar(); } } }, 'Borrar mi progreso')));
+    h('section', { class: 'hoja ajuste' },
+      h('h2', {}, 'Quién está estudiando'),
+      h('p', {}, `Estás como `, h('b', {}, u.nombre), '. Cada persona tiene su progreso aparte.'),
+      h('div', { class: 'acciones' }, h('a', { class: 'boton secundario', href: '#/bienvenida?cambiar=1' }, 'Cambiar de usuario o crear uno nuevo'))),
+    h('section', { class: 'hoja ajuste' },
+      h('h2', {}, 'Modo de estudio'),
+      h('p', {}, modo === 'expres' ? 'Estás en modo exprés (jugado de tiempo).' : 'Estás en modo completo (con tiempo).', ' El progreso es uno solo para los dos modos.'),
+      h('div', { class: 'acciones' }, h('button', { class: 'boton secundario', type: 'button', onclick: () => { P.setModoEstudio(modo === 'expres' ? 'completo' : 'expres'); aviso(`Listo: modo ${modo === 'expres' ? 'completo' : 'exprés'}.`); navegar(); } }, modo === 'expres' ? 'Pasar a modo completo' : 'Pasar a modo exprés'))),
+    h('section', { class: 'hoja ajuste' },
+      h('h2', {}, 'Tu progreso'),
+      h('p', {}, servidor
+        ? `Se guarda solo cada vez que respondés algo, en el archivo progreso/${u.id}.json de la carpeta del sistema (más una copia por día en backups/). Lo que figura como guardado ya está escrito en el disco: podés cerrar la pestaña o la ventana negra cuando quieras. Ese archivo no se sube a GitHub.`
+        : 'Abriste la app sin el servidor, así que el progreso se guarda en este navegador. Para guardarlo en un archivo, abrí la app con iniciar.bat.'),
+      h('div', { class: 'acciones' },
+        h('button', { class: 'boton', type: 'button', onclick: guardarConAviso }, 'Guardar progreso ahora'),
+        h('button', { class: 'boton secundario', type: 'button', onclick: () => P.exportar() }, 'Descargar copia'),
+        h('button', { class: 'boton secundario', type: 'button', onclick: () => inp.click() }, 'Importar progreso'), inp)),
+    servidor ? h('section', { class: 'hoja ajuste' },
+      h('h2', {}, 'Cerrar la app'),
+      h('p', {}, 'Guarda todo y apaga el servidor (la ventana negra se cierra sola). Es opcional: cerrar la ventana con la X también está bien.'),
+      h('button', { class: 'boton secundario', type: 'button', onclick: cerrarApp }, 'Cerrar la app')) : null,
+    h('section', { class: 'hoja ajuste' }, h('h2', {}, 'Apariencia'), h('label', { class: 'campo' }, 'Tema', sel)),
+    h('section', { class: 'hoja ajuste peligro' },
+      h('h2', {}, 'Empezar de cero'),
+      h('p', { class: 'suave' }, `Borra todas las respuestas, notas de parciales y unidades aprobadas de ${u.nombre}. Antes descargá una copia por las dudas.`),
+      h('button', { class: 'boton secundario', type: 'button', onclick: () => { if (confirm(`¿Borrar todo el progreso de ${u.nombre}? No se puede deshacer.`)) { P.reiniciar(); navegar(); } } }, 'Borrar mi progreso'))));
 }
 function aplicarTema() {
-  const t = (P.get().ajustes || {}).tema || 'auto';
+  const t = ((P.get() || {}).ajustes || {}).tema || 'auto';
   if (t === 'auto') document.documentElement.removeAttribute('data-tema'); else document.documentElement.setAttribute('data-tema', t);
 }
 
 // ---------------- Arranque ----------------
 async function iniciar() {
   try {
-    await Promise.all([P.cargar(), D.cargarTodo()]);
+    await D.cargarTodo();
+    await P.cargar();
   } catch (e) {
     $main().innerHTML = `<p class="vacio">No pude cargar el contenido (${e.message}). Abrí la app con <b>iniciar.bat</b> (o <code>python servidor.py</code>) en vez de abrir el archivo directamente.</p>`;
     return;
   }
+  iniciarMarco();
+  P.alCambiar(aplicarTema);
   aplicarTema();
-  P.alCambiar(pintarGuardado);
-  pintarGuardado();
   window.addEventListener('hashchange', navegar);
   navegar();
 }
 iniciar();
-export { navegar, sesion };
+export { navegar, refrescar };
