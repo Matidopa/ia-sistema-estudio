@@ -1,0 +1,3767 @@
+{
+ "ejercicios": [
+  {
+   "id": "gb-01",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 1: El Primero Mejor",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 1",
+   "enunciado": "Recorra el grafo hasta alcanzar la solución utilizando **El Primero Mejor**, indicando las listas de ABIERTOS y CERRADOS en cada iteración. Los nodos J y K son solución; cuanto menor el valor heurístico, más deseable el nodo.",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "nodos": {
+     "A": {
+      "h": 12
+     },
+     "B": {
+      "h": 7
+     },
+     "C": {
+      "h": 6
+     },
+     "D": {
+      "h": 5
+     },
+     "E": {
+      "h": 3
+     },
+     "F": {
+      "h": 9
+     },
+     "G": {
+      "h": 8
+     },
+     "H": {
+      "h": 1
+     },
+     "I": {
+      "h": 2
+     },
+     "J": {
+      "h": 0,
+      "sol": true
+     },
+     "K": {
+      "h": 0,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B"
+      ],
+      [
+       "C"
+      ]
+     ],
+     "B": [
+      [
+       "D"
+      ],
+      [
+       "E"
+      ]
+     ],
+     "C": [
+      [
+       "F"
+      ],
+      [
+       "G"
+      ]
+     ],
+     "E": [
+      [
+       "H"
+      ],
+      [
+       "I"
+      ]
+     ],
+     "H": [
+      [
+       "J"
+      ]
+     ],
+     "I": [
+      [
+       "K"
+      ]
+     ],
+     "G": [
+      [
+       "K"
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "pm"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "gb-02",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 2: Beam Search n = 3",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 2",
+   "enunciado": "Recorra el grafo utilizando **Beam Search con n = 3**, indicando ABIERTOS y CERRADOS en cada iteración. Los nodos M y K son solución; menor es más deseable.\n\nPregunta: si usáramos **n = 2**, ¿en qué nodo finaliza la búsqueda? ¿Es solución? Si no, ¿cuál fue la deficiencia del método?",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "nodos": {
+     "A": {
+      "h": 14
+     },
+     "B": {
+      "h": 5
+     },
+     "C": {
+      "h": 3
+     },
+     "D": {
+      "h": 7
+     },
+     "E": {
+      "h": 9
+     },
+     "F": {
+      "h": 6
+     },
+     "G": {
+      "h": 8
+     },
+     "H": {
+      "h": 5
+     },
+     "I": {
+      "h": 4
+     },
+     "J": {
+      "h": 2
+     },
+     "K": {
+      "h": 0,
+      "sol": true
+     },
+     "L": {
+      "h": 2
+     },
+     "N": {
+      "h": 3
+     },
+     "M": {
+      "h": 0,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B"
+      ],
+      [
+       "C"
+      ]
+     ],
+     "B": [
+      [
+       "D"
+      ],
+      [
+       "E"
+      ]
+     ],
+     "C": [
+      [
+       "F"
+      ],
+      [
+       "G"
+      ]
+     ],
+     "D": [
+      [
+       "H"
+      ],
+      [
+       "I"
+      ]
+     ],
+     "F": [
+      [
+       "I"
+      ],
+      [
+       "J"
+      ]
+     ],
+     "G": [
+      [
+       "J"
+      ],
+      [
+       "K"
+      ]
+     ],
+     "H": [
+      [
+       "L"
+      ]
+     ],
+     "L": [
+      [
+       "N"
+      ],
+      [
+       "M"
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "beam3",
+    "beam2"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "gb-03",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 3: Escalada Simple y Máxima Pendiente",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 3",
+   "enunciado": "Recorra el grafo hasta alcanzar la solución con **Escalada Simple** y **Escalada por Máxima Pendiente** (de izquierda a derecha) e indique la secuencia de nodos visitados de cada uno. Compare las soluciones. Los nodos I y G son solución; menor es más deseable.",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "nodos": {
+     "A": {
+      "h": 12
+     },
+     "B": {
+      "h": 8
+     },
+     "C": {
+      "h": 7
+     },
+     "D": {
+      "h": 9
+     },
+     "E": {
+      "h": 9
+     },
+     "F": {
+      "h": 6
+     },
+     "G": {
+      "h": 0,
+      "sol": true
+     },
+     "H": {
+      "h": 1
+     },
+     "I": {
+      "h": 0,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B"
+      ],
+      [
+       "C"
+      ]
+     ],
+     "B": [
+      [
+       "D"
+      ]
+     ],
+     "C": [
+      [
+       "E"
+      ],
+      [
+       "F"
+      ]
+     ],
+     "D": [
+      [
+       "G"
+      ],
+      [
+       "H"
+      ]
+     ],
+     "F": [
+      [
+       "H"
+      ],
+      [
+       "I"
+      ]
+     ],
+     "H": [
+      [
+       "I"
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "escalada_izq",
+    "maxpend"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "gb-04",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 4: A*",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 4",
+   "enunciado": "Recorra el grafo hasta la solución con **A\\***, indicando ABIERTOS (con su valor entre paréntesis) y CERRADOS en cada iteración. Los nodos I y K son solución; menor es más deseable; costo 1 por cada transición.",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "nodos": {
+     "A": {
+      "h": 10
+     },
+     "B": {
+      "h": 7
+     },
+     "C": {
+      "h": 6
+     },
+     "D": {
+      "h": 5
+     },
+     "E": {
+      "h": 3
+     },
+     "F": {
+      "h": 8
+     },
+     "G": {
+      "h": 7
+     },
+     "H": {
+      "h": 1
+     },
+     "I": {
+      "h": 0,
+      "sol": true
+     },
+     "K": {
+      "h": 0,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B",
+       1
+      ],
+      [
+       "C",
+       1
+      ]
+     ],
+     "B": [
+      [
+       "D",
+       1
+      ],
+      [
+       "E",
+       1
+      ]
+     ],
+     "C": [
+      [
+       "F",
+       1
+      ],
+      [
+       "G",
+       1
+      ]
+     ],
+     "E": [
+      [
+       "H",
+       1
+      ],
+      [
+       "I",
+       1
+      ]
+     ],
+     "G": [
+      [
+       "I",
+       1
+      ]
+     ],
+     "H": [
+      [
+       "K",
+       1
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "astar"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "gb-05",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 5: A* (resuelto en clase)",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 5 · resuelto en la clase del 08/04/2026",
+   "enunciado": "Recorra el grafo con **A\\***, indicando ABIERTOS (con el valor de f' entre paréntesis) y CERRADOS en cada iteración. Los nodos L y J son solución; menor es más deseable; costo 1 por transición.",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "nodos": {
+     "A": {
+      "h": 12
+     },
+     "B": {
+      "h": 7
+     },
+     "C": {
+      "h": 6
+     },
+     "D": {
+      "h": 3
+     },
+     "E": {
+      "h": 4
+     },
+     "F": {
+      "h": 9
+     },
+     "G": {
+      "h": 10
+     },
+     "H": {
+      "h": 8
+     },
+     "I": {
+      "h": 1
+     },
+     "J": {
+      "h": 0,
+      "sol": true
+     },
+     "K": {
+      "h": 2
+     },
+     "L": {
+      "h": 0,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B",
+       1
+      ],
+      [
+       "C",
+       1
+      ]
+     ],
+     "B": [
+      [
+       "D",
+       1
+      ],
+      [
+       "E",
+       1
+      ]
+     ],
+     "C": [
+      [
+       "F",
+       1
+      ],
+      [
+       "G",
+       1
+      ],
+      [
+       "H",
+       1
+      ]
+     ],
+     "E": [
+      [
+       "I",
+       1
+      ],
+      [
+       "J",
+       1
+      ]
+     ],
+     "G": [
+      [
+       "J",
+       1
+      ]
+     ],
+     "H": [
+      [
+       "K",
+       1
+      ]
+     ],
+     "I": [
+      [
+       "L",
+       1
+      ]
+     ],
+     "K": [
+      [
+       "L",
+       1
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "astar"
+   ],
+   "oficial": "Resolución de la clase (A*): it.1 A → C(6+1), B(7+1) · it.2 C → B(8), H(10), F(11), G(12) · it.3 B → D(5), E(6), H(10), F(11), G(12) · it.4 D → E(6), H(10), F(11), G(12) · it.5 E → J(3), I(4), H(10), F(11), G(12) · it.6 J es solución → abiertos I(4), H(10), F(11), G(12).",
+   "preguntas": [],
+   "fuente": "oficial"
+  },
+  {
+   "id": "gb-06",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 6: Primero en Amplitud y en Profundidad",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 6",
+   "enunciado": "Los nodos B y E son los únicos nodos solución y A es la raíz. Indique la cantidad y secuencia de nodos visitados con **Primero en Amplitud**. Si la mejor solución es la que se alcanza en menos pasos, ¿qué nodo elige el algoritmo? ¿Sería el mismo nodo con **Primero en Profundidad**? (Izquierda a derecha.)",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "sin_h": true,
+    "nodos": {
+     "A": {
+      "h": null
+     },
+     "D": {
+      "h": null
+     },
+     "F": {
+      "h": null
+     },
+     "G": {
+      "h": null
+     },
+     "H": {
+      "h": null
+     },
+     "J": {
+      "h": null
+     },
+     "C": {
+      "h": null
+     },
+     "E": {
+      "h": null,
+      "sol": true
+     },
+     "P": {
+      "h": null
+     },
+     "Q": {
+      "h": null
+     },
+     "K": {
+      "h": null
+     },
+     "Z": {
+      "h": null
+     },
+     "W": {
+      "h": null
+     },
+     "B": {
+      "h": null,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "D"
+      ],
+      [
+       "F"
+      ],
+      [
+       "G"
+      ]
+     ],
+     "D": [
+      [
+       "H"
+      ],
+      [
+       "J"
+      ]
+     ],
+     "F": [
+      [
+       "C"
+      ],
+      [
+       "E"
+      ]
+     ],
+     "H": [
+      [
+       "P"
+      ],
+      [
+       "Q"
+      ]
+     ],
+     "J": [
+      [
+       "K"
+      ]
+     ],
+     "C": [
+      [
+       "Z"
+      ],
+      [
+       "W"
+      ]
+     ],
+     "K": [
+      [
+       "B"
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "amplitud_izq",
+    "profundidad_izq"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "gb-07",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 7: A* y comparaciones",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 7",
+   "enunciado": "Recorra el grafo con **A\\*** (f' entre paréntesis), de izquierda a derecha. Soluciones M y O; menor es más deseable; costo 1 por transición.\n\n1) Con **Escalada por Máxima Pendiente**, ¿a qué solución se llega? Si no llega, ¿cuál fue la deficiencia? ¿Y con **Escalada Simple**?\n2) ¿La lista final de cerrados de **El Primero Mejor** es igual al recorrido de A*? ¿Por qué?",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "nodos": {
+     "A": {
+      "h": 50
+     },
+     "B": {
+      "h": 30
+     },
+     "C": {
+      "h": 34
+     },
+     "D": {
+      "h": 29
+     },
+     "E": {
+      "h": 23
+     },
+     "F": {
+      "h": 19
+     },
+     "G": {
+      "h": 20
+     },
+     "H": {
+      "h": 31
+     },
+     "I": {
+      "h": 2
+     },
+     "J": {
+      "h": 8
+     },
+     "K": {
+      "h": 10
+     },
+     "L": {
+      "h": 7
+     },
+     "M": {
+      "h": 0,
+      "sol": true
+     },
+     "N": {
+      "h": 5
+     },
+     "O": {
+      "h": 0,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B",
+       1
+      ],
+      [
+       "C",
+       1
+      ],
+      [
+       "D",
+       1
+      ]
+     ],
+     "B": [
+      [
+       "E",
+       1
+      ],
+      [
+       "F",
+       1
+      ]
+     ],
+     "C": [
+      [
+       "G",
+       1
+      ]
+     ],
+     "D": [
+      [
+       "H",
+       1
+      ]
+     ],
+     "E": [
+      [
+       "I",
+       1
+      ],
+      [
+       "J",
+       1
+      ]
+     ],
+     "F": [
+      [
+       "J",
+       1
+      ]
+     ],
+     "G": [
+      [
+       "K",
+       1
+      ],
+      [
+       "L",
+       1
+      ]
+     ],
+     "J": [
+      [
+       "M",
+       1
+      ]
+     ],
+     "L": [
+      [
+       "N",
+       1
+      ],
+      [
+       "O",
+       1
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "astar",
+    "maxpend",
+    "escalada_izq",
+    "pm"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "gb-08",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 8: El Primero Mejor (mayor es mejor)",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 8",
+   "enunciado": "Recorra el árbol con **El Primero Mejor** indicando ABIERTOS y CERRADOS. Los nodos L y W son solución; **cuanto mayor el valor heurístico, más deseable** (∞ es el máximo).\n\nPregunta: si usáramos **Beam Search con n = 2**, ¿se llega a la misma solución?",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "mayor",
+    "nodos": {
+     "A": {
+      "h": 4
+     },
+     "D": {
+      "h": 3
+     },
+     "F": {
+      "h": 6
+     },
+     "G": {
+      "h": 1
+     },
+     "H": {
+      "h": 3
+     },
+     "Y": {
+      "h": 4
+     },
+     "J": {
+      "h": 5
+     },
+     "C": {
+      "h": 7
+     },
+     "E": {
+      "h": 9
+     },
+     "B": {
+      "h": 1
+     },
+     "K": {
+      "h": 6
+     },
+     "Q": {
+      "h": 3
+     },
+     "P": {
+      "h": 1
+     },
+     "Z": {
+      "h": 4
+     },
+     "W": {
+      "h": 1000000000.0,
+      "sol": true
+     },
+     "M": {
+      "h": 8
+     },
+     "L": {
+      "h": 1000000000.0,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "D"
+      ],
+      [
+       "F"
+      ],
+      [
+       "G"
+      ]
+     ],
+     "D": [
+      [
+       "H"
+      ],
+      [
+       "Y"
+      ]
+     ],
+     "F": [
+      [
+       "J"
+      ],
+      [
+       "C"
+      ],
+      [
+       "E"
+      ]
+     ],
+     "Y": [
+      [
+       "B"
+      ]
+     ],
+     "C": [
+      [
+       "K"
+      ],
+      [
+       "Q"
+      ],
+      [
+       "P"
+      ]
+     ],
+     "E": [
+      [
+       "Z"
+      ],
+      [
+       "W"
+      ]
+     ],
+     "K": [
+      [
+       "M"
+      ],
+      [
+       "L"
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "pm",
+    "beam2"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "gb-09",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 9: árbol a partir de reglas",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 9",
+   "enunciado": "Arme el árbol a partir de las reglas A→B, A→C, A→D, B→E, B→F, D→G, D→H, D→I, H→J, H→K, I→L, I→M, L→N, N→O y las heurísticas dadas, y recórralo con **Escalada Simple** y **Escalada por Máxima Pendiente** (de izquierda a derecha). J y O son solución; la heurística desciende a medida que nos acercamos a la solución.",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "nodos": {
+     "A": {
+      "h": 10
+     },
+     "B": {
+      "h": 9
+     },
+     "C": {
+      "h": 7
+     },
+     "D": {
+      "h": 8
+     },
+     "E": {
+      "h": 8
+     },
+     "F": {
+      "h": 7
+     },
+     "G": {
+      "h": 8
+     },
+     "H": {
+      "h": 7
+     },
+     "I": {
+      "h": 6
+     },
+     "J": {
+      "h": 0,
+      "sol": true
+     },
+     "K": {
+      "h": 5
+     },
+     "L": {
+      "h": 4
+     },
+     "M": {
+      "h": 3
+     },
+     "N": {
+      "h": 1
+     },
+     "O": {
+      "h": 0,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B"
+      ],
+      [
+       "C"
+      ],
+      [
+       "D"
+      ]
+     ],
+     "B": [
+      [
+       "E"
+      ],
+      [
+       "F"
+      ]
+     ],
+     "D": [
+      [
+       "G"
+      ],
+      [
+       "H"
+      ],
+      [
+       "I"
+      ]
+     ],
+     "H": [
+      [
+       "J"
+      ],
+      [
+       "K"
+      ]
+     ],
+     "I": [
+      [
+       "L"
+      ],
+      [
+       "M"
+      ]
+     ],
+     "L": [
+      [
+       "N"
+      ]
+     ],
+     "N": [
+      [
+       "O"
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "escalada_izq",
+    "maxpend"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "gb-10a",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 10 (globalizador, grafo 1)",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 10",
+   "enunciado": "Recorra el grafo aplicando **todos los métodos de búsqueda** y compare su eficacia y eficiencia. Mayor es más deseable; I y M son solución; el costo de transición está señalado en el grafo.",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "mayor",
+    "nodos": {
+     "A": {
+      "h": 0
+     },
+     "B": {
+      "h": 80
+     },
+     "C": {
+      "h": 90
+     },
+     "D": {
+      "h": 100
+     },
+     "E": {
+      "h": 140
+     },
+     "F": {
+      "h": 250
+     },
+     "H": {
+      "h": 150
+     },
+     "K": {
+      "h": 185
+     },
+     "L": {
+      "h": 80
+     },
+     "G": {
+      "h": 200
+     },
+     "I": {
+      "h": 270,
+      "sol": true
+     },
+     "J": {
+      "h": 230
+     },
+     "M": {
+      "h": 200,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B",
+       30
+      ],
+      [
+       "C",
+       20
+      ],
+      [
+       "D",
+       10
+      ]
+     ],
+     "B": [
+      [
+       "E",
+       10
+      ],
+      [
+       "F",
+       10
+      ],
+      [
+       "H",
+       10
+      ]
+     ],
+     "C": [
+      [
+       "H",
+       40
+      ],
+      [
+       "K",
+       40
+      ]
+     ],
+     "D": [
+      [
+       "L",
+       30
+      ]
+     ],
+     "E": [
+      [
+       "G",
+       30
+      ]
+     ],
+     "H": [
+      [
+       "I",
+       10
+      ],
+      [
+       "J",
+       20
+      ]
+     ],
+     "K": [
+      [
+       "M",
+       60
+      ]
+     ],
+     "L": [
+      [
+       "M",
+       50
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "amplitud_izq",
+    "profundidad_izq",
+    "escalada_izq",
+    "escalada_der",
+    "maxpend",
+    "pm",
+    "beam1",
+    "beam2",
+    "astar"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "gb-10b",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Ejercicio 10 (globalizador, grafo 2)",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio N° 10",
+   "enunciado": "Recorra el grafo aplicando **todos los métodos de búsqueda** y compare. Menor es más deseable; P y M son solución; el costo está señalado en el grafo.",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "nodos": {
+     "A": {
+      "h": 500
+     },
+     "B": {
+      "h": 350
+     },
+     "C": {
+      "h": 300
+     },
+     "D": {
+      "h": 400
+     },
+     "G": {
+      "h": 340
+     },
+     "N": {
+      "h": 290
+     },
+     "E": {
+      "h": 250
+     },
+     "J": {
+      "h": 300
+     },
+     "L": {
+      "h": 350
+     },
+     "F": {
+      "h": 260
+     },
+     "I": {
+      "h": 230
+     },
+     "M": {
+      "h": 200,
+      "sol": true
+     },
+     "H": {
+      "h": 250
+     },
+     "P": {
+      "h": 100,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B",
+       20
+      ],
+      [
+       "C",
+       10
+      ],
+      [
+       "D",
+       40
+      ]
+     ],
+     "B": [
+      [
+       "G",
+       60
+      ],
+      [
+       "F",
+       130
+      ]
+     ],
+     "C": [
+      [
+       "N",
+       100
+      ],
+      [
+       "E",
+       130
+      ]
+     ],
+     "D": [
+      [
+       "J",
+       100
+      ],
+      [
+       "L",
+       20
+      ]
+     ],
+     "N": [
+      [
+       "F",
+       30
+      ]
+     ],
+     "E": [
+      [
+       "I",
+       50
+      ]
+     ],
+     "L": [
+      [
+       "M",
+       30
+      ]
+     ],
+     "F": [
+      [
+       "H",
+       40
+      ]
+     ],
+     "I": [
+      [
+       "P",
+       30
+      ]
+     ],
+     "H": [
+      [
+       "P",
+       30
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "amplitud_izq",
+    "profundidad_izq",
+    "escalada_izq",
+    "escalada_der",
+    "maxpend",
+    "pm",
+    "beam1",
+    "beam2",
+    "astar"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "gb-r1",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Resuelto 1: El Primero Mejor",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio Resuelto N° 1",
+   "enunciado": "Recorra el grafo con **El Primero Mejor**. Menor es más deseable; M y K son solución.",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "nodos": {
+     "A": {
+      "h": 14
+     },
+     "B": {
+      "h": 5
+     },
+     "C": {
+      "h": 3
+     },
+     "D": {
+      "h": 7
+     },
+     "E": {
+      "h": 9
+     },
+     "F": {
+      "h": 6
+     },
+     "G": {
+      "h": 8
+     },
+     "H": {
+      "h": 5
+     },
+     "I": {
+      "h": 1
+     },
+     "J": {
+      "h": 2
+     },
+     "K": {
+      "h": 0,
+      "sol": true
+     },
+     "L": {
+      "h": 2
+     },
+     "N": {
+      "h": 3
+     },
+     "M": {
+      "h": 0,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B"
+      ],
+      [
+       "C"
+      ]
+     ],
+     "B": [
+      [
+       "D"
+      ],
+      [
+       "E"
+      ]
+     ],
+     "C": [
+      [
+       "F"
+      ],
+      [
+       "G"
+      ]
+     ],
+     "D": [
+      [
+       "H"
+      ],
+      [
+       "I"
+      ]
+     ],
+     "F": [
+      [
+       "I"
+      ],
+      [
+       "J"
+      ]
+     ],
+     "G": [
+      [
+       "J"
+      ],
+      [
+       "K"
+      ]
+     ],
+     "I": [
+      [
+       "K"
+      ]
+     ],
+     "H": [
+      [
+       "L"
+      ]
+     ],
+     "L": [
+      [
+       "N"
+      ],
+      [
+       "M"
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "pm"
+   ],
+   "oficial": "Resolución oficial: it.1 A → C(3), B(5) · it.2 C → B(5), F(6), G(8) · it.3 B → F(6), D(7), G(8), E(9) · it.4 F → I(1), J(2), D(7), G(8), E(9) · it.5 I → K(0), J(2), D(7), G(8), E(9) · it.6 K es solución → abiertos J(2), D(7), G(8), E(9); cerrados A, C, B, F, I, K.",
+   "preguntas": [],
+   "fuente": "oficial"
+  },
+  {
+   "id": "gb-r2",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Resuelto 2: A* con empate",
+   "origen": "Guía Práctica de Métodos de Búsqueda, Ejercicio Resuelto N° 2",
+   "enunciado": "Recorra el grafo con **A\\***. M y K son solución; costo 1 por transición; menor es más deseable. Si hay más de un camino para alcanzar la solución, indique el mejor.",
+   "arbol": {
+    "raiz": "A",
+    "mejor": "menor",
+    "nodos": {
+     "A": {
+      "h": 10
+     },
+     "B": {
+      "h": 4
+     },
+     "C": {
+      "h": 3
+     },
+     "D": {
+      "h": 7
+     },
+     "E": {
+      "h": 8
+     },
+     "F": {
+      "h": 6
+     },
+     "G": {
+      "h": 7
+     },
+     "H": {
+      "h": 4
+     },
+     "I": {
+      "h": 8
+     },
+     "N": {
+      "h": 3
+     },
+     "K": {
+      "h": 0,
+      "sol": true
+     },
+     "L": {
+      "h": 1
+     },
+     "M": {
+      "h": 0,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "A": [
+      [
+       "B",
+       1
+      ],
+      [
+       "C",
+       1
+      ]
+     ],
+     "B": [
+      [
+       "D",
+       1
+      ],
+      [
+       "E",
+       1
+      ]
+     ],
+     "C": [
+      [
+       "F",
+       1
+      ],
+      [
+       "G",
+       1
+      ]
+     ],
+     "D": [
+      [
+       "H",
+       1
+      ],
+      [
+       "I",
+       1
+      ]
+     ],
+     "F": [
+      [
+       "I",
+       1
+      ],
+      [
+       "N",
+       1
+      ]
+     ],
+     "G": [
+      [
+       "N",
+       1
+      ],
+      [
+       "K",
+       1
+      ]
+     ],
+     "H": [
+      [
+       "L",
+       1
+      ]
+     ],
+     "L": [
+      [
+       "M",
+       1
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "astar"
+   ],
+   "oficial": "Resolución oficial: hasta la iteración 5 quedan abiertos G(7+2), E(8+2), I(8+3) y D(7+2). Como G y D empatan, la cátedra prueba los dos caminos: por G se llega a K en la iteración 7 (cerrados A, C, B, F, N, G, K); por D se llega a M en la iteración 9 (A, C, B, F, N, D, H, L, M). El mejor camino es el que elige G.",
+   "preguntas": [],
+   "fuente": "oficial"
+  },
+  {
+   "id": "rec-2025-2",
+   "tipo": "busqueda",
+   "unidad": "u5-busqueda",
+   "titulo": "Recuperatorio 2025, Ejercicio 2: A* y Máxima Pendiente",
+   "origen": "Recuperatorio Miércoles 2025 (foto del examen), Ejercicio N° 2",
+   "enunciado": "Recorra el grafo hasta alcanzar la solución con **A\\*** y con **Escalada por Máxima Pendiente**, desarrollando paso a paso cada método con sus listas de nodos. B y C son solución; el costo está señalado en el grafo; menor es más deseable.",
+   "arbol": {
+    "raiz": "L",
+    "mejor": "menor",
+    "nodos": {
+     "L": {
+      "h": 350
+     },
+     "H": {
+      "h": 210
+     },
+     "I": {
+      "h": 220
+     },
+     "J": {
+      "h": 240
+     },
+     "D": {
+      "h": 160
+     },
+     "E": {
+      "h": 190
+     },
+     "F": {
+      "h": 260
+     },
+     "G": {
+      "h": 230
+     },
+     "A": {
+      "h": 40
+     },
+     "B": {
+      "h": 190,
+      "sol": true
+     },
+     "C": {
+      "h": 60,
+      "sol": true
+     }
+    },
+    "hijos": {
+     "L": [
+      [
+       "H",
+       10
+      ],
+      [
+       "I",
+       10
+      ],
+      [
+       "J",
+       10
+      ]
+     ],
+     "H": [
+      [
+       "D",
+       20
+      ],
+      [
+       "E",
+       5
+      ]
+     ],
+     "I": [
+      [
+       "E",
+       20
+      ],
+      [
+       "F",
+       10
+      ]
+     ],
+     "J": [
+      [
+       "G",
+       10
+      ]
+     ],
+     "D": [
+      [
+       "A",
+       10
+      ],
+      [
+       "B",
+       40
+      ]
+     ],
+     "E": [
+      [
+       "C",
+       30
+      ]
+     ],
+     "G": [
+      [
+       "C",
+       40
+      ]
+     ]
+    }
+   },
+   "consignas": [
+    "astar",
+    "maxpend"
+   ],
+   "oficial": null,
+   "preguntas": [],
+   "fuente": "calculada"
+  },
+  {
+   "id": "ge-01",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 1: Tipos de Hormiga",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 1 · resuelto en la clase del 06/05/2026",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 4,
+   "grid": [
+    [
+     1,
+     4,
+     1,
+     2
+    ],
+    [
+     4,
+     1,
+     3,
+     1
+    ],
+    [
+     2,
+     3,
+     2,
+     4
+    ],
+    [
+     3,
+     2,
+     2,
+     3
+    ]
+   ],
+   "elementos": [
+    "Hormiga Gemella",
+    "Hormiga Argentina",
+    "Hormiga Común",
+    "Hormiga Patagónica"
+   ],
+   "caracteristicas": [
+    [
+     "Forma de las Alas",
+     "redondeada",
+     "ovalada"
+    ],
+    [
+     "Comportamiento",
+     "violento",
+     "no violento"
+    ],
+    [
+     "Tamaño",
+     "grande",
+     "pequeño"
+    ],
+    [
+     "Aspecto de las Alas",
+     "lisas",
+     "rayadas"
+    ]
+   ],
+   "texto": "Todas aquellas hormigas cuyo comportamiento es violento, poseen un tamaño grande. Mientras que las hormigas con comportamiento no violento, poseen un tamaño pequeño.",
+   "relaciones": [
+    {
+     "ci": "C2",
+     "cj": "C3",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "Y"
+      ]
+     ],
+     "explicacion": "violento → grande y no violento → pequeño."
+    }
+   ],
+   "fuente": "oficial",
+   "nota_fuente": "Formalización y grupos verificados contra la resolución de la clase."
+  },
+  {
+   "id": "ge-02",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 2: Tipos de Planeta",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 2",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 4,
+   "grid": [
+    [
+     4,
+     3,
+     1,
+     1
+    ],
+    [
+     1,
+     2,
+     4,
+     3
+    ],
+    [
+     1,
+     1,
+     2,
+     4
+    ],
+    [
+     3,
+     4,
+     2,
+     1
+    ]
+   ],
+   "elementos": [
+    "Mercurio",
+    "Venus",
+    "Júpiter",
+    "Urano"
+   ],
+   "caracteristicas": [
+    [
+     "Composición Elementos",
+     "rocoso",
+     "gaseoso"
+    ],
+    [
+     "Tamaño",
+     "grande",
+     "pequeño"
+    ],
+    [
+     "Período Sidérico",
+     "poco tiempo",
+     "mucho tiempo"
+    ],
+    [
+     "Temperatura promedio",
+     "muy calurosa",
+     "muy fría"
+    ]
+   ],
+   "texto": "Todos los planetas rocosos son de tamaño pequeño, mientras que los planetas gaseosos son de tamaño grande. Los planetas con mayor temperatura promedio tienen menor período sidérico.",
+   "relaciones": [
+    {
+     "ci": "C1",
+     "cj": "C2",
+     "flechas": [
+      [
+       "A",
+       "Y"
+      ],
+      [
+       "B",
+       "X"
+      ]
+     ],
+     "explicacion": "rocoso → pequeño (A→Y) y gaseoso → grande (B→X): las dos flechas son cruzadas."
+    },
+    {
+     "ci": "C3",
+     "cj": "C4",
+     "flechas": [
+      [
+       "X",
+       "A"
+      ]
+     ],
+     "explicacion": "muy calurosa (X de C4) → poco tiempo (A de C3): una sola flecha derecha."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "Formalización calculada con el motor (verificado contra las resoluciones oficiales). Relaciones propuestas leyendo el texto con los patrones de la cátedra."
+  },
+  {
+   "id": "ge-03",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 3: Tipos de Arroz",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 3",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,3], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 3,
+   "grid": [
+    [
+     1,
+     2,
+     1,
+     1
+    ],
+    [
+     2,
+     1,
+     2,
+     3
+    ],
+    [
+     3,
+     3,
+     3,
+     2
+    ],
+    [
+     2,
+     2,
+     1,
+     3
+    ]
+   ],
+   "elementos": [
+    "Variedad Carolina",
+    "Variedad Integral",
+    "Variedad Silvestre",
+    "Variedad Vaporizado"
+   ],
+   "caracteristicas": [
+    [
+     "Tipo de Cocción",
+     "mucho tiempo",
+     "poco tiempo"
+    ],
+    [
+     "Tipo de Grano",
+     "grano largo",
+     "grano corto"
+    ],
+    [
+     "Color del Grano",
+     "color oscuro",
+     "color claro"
+    ],
+    [
+     "Cantidad de Almidón",
+     "mucha",
+     "poca"
+    ]
+   ],
+   "texto": "Todas aquellas variedades de arroces que necesitan mucho tiempo de cocción, poseen granos de color oscuro, dado que este tipo de grano es muy duro. Mientras que todas aquellas variedades de arroces que se cocinan en poco tiempo poseen granos claros. Los granos claros son siempre blandos. Granos largos y cortos poseen mucho almidón.",
+   "relaciones": [
+    {
+     "ci": "C1",
+     "cj": "C3",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "Y"
+      ]
+     ],
+     "explicacion": "mucho tiempo → oscuro y poco tiempo → claro."
+    },
+    {
+     "ci": "C2",
+     "cj": "C4",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "X"
+      ]
+     ],
+     "explicacion": "grano largo → mucho almidón y grano corto → mucho almidón: dos flechas llegan al mismo polo."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "Formalización calculada con el motor (verificado contra las resoluciones oficiales). Relaciones propuestas leyendo el texto con los patrones de la cátedra."
+  },
+  {
+   "id": "ge-04",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 4: Tipos de Carreras Universitarias",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 4",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 4,
+   "grid": [
+    [
+     4,
+     4,
+     3,
+     1
+    ],
+    [
+     4,
+     4,
+     4,
+     4
+    ],
+    [
+     3,
+     4,
+     2,
+     3
+    ],
+    [
+     4,
+     4,
+     2,
+     2
+    ]
+   ],
+   "elementos": [
+    "Ing. en Sistemas de Inf. (UTN)",
+    "Abogacía (UP)",
+    "Psicopedagogía (Terciario Privado)",
+    "Ciencias Informáticas (UBA)"
+   ],
+   "caracteristicas": [
+    [
+     "Cantidad de Materias",
+     "muchas",
+     "pocas"
+    ],
+    [
+     "Horas de Cursada por Semana",
+     "pocas",
+     "muchas"
+    ],
+    [
+     "Alumnos que inician 1° año",
+     "pocos",
+     "muchos"
+    ],
+    [
+     "Alumnos que terminan la carrera",
+     "pocos",
+     "muchos"
+    ]
+   ],
+   "texto": "No importa cuantos alumnos inician las carreras, pocos son los que las terminan. Si son muchas las materias, pocos serán los alumnos que terminen la carrera, en cambio, cuando la cantidad de materias es menor, más son los alumnos que terminan y se reciben.",
+   "relaciones": [
+    {
+     "ci": "C1",
+     "cj": "C4",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "Y"
+      ]
+     ],
+     "explicacion": "muchas materias → pocos terminan; menos materias → más terminan."
+    },
+    {
+     "ci": "C3",
+     "cj": "C4",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "X"
+      ]
+     ],
+     "explicacion": "empiecen pocos o muchos, terminan pocos: dos flechas al mismo polo."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "Formalización calculada con el motor (verificado contra las resoluciones oficiales). Relaciones propuestas leyendo el texto con los patrones de la cátedra."
+  },
+  {
+   "id": "ge-05",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 5: Tipos de Papeles",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 5",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 4,
+   "grid": [
+    [
+     3,
+     2,
+     4,
+     1
+    ],
+    [
+     1,
+     4,
+     4,
+     2
+    ],
+    [
+     4,
+     3,
+     4,
+     1
+    ],
+    [
+     4,
+     2,
+     4,
+     1
+    ]
+   ],
+   "elementos": [
+    "Papel Corrugado",
+    "Papel de Impresión y Escritura",
+    "Cartulinas",
+    "Papel para Periódico"
+   ],
+   "caracteristicas": [
+    [
+     "Rigidez",
+     "menor",
+     "mayor"
+    ],
+    [
+     "Blancura",
+     "menor",
+     "mayor"
+    ],
+    [
+     "Estabilidad Dimensional",
+     "poca",
+     "mucha"
+    ],
+    [
+     "Gramaje",
+     "poco",
+     "mucho"
+    ]
+   ],
+   "texto": "La rigidez y la estabilidad dimensional en el caso de los tipos de papel están íntimamente relacionadas ya que, cuanto menor rigidez tiene el papel menor será su estabilidad dimensional y cuánto mayor rigidez, mayor su estabilidad dimensional. Por otro lado si pensamos a partir de la estabilidad dimensional ocurre lo mismo, a mayor estabilidad dimensional, mayor rigidez y a menor estabilidad dimensional menor rigidez. Asimismo, la rigidez y el gramaje en el caso de los tipos de papel están íntimamente relacionados ya que, cuanto menor rigidez tiene el papel menor será su gramaje y cuánto mayor rigidez, mayor su gramaje. Por otro lado si pensamos a partir del gramaje ocurre lo mismo, a mayor gramaje, mayor rigidez y a menor gramaje menor rigidez.",
+   "relaciones": [
+    {
+     "ci": "C1",
+     "cj": "C3",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "Y"
+      ],
+      [
+       "X",
+       "A"
+      ],
+      [
+       "Y",
+       "B"
+      ]
+     ],
+     "explicacion": "la relación vale de rigidez a estabilidad y de estabilidad a rigidez."
+    },
+    {
+     "ci": "C1",
+     "cj": "C4",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "Y"
+      ],
+      [
+       "X",
+       "A"
+      ],
+      [
+       "Y",
+       "B"
+      ]
+     ],
+     "explicacion": "la relación vale de rigidez a gramaje y de gramaje a rigidez."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "Formalización calculada con el motor (verificado contra las resoluciones oficiales). Relaciones propuestas leyendo el texto con los patrones de la cátedra."
+  },
+  {
+   "id": "ge-06",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 6: Tipo de Quesos",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 6",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 4,
+   "grid": [
+    [
+     1,
+     4,
+     3
+    ],
+    [
+     4,
+     1,
+     2
+    ],
+    [
+     1,
+     4,
+     3
+    ],
+    [
+     1,
+     1,
+     3
+    ],
+    [
+     4,
+     4,
+     1
+    ]
+   ],
+   "elementos": [
+    "Queso Fresco",
+    "Queso Curado",
+    "Queso Semicurado"
+   ],
+   "caracteristicas": [
+    [
+     "Energía",
+     "mayor cantidad",
+     "menor cantidad"
+    ],
+    [
+     "Proteínas",
+     "mayor cantidad",
+     "menor cantidad"
+    ],
+    [
+     "Glúcidos",
+     "mayor cantidad",
+     "menor cantidad"
+    ],
+    [
+     "Lípidos",
+     "mayor cantidad",
+     "menor cantidad"
+    ],
+    [
+     "Vitaminas",
+     "mayor cantidad",
+     "menor cantidad"
+    ]
+   ],
+   "texto": "Analizando muestras de los distintos tipos de quesos que se tienen se ha detectado que, a mayor cantidad de energía menor es la cantidad de glúcidos, a mayor cantidad de energía mayor cantidad de proteínas y a menor cantidad de proteínas mayor cantidad de glúcidos. Ese mismo análisis mostró con poca claridad la relación entre los lípidos y las vitaminas, ya que no importa la cantidad de lípidos encontrados en la muestra todos los quesos tienen una gran cantidad de vitaminas. Es por eso que son tan recomendados en todo tipo de dietas. Finalmente se verificó que aquellos quesos que tienen mayor cantidad de glúcidos en su composición también tienen mayor cantidad de vitaminas.",
+   "relaciones": [
+    {
+     "ci": "C1",
+     "cj": "C2",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ]
+     ],
+     "explicacion": "mayor energía → mayor proteínas: una flecha derecha."
+    },
+    {
+     "ci": "C1",
+     "cj": "C3",
+     "flechas": [
+      [
+       "A",
+       "Y"
+      ]
+     ],
+     "explicacion": "mayor energía → menor glúcidos: una flecha cruzada."
+    },
+    {
+     "ci": "C2",
+     "cj": "C3",
+     "flechas": [
+      [
+       "B",
+       "X"
+      ]
+     ],
+     "explicacion": "menor proteínas → mayor glúcidos: una flecha cruzada."
+    },
+    {
+     "ci": "C4",
+     "cj": "C5",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "X"
+      ]
+     ],
+     "explicacion": "con más o menos lípidos, todos tienen muchas vitaminas: dos flechas al mismo polo."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "Formalización calculada con el motor (verificado contra las resoluciones oficiales). Relaciones propuestas leyendo el texto con los patrones de la cátedra."
+  },
+  {
+   "id": "ge-07",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 7: Tipos de Yogur",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 7",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 4,
+   "grid": [
+    [
+     3,
+     4,
+     1
+    ],
+    [
+     4,
+     3,
+     4
+    ],
+    [
+     3,
+     4,
+     3
+    ],
+    [
+     2,
+     4,
+     2
+    ],
+    [
+     4,
+     3,
+     3
+    ]
+   ],
+   "elementos": [
+    "Yogur Natural",
+    "Yogur Con Frutas",
+    "Yogur Desnatado"
+   ],
+   "caracteristicas": [
+    [
+     "Energía",
+     "mayor cantidad",
+     "menor cantidad"
+    ],
+    [
+     "Proteínas",
+     "mayor cantidad",
+     "menor cantidad"
+    ],
+    [
+     "Glúcidos",
+     "mayor cantidad",
+     "menor cantidad"
+    ],
+    [
+     "Lípidos",
+     "mayor cantidad",
+     "menor cantidad"
+    ],
+    [
+     "Vitaminas",
+     "mayor cantidad",
+     "menor cantidad"
+    ]
+   ],
+   "texto": "Los yogures revisados revelan que, a menor cantidad de proteínas, menor es la cantidad de energías y de glúcidos que éstos aportan. Varios análisis realizados sobre diferentes muestras de yogur mostraron con poca claridad la relación entre los lípidos y las vitaminas, ya que no importa la cantidad de lípidos encontrados en la muestra todos los yogures tienen una gran cantidad de vitaminas. Es por eso que son tan recomendados en todo tipo de dietas. Todos los yogures han mostrado tener una gran cantidad de proteínas y por lo tanto ser una fuente importante de vitaminas.",
+   "relaciones": [
+    {
+     "ci": "C2",
+     "cj": "C5",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ]
+     ],
+     "explicacion": "mucha proteína → muchas vitaminas: una flecha derecha."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "Formalización calculada con el motor (verificado contra las resoluciones oficiales). Relaciones propuestas leyendo el texto con los patrones de la cátedra."
+  },
+  {
+   "id": "ge-08",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 8: Tipos de Naves Imperiales",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 8",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 4,
+   "grid": [
+    [
+     2,
+     3,
+     4,
+     4
+    ],
+    [
+     1,
+     2,
+     1,
+     3
+    ],
+    [
+     2,
+     3,
+     2,
+     3
+    ],
+    [
+     1,
+     1,
+     3,
+     1
+    ]
+   ],
+   "elementos": [
+    "Fragata",
+    "Cañonera",
+    "Crucero de Batalla",
+    "Destructor Estelar"
+   ],
+   "caracteristicas": [
+    [
+     "Tamaño",
+     "pequeño",
+     "grande"
+    ],
+    [
+     "Tipo de Funciones",
+     "traslado",
+     "ataque"
+    ],
+    [
+     "Cantidad de Armamento",
+     "poco",
+     "mucho"
+    ],
+    [
+     "Velocidad",
+     "poca velocidad",
+     "gran velocidad"
+    ]
+   ],
+   "texto": "Las naves variaban en tamaño, existían naves de tamaño gigantesco que dado su tamaño estaban fuertemente armadas, con una gran cantidad de armamento (…). Estas grandes naves cumplían con la función de ataque y eran grandes destructores. También existían otras de menor tamaño que a pesar de su tamaño también estaban fuertemente armadas. Estas naves que eran pequeñas cumplían con la función de traslado de tropas de ataque. Todas las naves contaban con sistemas de propulsión. Las grandes naves eran impulsadas por un hiperpropulsor (…) pudiendo atravesar grandes distancias en pocos minutos u horas. Las naves pequeñas no tenían la capacidad de tener un hiperpropulsor, por falta de espacio por lo que viajaban a poca velocidad (…).",
+   "relaciones": [
+    {
+     "ci": "C1",
+     "cj": "C2",
+     "flechas": [
+      [
+       "B",
+       "Y"
+      ],
+      [
+       "A",
+       "X"
+      ]
+     ],
+     "explicacion": "grandes → ataque y pequeñas → traslado."
+    },
+    {
+     "ci": "C1",
+     "cj": "C3",
+     "flechas": [
+      [
+       "B",
+       "Y"
+      ],
+      [
+       "A",
+       "Y"
+      ]
+     ],
+     "explicacion": "grandes y pequeñas están fuertemente armadas: dos flechas al mismo polo."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "Formalización calculada con el motor (verificado contra las resoluciones oficiales). Relaciones propuestas leyendo el texto con los patrones de la cátedra."
+  },
+  {
+   "id": "ge-09",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 9: Tipos de Minions",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 9",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 4,
+   "grid": [
+    [
+     1,
+     3,
+     2,
+     4
+    ],
+    [
+     2,
+     3,
+     1,
+     4
+    ],
+    [
+     1,
+     3,
+     2,
+     2
+    ],
+    [
+     2,
+     2,
+     3,
+     2
+    ]
+   ],
+   "elementos": [
+    "Minion Kevin",
+    "Minion Stuart",
+    "Minion Bob",
+    "Minion Tom"
+   ],
+   "caracteristicas": [
+    [
+     "Capacidad de usar Computadoras",
+     "alta",
+     "baja"
+    ],
+    [
+     "Capacidad de Conducir",
+     "alta",
+     "baja"
+    ],
+    [
+     "Colaboración con los malvados planes de su amo",
+     "mucha",
+     "poca"
+    ],
+    [
+     "Autocontrol",
+     "mucho",
+     "poco"
+    ]
+   ],
+   "texto": "Aquellos minions que colaboran mucho con los malvados planes de su amo, son aquellos que tienen una alta capacidad de conducir cualquier tipo de vehículo, a pesar de ser criaturas impulsivas con poco autocontrol (…). También existen los que son amantes de la diversión y manejan en forma excelente las computadoras. Éste tipo de minions también colaboran mucho con su amo. Sin embargo, aquellos que tienen una alta capacidad en el uso de la computadora, no tienen capacidad para manejar vehículos (…).",
+   "relaciones": [
+    {
+     "ci": "C1",
+     "cj": "C3",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ]
+     ],
+     "explicacion": "los que manejan muy bien las computadoras colaboran mucho: una flecha derecha."
+    },
+    {
+     "ci": "C2",
+     "cj": "C3",
+     "flechas": [
+      [
+       "X",
+       "A"
+      ]
+     ],
+     "explicacion": "los que colaboran mucho conducen bien: una flecha derecha (de C3 a C2)."
+    },
+    {
+     "ci": "C1",
+     "cj": "C2",
+     "flechas": [
+      [
+       "A",
+       "Y"
+      ]
+     ],
+     "explicacion": "alta capacidad con computadoras → no conducen (baja): flecha cruzada."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "Formalización calculada con el motor (verificado contra las resoluciones oficiales). Relaciones propuestas leyendo el texto con los patrones de la cátedra."
+  },
+  {
+   "id": "ge-10",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 10: Tipos de Robots Terminators",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 10",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,5], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 5,
+   "grid": [
+    [
+     2,
+     4,
+     3,
+     3
+    ],
+    [
+     1,
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     2,
+     5,
+     5
+    ],
+    [
+     5,
+     3,
+     2,
+     1
+    ]
+   ],
+   "elementos": [
+    "Modelo T-100",
+    "Modelo T-800",
+    "Modelo T-1000",
+    "Modelo T-X"
+   ],
+   "caracteristicas": [
+    [
+     "Capacidad de Aprendizaje",
+     "mucha",
+     "poca"
+    ],
+    [
+     "Capacidad de Infiltración",
+     "grande",
+     "ninguna"
+    ],
+    [
+     "Resistencia",
+     "grande",
+     "pequeña"
+    ],
+    [
+     "Costo de Fabricación",
+     "alto",
+     "bajo"
+    ]
+   ],
+   "texto": "(…) Los siguientes modelos comenzaron a incorporar características humanoides para poder infiltrarse en bases militares. El incorporar mayor detalle en sus características de infiltración, generó un aumento considerable en el costo de fabricación de los cyborgs. En cambio, cuando no tenían estas capacidades de infiltración, el costo era mucho menor. (…) Esta estructura de ‘metal líquido’, además de darles mayor capacidad de infiltración, les otorga una mayor resistencia por ser capaces de regenerarse. Por otra parte, los modelos T-8xx son los que tienen mayor capacidad de aprendizaje y adaptación, (…) aumentando así la posibilidad de infiltración. Sin embargo, esta tecnología no era compatible con la polialeación mimética por lo que tener una mayor capacidad de aprendizaje reducía considerablemente su resistencia a armas y daños.",
+   "relaciones": [
+    {
+     "ci": "C2",
+     "cj": "C4",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "Y"
+      ]
+     ],
+     "explicacion": "más infiltración → costo alto; sin infiltración → costo bajo."
+    },
+    {
+     "ci": "C1",
+     "cj": "C3",
+     "flechas": [
+      [
+       "A",
+       "Y"
+      ]
+     ],
+     "explicacion": "mucho aprendizaje → resistencia pequeña: flecha cruzada."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "Formalización calculada con el motor (verificado contra las resoluciones oficiales). Relaciones propuestas leyendo el texto con los patrones de la cátedra."
+  },
+  {
+   "id": "ge-11",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Ejercicio 11: Clasificación de Personajes de la serie Dragon Ball",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio N° 11",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo** (criterio de mínima distancia).",
+   "max": 4,
+   "grid": [
+    [
+     1,
+     2,
+     3,
+     3
+    ],
+    [
+     4,
+     1,
+     3,
+     4
+    ],
+    [
+     1,
+     3,
+     2,
+     3
+    ],
+    [
+     4,
+     3,
+     3,
+     4
+    ]
+   ],
+   "elementos": [
+    "Goku",
+    "Krilin",
+    "Yamcha",
+    "Chaos"
+   ],
+   "caracteristicas": [
+    [
+     "Velocidad en los Movimientos de Ataque",
+     "baja",
+     "alta"
+    ],
+    [
+     "Fuerza Generada en el Kame-Hame-Ha",
+     "poca",
+     "mucha"
+    ],
+    [
+     "Capacidad de Aprender una Nueva Técnica",
+     "alta",
+     "baja"
+    ],
+    [
+     "Resistencia Física a los Golpes del Oponente",
+     "baja",
+     "alta"
+    ]
+   ],
+   "texto": "Aquellos que han logrado una alta resistencia física a los golpes son también los que generan mayor fuerza cuando ejecutan el Kame-Hame-Ha debido a que esta técnica necesita hombres resistentes. (…) Aquellos que tienen una alta capacidad de aprender técnicas, han demostrado no tener una alta velocidad en sus movimientos de ataque porque lo importante es generar el mayor daño usando bien la técnica. Pero aquellos otros que son más lentos en el aprendizaje tienen una alta velocidad en sus movimientos de ataque.",
+   "relaciones": [
+    {
+     "ci": "C2",
+     "cj": "C4",
+     "flechas": [
+      [
+       "Y",
+       "B"
+      ]
+     ],
+     "explicacion": "alta resistencia → mucha fuerza: una flecha derecha (de C4 a C2)."
+    },
+    {
+     "ci": "C1",
+     "cj": "C3",
+     "flechas": [
+      [
+       "X",
+       "A"
+      ],
+      [
+       "Y",
+       "B"
+      ]
+     ],
+     "explicacion": "aprender alto → velocidad baja; aprender bajo → velocidad alta: dos flechas derechas en el mismo sentido."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "Formalización calculada con el motor (verificado contra las resoluciones oficiales). Relaciones propuestas leyendo el texto con los patrones de la cátedra."
+  },
+  {
+   "id": "ge-r1",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Resuelto 1: Tipos de Harinas",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio Resuelto N° 1",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo**.",
+   "max": 4,
+   "grid": [
+    [
+     3,
+     3,
+     4,
+     2
+    ],
+    [
+     3,
+     4,
+     4,
+     3
+    ],
+    [
+     4,
+     3,
+     3,
+     2
+    ],
+    [
+     1,
+     3,
+     4,
+     2
+    ]
+   ],
+   "elementos": [
+    "Harina Integral",
+    "Harina de Garbanzos",
+    "Harina de Mandioca",
+    "Harina de Centeno"
+   ],
+   "caracteristicas": [
+    [
+     "Fuerza de la Harina",
+     "fuerte",
+     "débil"
+    ],
+    [
+     "Cantidad de proteínas",
+     "mayor",
+     "menor"
+    ],
+    [
+     "Valor Nutritivo",
+     "mayor",
+     "menor"
+    ],
+    [
+     "Tasa de absorción de agua",
+     "mayor",
+     "menor"
+    ]
+   ],
+   "texto": "En primer término se puede detectar que existe una alta relación entre la cantidad de proteínas y la fuerza de la harina: para tener harinas fuertes es necesario que contenga gran cantidad de proteínas, pero las débiles tienen poca cantidad. Por lo tanto, se puede decir que tener gran cantidad de proteínas genera una harina más fuerte, mientras que poca cantidad genera una harina débil. En cambio, la fuerza de la harina no tiene mucha relación con su valor nutritivo por lo que una harina fuerte puede generar un alto valor nutritivo, pero una harina débil también. No obstante, las harinas con alto valor nutritivo son también las harinas con gran cantidad de proteínas y las harinas de menos cantidad de proteínas son las de menor valor nutritivo. Finalmente, es posible mencionar que las harinas con mayor absorción de agua pueden tener diferentes grados de valor nutritivo (mayor o menor), mientras que las que tienen una tasa menor de absorción siempre tienen un bajo valor nutritivo.",
+   "relaciones": [
+    {
+     "ci": "C1",
+     "cj": "C2",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "Y"
+      ],
+      [
+       "X",
+       "A"
+      ],
+      [
+       "Y",
+       "B"
+      ]
+     ],
+     "explicacion": "ida y vuelta entre fuerza y proteínas."
+    },
+    {
+     "ci": "C1",
+     "cj": "C3",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "X"
+      ]
+     ],
+     "explicacion": "fuerte o débil pueden dar valor nutritivo mayor."
+    },
+    {
+     "ci": "C2",
+     "cj": "C3",
+     "flechas": [
+      [
+       "X",
+       "A"
+      ],
+      [
+       "B",
+       "Y"
+      ]
+     ],
+     "explicacion": "alto valor → muchas proteínas (de C3 a C2) y pocas proteínas → menor valor (de C2 a C3): sentidos opuestos."
+    },
+    {
+     "ci": "C3",
+     "cj": "C4",
+     "flechas": [
+      [
+       "X",
+       "A"
+      ],
+      [
+       "X",
+       "B"
+      ],
+      [
+       "Y",
+       "B"
+      ]
+     ],
+     "explicacion": "mayor absorción → valor mayor o menor; menor absorción → valor bajo."
+    }
+   ],
+   "fuente": "oficial",
+   "nota_fuente": "Resolución oficial de la guía (grupos y relaciones)."
+  },
+  {
+   "id": "ge-r2",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Resuelto 2: Tipos de Antivirus",
+   "origen": "Guía Práctica de Emparrillado, Ejercicio Resuelto N° 2",
+   "enunciado": "A partir de la parrilla evaluada en escala [1,4], realizar el **emparrillado completo**.",
+   "max": 4,
+   "grid": [
+    [
+     4,
+     4,
+     2,
+     1
+    ],
+    [
+     3,
+     4,
+     1,
+     3
+    ],
+    [
+     3,
+     2,
+     1,
+     3
+    ],
+    [
+     4,
+     4,
+     4,
+     3
+    ],
+    [
+     4,
+     3,
+     2,
+     1
+    ]
+   ],
+   "elementos": [
+    "Mc Afee",
+    "Norton",
+    "Panda",
+    "Antiviral Tollkit Pro"
+   ],
+   "caracteristicas": [
+    [
+     "Diseño y Estructura del programa",
+     "fácil de usar",
+     "difícil de usar"
+    ],
+    [
+     "Grado de Popularidad",
+     "mayor",
+     "menor"
+    ],
+    [
+     "Sistema de Monitorización en 2do plano",
+     "bueno",
+     "malo"
+    ],
+    [
+     "Herramienta Monitorización del Correo",
+     "buena",
+     "mala"
+    ],
+    [
+     "Copias de Seguridad",
+     "buenas",
+     "malas"
+    ]
+   ],
+   "texto": "El grado de popularidad de los antivirus se obtuvo a partir de varias investigaciones y estadísticas. En todas ellas se verificó que los programas más populares tenían dentro de su estructura un muy buen sistema de monitorización en 2do plano que no ralentiza la máquina. Por otro lado, analizamos el vínculo entre la estructura de los productos y las características de las copias de seguridad. Podemos afirmar que los sistemas más fáciles de usar realizan mejores copias de seguridad y de una forma muy autónoma. En cambio, aquellos que son difíciles de usar requieren de mayor planificación del usuario para generar dichas copias siendo estás además de mala calidad. Finalmente, el tamaño de la base de datos de virus dentro de un sistema antivirus es muy relevante y también está vinculado a la popularidad. Bases más grandes hacen antivirus más populares.",
+   "relaciones": [
+    {
+     "ci": "C1",
+     "cj": "C5",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ],
+      [
+       "B",
+       "Y"
+      ]
+     ],
+     "explicacion": "fácil → buenas copias; difícil → malas copias."
+    },
+    {
+     "ci": "C2",
+     "cj": "C3",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ]
+     ],
+     "explicacion": "más populares → buen monitoreo: una flecha."
+    }
+   ],
+   "fuente": "oficial",
+   "nota_fuente": "Resolución oficial de la guía (grupos y relaciones)."
+  },
+  {
+   "id": "rec-2025-3",
+   "tipo": "emparrillado",
+   "unidad": "u4-emparrillado",
+   "titulo": "Recuperatorio 2025, Ejercicio 3: Neumáticos de F1",
+   "origen": "Recuperatorio Miércoles 2025 (foto del examen), Ejercicio N° 3",
+   "enunciado": "A partir de la matriz de distancias d1 y d2 (escala [1,4]): 1) realice la clasificación de las características y analice el árbol ordenado; 2) establezca la red de relaciones a partir de las conclusiones del experto.",
+   "max": 4,
+   "matrizC": {
+    "d1": {
+     "C1-C2": 5,
+     "C1-C3": 6,
+     "C1-C4": 4,
+     "C1-C5": 10,
+     "C2-C3": 8,
+     "C2-C4": 9,
+     "C2-C5": 2,
+     "C3-C4": 6,
+     "C3-C5": 3,
+     "C4-C5": 5
+    },
+    "d2": {
+     "C1-C2": 11,
+     "C1-C3": 9,
+     "C1-C4": 4,
+     "C1-C5": 6,
+     "C2-C3": 5,
+     "C2-C4": 6,
+     "C2-C5": 6,
+     "C3-C4": 8,
+     "C3-C5": 2,
+     "C4-C5": 9
+    }
+   },
+   "elementos": [],
+   "caracteristicas": [
+    [
+     "Riesgo de Degradación",
+     "bajo",
+     "alto"
+    ],
+    [
+     "Agarre",
+     "mucho",
+     "poco"
+    ],
+    [
+     "Rendimiento en Mojado",
+     "bajo",
+     "alto"
+    ],
+    [
+     "Durabilidad",
+     "mucha",
+     "poca"
+    ],
+    [
+     "Tiempo de Calentamiento",
+     "lento",
+     "rápido"
+    ]
+   ],
+   "texto": "En el análisis del comportamiento de los neumáticos de Fórmula 1, es fundamental comprender la interrelación entre riesgo de degradación, durabilidad, rendimiento en mojado, agarre y tiempo de calentamiento, ya que estas variables definen tanto el rendimiento como la estrategia de carrera. Los neumáticos con bajo riesgo de degradación suelen presentar mucha durabilidad, lo que los hace ideales para tramos largos y estrategias conservadoras. Sin embargo, este tipo de neumático generalmente tiene un agarre menor especialmente en condiciones de pista fría o poco abrasiva. Los compuestos de alto agarre (típicamente los más blandos) ofrecen un tiempo de calentamiento rápido y son altamente efectivos en condiciones donde se requiere máxima tracción, como en la clasificación o en tramos cortos de carrera. En cuanto al rendimiento en mojado, los neumáticos específicos para lluvia son los que presentan un alto rendimiento dado que tienen mucho agarre incluso bajo condiciones de baja adherencia. Estos neumáticos con alto rendimiento en mojado ofrecen un tiempo de calentamiento rápido y una estructura diseñada para evacuar el agua. Sin embargo, los compuestos de bajo rendimiento en mojado también presentan un lento tiempo de calentamiento.",
+   "relaciones": [
+    {
+     "ci": "C1",
+     "cj": "C4",
+     "flechas": [
+      [
+       "A",
+       "X"
+      ]
+     ],
+     "explicacion": "bajo riesgo → mucha durabilidad: una flecha derecha."
+    },
+    {
+     "ci": "C2",
+     "cj": "C5",
+     "flechas": [
+      [
+       "A",
+       "Y"
+      ]
+     ],
+     "explicacion": "alto agarre → calentamiento rápido: flecha cruzada."
+    },
+    {
+     "ci": "C2",
+     "cj": "C3",
+     "flechas": [
+      [
+       "A",
+       "Y"
+      ]
+     ],
+     "explicacion": "mucho agarre → alto rendimiento en mojado: flecha cruzada."
+    },
+    {
+     "ci": "C3",
+     "cj": "C5",
+     "flechas": [
+      [
+       "B",
+       "Y"
+      ],
+      [
+       "A",
+       "X"
+      ]
+     ],
+     "explicacion": "alto rendimiento → rápido y bajo rendimiento → lento."
+    },
+    {
+     "ci": "C1",
+     "cj": "C2",
+     "flechas": [
+      [
+       "A",
+       "Y"
+      ]
+     ],
+     "explicacion": "bajo riesgo → agarre menor, pero C1 y C2 están en grupos distintos."
+    }
+   ],
+   "fuente": "calculada",
+   "nota_fuente": "El examen no tiene resolución publicada: grupos calculados con el motor y relaciones propuestas."
+  },
+  {
+   "id": "rec-2025-1",
+   "tipo": "texto",
+   "unidad": "u0-parcial",
+   "titulo": "Recuperatorio 2025, Ejercicio 1: Verdadero o falso",
+   "origen": "Recuperatorio Miércoles 2025 (foto del examen), Ejercicio N° 1",
+   "enunciado": "Identifique si las siguientes afirmaciones son verdaderas o falsas, justificando su respuesta.\n\n1. En un Análisis de Protocolos, los conocimientos declarativos más útiles se obtienen al analizar los metacomentarios.\n2. Si se recolectan los datos de fuentes propias de la organización, no es necesario estudiarlos ya que deben ser válidos para usar.\n3. La ventaja de las redes Convolucionales es que sólo requieren una única época de entrenamiento para aprender correctamente a clasificar cualquier cantidad de imágenes.\n4. La selección por Ranking siempre evita la convergencia prematura en la corrida de un Algoritmo Genético.",
+   "resolucion": "1. **Falso.** Los metacomentarios justamente *no* aportan información directa al razonamiento. El conocimiento declarativo sale de la codificación: conceptos, características, valores y relaciones.\n\n2. **Falso.** Los datos *siempre* se estudian (cantidad, relevancia de atributos, ruido, duplicados, representatividad, sesgos) antes de usarlos, vengan de donde vengan.\n\n3. **Falso.** Ninguna red aprende en una sola época; las convolucionales necesitan muchas épocas y muchos ejemplos. Su ventaja es que extraen automáticamente características de las imágenes (filtros).\n\n4. **Falso.** Es al revés: el Ranking siempre elige a los mejores, la población pierde diversidad y es el método con **mayor** riesgo de convergencia prematura.",
+   "fuente": "propuesta",
+   "nota_fuente": "Respuestas propuestas según la teoría de la cátedra (el examen no tiene resolución publicada)."
+  },
+  {
+   "id": "ga-01",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 1: Alga",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 1 · resuelto en la clase del 08/04/2026",
+   "enunciado": "Dada la siguiente grabación, realizada a partir de un experto al que se le ha solicitado reconocer un tipo de alga, efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "En este alga,",
+    "podemos observar",
+    "sus ramas ligeramente rígidas",
+    "de tonos verdes y amarillos.",
+    "Sus ramas",
+    "están formadas por",
+    "pequeños filamentos",
+    "que miden 3 mm de ancho.",
+    "Deduzco que se podría tratar",
+    "de una cualidad del",
+    "Alga Corallina.",
+    "Asimismo,",
+    "en esta planta,",
+    "podemos distinguir",
+    "que sus paredes celulares son planas y",
+    "contienen celulosa.",
+    "Concluimos que se trata del",
+    "Alga Nostoc."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| alga | | |\n| ramas | rígidas | ligeramente |\n| | tonos | verdes y amarillos |\n| filamentos | (tamaño) | pequeños |\n| | ancho | 3 mm |\n| alga Corallina | | |\n| planta | | |\n| paredes celulares | (forma) | planas |\n| | (contenido) | celulosa |\n| alga Nostoc | | |\n\n**Relaciones implícitas**: alga —es tipo→ alga Corallina; alga —es tipo→ alga Nostoc; alga —tiene→ ramas; ramas —formados por→ filamentos; alga —tiene→ paredes celulares.\n\n**Búsqueda**: ¿Tipo de alga? —\"de una cualidad del\"→ **Alga Corallina** (ramas ligeramente rígidas, de tonos verdes y amarillos, filamentos pequeños de 3 mm de ancho) —\"concluimos que se trata del\"→ **Alga Nostoc** (paredes celulares planas que contienen celulosa).\n\n**Sinónimos**: alga y planta. **Metacomentarios**: línea 12, \"asimismo\" (subetapas). **Incertidumbre**: \"deduzco que se podría tratar\" (línea 9).\n\n**Reglas**\n```\nSI (ramas.rígidas = ligeramente) y (ramas.tonos = verdes y amarillos) y\n   (filamentos.tamaño = pequeños) y (filamentos.ancho = 3 mm)\nENTONCES asignar (tipo de alga, Alga Corallina)\nSI (paredes celulares.forma = planas) y (paredes celulares.contenido = celulosa)\nENTONCES asignar (tipo de alga, Alga Nostoc)\n```",
+   "fuente": "oficial",
+   "nota_fuente": "Resolución oficial de la cátedra."
+  },
+  {
+   "id": "ga-02",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 2: Araña",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 2 · resuelto en la clase del 22/04/2026",
+   "enunciado": "A partir de la siguiente transcripción, de un protocolo grabado a partir de un experto al que se le ha pedido reconocer un tipo de araña, efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "Observando la forma de esta araña,",
+    "vemos que es araneomorfa,",
+    "de apariencia esbelta y elegante,",
+    "con abdomen de forma globosa.",
+    "Esto nos da la pauta",
+    "que se trata de una araña Terídidos.",
+    "Continuando con el análisis,",
+    "de éste arácnido",
+    "vemos que tiene dientes quelicerales",
+    "y que su abdomen",
+    "es de forma más ovalada.",
+    "Todas estas características indican",
+    "que este insecto es Steatoda.",
+    "El tono de su cuerpo",
+    "es negro y marrón",
+    "y su picadura es venenosa.",
+    "Esto podría indicar",
+    "que se trata de una falsa viuda negra.",
+    "Este tipo de arañas generalmente",
+    "las podemos encontrar",
+    "en los rincones más oscuros",
+    "de nuestra casa."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| araña | forma | araneomorfa |\n| | apariencia | esbelta y elegante |\n| | dientes | quelicerales |\n| abdomen | forma | globosa / más ovalada |\n| Terídidos | | |\n| arácnido | | |\n| insecto | | |\n| Steatoda | | |\n| cuerpo | tono | negro y marrón |\n| picadura | (tipo) | venenosa |\n| Falsa Viuda Negra | | |\n\n**Relaciones implícitas**: araña —es tipo→ Terídidos, Steatoda, Falsa Viuda Negra; araña —tiene→ cuerpo, abdomen; araña —genera→ picadura.\n\n**Búsqueda**: ¿Tipo de araña? —\"esto nos da la pauta que se trata de una\"→ **Terídidos** (forma araneomorfa, apariencia esbelta y elegante, abdomen globoso) —\"todas estas características indican que\"→ **Steatoda** (dientes quelicerales, abdomen más ovalado) —\"que se trata de una\"→ **Falsa Viuda Negra** (tono del cuerpo negro y marrón, picadura venenosa).\n\n**Sinónimos**: araña, arácnido, insecto.\n\n**Metacomentarios**: línea 7, \"continuando con el análisis\" (subetapas); líneas 19 a 22, \"este tipo de arañas generalmente las podemos encontrar en los rincones más oscuros de nuestra casa\" (comentario sobre dónde vive la Falsa Viuda Negra).\n\n**Incertidumbre**: \"esto podría indicar\" (línea 17).\n\n**Reglas**\n```\nSI (araña.forma = araneomorfa) y (araña.apariencia = esbelta y elegante) y (abdomen.forma = globosa)\nENTONCES asignar (tipo de araña, Terídidos)\nSI (araña.dientes = quelicerales) y (abdomen.forma = más ovalada)\nENTONCES asignar (tipo de araña, Steatoda)\nSI (cuerpo.tono = negro y marrón) y (picadura.tipo = venenosa)\nENTONCES asignar (tipo de araña, Falsa Viuda Negra)\n```",
+   "fuente": "oficial",
+   "nota_fuente": "Resolución oficial de la cátedra."
+  },
+  {
+   "id": "ga-03",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 3: Hormiga",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 3",
+   "enunciado": "Dada la siguiente transcripción, de un protocolo grabado a partir de un experto al que se le ha pedido reconocer un tipo de hormiga, efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "Esta hormiga, tal como la vemos,",
+    "es considerada una Hormiga Obrera,",
+    "dado que no posee alas y",
+    "su cuerpo tiene una longitud de 5 mm.",
+    "Las hormigas obreras son las que",
+    "se encargan del cuidado del hormiguero",
+    "y de la recolección de alimentos.",
+    "Observando más detalladamente,",
+    "posee pequeñas espinas blancas",
+    "en su cuerpo y su cabeza es alargada.",
+    "Esto nos podría señalar",
+    "que se trata de la",
+    "Hormiga Gemella.",
+    "También, en este insecto, vemos que",
+    "su comportamiento es agresivo y violento.",
+    "Tiene un aguijón grueso,",
+    "utilizado para defenderse.",
+    "Dados estos atributos,",
+    "podemos definir a la",
+    "Hormiga Argentina."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| hormiga | alas | no posee |\n| | comportamiento | agresivo y violento |\n| cuerpo | longitud | 5 mm |\n| Hormiga Obrera | | |\n| espinas | (tamaño) | pequeñas |\n| | (color) | blancas |\n| cabeza | (forma) | alargada |\n| Hormiga Gemella | | |\n| insecto | | |\n| aguijón | (grosor) | grueso |\n| Hormiga Argentina | | |\n\n**Relaciones implícitas**: hormiga —es tipo→ Hormiga Obrera, Hormiga Gemella, Hormiga Argentina; hormiga —tiene→ cuerpo, cabeza, aguijón; cuerpo —tiene→ espinas.\n\n**Búsqueda**: ¿Tipo de hormiga? —\"es considerada una\"→ **Hormiga Obrera** (no posee alas, cuerpo de 5 mm) —\"esto nos podría señalar que se trata de la\"→ **Hormiga Gemella** (pequeñas espinas blancas en el cuerpo, cabeza alargada) —\"dados estos atributos, podemos definir a la\"→ **Hormiga Argentina** (comportamiento agresivo y violento, aguijón grueso).\n\n**Sinónimos**: hormiga e insecto.\n\n**Metacomentarios**: líneas 5 a 7, \"las hormigas obreras son las que se encargan del cuidado del hormiguero y de la recolección de alimentos\" (comentario general); línea 8, \"observando más detalladamente\" (subetapas); línea 14, \"también\" (subetapas); línea 17, \"utilizado para defenderse\" (comentario sobre la función del aguijón).\n\n**Incertidumbre**: \"esto nos podría señalar\" (línea 11).\n\n**Reglas**\n```\nSI (hormiga.alas = no posee) y (cuerpo.longitud = 5 mm)\nENTONCES asignar (tipo de hormiga, Hormiga Obrera)\nSI (espinas.tamaño = pequeñas) y (espinas.color = blancas) y (cabeza.forma = alargada)\nENTONCES asignar (tipo de hormiga, Hormiga Gemella)\nSI (hormiga.comportamiento = agresivo y violento) y (aguijón.grosor = grueso)\nENTONCES asignar (tipo de hormiga, Hormiga Argentina)\n```",
+   "fuente": "propuesta",
+   "nota_fuente": "Resolución propuesta por IA siguiendo el formato de las resoluciones oficiales (alga, araña, planeta, menta). Puede haber decisiones discutibles: comparala con lo visto en clase."
+  },
+  {
+   "id": "ga-04",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 4: Tortuga Marina",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 4",
+   "enunciado": "Dada la siguiente transcripción de un protocolo grabado a partir de un experto al que se le ha solicitado reconocer un tipo de tortuga marina, realizar el análisis de protocolos completo.",
+   "lineas": [
+    "Las tortugas marinas son reptiles",
+    "con caparazón, que existen",
+    "hace más de 150 millones de años.",
+    "La tortuga que observamos",
+    "podría tratarse de la denominada",
+    "Tortuga Laud,",
+    "dado que su cuerpo está formado",
+    "de pequeñas placas óseas",
+    "unidas entre sí.",
+    "Su piel es muy gruesa y",
+    "está impregnada de aceite,",
+    "lo que la capacita para conservar",
+    "su temperatura interna.",
+    "Sin embargo, notamos",
+    "que su cabeza es pequeña,",
+    "siendo de una forma rectangular y chata.",
+    "Su pico es aserrado",
+    "y está adaptado a dietas herbívoras.",
+    "Podemos afirmar que este animal es una",
+    "Tortuga Verde."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| tortuga | | |\n| cuerpo | (composición) | pequeñas placas óseas unidas entre sí |\n| piel | (grosor) | muy gruesa |\n| | (impregnación) | aceite |\n| Tortuga Laud | | |\n| cabeza | (tamaño) | pequeña |\n| | forma | rectangular y chata |\n| pico | (borde) | aserrado |\n| | (adaptación) | dietas herbívoras |\n| animal | | |\n| Tortuga Verde | | |\n\n**Relaciones implícitas**: tortuga —es tipo→ Tortuga Laud, Tortuga Verde; tortuga —tiene→ cuerpo, piel, cabeza, pico.\n\n**Búsqueda**: ¿Tipo de tortuga marina? —\"podría tratarse de la denominada\"→ **Tortuga Laud** (cuerpo de pequeñas placas óseas unidas, piel muy gruesa impregnada de aceite) —\"podemos afirmar que este animal es una\"→ **Tortuga Verde** (cabeza pequeña, rectangular y chata; pico aserrado adaptado a dietas herbívoras).\n\n**Sinónimos**: tortuga y animal.\n\n**Metacomentarios**: líneas 1 a 3, \"las tortugas marinas son reptiles con caparazón, que existen hace más de 150 millones de años\" (comentario general); líneas 12 y 13, \"lo que la capacita para conservar su temperatura interna\" (consecuencia, no aporta al diagnóstico); línea 14, \"sin embargo\" (cambio de etapa).\n\n**Incertidumbre**: \"podría tratarse de la denominada\" (línea 5).\n\n**Reglas**\n```\nSI (cuerpo.composición = pequeñas placas óseas unidas entre sí) y\n   (piel.grosor = muy gruesa) y (piel.impregnación = aceite)\nENTONCES asignar (tipo de tortuga marina, Tortuga Laud)\nSI (cabeza.tamaño = pequeña) y (cabeza.forma = rectangular y chata) y\n   (pico.borde = aserrado) y (pico.adaptación = dietas herbívoras)\nENTONCES asignar (tipo de tortuga marina, Tortuga Verde)\n```",
+   "fuente": "propuesta",
+   "nota_fuente": "Resolución propuesta por IA siguiendo el formato de las resoluciones oficiales (alga, araña, planeta, menta). Puede haber decisiones discutibles: comparala con lo visto en clase."
+  },
+  {
+   "id": "ga-05",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 5: Madera",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 5",
+   "enunciado": "Dada la siguiente transcripción, de un protocolo grabado a partir de un experto al que se le ha pedido reconocer un tipo de madera, efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "Observando esta madera",
+    "podemos notar,",
+    "su color blanco cremoso",
+    "con vetas marrones y beiges.",
+    "Posee fibras de estructura recta",
+    "y de peso ligero,",
+    "lo que provoca que esta madera",
+    "no sea resistente,",
+    "y tienda a ser quebradiza.",
+    "Según esta información,",
+    "podemos afirmar",
+    "que estaríamos ante un",
+    "Abeto.",
+    "Sin embargo,",
+    "observando su peso específico",
+    "de 0,36 g/cm3,",
+    "su textura fina",
+    "y sus fibras de tamaño irregular,",
+    "podemos concluir que es un",
+    "Agar.",
+    "El Agar posee un brillo superior",
+    "a cualquier otra madera,",
+    "por lo cual es utilizado",
+    "para la elaboración de adornos."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| madera | color | blanco cremoso |\n| | peso | ligero |\n| | peso específico | 0,36 g/cm3 |\n| | textura | fina |\n| vetas | (color) | marrones y beiges |\n| fibras | estructura | recta |\n| | tamaño | irregular |\n| Abeto | | |\n| Agar | | |\n\n**Relaciones implícitas**: madera —es tipo→ Abeto, Agar; madera —tiene→ vetas, fibras.\n\n**Búsqueda**: ¿Tipo de madera? —\"podemos afirmar que estaríamos ante un\"→ **Abeto** (color blanco cremoso, vetas marrones y beiges, fibras de estructura recta, peso ligero) —\"podemos concluir que es un\"→ **Agar** (peso específico de 0,36 g/cm3, textura fina, fibras de tamaño irregular).\n\n**Sinónimos**: no hay.\n\n**Metacomentarios**: líneas 7 a 9, \"lo que provoca que esta madera no sea resistente y tienda a ser quebradiza\" (consecuencia del peso); línea 10, \"según esta información\"; línea 14, \"sin embargo\" (cambio de etapa); líneas 21 a 24, \"el Agar posee un brillo superior a cualquier otra madera, por lo cual es utilizado para la elaboración de adornos\" (comentario posterior a la conclusión).\n\n**Incertidumbre**: \"estaríamos ante un\" (línea 12).\n\n**Reglas**\n```\nSI (madera.color = blanco cremoso) y (vetas.color = marrones y beiges) y\n   (fibras.estructura = recta) y (madera.peso = ligero)\nENTONCES asignar (tipo de madera, Abeto)\nSI (madera.peso específico = 0,36 g/cm3) y (madera.textura = fina) y (fibras.tamaño = irregular)\nENTONCES asignar (tipo de madera, Agar)\n```",
+   "fuente": "propuesta",
+   "nota_fuente": "Resolución propuesta por IA siguiendo el formato de las resoluciones oficiales (alga, araña, planeta, menta). Puede haber decisiones discutibles: comparala con lo visto en clase."
+  },
+  {
+   "id": "ga-06",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 6: Virus de la Gripe",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 6",
+   "enunciado": "Dada la siguiente transcripción, de un protocolo grabado a partir de un experto, al que se le ha pedido reconocer un tipo de virus de la gripe, según los síntomas del paciente analizado, realizar el análisis de protocolos completo.",
+   "lineas": [
+    "El paciente asistió a la guardia del sanatorio",
+    "con un cuadro clínico caracterizado por",
+    "fiebre elevada persistente,",
+    "dolor de cabeza y abundante tos.",
+    "Al revisar sus pulmones, observé que",
+    "tenía dificultad para respirar y",
+    "sus labios eran de color azulado.",
+    "Tenía su garganta inflamada y muy roja.",
+    "Todos estos síntomas, me hicieron pensar",
+    "que se podría tratar de una gripe clase B,",
+    "que es la gripe más común que",
+    "se puede presentar en un humano.",
+    "Pero de repente, un mareo repentino con",
+    "baja de presión se le presentó a esta persona.",
+    "Tuvo una confusión temporal,",
+    "no sabiendo en donde se encontraba.",
+    "El análisis de laboratorio dio como resultado",
+    "que se trataba de un virus tipo H1N1.",
+    "Entonces cambié mi diagnóstico,",
+    "es una gripe clase A."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| paciente | (estado) | confusión temporal |\n| cuadro clínico | fiebre | elevada persistente |\n| | dolor | de cabeza |\n| | tos | abundante |\n| pulmones | (respiración) | dificultad para respirar |\n| labios | color | azulado |\n| garganta | (estado) | inflamada |\n| | (color) | muy roja |\n| gripe clase B | | |\n| mareo | (aparición) | repentino |\n| presión | (nivel) | baja |\n| persona | | |\n| análisis de laboratorio | resultado | virus tipo H1N1 |\n| gripe clase A | | |\n\n**Relaciones implícitas**: paciente —presenta→ cuadro clínico; paciente —tiene→ pulmones, labios, garganta; gripe —es tipo→ gripe clase B, gripe clase A; paciente —se realiza→ análisis de laboratorio.\n\n**Búsqueda**: ¿Tipo de gripe? —\"me hicieron pensar que se podría tratar de una\"→ **gripe clase B** (fiebre elevada persistente, dolor de cabeza, tos abundante, dificultad para respirar, labios azulados, garganta inflamada y muy roja) —\"entonces cambié mi diagnóstico, es una\"→ **gripe clase A** (mareo repentino, presión baja, confusión temporal, análisis con resultado H1N1).\n\n**Sinónimos**: paciente y persona.\n\n**Metacomentarios**: línea 1, \"asistió a la guardia del sanatorio\" (contexto); líneas 11 y 12, \"que es la gripe más común que se puede presentar en un humano\" (comentario general); línea 13, \"pero de repente\" (cambio de etapa); línea 16, \"no sabiendo en donde se encontraba\" (aclaración de la confusión).\n\n**Incertidumbre**: \"se podría tratar de\" (línea 10).\n\n**Reglas**\n```\nSI (cuadro clínico.fiebre = elevada persistente) y (cuadro clínico.dolor = de cabeza) y\n   (cuadro clínico.tos = abundante) y (pulmones.respiración = dificultad para respirar) y\n   (labios.color = azulado) y (garganta.estado = inflamada) y (garganta.color = muy roja)\nENTONCES asignar (tipo de gripe, gripe clase B)\nSI (mareo.aparición = repentino) y (presión.nivel = baja) y (paciente.estado = confusión temporal) y\n   (análisis de laboratorio.resultado = virus tipo H1N1)\nENTONCES asignar (tipo de gripe, gripe clase A)\n```",
+   "fuente": "propuesta",
+   "nota_fuente": "Resolución propuesta por IA siguiendo el formato de las resoluciones oficiales (alga, araña, planeta, menta). Puede haber decisiones discutibles: comparala con lo visto en clase."
+  },
+  {
+   "id": "ga-07",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 7: Nave Estelar según la película ‘Star Wars’",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 7",
+   "enunciado": "A partir de la siguiente transcripción, de un protocolo grabado a partir de un experto al que se le ha pedido identificar el modelo de una Nave Estelar considerando sus capacidades y características (según la película ‘Star Wars’), efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "Las naves estelares fueron utilizadas",
+    "por la Flota Imperial para mantener",
+    "el control imperial a lo largo de la galaxia.",
+    "Esta nave que vemos en la pantalla",
+    "es sin dudas un Destructor Estelar, ya que",
+    "está fuertemente armada, es de gran tamaño",
+    "y tiene forma de daga,",
+    "lo cual facilita la concentración del fuego.",
+    "Evaluemos entonces la clase de Destructor",
+    "que esta nave es.",
+    "Su longitud es de 752 m y su altura de 200 m.",
+    "Está compuesta por un hipermotor",
+    "que tiene un alcance de 250.000 años luz.",
+    "La nave tiene un hangar de ataque amplio.",
+    "Podríamos suponer que se trata de una",
+    "nave clase Victoria.",
+    "Sin embargo, vemos que tiene",
+    "dos motores principales y dos motores auxiliares.",
+    "El hangar de ataque está ubicado",
+    "en la parte inferior de la nave y",
+    "está protegido por puertas blindadas.",
+    "La nave está equipada",
+    "con un generador de pozo gravitatorio",
+    "que es utilizado para detener el",
+    "viaje hiperespacial de las naves enemigas.",
+    "Concluimos que es una nave clase Harrow.",
+    "Este tipo de embarcaciones son capaces de",
+    "destruir sistemas estelares enteros."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| nave | (armamento) | fuertemente armada |\n| | tamaño | gran |\n| | forma | daga |\n| | longitud | 752 m |\n| | altura | 200 m |\n| Destructor Estelar | | |\n| hipermotor | alcance | 250.000 años luz |\n| hangar de ataque | (amplitud) | amplio |\n| | (ubicación) | parte inferior de la nave |\n| | (protección) | puertas blindadas |\n| nave clase Victoria | | |\n| motores principales | (cantidad) | dos |\n| motores auxiliares | (cantidad) | dos |\n| generador de pozo gravitatorio | | |\n| nave clase Harrow | | |\n| embarcación | | |\n\n**Relaciones implícitas**: nave —es tipo→ Destructor Estelar; Destructor Estelar —es clase→ Victoria, Harrow; nave —tiene→ hipermotor, hangar de ataque, motores, generador de pozo gravitatorio.\n\n**Búsqueda**: ¿Modelo de nave? —\"es sin dudas un\"→ **Destructor Estelar** (fuertemente armada, gran tamaño, forma de daga) —\"podríamos suponer que se trata de una\"→ **nave clase Victoria** (752 m de longitud y 200 m de altura, hipermotor de 250.000 años luz, hangar de ataque amplio) —\"concluimos que es una\"→ **nave clase Harrow** (dos motores principales y dos auxiliares, hangar inferior con puertas blindadas, generador de pozo gravitatorio).\n\n**Sinónimos**: nave y embarcación.\n\n**Metacomentarios**: líneas 1 a 3 (historia de las naves de la Flota Imperial); línea 8, \"lo cual facilita la concentración del fuego\"; líneas 9 y 10, \"evaluemos entonces la clase de Destructor que esta nave es\" (subetapa); línea 17, \"sin embargo\"; líneas 24 y 25, \"que es utilizado para detener el viaje hiperespacial de las naves enemigas\" (función); líneas 27 y 28, \"este tipo de embarcaciones son capaces de destruir sistemas estelares enteros\".\n\n**Incertidumbre**: \"podríamos suponer que se trata de una\" (línea 15).\n\n**Reglas**\n```\nSI (nave.armamento = fuertemente armada) y (nave.tamaño = gran) y (nave.forma = daga)\nENTONCES asignar (modelo de nave, Destructor Estelar)\nSI (nave.longitud = 752 m) y (nave.altura = 200 m) y (hipermotor.alcance = 250.000 años luz) y\n   (hangar de ataque.amplitud = amplio)\nENTONCES asignar (clase de Destructor, Victoria)\nSI (motores principales.cantidad = dos) y (motores auxiliares.cantidad = dos) y\n   (hangar de ataque.ubicación = parte inferior) y (hangar de ataque.protección = puertas blindadas) y\n   (nave.equipamiento = generador de pozo gravitatorio)\nENTONCES asignar (clase de Destructor, Harrow)\n```",
+   "fuente": "propuesta",
+   "nota_fuente": "Resolución propuesta por IA siguiendo el formato de las resoluciones oficiales (alga, araña, planeta, menta). Puede haber decisiones discutibles: comparala con lo visto en clase."
+  },
+  {
+   "id": "ga-08",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 8: Modelo de Terminator",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 8",
+   "enunciado": "A partir de la siguiente transcripción, de un protocolo grabado a partir de un experto al que se le ha pedido identificar el modelo de un Terminator que se observa en un video de vigilancia, efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "Existen diversos tipos de Terminators,",
+    "pero a partir de las características físicas",
+    "es posible determinar sin lugar a dudas",
+    "de qué modelo se trata.",
+    "Lo primero que podemos notar es que",
+    "el Terminator del video",
+    "tiene un aspecto humanoide.",
+    "Además, es bípedo,",
+    "es decir, se desplaza en sus dos piernas.",
+    "Posee un endoesqueleto sólido,",
+    "dado esto es que en este video",
+    "se lo ve caminar con dificultad.",
+    "Por lo tanto, podría ser un modelo",
+    "comprendido entre las series 400 y 900 inclusive.",
+    "En estos modelos, su endoesqueleto",
+    "no es de metal líquido",
+    "como los modelos más avanzados.",
+    "Al observar con mayor detalle,",
+    "se puede ver que",
+    "su endoesqueleto está recubierto",
+    "con una piel similar al tejido viviente,",
+    "la cual es una mejora de Skynet",
+    "para infiltrarse en las bases humanas.",
+    "No me queda dudas que",
+    "se trata de un robot de la serie 8xx,",
+    "similar al que enviaron a matar a mi madre.",
+    "Sin embargo,",
+    "este exterminador tiene el pelo canoso",
+    "y arrugas en su cara.",
+    "Esto se corresponde con",
+    "el modelo T-850.",
+    "Ha venido a matarme, esa es su misión."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| Terminator | aspecto | humanoide |\n| | (forma de desplazamiento) | bípedo |\n| | pelo | canoso |\n| endoesqueleto | (consistencia) | sólido |\n| | (recubrimiento) | piel similar al tejido viviente |\n| modelo serie 400 a 900 | | |\n| robot serie 8xx | | |\n| cara | (estado) | arrugas |\n| exterminador | | |\n| modelo T-850 | | |\n\n**Relaciones implícitas**: Terminator —es modelo→ serie 400 a 900, serie 8xx, T-850; Terminator —tiene→ endoesqueleto, cara.\n\n**Búsqueda**: ¿Modelo de Terminator? —\"por lo tanto, podría ser un modelo comprendido entre\"→ **serie 400 a 900** (aspecto humanoide, bípedo, endoesqueleto sólido) —\"no me queda dudas que se trata de un\"→ **robot de la serie 8xx** (endoesqueleto recubierto con piel similar al tejido viviente) —\"esto se corresponde con\"→ **T-850** (pelo canoso, arrugas en la cara).\n\n**Sinónimos**: Terminator, robot y exterminador.\n\n**Metacomentarios**: líneas 1 a 4 (introducción); línea 9, \"es decir, se desplaza en sus dos piernas\" (aclaración); líneas 11 y 12, \"dado esto es que en este video se lo ve caminar con dificultad\"; líneas 15 a 17, \"en estos modelos, su endoesqueleto no es de metal líquido como los modelos más avanzados\"; líneas 22 y 23 (la piel es una mejora de Skynet para infiltrarse); línea 26 (anécdota personal); línea 32, \"ha venido a matarme, esa es su misión\".\n\n**Incertidumbre**: \"podría ser un modelo comprendido entre\" (línea 13).\n\n**Reglas**\n```\nSI (Terminator.aspecto = humanoide) y (Terminator.desplazamiento = bípedo) y\n   (endoesqueleto.consistencia = sólido)\nENTONCES asignar (modelo, serie 400 a 900)\nSI (endoesqueleto.recubrimiento = piel similar al tejido viviente)\nENTONCES asignar (modelo, serie 8xx)\nSI (Terminator.pelo = canoso) y (cara.estado = arrugas)\nENTONCES asignar (modelo, T-850)\n```",
+   "fuente": "propuesta",
+   "nota_fuente": "Resolución propuesta por IA siguiendo el formato de las resoluciones oficiales (alga, araña, planeta, menta). Puede haber decisiones discutibles: comparala con lo visto en clase."
+  },
+  {
+   "id": "ga-09",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 9: Copa Mundial",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 9",
+   "enunciado": "A partir de la siguiente transcripción, de un protocolo grabado a partir de un experto al que se le ha solicitado identificar si la copa mundial incautada es la auténtica robada o es una réplica, efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "El actual trofeo de la copa del mundo es",
+    "una figura compuesta por dos seres humanos",
+    "sosteniendo al planeta Tierra.",
+    "En esta copa en particular, podemos notar",
+    "su altura de 36,8 centímetros.",
+    "La base contiene dos anillos de malaquita,",
+    "que es una piedra semipreciosa.",
+    "Los anillos son de color verde y",
+    "tienen un ancho de 2 centímetros.",
+    "También en la base se puede leer una leyenda",
+    "que dice “FIFA World Cup”,",
+    "que es el nombre actual de esta copa.",
+    "Al levantarla, nos podemos dar cuenta",
+    "que su peso es menor a 3 kg,",
+    "lo que indica que es una figura hueca.",
+    "Sin dudas, se trata de una réplica de la copa,",
+    "pero averiguaremos si es una réplica oficial o no.",
+    "Está enchapada en oro de 18 quilates.",
+    "En la cara inferior de la copa aparecen grabados",
+    "los años y los nombres de todos los campeones",
+    "de la copa mundial desde el año 1974.",
+    "Es una copa dorada y brillante.",
+    "Las letras están en relieve,",
+    "pero no son nítidas",
+    "Son 1mm más grandes",
+    "que las letras de la copa original.",
+    "Concluimos que la réplica es falsa,",
+    "¡muy bien hecha!",
+    "El aficionado promedio",
+    "no podrá detectarla fácilmente."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| copa | altura | 36,8 cm |\n| | peso | menor a 3 kg |\n| | (enchapado) | oro de 18 quilates |\n| | (color) | dorada |\n| | (brillo) | brillante |\n| base | (leyenda) | “FIFA World Cup” |\n| anillos | (material) | malaquita |\n| | color | verde |\n| | ancho | 2 cm |\n| réplica | | |\n| cara inferior | (grabado) | años y nombres de los campeones desde 1974 |\n| letras | (relieve) | en relieve |\n| | (nitidez) | no nítidas |\n| | (tamaño) | 1 mm más grandes que las originales |\n| réplica falsa | | |\n\n**Relaciones implícitas**: copa —tiene→ base, cara inferior; base —contiene→ anillos; cara inferior —tiene→ letras; copa —es tipo→ réplica, réplica falsa.\n\n**Búsqueda**: ¿Copa original o réplica? —\"sin dudas, se trata de una\"→ **réplica** (altura de 36,8 cm, base con dos anillos verdes de malaquita de 2 cm, leyenda “FIFA World Cup”, peso menor a 3 kg) —\"concluimos que la réplica es\"→ **réplica falsa** (enchapada en oro de 18 quilates, grabados desde 1974, dorada y brillante, letras en relieve no nítidas y 1 mm más grandes).\n\n**Sinónimos**: copa y trofeo.\n\n**Metacomentarios**: líneas 1 a 3 (descripción general del trofeo actual); línea 7, \"que es una piedra semipreciosa\"; línea 12, \"que es el nombre actual de esta copa\"; línea 15, \"lo que indica que es una figura hueca\"; línea 17, \"pero averiguaremos si es una réplica oficial o no\" (subetapa); línea 28, \"¡muy bien hecha!\"; líneas 29 y 30 (el aficionado promedio no podrá detectarla).\n\n**Incertidumbre**: no hay (el experto afirma \"sin dudas\").\n\n**Reglas**\n```\nSI (copa.altura = 36,8 cm) y (anillos.material = malaquita) y (anillos.color = verde) y\n   (anillos.ancho = 2 cm) y (base.leyenda = “FIFA World Cup”) y (copa.peso = menor a 3 kg)\nENTONCES asignar (tipo de copa, réplica)\nSI (copa.enchapado = oro de 18 quilates) y (cara inferior.grabado = campeones desde 1974) y\n   (letras.nitidez = no nítidas) y (letras.tamaño = 1 mm más grandes)\nENTONCES asignar (tipo de réplica, réplica falsa)\n```",
+   "fuente": "propuesta",
+   "nota_fuente": "Resolución propuesta por IA siguiendo el formato de las resoluciones oficiales (alga, araña, planeta, menta). Puede haber decisiones discutibles: comparala con lo visto en clase."
+  },
+  {
+   "id": "ga-10",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 10: Técnica para derrotar a Pikoro Daimaku",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 10",
+   "enunciado": "A partir de la siguiente transcripción, de un protocolo grabado a partir de un experto al que se le ha pedido reconocer la mejor técnica para derrotar a Pikoro Daimaku, considerando sus características y habilidades (según la serie Dragon Ball), efectuar el análisis de protocolos completo. 1 El malvado Pikoro Daimaku                                14 que parece multiplicarse. 2 ha sido liberado de su encierro y                        15 Sin embargo, se puede observar que 3 en su deseo por recuperar su juventud y poder            16 la visión de Pikoro es muy aguda, 4 va tras las siete esferas del dragón,                    17 lo que le permite seguir los movimientos de Goku. 5 pero antes debe derrotar a Goku.                         18 Demuestra conocer muchas técnicas de defensa 6 Pikoro es muy anciano y                                  19 y la resistencia a los golpes es muy alta. 7 sus movimientos son lentos.                              20 El sentido del oído también se ha agudizado, 8 Tiene una fuerza extraordinaria,                         21 lo que le permite al anciano, literalmente \"oír\" 9 lo que indica que sus golpes causan un gran daño.        22 los imperceptibles movimientos de Goku y 10 Es tres veces más alto que Goku.                        23 evitar sus golpes aún sin verlo. 11 Sin dudas, la mejor técnica de ataque para Goku         24 Por lo tanto, la técnica más adecuada para Goku 12 es la técnica de multi-imágenes,                        25 es el Kame-Hame-Ha, que es la técnica más letal. 13 en la que se mueve a una velocidad tan alta             26 Ante semejante oponente, es la mejor técnica.",
+   "lineas": [
+    "El malvado Pikoro Daimaku",
+    "ha sido liberado de su encierro y",
+    "en su deseo por recuperar su juventud y poder",
+    "va tras las siete esferas del dragón,",
+    "pero antes debe derrotar a Goku.",
+    "Pikoro es muy anciano y",
+    "sus movimientos son lentos.",
+    "Tiene una fuerza extraordinaria,",
+    "lo que indica que sus golpes causan un gran daño.",
+    "Es tres veces más alto que Goku.",
+    "Sin dudas, la mejor técnica de ataque para Goku",
+    "es la técnica de multi-imágenes,",
+    "en la que se mueve a una velocidad tan alta",
+    "que parece multiplicarse.",
+    "Sin embargo, se puede observar que",
+    "la visión de Pikoro es muy aguda,",
+    "lo que le permite seguir los movimientos de Goku.",
+    "Demuestra conocer muchas técnicas de defensa",
+    "y la resistencia a los golpes es muy alta.",
+    "El sentido del oído también se ha agudizado,",
+    "lo que le permite al anciano, literalmente \"oír\"",
+    "los imperceptibles movimientos de Goku y",
+    "evitar sus golpes aún sin verlo.",
+    "Por lo tanto, la técnica más adecuada para Goku",
+    "es el Kame-Hame-Ha, que es la técnica más letal.",
+    "Ante semejante oponente, es la mejor técnica."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| Pikoro | (edad) | muy anciano |\n| | (altura) | tres veces más alto que Goku |\n| movimientos | (velocidad) | lentos |\n| fuerza | (intensidad) | extraordinaria |\n| técnica de multi-imágenes | velocidad | tan alta que parece multiplicarse |\n| visión | (agudeza) | muy aguda |\n| técnicas de defensa | (cantidad) | muchas |\n| resistencia a los golpes | (nivel) | muy alta |\n| sentido del oído | (agudeza) | agudizado |\n| anciano | | |\n| Kame-Hame-Ha | (letalidad) | la más letal |\n\n**Relaciones implícitas**: Pikoro —tiene→ visión, sentido del oído, fuerza; Goku —usa→ técnica de multi-imágenes, Kame-Hame-Ha; técnica de ataque —es tipo→ multi-imágenes, Kame-Hame-Ha.\n\n**Búsqueda**: ¿Mejor técnica? —\"sin dudas, la mejor técnica de ataque para Goku es\"→ **técnica de multi-imágenes** (Pikoro muy anciano, movimientos lentos, fuerza extraordinaria, tres veces más alto) —\"por lo tanto, la técnica más adecuada para Goku es\"→ **Kame-Hame-Ha** (visión muy aguda, muchas técnicas de defensa, resistencia muy alta a los golpes, oído agudizado).\n\n**Sinónimos**: Pikoro y anciano.\n\n**Metacomentarios**: líneas 1 a 5 (contexto de la historia); línea 9, \"lo que indica que sus golpes causan un gran daño\"; línea 15, \"sin embargo\"; línea 17, \"lo que le permite seguir los movimientos de Goku\"; líneas 21 a 23 (explica para qué le sirve el oído); línea 26, \"ante semejante oponente, es la mejor técnica\".\n\n**Incertidumbre**: no hay.\n\n**Reglas**\n```\nSI (Pikoro.edad = muy anciano) y (movimientos.velocidad = lentos) y\n   (fuerza.intensidad = extraordinaria) y (Pikoro.altura = tres veces más alto que Goku)\nENTONCES asignar (técnica de ataque, multi-imágenes)\nSI (visión.agudeza = muy aguda) y (técnicas de defensa.cantidad = muchas) y\n   (resistencia a los golpes.nivel = muy alta) y (sentido del oído.agudeza = agudizado)\nENTONCES asignar (técnica de ataque, Kame-Hame-Ha)\n```",
+   "fuente": "propuesta",
+   "nota_fuente": "Resolución propuesta por IA siguiendo el formato de las resoluciones oficiales (alga, araña, planeta, menta). Puede haber decisiones discutibles: comparala con lo visto en clase."
+  },
+  {
+   "id": "ga-11",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 11: Ovni",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 11",
+   "enunciado": "A partir de la siguiente transcripción, de un protocolo grabado a partir de un experto en ufología, al que se le ha pedido identificar si un fenómeno pertenece a un ovni o no, efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "En este agrograma que repentinamente apareció",
+    "en los campos del aeroclub, podemos observar",
+    "tres anillos brillantes de tamaño grande y",
+    "un surco uniforme de 60 cm.",
+    "Este surco indica que no se ha utilizado",
+    "ninguna herramienta o maquinaria.",
+    "A simple vista el pasto se aprecia quemado.",
+    "Podría no ser por fuego según mi experiencia.",
+    "El color predominante del pasto",
+    "es el amarillo con tonalidades marrones.",
+    "Esto nos encuadra dentro del",
+    "fenómeno ovni.",
+    "Siguiendo con nuestro análisis, vemos que",
+    "los anillos se encuentran en disposición triangular.",
+    "No se perciben olores fuertes, pero",
+    "el estudio de laboratorio detecta",
+    "la presencia de un herbicida.",
+    "Como el PH del suelo es muy elevado,",
+    "ayudó a que el agente activo del desmalezante",
+    "permanezca por más tiempo.",
+    "El pasto se puede notar que está aplastado y",
+    "sigue una dirección en sentido antihorario.",
+    "Aunque seguiremos investigando",
+    "cómo se han formado los anillos",
+    "no quedan dudas que estamos ante un",
+    "fenómeno creado por el hombre,",
+    "donde existieron químicos que intervinieron.",
+    "Los anillos son demasiado perfectos…"
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| agrograma | | |\n| anillos | (cantidad) | tres |\n| | (brillo) | brillantes |\n| | tamaño | grande |\n| | disposición | triangular |\n| surco | (forma) | uniforme |\n| | (ancho) | 60 cm |\n| pasto | (estado) | quemado / aplastado |\n| | color predominante | amarillo con tonalidades marrones |\n| | (dirección) | sentido antihorario |\n| fenómeno ovni | | |\n| olores | (intensidad) | no fuertes |\n| estudio de laboratorio | (resultado) | presencia de herbicida |\n| suelo | PH | muy elevado |\n| fenómeno creado por el hombre | | |\n\n**Relaciones implícitas**: agrograma —tiene→ anillos, surco, pasto; agrograma —es tipo→ fenómeno ovni, fenómeno creado por el hombre; suelo —contiene→ herbicida.\n\n**Búsqueda**: ¿Origen del agrograma? —\"esto nos encuadra dentro del\"→ **fenómeno ovni** (tres anillos brillantes de tamaño grande, surco uniforme de 60 cm, pasto quemado de color amarillo con tonos marrones) —\"no quedan dudas que estamos ante un\"→ **fenómeno creado por el hombre** (anillos en disposición triangular, sin olores fuertes, herbicida detectado, PH del suelo muy elevado, pasto aplastado en sentido antihorario).\n\n**Sinónimos**: no hay.\n\n**Metacomentarios**: línea 1, \"que repentinamente apareció en los campos del aeroclub\"; líneas 5 y 6, \"este surco indica que no se ha utilizado ninguna herramienta o maquinaria\"; línea 13, \"siguiendo con nuestro análisis\" (subetapa); líneas 19 y 20, \"ayudó a que el agente activo del desmalezante permanezca por más tiempo\"; líneas 23 y 24, \"aunque seguiremos investigando cómo se han formado los anillos\"; línea 27; línea 28, \"los anillos son demasiado perfectos…\".\n\n**Incertidumbre**: \"podría no ser por fuego según mi experiencia\" (línea 8), sobre la causa del pasto quemado.\n\n**Reglas**\n```\nSI (anillos.cantidad = tres) y (anillos.brillo = brillantes) y (anillos.tamaño = grande) y\n   (surco.forma = uniforme) y (surco.ancho = 60 cm) y (pasto.estado = quemado) y\n   (pasto.color predominante = amarillo con tonalidades marrones)\nENTONCES asignar (origen, fenómeno ovni)\nSI (anillos.disposición = triangular) y (olores.intensidad = no fuertes) y\n   (estudio de laboratorio.resultado = herbicida) y (suelo.PH = muy elevado) y\n   (pasto.dirección = sentido antihorario)\nENTONCES asignar (origen, fenómeno creado por el hombre)\n```",
+   "fuente": "propuesta",
+   "nota_fuente": "Resolución propuesta por IA siguiendo el formato de las resoluciones oficiales (alga, araña, planeta, menta). Puede haber decisiones discutibles: comparala con lo visto en clase."
+  },
+  {
+   "id": "ga-12",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Ejercicio 12: Hamburguesa Gourmet",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio N° 12",
+   "enunciado": "A partir de la siguiente transcripción de un protocolo grabado a partir de un experto al que se le ha pedido identificar el tipo de hamburguesa gourmet (según el gobierno porteño con un nuevo concurso: \"Elegí la mejor hamburguesa de la Ciudad\"), efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "Las hamburguesas gourmet son la última novedad",
+    "en degustación gastronómica en Capital Federal.",
+    "Son hamburguesas caseras que han dejado",
+    "de etiquetarse como comida rápida.",
+    "En este caso, se puede observar",
+    "que este sándwich posee",
+    "hierbas y pimentón como condimentos.",
+    "Se visualiza un pan tostado ubicado lateralmente",
+    "de color maíz cubierto con semillas de sésamo.",
+    "Tiene queso derretido frío que consiste en",
+    "roquefort mezclado con manteca.",
+    "El filete de carne mide 20 cm de diámetro,",
+    "es de 250 grs y se encuentra cocido a punto",
+    "ya que tiene color rojo en su interior.",
+    "Tiene pequeñas cebollas en estado caramelizado.",
+    "Puede tratarse de una",
+    "hamburguesa Dorothy.",
+    "En una segunda observación,",
+    "podemos visualizar que posee",
+    "tomates cherry confitados",
+    "cubiertos con una salsa de mostaza con miel.",
+    "La combinación con gustos agridulces es novedosa",
+    "para este tipo de hamburguesas.",
+    "Se pueden apreciar sus aderezos",
+    "ubicados en el plato de degustación.",
+    "Son aderezos caseros,",
+    "lo que indica que pueden mezclarse",
+    "con papas fritas o aros de cebolla para acompañar.",
+    "Dadas estas particularidades",
+    "podemos concluir que se trata de una",
+    "hamburguesa Goldie.",
+    "Este emparedado fue el ganador del concurso",
+    "\"Elegí la mejor hamburguesa de la Ciudad\"",
+    "en marzo de 2017."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| hamburguesa | | |\n| sándwich | condimentos | hierbas y pimentón |\n| pan | (estado) | tostado |\n| | (ubicación) | lateral |\n| | color | maíz |\n| | (cobertura) | semillas de sésamo |\n| queso | (estado) | derretido frío |\n| | (composición) | roquefort mezclado con manteca |\n| filete de carne | diámetro | 20 cm |\n| | (peso) | 250 grs |\n| | (cocción) | a punto |\n| | color interior | rojo |\n| cebollas | (tamaño) | pequeñas |\n| | estado | caramelizado |\n| hamburguesa Dorothy | | |\n| tomates cherry | (preparación) | confitados |\n| | (cobertura) | salsa de mostaza con miel |\n| aderezos | (ubicación) | plato de degustación |\n| | (elaboración) | caseros |\n| hamburguesa Goldie | | |\n| emparedado | | |\n\n**Relaciones implícitas**: hamburguesa —es tipo→ hamburguesa Dorothy, hamburguesa Goldie; hamburguesa —tiene→ pan, queso, filete de carne, cebollas, tomates cherry, aderezos.\n\n**Búsqueda**: ¿Tipo de hamburguesa gourmet? —\"puede tratarse de una\"→ **hamburguesa Dorothy** (hierbas y pimentón, pan tostado lateral color maíz con sésamo, queso roquefort con manteca, filete de 20 cm y 250 grs a punto, cebollas pequeñas caramelizadas) —\"podemos concluir que se trata de una\"→ **hamburguesa Goldie** (tomates cherry confitados con salsa de mostaza con miel, aderezos caseros en el plato).\n\n**Sinónimos**: hamburguesa, sándwich y emparedado.\n\n**Metacomentarios**: líneas 1 a 4 (contexto sobre las hamburguesas gourmet); línea 14, \"ya que tiene color rojo en su interior\" (justificación); línea 18, \"en una segunda observación\" (subetapa); líneas 22 y 23, \"la combinación con gustos agridulces es novedosa\"; líneas 27 y 28, \"lo que indica que pueden mezclarse con papas fritas o aros de cebolla\"; líneas 32 a 34 (ganó un concurso).\n\n**Incertidumbre**: \"puede tratarse de una\" (línea 16).\n\n**Reglas**\n```\nSI (sándwich.condimentos = hierbas y pimentón) y (pan.estado = tostado) y (pan.color = maíz) y\n   (pan.cobertura = semillas de sésamo) y (queso.composición = roquefort con manteca) y\n   (filete de carne.diámetro = 20 cm) y (filete de carne.cocción = a punto) y (cebollas.estado = caramelizado)\nENTONCES asignar (tipo de hamburguesa, Dorothy)\nSI (tomates cherry.preparación = confitados) y (tomates cherry.cobertura = salsa de mostaza con miel) y\n   (aderezos.elaboración = caseros)\nENTONCES asignar (tipo de hamburguesa, Goldie)\n```",
+   "fuente": "propuesta",
+   "nota_fuente": "Resolución propuesta por IA siguiendo el formato de las resoluciones oficiales (alga, araña, planeta, menta). Puede haber decisiones discutibles: comparala con lo visto en clase."
+  },
+  {
+   "id": "ga-r1",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Resuelto 1: Planeta",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio Resuelto N° 1",
+   "enunciado": "Dada la siguiente grabación, realizada a partir de un experto al que se le ha solicitado reconocer un determinado planeta, efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "En nuestra primera observación,",
+    "puedo notar",
+    "que este planeta",
+    "posee una densidad muy baja",
+    "y presenta una superficie gaseosa.",
+    "Dadas estas características",
+    "se podría tratar de",
+    "Urano.",
+    "Realizando una segunda observación,",
+    "puedo ver",
+    "que posee diez satélites",
+    "y que su período de rotación",
+    "es de 9 horas.",
+    "Podemos concluir",
+    "que este cuerpo celeste es",
+    "Júpiter."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| planeta | densidad | muy baja |\n| superficie | (forma) | gaseosa |\n| Urano | | |\n| satélite | (cantidad) | diez |\n| período de rotación | (tiempo) | 9 horas |\n| cuerpo celeste | | |\n| Júpiter | | |\n\n**Relaciones implícitas**: Urano —es un→ planeta; Júpiter —es un→ planeta; planeta —tiene→ superficie, período de rotación, satélite.\n\n**Búsqueda**: ¿Planeta? —\"dadas estas características\"→ **Urano** (densidad muy baja, superficie gaseosa) —\"podemos concluir que\"→ **Júpiter** (diez satélites, período de rotación de 9 horas).\n\n**Sinónimos**: planeta y cuerpo celeste. **Metacomentarios**: líneas 1 y 9, \"en nuestra primera observación\" y \"realizando una segunda observación\" (secuencia de subetapas). **Incertidumbre**: \"se podría tratar\".\n\n**Reglas**\n```\nSI (planeta.densidad = muy baja) y (superficie.forma = gaseosa)\nENTONCES asignar (planeta, Urano)\nSI (satélite.cantidad = diez) y (período de rotación.tiempo = 9 horas)\nENTONCES asignar (planeta, Júpiter)\n```",
+   "fuente": "oficial",
+   "nota_fuente": "Resolución oficial de la cátedra."
+  },
+  {
+   "id": "ga-r2",
+   "tipo": "protocolo",
+   "unidad": "u3-protocolos",
+   "titulo": "Resuelto 2: Planta de Menta",
+   "origen": "Guía Práctica de Análisis de Protocolos, Ejercicio Resuelto N° 2",
+   "enunciado": "Dada la siguiente grabación, realizada a partir de un experto al que se le ha solicitado reconocer un tipo de planta de menta, efectuar el análisis de protocolos completo.",
+   "lineas": [
+    "La menta",
+    "es un género de plantas herbáceas",
+    "apreciada por su agradable aroma.",
+    "Vemos que esta planta",
+    "presenta un aroma refrescante y",
+    "contiene una cantidad muy alta",
+    "de aceite de mentol.",
+    "Sus hojas son anchas y",
+    "de tamaño grande.",
+    "Sus flores son de color púrpura claro.",
+    "Podríamos deducir,",
+    "que estamos identificando a una",
+    "Menta Arvensis.",
+    "En una segunda observación más profunda,",
+    "vemos que",
+    "la altura de este vegetal es de 30 cm y",
+    "sus hojas de 4 mm de longitud,",
+    "tienen borde aserrado.",
+    "El tallo es cuadrangular",
+    "de color verdoso claro.",
+    "Concluimos entonces que se trata de una",
+    "Menta Austríaca."
+   ],
+   "resolucion": "**Tabla CCV**\n\n| Concepto | Característica | Valor |\n|---|---|---|\n| planta | aroma | refrescante |\n| | altura | 30 cm |\n| aceite de mentol | cantidad | muy alta |\n| hoja | (anchura) | ancha |\n| | tamaño | grande |\n| | longitud | 4 mm |\n| | borde | aserrado |\n| flor | color | púrpura claro |\n| Menta Arvensis | | |\n| vegetal | | |\n| tallo | (forma) | cuadrangular |\n| | color | verdoso claro |\n| Menta Austríaca | | |\n\n**Relaciones implícitas**: planta —es una→ Menta Arvensis, Menta Austríaca; planta —tiene→ tallo, hoja, flor, aceite de mentol.\n\n**Búsqueda**: ¿Planta de menta? —\"que estamos identificando a una\"→ **Menta Arvensis** (aroma refrescante, muy alta cantidad de aceite de mentol, hojas anchas de tamaño grande, flores púrpura claro) —\"concluimos entonces que se trata de una\"→ **Menta Austríaca** (altura de 30 cm, hojas de 4 mm de longitud con borde aserrado, tallo cuadrangular verdoso claro).\n\n**Sinónimos**: planta y vegetal. **Metacomentarios**: líneas 1 a 3, \"la menta es un género de plantas herbáceas apreciada por su agradable aroma\" (comentario general sobre el género); línea 14, \"en una segunda observación más profunda\" (subetapas). **Incertidumbre**: \"podríamos deducir\".\n\n**Reglas**\n```\nSI (planta.aroma = refrescante) y (aceite de mentol.cantidad = muy alta) y\n   (hoja.anchura = ancha) y (hoja.tamaño = grande) y (flor.color = púrpura claro)\nENTONCES asignar (tipo de planta de menta, Menta Arvensis)\nSI (planta.altura = 30 cm) y (hoja.longitud = 4 mm) y (hoja.borde = aserrado) y\n   (tallo.forma = cuadrangular) y (tallo.color = verdoso claro)\nENTONCES asignar (tipo de planta de menta, Menta Austríaca)\n```",
+   "fuente": "oficial",
+   "nota_fuente": "Resolución oficial de la cátedra."
+  }
+ ]
+}

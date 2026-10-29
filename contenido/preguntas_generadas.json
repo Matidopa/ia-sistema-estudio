@@ -1,0 +1,1960 @@
+{
+ "nota": "Preguntas generadas por IA a partir de los parciales reales y el material de la cátedra. Cada una indica en qué preguntas reales se basa (basada_en).",
+ "preguntas": [
+  {
+   "unidad": "u0-parcial",
+   "enunciado": "En los parciales recientes, ¿cuántas preguntas suelen corresponder a las tres técnicas (Protocolos, Emparrillado y Búsqueda) juntas?",
+   "opciones": [
+    "Alrededor de 15.",
+    "Alrededor de 10.",
+    "Las 25.",
+    "Alrededor de 5."
+   ],
+   "correcta": 1,
+   "explicacion": "Cada técnica tiene 4 o 5 preguntas con su anexo: entre las tres suman unas 15 de las 25. Por eso conviene dominarlas primero.",
+   "basada_en": [],
+   "id": "gen-u0-01"
+  },
+  {
+   "unidad": "u0-parcial",
+   "enunciado": "Los temas T1 y T2 de un mismo día de parcial…",
+   "opciones": [
+    "tienen anexos distintos y el mismo orden de bloques.",
+    "son idénticos.",
+    "comparten los anexos pero pueden cambiar el orden de los bloques.",
+    "no incluyen anexos."
+   ],
+   "correcta": 3,
+   "explicacion": "T1 y T2 usan el mismo árbol, la misma matriz y el mismo protocolo, pero reordenan los bloques y cambian las preguntas. Leé qué pregunta cada letra.",
+   "basada_en": [
+    "2022-1c-miercoles-t2-a"
+   ],
+   "id": "gen-u0-02"
+  },
+  {
+   "unidad": "u0-parcial",
+   "enunciado": "Antes de leer las preguntas del bloque de Métodos de Búsqueda, lo más conveniente es…",
+   "opciones": [
+    "resolver solo Primero en Amplitud.",
+    "adivinar el método más usado.",
+    "saltear el bloque.",
+    "resolver en borrador las tablas de Primero el Mejor y A* y los caminos de las escaladas."
+   ],
+   "correcta": 4,
+   "explicacion": "Con las tablas de Primero el Mejor y A* y los recorridos de las escaladas y de profundidad se responden casi todas las preguntas del Anexo B.",
+   "basada_en": [],
+   "id": "gen-u0-03"
+  },
+  {
+   "unidad": "u0-parcial",
+   "enunciado": "En una opción de una pregunta de teoría aparece la palabra \"siempre\" o \"garantiza\". En esta materia eso…",
+   "opciones": [
+    "la hace siempre correcta.",
+    "suele indicar que es incorrecta, salvo en definiciones duras.",
+    "no tiene ninguna importancia.",
+    "indica que la respuesta es \"todas las anteriores\"."
+   ],
+   "correcta": 2,
+   "explicacion": "Casi todo en IA es \"puede\": la ruleta *no garantiza*, la escalada *puede* no llegar, el AG da *una buena* solución. Excepciones: definiciones como \"la cruza simple tiene siempre un punto de corte\".",
+   "basada_en": [
+    "2020-2c-t1-a",
+    "2020-2c-t3-b"
+   ],
+   "id": "gen-u0-04"
+  },
+  {
+   "unidad": "u0-parcial",
+   "enunciado": "En la sección Repaso de este sistema, una pregunta que acertás…",
+   "opciones": [
+    "vuelve al día siguiente siempre.",
+    "se marca como errada.",
+    "desaparece para siempre.",
+    "vuelve cada vez más espaciada (1, 3, 7 y 16 días)."
+   ],
+   "correcta": 4,
+   "explicacion": "Es repaso espaciado (sistema Leitner): cada acierto sube la pregunta de caja y tarda más en volver; un error la devuelve al principio.",
+   "basada_en": [],
+   "id": "gen-u0-05"
+  },
+  {
+   "unidad": "u1-intro",
+   "enunciado": "Según la cátedra, la Inteligencia Artificial busca construir software capaz de realizar actividades propias de los seres humanos como…",
+   "opciones": [
+    "cálculo numérico y almacenamiento.",
+    "razonamiento, conducta y aprendizaje.",
+    "comunicación por redes.",
+    "percepción visual exclusivamente."
+   ],
+   "correcta": 2,
+   "explicacion": "La definición de la cátedra: modelos de cómputo para actividades humanas de **razonamiento, conducta y aprendizaje**.",
+   "basada_en": [],
+   "id": "gen-u1-01"
+  },
+  {
+   "unidad": "u1-intro",
+   "enunciado": "La IA Fuerte sostiene que…",
+   "opciones": [
+    "solo el cerebro humano tiene mente.",
+    "el hardware más el software constituyen una mente.",
+    "el software solo puede modelar una mente humana con capacidad reducida.",
+    "las máquinas nunca podrán pensar."
+   ],
+   "correcta": 2,
+   "explicacion": "IA fuerte: Hardware + Software = Mente (el cerebro y la mente son equivalentes al HW y SW). IA débil: es un *modelo* de mente, con capacidad reducida.",
+   "basada_en": [],
+   "id": "gen-u1-02"
+  },
+  {
+   "unidad": "u1-intro",
+   "enunciado": "La paradoja de Moravec dice que para una computadora es…",
+   "opciones": [
+    "imposible aprender.",
+    "igual de difícil cualquier tarea humana.",
+    "fácil rendir como un adulto en un test de inteligencia y difícil tener las habilidades perceptivas y motrices de un bebé.",
+    "difícil jugar al ajedrez y fácil caminar."
+   ],
+   "correcta": 3,
+   "explicacion": "Lo que a nosotros nos cuesta (lógica, cálculo) a la máquina le resulta fácil, y lo que hacemos sin pensar (percibir, movernos) le resulta muy difícil.",
+   "basada_en": [],
+   "id": "gen-u1-03"
+  },
+  {
+   "unidad": "u1-intro",
+   "enunciado": "El término \"Inteligencia Artificial\" se presentó formalmente por primera vez en…",
+   "opciones": [
+    "la Conferencia de Dartmouth (1956).",
+    "el test de Turing (1950).",
+    "la máquina analítica de Babbage.",
+    "la partida de Deep Blue contra Kasparov."
+   ],
+   "correcta": 1,
+   "explicacion": "Dartmouth, 1956. Turing (1950) propuso el juego de la imitación; Deep Blue es de 1996-97.",
+   "basada_en": [],
+   "id": "gen-u1-04"
+  },
+  {
+   "unidad": "u1-intro",
+   "enunciado": "Para la cátedra, la \"experiencia\" es…",
+   "opciones": [
+    "el conjunto de capacidades cognitivas.",
+    "lo que está escrito en libros y manuales.",
+    "la facultad de comprender las cosas por la razón.",
+    "el conocimiento adquirido por haber realizado una actividad un número significativo de veces."
+   ],
+   "correcta": 4,
+   "explicacion": "Experiencia = conocimiento por repetición. La primera opción es la definición de *conocimiento*, la tercera la de *mente* y la cuarta describe una *fuente pública*.",
+   "basada_en": [],
+   "id": "gen-u1-05"
+  },
+  {
+   "unidad": "u1-intro",
+   "enunciado": "Al momento de aplicar Inteligencia Artificial en una organización se deben considerar…",
+   "opciones": [
+    "únicamente el costo del hardware.",
+    "solo los deseos de los directivos.",
+    "solo las tecnologías disponibles.",
+    "los conocimientos del dominio, los componentes éticos y sociales y los principios ingenieriles del proceso."
+   ],
+   "correcta": 4,
+   "explicacion": "La cátedra insiste en considerar todo junto: dominio, ética y proceso de ingeniería. En los parciales la respuesta es \"todas las opciones anteriores\".",
+   "basada_en": [
+    "2022-2c-lunes-t1-l",
+    "2022-2c-lunes-t2-t"
+   ],
+   "id": "gen-u1-06"
+  },
+  {
+   "unidad": "u2-adquisicion",
+   "enunciado": "El conocimiento que un médico usa para diagnosticar \"a ojo\" por su experiencia, y que no está escrito en ningún libro, es conocimiento…",
+   "opciones": [
+    "público, y se educe.",
+    "privado, y se educe.",
+    "privado, y se extrae.",
+    "público, y se extrae."
+   ],
+   "correcta": 2,
+   "explicacion": "Lo que está en la cabeza del experto es **privado** y se obtiene por **educción**. Lo escrito (libros, manuales) es público y se **extrae**.",
+   "basada_en": [],
+   "id": "gen-u2-01"
+  },
+  {
+   "unidad": "u2-adquisicion",
+   "enunciado": "El Análisis de Protocolos es utilizado por el Ingeniero de Conocimiento principalmente para…",
+   "opciones": [
+    "medir la exactitud de un modelo.",
+    "identificar las reglas que aplica el experto al resolver el problema.",
+    "completar datos que el experto no mencionó.",
+    "generar automáticamente la solución del problema."
+   ],
+   "correcta": 2,
+   "explicacion": "El AP saca las reglas de razonamiento (conocimiento procedimental) además de conceptos y características.",
+   "basada_en": [
+    "2024-1c-miercoles-t1-e"
+   ],
+   "id": "gen-u2-02"
+  },
+  {
+   "unidad": "u2-adquisicion",
+   "enunciado": "El Emparrillado es utilizado por el Ingeniero de Conocimiento principalmente para…",
+   "opciones": [
+    "identificar la relación entre los conceptos que aplica el experto.",
+    "documentar los requerimientos del software.",
+    "entrenar una red neuronal.",
+    "escribir las reglas SI-ENTONCES del experto."
+   ],
+   "correcta": 1,
+   "explicacion": "El emparrillado da conocimiento declarativo: qué elementos se parecen y cómo se relacionan las características.",
+   "basada_en": [
+    "2024-1c-miercoles-t2-o"
+   ],
+   "id": "gen-u2-03"
+  },
+  {
+   "unidad": "u2-adquisicion",
+   "enunciado": "¿Cuál de estas técnicas es de EXTRACCIÓN (no de educción)?",
+   "opciones": [
+    "Emparrillado.",
+    "Análisis de documentación.",
+    "Tormenta de ideas.",
+    "Entrevista."
+   ],
+   "correcta": 2,
+   "explicacion": "Extracción = análisis de documentación y de datos (conocimiento público). Las demás obtienen conocimiento del experto (educción).",
+   "basada_en": [],
+   "id": "gen-u2-04"
+  },
+  {
+   "unidad": "u2-adquisicion",
+   "enunciado": "El conocimiento procedimental obtenido en un Análisis de Protocolos se encuentra en…",
+   "opciones": [
+    "la tabla de conceptos-características-valores.",
+    "los sinónimos.",
+    "las reglas armadas en la etapa de interpretación.",
+    "la transcripción."
+   ],
+   "correcta": 3,
+   "explicacion": "Procedimental (cómo resolvió) = reglas de la interpretación. Declarativo (qué objetos y relaciones hay) = codificación.",
+   "basada_en": [],
+   "id": "gen-u2-05"
+  },
+  {
+   "unidad": "u2-adquisicion",
+   "enunciado": "Un software tradicional transforma los datos en ___, mientras que un sistema inteligente los transforma en ___.",
+   "opciones": [
+    "conocimiento / noticias",
+    "noticias / conocimiento",
+    "información / datos",
+    "reglas / datos"
+   ],
+   "correcta": 2,
+   "explicacion": "Software tradicional: datos → noticias (información). Sistema inteligente: les encuentra significado y utilidad en el dominio → conocimiento.",
+   "basada_en": [],
+   "id": "gen-u2-06"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Una característica que comparten el software tradicional y los sistemas inteligentes es que…",
+   "opciones": [
+    "son flexibles y robustos.",
+    "satisfacen deseos y necesidades de los stakeholders.",
+    "se aplican a tareas sistemáticas.",
+    "se implementan en forma algorítmica."
+   ],
+   "correcta": 2,
+   "explicacion": "Lo común: resuelven problemas y satisfacen deseos y necesidades de los stakeholders. Lo algorítmico y sistemático es del tradicional; lo flexible y robusto, del inteligente.",
+   "basada_en": [
+    "2025-lunes-t2-p"
+   ],
+   "id": "gen-u6-01"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Un sistema que \"se equivoca a veces pero puede mejorar durante su uso\" cumple con las características de…",
+   "opciones": [
+    "no infalible y capaz de aprender.",
+    "omnisciente y racional.",
+    "determinista.",
+    "infalible."
+   ],
+   "correcta": 1,
+   "explicacion": "Los sistemas inteligentes son racionales, no omniscientes, **no infalibles**, **pueden aprender**, y son flexibles y robustos.",
+   "basada_en": [
+    "2025-lunes-t1-g"
+   ],
+   "id": "gen-u6-02"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Todo Sistema Basado en Conocimientos…",
+   "opciones": [
+    "debe tener base de conocimientos explícita.",
+    "debe tener memoria de trabajo.",
+    "puede o no tener base de conocimientos explícita.",
+    "usa solo conocimiento privado."
+   ],
+   "correcta": 1,
+   "explicacion": "El SBC depende de la presencia **explícita** de un cuerpo de conocimientos: siempre tiene BC explícita. Es el Sistema Experto el que puede o no tenerla.",
+   "basada_en": [
+    "2020-2c-t3-u",
+    "2020-2c-t4-u"
+   ],
+   "id": "gen-u6-03"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "En un SBC, las reglas se almacenan en ___ y para decidir cuál aplicar se usa ___.",
+   "opciones": [
+    "la base de datos / el trazador de consultas",
+    "el trazador de explicaciones / la memoria de trabajo",
+    "el motor de inferencias con emparrillado / la base de conocimientos",
+    "la base de conocimientos con lógica de primer orden / el motor de inferencias con métodos de búsqueda"
+   ],
+   "correcta": 4,
+   "explicacion": "Base de Conocimientos = reglas en lógica de 1er orden. Motor de Inferencias = elige reglas con métodos de búsqueda.",
+   "basada_en": [
+    "2024-1c-lunes-t1-e",
+    "2024-1c-lunes-t2-o"
+   ],
+   "id": "gen-u6-04"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "El componente de un Sistema Experto Tradicional que lee la memoria de trabajo para mostrarle al usuario cómo se llegó al resultado es…",
+   "opciones": [
+    "el trazador de explicaciones.",
+    "la base de datos.",
+    "el manejador de comunicaciones.",
+    "el trazador de consultas."
+   ],
+   "correcta": 1,
+   "explicacion": "El trazador de explicaciones justifica los resultados usando la traza de la memoria de trabajo. Es el único tipo de sistema con un componente para justificar.",
+   "basada_en": [
+    "2023-1c-lunes-t1-l",
+    "2022-1c-lunes-t2-t"
+   ],
+   "id": "gen-u6-05"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Los sistemas inteligentes considerados \"caja negra\" porque guardan su conocimiento en forma implícita y no pueden justificar resultados son…",
+   "opciones": [
+    "los Sistemas Basados en Conocimientos.",
+    "los sistemas difusos con reglas explícitas.",
+    "las Redes Neuronales Artificiales.",
+    "los Sistemas Expertos Tradicionales."
+   ],
+   "correcta": 3,
+   "explicacion": "En una RNA el conocimiento queda en los pesos de las conexiones, sin forma legible de justificarlo.",
+   "basada_en": [
+    "2023-2c-miercoles-t2-t"
+   ],
+   "id": "gen-u6-06"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Si un sistema aprendió automáticamente sus conocimientos a partir de una tabla de datos históricos, su arquitectura pertenece a…",
+   "opciones": [
+    "Machine Learning.",
+    "IA Fuerte.",
+    "IA Tradicional.",
+    "Inteligencia de enjambre."
+   ],
+   "correcta": 1,
+   "explicacion": "Generar el modelo a partir de ejemplos es Machine Learning. Aplicar reglas explícitas elegidas con búsqueda sería IA Tradicional.",
+   "basada_en": [
+    "2022-2c-miercoles-t1-k",
+    "2022-2c-miercoles-t2-s"
+   ],
+   "id": "gen-u6-07"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Un ejemplo de problema de OPTIMIZACIÓN es…",
+   "opciones": [
+    "reconocer la marca de una gaseosa en una foto.",
+    "decidir si un mail es spam.",
+    "estimar cuántos litros de agua se consumirán mañana en un barrio.",
+    "armar el cronograma de guardias de un hospital que minimice horas extra y cubra todos los turnos."
+   ],
+   "correcta": 4,
+   "explicacion": "Optimización = encontrar la mejor combinación que maximiza o minimiza algo. Reconocer o decidir es clasificación; estimar un número es predicción.",
+   "basada_en": [
+    "2022-1c-lunes-t1-f",
+    "2023-2c-miercoles-t1-l"
+   ],
+   "id": "gen-u6-08"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Un ejemplo de problema de PREDICCIÓN / ESTIMACIÓN es…",
+   "opciones": [
+    "identificar el género de una película a partir de su tráiler.",
+    "encontrar el orden óptimo de entregas de un repartidor.",
+    "identificar la cantidad de personas que aparecen en una foto.",
+    "reconocer una firma falsificada."
+   ],
+   "correcta": 3,
+   "explicacion": "La salida es un **número** (cantidad de personas), aunque empiece con \"identificar\". El género y la firma son clasificación; el orden óptimo, optimización.",
+   "basada_en": [
+    "2023-1c-miercoles-t1-k",
+    "2023-1c-miercoles-t2-s"
+   ],
+   "id": "gen-u6-09"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Para encontrar la mejor combinación de proveedores que minimice costo y tiempo de entrega, lo adecuado es…",
+   "opciones": [
+    "una RNA de Hopfield.",
+    "un Algoritmo de Inducción.",
+    "una RNA Perceptrón.",
+    "un Algoritmo Genético."
+   ],
+   "correcta": 4,
+   "explicacion": "Mejor combinación + maximizar/minimizar = optimización → Algoritmo Genético.",
+   "basada_en": [
+    "2022-1c-miercoles-t1-m",
+    "2022-1c-miercoles-t2-u"
+   ],
+   "id": "gen-u6-10"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Para estimar el precio de venta de un auto usado según su modelo, año y kilometraje, contando con muchos datos históricos, lo adecuado es…",
+   "opciones": [
+    "una RNA Multi-Perceptrón BackPropagation.",
+    "una RNA de Hopfield.",
+    "un Sistema Basado en Conocimientos sin datos.",
+    "un Algoritmo Genético."
+   ],
+   "correcta": 1,
+   "explicacion": "Predicción de un valor a partir de ejemplos etiquetados → RNA Backpropagation con aprendizaje supervisado.",
+   "basada_en": [
+    "2022-1c-lunes-t1-m",
+    "2023-1c-lunes-t1-m"
+   ],
+   "id": "gen-u6-11"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Si se necesita elegir el vino \"más adecuado\" para un plato aplicando las reglas subjetivas educidas de un sommelier, lo adecuado es…",
+   "opciones": [
+    "un Sistema Experto Difuso.",
+    "un Algoritmo de Inducción.",
+    "una RNA Perceptrón.",
+    "una RNA de Hopfield."
+   ],
+   "correcta": 1,
+   "explicacion": "Reglas educidas de un experto + valoraciones subjetivas e imprecisas (\"más adecuado\") → Sistema Experto Difuso.",
+   "basada_en": [
+    "2023-2c-miercoles-t1-m",
+    "2023-2c-miercoles-t2-u"
+   ],
+   "id": "gen-u6-12"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Si una organización no tiene datos ni reglas pero sí heurísticas sobre el problema, la tecnología a usar es…",
+   "opciones": [
+    "IA Tradicional.",
+    "Inteligencia Computacional.",
+    "Machine Learning.",
+    "ninguna, no se puede aplicar IA."
+   ],
+   "correcta": 2,
+   "explicacion": "Con solo heurísticas se puede usar Inteligencia Computacional (por ejemplo, un AG con esas heurísticas en la función de aptitud).",
+   "basada_en": [
+    "2025-miercoles-t2-p",
+    "2025-miercoles-t1-f"
+   ],
+   "id": "gen-u6-13"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "Los Sistemas Inteligentes que usan conocimiento declarativo y explícito adquirido de fuentes privadas y públicas son…",
+   "opciones": [
+    "los Sistemas Expertos Tradicionales.",
+    "los Sistemas Basados en Conocimientos.",
+    "los Algoritmos Genéticos.",
+    "las Redes Neuronales."
+   ],
+   "correcta": 1,
+   "explicacion": "SET = privadas + públicas. SBC = solo públicas. La diferencia principal entre ambos es la fuente de conocimiento.",
+   "basada_en": [
+    "2023-1c-miercoles-t1-l",
+    "2023-1c-miercoles-t2-t"
+   ],
+   "id": "gen-u6-14"
+  },
+  {
+   "unidad": "u6-sistemas",
+   "enunciado": "La Inteligencia Computacional engloba…",
+   "opciones": [
+    "solo los algoritmos de regresión.",
+    "los Sistemas Basados en Conocimientos.",
+    "el razonamiento simbólico clásico.",
+    "tecnologías de inspiración biológica como RNA y Algoritmos Genéticos."
+   ],
+   "correcta": 4,
+   "explicacion": "Inteligencia Computacional = RNA, computación evolutiva, inteligencia de enjambre, sistemas inmunológicos artificiales, en contraposición al razonamiento simbólico.",
+   "basada_en": [
+    "2025-lunes-t2-w"
+   ],
+   "id": "gen-u6-15"
+  },
+  {
+   "unidad": "u11-implementacion",
+   "enunciado": "Según el proceso de implementación, lo PRIMERO que se debería hacer al iniciar un proyecto es…",
+   "opciones": [
+    "preparar los datos.",
+    "elegir la tecnología.",
+    "entrenar un prototipo.",
+    "identificar las fuentes de información."
+   ],
+   "correcta": 4,
+   "explicacion": "Antes de todo hay que saber de dónde va a salir el conocimiento: fuentes propias y externas, stakeholders y expertos.",
+   "basada_en": [
+    "2024-1c-lunes-t1-f",
+    "2024-1c-lunes-t2-p"
+   ],
+   "id": "gen-u11-01"
+  },
+  {
+   "unidad": "u11-implementacion",
+   "enunciado": "El estudio de viabilidad (¿es posible aplicar IA? ¿es la mejor alternativa?) se realiza en la fase de…",
+   "opciones": [
+    "Construcción del Modelo.",
+    "Aplicación del Sistema Inteligente.",
+    "Identificación y Transformación de los Datos.",
+    "Definición del Problema."
+   ],
+   "correcta": 4,
+   "explicacion": "La viabilidad es parte de la articulación de requerimientos, dentro de Definición del Problema, y sirve para delimitar y confirmar el alcance.",
+   "basada_en": [
+    "2022-1c-lunes-t2-m",
+    "2023-1c-miercoles-t2-n"
+   ],
+   "id": "gen-u11-02"
+  },
+  {
+   "unidad": "u11-implementacion",
+   "enunciado": "La normalización y limpieza de los datos disponibles se hace en la fase de…",
+   "opciones": [
+    "Aplicación del Sistema Inteligente.",
+    "Definición del Problema.",
+    "Identificación y Transformación de los Datos.",
+    "Selección de la Tecnología."
+   ],
+   "correcta": 3,
+   "explicacion": "Recolección, estudio y **preparación** (integración, formateo/normalización, limpieza) son la fase de datos.",
+   "basada_en": [
+    "2023-2c-miercoles-t2-m",
+    "2025-lunes-t2-r"
+   ],
+   "id": "gen-u11-03"
+  },
+  {
+   "unidad": "u11-implementacion",
+   "enunciado": "La fase de Identificación y Transformación de los Datos es obligatoria cuando se implementa…",
+   "opciones": [
+    "un Sistema Experto Tradicional.",
+    "un Algoritmo Genético.",
+    "una Red Neuronal Artificial.",
+    "cualquier sistema inteligente."
+   ],
+   "correcta": 3,
+   "explicacion": "Es una fase opcional: solo se hace si hay datos. Una RNA no se puede entrenar sin datos; un AG o un SET pueden no necesitarlos.",
+   "basada_en": [
+    "2023-2c-lunes-t2-n"
+   ],
+   "id": "gen-u11-04"
+  },
+  {
+   "unidad": "u11-implementacion",
+   "enunciado": "La fase de Construcción del Modelo se realiza…",
+   "opciones": [
+    "solo cuando hay datos.",
+    "siempre, cualquiera sea la tecnología.",
+    "solo para redes neuronales.",
+    "solo para sistemas expertos."
+   ],
+   "correcta": 2,
+   "explicacion": "Toda tecnología necesita construir su modelo: entrenar la RNA, cargar las reglas del SET o SBC, diseñar y probar el AG.",
+   "basada_en": [
+    "2023-2c-lunes-t1-f"
+   ],
+   "id": "gen-u11-05"
+  },
+  {
+   "unidad": "u11-implementacion",
+   "enunciado": "Construir las canalizaciones entre modelos y las interfaces con los sistemas existentes corresponde a la fase de…",
+   "opciones": [
+    "Aplicación del Sistema Inteligente.",
+    "Construcción del Modelo.",
+    "Selección de la Tecnología.",
+    "Definición del Problema."
+   ],
+   "correcta": 1,
+   "explicacion": "Aplicación = integrar (interfaces, canalizaciones), probar integrado, poner en producción y mantener.",
+   "basada_en": [
+    "2023-1c-lunes-t1-f",
+    "2025-miercoles-t1-g",
+    "2024-1c-miercoles-t2-q"
+   ],
+   "id": "gen-u11-06"
+  },
+  {
+   "unidad": "u11-implementacion",
+   "enunciado": "Las actividades para comprender los requerimientos son…",
+   "opciones": [
+    "abstraer, descomponer, proyectar y modularizar.",
+    "recolectar, estudiar y preparar.",
+    "programar, testear, compilar y depurar.",
+    "entrenar, validar y probar."
+   ],
+   "correcta": 1,
+   "explicacion": "Comprender = abstraer, descomponer, proyectar y modularizar. \"Recolectar, estudiar y preparar\" es la fase de datos; \"entrenar, validar y probar\", la construcción de un modelo de ML.",
+   "basada_en": [
+    "2025-lunes-t1-h"
+   ],
+   "id": "gen-u11-07"
+  },
+  {
+   "unidad": "u11-implementacion",
+   "enunciado": "Para implementar un Sistema Experto Tradicional, en la Construcción del Modelo se usan…",
+   "opciones": [
+    "los conocimientos extraídos para el trazador de explicaciones.",
+    "los conocimientos educidos para identificar las reglas de la base de conocimientos.",
+    "los pesos de las conexiones entre reglas.",
+    "los datos para entrenar el motor de inferencias."
+   ],
+   "correcta": 2,
+   "explicacion": "SET → conocimientos **educidos** (del experto) → reglas en la BC. Para un SBC serían los conocimientos **extraídos**.",
+   "basada_en": [
+    "2023-2c-miercoles-t2-n",
+    "2023-2c-miercoles-t1-f"
+   ],
+   "id": "gen-u11-08"
+  },
+  {
+   "unidad": "u11-implementacion",
+   "enunciado": "Un proyecto de sistema inteligente puede fracasar principalmente si…",
+   "opciones": [
+    "solo se extrae conocimiento público.",
+    "no se integra con los sistemas existentes o no se identifican bien sus objetivos.",
+    "no hay datos en la organización.",
+    "no usa Machine Learning."
+   ],
+   "correcta": 2,
+   "explicacion": "Los sistemas exitosos están integrados y tienen objetivos claros. La falta de datos se compensa con otras tecnologías.",
+   "basada_en": [
+    "2024-1c-lunes-t1-g",
+    "2024-1c-lunes-t2-q"
+   ],
+   "id": "gen-u11-09"
+  },
+  {
+   "unidad": "u11-implementacion",
+   "enunciado": "Durante el mantenimiento de un sistema inteligente pueden cambiar…",
+   "opciones": [
+    "solo los datos.",
+    "las interfaces, los módulos o modelos, los datos y hasta la tecnología.",
+    "solo las interfaces.",
+    "nada: un sistema inteligente no se mantiene."
+   ],
+   "correcta": 2,
+   "explicacion": "El mantenimiento es perfectivo y puede tocar cualquier parte del sistema.",
+   "basada_en": [
+    "2025-miercoles-t1-h",
+    "2025-miercoles-t2-r"
+   ],
+   "id": "gen-u11-10"
+  },
+  {
+   "unidad": "u12-ia2026",
+   "enunciado": "La principal diferencia entre un modelo de lenguaje usado como asistente y un agente de IA es que el agente…",
+   "opciones": [
+    "percibe, decide y ejecuta acciones para alcanzar un objetivo.",
+    "solo genera texto.",
+    "es más grande.",
+    "no usa redes neuronales."
+   ],
+   "correcta": 1,
+   "explicacion": "Agente: percibe su entorno, razona, decide y **actúa** (total o parcialmente autónomo). El asistente solo responde.",
+   "basada_en": [],
+   "id": "gen-u12-01"
+  },
+  {
+   "unidad": "u12-ia2026",
+   "enunciado": "Un banco que ejecuta un modelo de lenguaje pequeño en sus propios servidores para no enviar datos sensibles afuera aplica la tendencia de…",
+   "opciones": [
+    "AGI.",
+    "multimodalidad.",
+    "modelos pequeños (SLM).",
+    "IA agéntica."
+   ],
+   "correcta": 3,
+   "explicacion": "Los SLM son más eficientes, más baratos, se ejecutan localmente y dan más privacidad.",
+   "basada_en": [],
+   "id": "gen-u12-02"
+  },
+  {
+   "unidad": "u12-ia2026",
+   "enunciado": "Según la clase de actualización 2026, la AGI (Inteligencia Artificial General)…",
+   "opciones": [
+    "es una norma de la Unión Europea.",
+    "es lo mismo que un sistema multi-agente.",
+    "ya fue demostrada en un paper validado.",
+    "no tiene evidencia científica sólida de existir hoy."
+   ],
+   "correcta": 4,
+   "explicacion": "Hay sistemas avanzados, pero sin aprendizaje continuo ni autonomía total; los benchmarks de generalidad siguen bajos. Mucho hype, poca evidencia.",
+   "basada_en": [],
+   "id": "gen-u12-03"
+  },
+  {
+   "unidad": "u12-ia2026",
+   "enunciado": "Que la IA \"desaparezca como producto\" y quede integrada dentro de un CRM o un ERP corresponde a la tendencia de…",
+   "opciones": [
+    "razonamiento.",
+    "especialización.",
+    "gobernanza.",
+    "IA embebida."
+   ],
+   "correcta": 4,
+   "explicacion": "IA embebida: no se ve, se experimenta. Coincide con la idea de la cátedra de que los sistemas inteligentes exitosos son los integrados.",
+   "basada_en": [],
+   "id": "gen-u12-04"
+  },
+  {
+   "unidad": "u12-ia2026",
+   "enunciado": "Un sistema donde un agente investiga, otro analiza y otro ejecuta, coordinados entre sí, es un ejemplo de…",
+   "opciones": [
+    "sistema experto tradicional.",
+    "multimodalidad.",
+    "modelo pequeño.",
+    "sistema multi-agente."
+   ],
+   "correcta": 4,
+   "explicacion": "Multi-agente: varios agentes colaborando en una arquitectura. \"Pasamos de modelos a arquitecturas\".",
+   "basada_en": [],
+   "id": "gen-u12-05"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "El segmento de frase completo “algo que pasa mucho en las bicis que se guardan al aire libre” …",
+   "opciones": [
+    "es una incertidumbre.",
+    "es sinónimo de “bastante oxidada”.",
+    "es un metacomentario.",
+    "es valor de la característica implícita “lugar de guardado” perteneciente al concepto “bicicleta”."
+   ],
+   "correcta": 3,
+   "explicacion": "Es un comentario general del mecánico que no agrega un dato observado de esta bicicleta a su razonamiento: **metacomentario**. No es duda sobre la conclusión (no es incertidumbre) ni describe esta bici.",
+   "basada_en": [
+    "2025-lunes-t1-t",
+    "2024-1c-lunes-t1-t",
+    "2022-2c-lunes-t1-n"
+   ],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: un mecánico revisa una bicicleta que trajo un cliente.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>Al revisar esta bicicleta,</td><td>9</td><td>Me parece que podría tratarse</td></tr>\n<tr><td>2</td><td>lo primero que observo</td><td>10</td><td>de un desgaste general de la transmisión.</td></tr>\n<tr><td>3</td><td>es que la cadena está bastante oxidada</td><td>11</td><td>Por otro lado,</td></tr>\n<tr><td>4</td><td>y hace un ruido metálico fuerte.</td><td>12</td><td>este rodado</td></tr>\n<tr><td>5</td><td>Los piñones tienen dientes gastados,</td><td>13</td><td>tiene la cubierta trasera lisa</td></tr>\n<tr><td>6</td><td>algo que pasa mucho en las bicis que se guardan al aire libre.</td><td>14</td><td>y con poca presión.</td></tr>\n<tr><td>7</td><td>Los frenos responden lento</td><td>15</td><td>Entonces concluyo que es</td></tr>\n<tr><td>8</td><td>y las pastillas son delgadas.</td><td>16</td><td>un problema de mantenimiento integral.</td></tr></table></div>",
+   "id": "gen-u3-01"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "El segmento de frase completo “bastante oxidada” …",
+   "opciones": [
+    "es una incertidumbre.",
+    "es un metacomentario.",
+    "es valor de la característica implícita “(estado)” perteneciente al concepto “cadena”.",
+    "es sinónimo de “ruido metálico fuerte”."
+   ],
+   "correcta": 3,
+   "explicacion": "Describe un rasgo observado de la cadena: es un **valor**. El \"bastante\" es parte del valor, no una duda. La característica no se nombra, así que es implícita: cadena → (estado) → bastante oxidada.",
+   "basada_en": [
+    "2025-lunes-t1-q",
+    "2024-1c-lunes-t1-q"
+   ],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: un mecánico revisa una bicicleta que trajo un cliente.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>Al revisar esta bicicleta,</td><td>9</td><td>Me parece que podría tratarse</td></tr>\n<tr><td>2</td><td>lo primero que observo</td><td>10</td><td>de un desgaste general de la transmisión.</td></tr>\n<tr><td>3</td><td>es que la cadena está bastante oxidada</td><td>11</td><td>Por otro lado,</td></tr>\n<tr><td>4</td><td>y hace un ruido metálico fuerte.</td><td>12</td><td>este rodado</td></tr>\n<tr><td>5</td><td>Los piñones tienen dientes gastados,</td><td>13</td><td>tiene la cubierta trasera lisa</td></tr>\n<tr><td>6</td><td>algo que pasa mucho en las bicis que se guardan al aire libre.</td><td>14</td><td>y con poca presión.</td></tr>\n<tr><td>7</td><td>Los frenos responden lento</td><td>15</td><td>Entonces concluyo que es</td></tr>\n<tr><td>8</td><td>y las pastillas son delgadas.</td><td>16</td><td>un problema de mantenimiento integral.</td></tr></table></div>",
+   "id": "gen-u3-02"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "Una relación implícita podría ser …",
+   "opciones": [
+    "cubierta trasera —(tiene)→ poca presión",
+    "frenos —(tienen)→ pastillas",
+    "bicicleta —(se guarda al)→ aire libre",
+    "bicicleta —(es un)→ rodado"
+   ],
+   "correcta": 2,
+   "explicacion": "Une dos **conceptos** (frenos y pastillas) con una relación que el texto no dice así. \"Bicicleta\" y \"rodado\" son sinónimos (no hay relaciones entre sinónimos); \"poca presión\" es un valor; \"aire libre\" aparece solo en un metacomentario.",
+   "basada_en": [
+    "2025-lunes-t1-p",
+    "2022-2c-lunes-t1-o",
+    "2024-1c-lunes-t1-p"
+   ],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: un mecánico revisa una bicicleta que trajo un cliente.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>Al revisar esta bicicleta,</td><td>9</td><td>Me parece que podría tratarse</td></tr>\n<tr><td>2</td><td>lo primero que observo</td><td>10</td><td>de un desgaste general de la transmisión.</td></tr>\n<tr><td>3</td><td>es que la cadena está bastante oxidada</td><td>11</td><td>Por otro lado,</td></tr>\n<tr><td>4</td><td>y hace un ruido metálico fuerte.</td><td>12</td><td>este rodado</td></tr>\n<tr><td>5</td><td>Los piñones tienen dientes gastados,</td><td>13</td><td>tiene la cubierta trasera lisa</td></tr>\n<tr><td>6</td><td>algo que pasa mucho en las bicis que se guardan al aire libre.</td><td>14</td><td>y con poca presión.</td></tr>\n<tr><td>7</td><td>Los frenos responden lento</td><td>15</td><td>Entonces concluyo que es</td></tr>\n<tr><td>8</td><td>y las pastillas son delgadas.</td><td>16</td><td>un problema de mantenimiento integral.</td></tr></table></div>",
+   "id": "gen-u3-03"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "Son sinónimos …",
+   "opciones": [
+    "“bicicleta”, “rodado”, “transmisión”.",
+    "“cadena”, “piñones”.",
+    "“bicicleta”, “rodado”.",
+    "no existen sinónimos en este protocolo."
+   ],
+   "correcta": 3,
+   "explicacion": "\"Este rodado\" (línea 12) es la misma bicicleta. \"Transmisión\" aparece en una conclusión (es otro concepto, un estado) y cadena y piñones son conceptos distintos.",
+   "basada_en": [
+    "2023-2c-lunes-t2-e",
+    "2022-1c-lunes-t2-e"
+   ],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: un mecánico revisa una bicicleta que trajo un cliente.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>Al revisar esta bicicleta,</td><td>9</td><td>Me parece que podría tratarse</td></tr>\n<tr><td>2</td><td>lo primero que observo</td><td>10</td><td>de un desgaste general de la transmisión.</td></tr>\n<tr><td>3</td><td>es que la cadena está bastante oxidada</td><td>11</td><td>Por otro lado,</td></tr>\n<tr><td>4</td><td>y hace un ruido metálico fuerte.</td><td>12</td><td>este rodado</td></tr>\n<tr><td>5</td><td>Los piñones tienen dientes gastados,</td><td>13</td><td>tiene la cubierta trasera lisa</td></tr>\n<tr><td>6</td><td>algo que pasa mucho en las bicis que se guardan al aire libre.</td><td>14</td><td>y con poca presión.</td></tr>\n<tr><td>7</td><td>Los frenos responden lento</td><td>15</td><td>Entonces concluyo que es</td></tr>\n<tr><td>8</td><td>y las pastillas son delgadas.</td><td>16</td><td>un problema de mantenimiento integral.</td></tr></table></div>",
+   "id": "gen-u3-04"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "Si “cubierta trasera” fuera considerado como concepto, algunas de sus características implícitas/explícitas asociadas serían …",
+   "opciones": [
+    "“(superficie)”, “presión”, “(lugar de guardado)”.",
+    "“(superficie)”, “presión”.",
+    "“(superficie)”, “presión”, “ruido”.",
+    "“(superficie)”, “presión”, “dientes”."
+   ],
+   "correcta": 2,
+   "explicacion": "El texto le atribuye a la cubierta trasera solo \"lisa\" (superficie, implícita) y \"poca presión\". El lugar de guardado sale de un metacomentario; el ruido es de la cadena y los dientes, de los piñones.",
+   "basada_en": [
+    "2024-1c-lunes-t2-g",
+    "2025-lunes-t1-s"
+   ],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: un mecánico revisa una bicicleta que trajo un cliente.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>Al revisar esta bicicleta,</td><td>9</td><td>Me parece que podría tratarse</td></tr>\n<tr><td>2</td><td>lo primero que observo</td><td>10</td><td>de un desgaste general de la transmisión.</td></tr>\n<tr><td>3</td><td>es que la cadena está bastante oxidada</td><td>11</td><td>Por otro lado,</td></tr>\n<tr><td>4</td><td>y hace un ruido metálico fuerte.</td><td>12</td><td>este rodado</td></tr>\n<tr><td>5</td><td>Los piñones tienen dientes gastados,</td><td>13</td><td>tiene la cubierta trasera lisa</td></tr>\n<tr><td>6</td><td>algo que pasa mucho en las bicis que se guardan al aire libre.</td><td>14</td><td>y con poca presión.</td></tr>\n<tr><td>7</td><td>Los frenos responden lento</td><td>15</td><td>Entonces concluyo que es</td></tr>\n<tr><td>8</td><td>y las pastillas son delgadas.</td><td>16</td><td>un problema de mantenimiento integral.</td></tr></table></div>",
+   "id": "gen-u3-05"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "El segmento de frase completo “Me parece que podría tratarse” …",
+   "opciones": [
+    "es una incertidumbre.",
+    "es sinónimo de “concluyo que es”.",
+    "es un metacomentario.",
+    "es un valor de la característica “diagnóstico” del concepto “bicicleta”."
+   ],
+   "correcta": 1,
+   "explicacion": "Es una duda del experto **sobre el cambio de estado** (sobre su conclusión): incertidumbre. Igual que \"deduzco que se podría tratar\" en el ejercicio del alga.",
+   "basada_en": [],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: un mecánico revisa una bicicleta que trajo un cliente.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>Al revisar esta bicicleta,</td><td>9</td><td>Me parece que podría tratarse</td></tr>\n<tr><td>2</td><td>lo primero que observo</td><td>10</td><td>de un desgaste general de la transmisión.</td></tr>\n<tr><td>3</td><td>es que la cadena está bastante oxidada</td><td>11</td><td>Por otro lado,</td></tr>\n<tr><td>4</td><td>y hace un ruido metálico fuerte.</td><td>12</td><td>este rodado</td></tr>\n<tr><td>5</td><td>Los piñones tienen dientes gastados,</td><td>13</td><td>tiene la cubierta trasera lisa</td></tr>\n<tr><td>6</td><td>algo que pasa mucho en las bicis que se guardan al aire libre.</td><td>14</td><td>y con poca presión.</td></tr>\n<tr><td>7</td><td>Los frenos responden lento</td><td>15</td><td>Entonces concluyo que es</td></tr>\n<tr><td>8</td><td>y las pastillas son delgadas.</td><td>16</td><td>un problema de mantenimiento integral.</td></tr></table></div>",
+   "id": "gen-u3-06"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "En este protocolo se observan …",
+   "opciones": [
+    "tres estados: “cadena oxidada”, “desgaste general de la transmisión” y “problema de mantenimiento integral”.",
+    "dos estados: “desgaste general de la transmisión” y “problema de mantenimiento integral”.",
+    "un estado: “problema de mantenimiento integral”.",
+    "ningún estado."
+   ],
+   "correcta": 2,
+   "explicacion": "Los estados son las conclusiones a las que llega el experto (líneas 10 y 16). \"Cadena oxidada\" es un concepto con su valor, no un estado.",
+   "basada_en": [
+    "2020-2c-t4-d"
+   ],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: un mecánico revisa una bicicleta que trajo un cliente.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>Al revisar esta bicicleta,</td><td>9</td><td>Me parece que podría tratarse</td></tr>\n<tr><td>2</td><td>lo primero que observo</td><td>10</td><td>de un desgaste general de la transmisión.</td></tr>\n<tr><td>3</td><td>es que la cadena está bastante oxidada</td><td>11</td><td>Por otro lado,</td></tr>\n<tr><td>4</td><td>y hace un ruido metálico fuerte.</td><td>12</td><td>este rodado</td></tr>\n<tr><td>5</td><td>Los piñones tienen dientes gastados,</td><td>13</td><td>tiene la cubierta trasera lisa</td></tr>\n<tr><td>6</td><td>algo que pasa mucho en las bicis que se guardan al aire libre.</td><td>14</td><td>y con poca presión.</td></tr>\n<tr><td>7</td><td>Los frenos responden lento</td><td>15</td><td>Entonces concluyo que es</td></tr>\n<tr><td>8</td><td>y las pastillas son delgadas.</td><td>16</td><td>un problema de mantenimiento integral.</td></tr></table></div>",
+   "id": "gen-u3-07"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "El siguiente extracto de la tabla de conceptos-características-valores es …  frenos | (respuesta) lenta | (grosor) delgadas",
+   "opciones": [
+    "incorrecto porque “delgadas” es un valor del concepto “pastillas”, no de “frenos”.",
+    "incorrecto porque “frenos” es una característica del concepto “bicicleta”.",
+    "correcto.",
+    "incorrecto porque falta la característica “ruido” con su valor “metálico fuerte”."
+   ],
+   "correcta": 1,
+   "explicacion": "El texto dice \"las pastillas son delgadas\": ese valor es de las pastillas. El ruido es de la cadena. Frenos es un concepto (tiene sus propias características).",
+   "basada_en": [
+    "2025-lunes-t1-r",
+    "2024-1c-lunes-t1-r"
+   ],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: un mecánico revisa una bicicleta que trajo un cliente.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>Al revisar esta bicicleta,</td><td>9</td><td>Me parece que podría tratarse</td></tr>\n<tr><td>2</td><td>lo primero que observo</td><td>10</td><td>de un desgaste general de la transmisión.</td></tr>\n<tr><td>3</td><td>es que la cadena está bastante oxidada</td><td>11</td><td>Por otro lado,</td></tr>\n<tr><td>4</td><td>y hace un ruido metálico fuerte.</td><td>12</td><td>este rodado</td></tr>\n<tr><td>5</td><td>Los piñones tienen dientes gastados,</td><td>13</td><td>tiene la cubierta trasera lisa</td></tr>\n<tr><td>6</td><td>algo que pasa mucho en las bicis que se guardan al aire libre.</td><td>14</td><td>y con poca presión.</td></tr>\n<tr><td>7</td><td>Los frenos responden lento</td><td>15</td><td>Entonces concluyo que es</td></tr>\n<tr><td>8</td><td>y las pastillas son delgadas.</td><td>16</td><td>un problema de mantenimiento integral.</td></tr></table></div>",
+   "id": "gen-u3-08"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "Los operadores de este protocolo son …",
+   "opciones": [
+    "“lo primero que observo” y “por otro lado”.",
+    "no hay operadores.",
+    "“podría tratarse de” y “concluyo que es”.",
+    "“bastante” y “poca”."
+   ],
+   "correcta": 3,
+   "explicacion": "Los operadores son las expresiones con las que el experto pasa de un estado a otro más cerca de la solución: \"(podría) tratarse de\" y \"concluyo que es\". \"Por otro lado\" es un metacomentario.",
+   "basada_en": [],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: un mecánico revisa una bicicleta que trajo un cliente.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>Al revisar esta bicicleta,</td><td>9</td><td>Me parece que podría tratarse</td></tr>\n<tr><td>2</td><td>lo primero que observo</td><td>10</td><td>de un desgaste general de la transmisión.</td></tr>\n<tr><td>3</td><td>es que la cadena está bastante oxidada</td><td>11</td><td>Por otro lado,</td></tr>\n<tr><td>4</td><td>y hace un ruido metálico fuerte.</td><td>12</td><td>este rodado</td></tr>\n<tr><td>5</td><td>Los piñones tienen dientes gastados,</td><td>13</td><td>tiene la cubierta trasera lisa</td></tr>\n<tr><td>6</td><td>algo que pasa mucho en las bicis que se guardan al aire libre.</td><td>14</td><td>y con poca presión.</td></tr>\n<tr><td>7</td><td>Los frenos responden lento</td><td>15</td><td>Entonces concluyo que es</td></tr>\n<tr><td>8</td><td>y las pastillas son delgadas.</td><td>16</td><td>un problema de mantenimiento integral.</td></tr></table></div>",
+   "id": "gen-u3-09"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "El segmento de frase completo “que es lo que a mí más me gusta” …",
+   "opciones": [
+    "es una incertidumbre.",
+    "es un metacomentario.",
+    "es valor de la característica “cuerpo” del concepto “café”.",
+    "es sinónimo de “ligero”."
+   ],
+   "correcta": 2,
+   "explicacion": "Es una opinión personal que no aporta información al razonamiento de la cata: metacomentario.",
+   "basada_en": [
+    "2022-1c-lunes-t1-n"
+   ],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: una barista identifica el origen de un café en una cata.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>En esta taza de café</td><td>9</td><td>Esto sugiere que</td></tr>\n<tr><td>2</td><td>percibo un aroma floral intenso</td><td>10</td><td>se trataría de un café de Etiopía.</td></tr>\n<tr><td>3</td><td>y una acidez muy brillante.</td><td>11</td><td>Igual, para estar segura,</td></tr>\n<tr><td>4</td><td>El cuerpo es ligero,</td><td>12</td><td>pruebo de nuevo esta bebida</td></tr>\n<tr><td>5</td><td>casi como un té,</td><td>13</td><td>y el retrogusto es cítrico y prolongado.</td></tr>\n<tr><td>6</td><td>que es lo que a mí más me gusta.</td><td>14</td><td>Los granos</td></tr>\n<tr><td>7</td><td>El tueste de los granos</td><td>15</td><td>tienen una forma alargada.</td></tr>\n<tr><td>8</td><td>es claro.</td><td>16</td><td>Concluyo que es un Yirgacheffe lavado.</td></tr></table></div>",
+   "id": "gen-u3-10"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "El segmento de frase completo “se trataría de un café de Etiopía” …",
+   "opciones": [
+    "es un metacomentario.",
+    "es sinónimo de “Yirgacheffe lavado”.",
+    "contiene una incertidumbre sobre el estado al que llega el experto.",
+    "es un valor de la característica “origen” del concepto “granos”."
+   ],
+   "correcta": 3,
+   "explicacion": "\"Se trataría\" (y el \"Esto sugiere que\" de la línea 9) expresa duda sobre la conclusión: incertidumbre. Etiopía es un estado intermedio; después concluye \"Yirgacheffe lavado\".",
+   "basada_en": [],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: una barista identifica el origen de un café en una cata.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>En esta taza de café</td><td>9</td><td>Esto sugiere que</td></tr>\n<tr><td>2</td><td>percibo un aroma floral intenso</td><td>10</td><td>se trataría de un café de Etiopía.</td></tr>\n<tr><td>3</td><td>y una acidez muy brillante.</td><td>11</td><td>Igual, para estar segura,</td></tr>\n<tr><td>4</td><td>El cuerpo es ligero,</td><td>12</td><td>pruebo de nuevo esta bebida</td></tr>\n<tr><td>5</td><td>casi como un té,</td><td>13</td><td>y el retrogusto es cítrico y prolongado.</td></tr>\n<tr><td>6</td><td>que es lo que a mí más me gusta.</td><td>14</td><td>Los granos</td></tr>\n<tr><td>7</td><td>El tueste de los granos</td><td>15</td><td>tienen una forma alargada.</td></tr>\n<tr><td>8</td><td>es claro.</td><td>16</td><td>Concluyo que es un Yirgacheffe lavado.</td></tr></table></div>",
+   "id": "gen-u3-11"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "Son sinónimos …",
+   "opciones": [
+    "“taza de café”, “bebida”.",
+    "“taza de café”, “bebida”, “granos”.",
+    "“café”, “té”.",
+    "no existen sinónimos en este protocolo."
+   ],
+   "correcta": 1,
+   "explicacion": "En la línea 12 \"esta bebida\" es la misma taza de café. Los granos son otro concepto y \"casi como un té\" es una comparación del valor del cuerpo.",
+   "basada_en": [],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: una barista identifica el origen de un café en una cata.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>En esta taza de café</td><td>9</td><td>Esto sugiere que</td></tr>\n<tr><td>2</td><td>percibo un aroma floral intenso</td><td>10</td><td>se trataría de un café de Etiopía.</td></tr>\n<tr><td>3</td><td>y una acidez muy brillante.</td><td>11</td><td>Igual, para estar segura,</td></tr>\n<tr><td>4</td><td>El cuerpo es ligero,</td><td>12</td><td>pruebo de nuevo esta bebida</td></tr>\n<tr><td>5</td><td>casi como un té,</td><td>13</td><td>y el retrogusto es cítrico y prolongado.</td></tr>\n<tr><td>6</td><td>que es lo que a mí más me gusta.</td><td>14</td><td>Los granos</td></tr>\n<tr><td>7</td><td>El tueste de los granos</td><td>15</td><td>tienen una forma alargada.</td></tr>\n<tr><td>8</td><td>es claro.</td><td>16</td><td>Concluyo que es un Yirgacheffe lavado.</td></tr></table></div>",
+   "id": "gen-u3-12"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "Si “granos” fuera considerado como concepto, algunas de sus características implícitas/explícitas asociadas serían …",
+   "opciones": [
+    "“tueste”, “forma”, “retrogusto”.",
+    "“tueste”, “forma”, “acidez”, “cuerpo”.",
+    "“tueste”, “forma”, “aroma”.",
+    "“tueste”, “forma”."
+   ],
+   "correcta": 4,
+   "explicacion": "A los granos el texto les atribuye tueste (claro) y forma (alargada). Aroma, acidez, cuerpo y retrogusto son de la taza de café.",
+   "basada_en": [],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: una barista identifica el origen de un café en una cata.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>En esta taza de café</td><td>9</td><td>Esto sugiere que</td></tr>\n<tr><td>2</td><td>percibo un aroma floral intenso</td><td>10</td><td>se trataría de un café de Etiopía.</td></tr>\n<tr><td>3</td><td>y una acidez muy brillante.</td><td>11</td><td>Igual, para estar segura,</td></tr>\n<tr><td>4</td><td>El cuerpo es ligero,</td><td>12</td><td>pruebo de nuevo esta bebida</td></tr>\n<tr><td>5</td><td>casi como un té,</td><td>13</td><td>y el retrogusto es cítrico y prolongado.</td></tr>\n<tr><td>6</td><td>que es lo que a mí más me gusta.</td><td>14</td><td>Los granos</td></tr>\n<tr><td>7</td><td>El tueste de los granos</td><td>15</td><td>tienen una forma alargada.</td></tr>\n<tr><td>8</td><td>es claro.</td><td>16</td><td>Concluyo que es un Yirgacheffe lavado.</td></tr></table></div>",
+   "id": "gen-u3-13"
+  },
+  {
+   "unidad": "u3-protocolos",
+   "enunciado": "Una relación implícita podría ser …",
+   "opciones": [
+    "café —(se parece a)→ té",
+    "café —(se elabora con)→ granos",
+    "taza de café —(es una)→ bebida",
+    "café —(tiene)→ acidez muy brillante"
+   ],
+   "correcta": 2,
+   "explicacion": "Une dos conceptos (café y granos) con un vínculo que el texto no explicita. Taza y bebida son sinónimos; \"acidez muy brillante\" es característica y valor; \"como un té\" es una comparación del valor.",
+   "basada_en": [],
+   "extra": "<div class=\"hoja\"><b>Protocolo (generado para practicar)</b>: una barista identifica el origen de un café en una cata.\n<table class=\"matriz\" style=\"text-align:left\"><tr><td>1</td><td>En esta taza de café</td><td>9</td><td>Esto sugiere que</td></tr>\n<tr><td>2</td><td>percibo un aroma floral intenso</td><td>10</td><td>se trataría de un café de Etiopía.</td></tr>\n<tr><td>3</td><td>y una acidez muy brillante.</td><td>11</td><td>Igual, para estar segura,</td></tr>\n<tr><td>4</td><td>El cuerpo es ligero,</td><td>12</td><td>pruebo de nuevo esta bebida</td></tr>\n<tr><td>5</td><td>casi como un té,</td><td>13</td><td>y el retrogusto es cítrico y prolongado.</td></tr>\n<tr><td>6</td><td>que es lo que a mí más me gusta.</td><td>14</td><td>Los granos</td></tr>\n<tr><td>7</td><td>El tueste de los granos</td><td>15</td><td>tienen una forma alargada.</td></tr>\n<tr><td>8</td><td>es claro.</td><td>16</td><td>Concluyo que es un Yirgacheffe lavado.</td></tr></table></div>",
+   "id": "gen-u3-14"
+  },
+  {
+   "unidad": "u4-emparrillado",
+   "enunciado": "En una parrilla evaluativa con escala [1,5], el valor opuesto de 2 es…",
+   "opciones": [
+    "1",
+    "5",
+    "4",
+    "3"
+   ],
+   "correcta": 3,
+   "explicacion": "Opuesto = (máximo + 1) − valor = 6 − 2 = 4.",
+   "basada_en": [],
+   "id": "gen-u4-01"
+  },
+  {
+   "unidad": "u4-emparrillado",
+   "enunciado": "La distancia d2 entre dos características se calcula comparando…",
+   "opciones": [
+    "la primera característica en la parrilla original con la segunda en la parrilla opuesta.",
+    "las dos en la parrilla opuesta.",
+    "los elementos en vertical.",
+    "la parrilla original de las dos."
+   ],
+   "correcta": 1,
+   "explicacion": "d1 = original contra original; d2 = Ci original contra Cj opuesta. Para agrupar se usa el mínimo de las dos.",
+   "basada_en": [
+    "2022-1c-miercoles-t2-b"
+   ],
+   "id": "gen-u4-02"
+  },
+  {
+   "unidad": "u4-emparrillado",
+   "enunciado": "Al agrupar por mínima distancia aparecen dos distancias mínimas iguales: E1-E2 = 3 y E2-E4 = 3. Entonces…",
+   "opciones": [
+    "se elige una al azar.",
+    "se descarta E2.",
+    "se forma un único grupo [E1, E2, E4].",
+    "se forman dos grupos separados [E1, E2] y [E2, E4]."
+   ],
+   "correcta": 3,
+   "explicacion": "Los empates se unen todos a la vez; como comparten E2, quedan en un solo grupo.",
+   "basada_en": [],
+   "id": "gen-u4-03"
+  },
+  {
+   "unidad": "u4-emparrillado",
+   "enunciado": "En el árbol de características se unen C1 y C3 a nivel 2, después C5 se une a ese grupo a nivel 4 y finalmente C2 y C4 (que se unieron entre sí a nivel 3) se unen al resto. ¿Cuántos grupos hay?",
+   "opciones": [
+    "2 grupos.",
+    "4 grupos.",
+    "3 grupos.",
+    "1 grupo."
+   ],
+   "correcta": 3,
+   "explicacion": "Grupos: (C1, C3) y (C2, C4), formados por ítems sueltos; C5 se pegó a un grupo ya formado, así que queda como grupo propio. La unión final de grupos no crea uno nuevo → 3 grupos.",
+   "basada_en": [
+    "2025-lunes-t1-u",
+    "2024-1c-lunes-t1-u"
+   ],
+   "id": "gen-u4-04"
+  },
+  {
+   "unidad": "u4-emparrillado",
+   "enunciado": "Si dos características quedaron en grupos distintos y el texto dice que \"si una es alta, la otra también\", la relación entre ellas es…",
+   "opciones": [
+    "no existe relación.",
+    "no tipificada.",
+    "ortogonal.",
+    "paralela."
+   ],
+   "correcta": 1,
+   "explicacion": "Solo se analizan relaciones entre características del mismo grupo. En grupos distintos: no existe relación.",
+   "basada_en": [
+    "2025-lunes-t1-y",
+    "2024-1c-lunes-t1-r"
+   ],
+   "id": "gen-u4-05"
+  },
+  {
+   "unidad": "u4-emparrillado",
+   "enunciado": "C1: Precio (alto / bajo); C2: Calidad (buena / mala). El texto dice: \"los productos caros son de buena calidad y los baratos, de mala\". Están en el mismo grupo. La relación es…",
+   "opciones": [
+    "no tipificada.",
+    "recíproca.",
+    "paralela.",
+    "ambigua."
+   ],
+   "correcta": 3,
+   "explicacion": "alto → buena (A→X) y bajo → mala (B→Y): dos flechas en el mismo sentido, cada polo con el de abajo → paralela. Sería recíproca si además dijera que la buena calidad implica precio alto y la mala, bajo.",
+   "basada_en": [
+    "2025-lunes-t1-w"
+   ],
+   "id": "gen-u4-06"
+  },
+  {
+   "unidad": "u4-emparrillado",
+   "enunciado": "C3: Experiencia (mucha / poca); C4: Errores (pocos / muchos). El texto: \"los que tienen mucha experiencia cometen muchos errores… pero también pocos\". Mismo grupo. La relación es…",
+   "opciones": [
+    "ambigua.",
+    "recíproca.",
+    "ortogonal.",
+    "paralela."
+   ],
+   "correcta": 1,
+   "explicacion": "Un polo (mucha) implica los dos polos de la otra característica (pocos y muchos): abanico → ambigua.",
+   "basada_en": [
+    "2023-2c-lunes-t1-r"
+   ],
+   "id": "gen-u4-07"
+  },
+  {
+   "unidad": "u4-emparrillado",
+   "enunciado": "C1: Velocidad (rápida / lenta); C2: Consumo (bajo / alto). El texto solo dice: \"los vehículos rápidos consumen mucho\". Mismo grupo. La relación es…",
+   "opciones": [
+    "no tipificada.",
+    "ortogonal.",
+    "ambigua.",
+    "paralela."
+   ],
+   "correcta": 1,
+   "explicacion": "rápida (A) → alto (Y): es una sola flecha **cruzada** (del primer polo al segundo polo). La cátedra marca ese caso como no tipificada. Si hubiera dicho \"los rápidos consumen poco\" (A→X), sería ortogonal.",
+   "basada_en": [
+    "2024-1c-lunes-t1-r"
+   ],
+   "id": "gen-u4-08"
+  },
+  {
+   "unidad": "u4-emparrillado",
+   "enunciado": "Una de las desventajas del Emparrillado es que…",
+   "opciones": [
+    "no tiene representación gráfica.",
+    "no es una técnica de educción.",
+    "captura conocimiento superficial y por sí solo no sirve para construir una base de conocimientos.",
+    "no permite asociar elementos con características."
+   ],
+   "correcta": 3,
+   "explicacion": "Desventajas: valores subjetivos, conocimiento superficial, complejidad con muchos elementos y no alcanza solo para una BC. Ventajas: reflexión, gráfico, asociaciones y refinamiento del problema.",
+   "basada_en": [],
+   "id": "gen-u4-09"
+  },
+  {
+   "unidad": "u5-busqueda",
+   "enunciado": "El método de búsqueda ciega que encuentra TODOS los estados solución es…",
+   "opciones": [
+    "Escalada Simple.",
+    "Bidireccional.",
+    "Generación y Prueba.",
+    "Primero en Profundidad."
+   ],
+   "correcta": 3,
+   "explicacion": "Generación y Prueba recorre todo el árbol como profundidad sin cortar en la primera solución. Profundidad termina en la primera.",
+   "basada_en": [],
+   "id": "gen-u5-01"
+  },
+  {
+   "unidad": "u5-busqueda",
+   "enunciado": "Los únicos métodos que pueden detenerse sin llegar a ninguna solución aunque exista una son…",
+   "opciones": [
+    "las Escaladas (Simple y por Máxima Pendiente).",
+    "Primero el Mejor y A*.",
+    "Primero en Amplitud.",
+    "Generación y Prueba."
+   ],
+   "correcta": 1,
+   "explicacion": "Las escaladas solo avanzan a un hijo estrictamente mejor y no vuelven atrás: se traban en un máximo local. (Beam Search también puede fallar por descartar nodos.)",
+   "basada_en": [
+    "2025-lunes-t2-l",
+    "2025-miercoles-t1-b"
+   ],
+   "id": "gen-u5-02"
+  },
+  {
+   "unidad": "u5-busqueda",
+   "enunciado": "En A*, la función de evaluación f para el caso \"cuanto menor es el valor heurístico, más deseable es el nodo\" es…",
+   "opciones": [
+    "f = h",
+    "f = h + g",
+    "f = h − g",
+    "f = g"
+   ],
+   "correcta": 2,
+   "explicacion": "g es el costo acumulado desde la raíz. Si menor es mejor, el costo suma (penaliza). Si mayor es mejor, la cátedra usa h − g.",
+   "basada_en": [
+    "2025-lunes-t1-c"
+   ],
+   "id": "gen-u5-03"
+  },
+  {
+   "unidad": "u5-busqueda",
+   "enunciado": "En Beam Search con n = 1, cuando el nodo actual es la solución, la lista de abiertos…",
+   "opciones": [
+    "tiene todos los nodos generados.",
+    "tiene la raíz.",
+    "queda vacía.",
+    "tiene los hermanos de la solución."
+   ],
+   "correcta": 3,
+   "explicacion": "Con n = 1 antes de elegir se recorta la lista a un solo nodo; al elegir la solución no queda nada. \"La lista queda vacía\" sale mucho.",
+   "basada_en": [
+    "2025-lunes-t1-b",
+    "2024-1c-lunes-t1-b"
+   ],
+   "id": "gen-u5-04"
+  },
+  {
+   "unidad": "u5-busqueda",
+   "enunciado": "En Primero el Mejor, si dos nodos abiertos tienen el mismo valor heurístico, se elige primero…",
+   "opciones": [
+    "el que entró antes a la lista (el más viejo).",
+    "el de la izquierda en el dibujo.",
+    "el de menor letra.",
+    "cualquiera."
+   ],
+   "correcta": 1,
+   "explicacion": "Convención de la cátedra: ante empate, prioridad al estado más viejo de la lista.",
+   "basada_en": [],
+   "id": "gen-u5-05"
+  },
+  {
+   "unidad": "u5-busqueda",
+   "enunciado": "La Escalada por Máxima Pendiente, a diferencia de la Escalada Simple…",
+   "opciones": [
+    "genera todos los hijos del nodo actual y elige el mejor.",
+    "usa los costos de los arcos.",
+    "puede volver atrás.",
+    "garantiza llegar a la solución."
+   ],
+   "correcta": 1,
+   "explicacion": "Simple: se mueve al primer hijo mejor que encuentra. Máxima pendiente: mira todos los hijos y se mueve al mejor (si mejora al actual).",
+   "basada_en": [],
+   "id": "gen-u5-06"
+  },
+  {
+   "unidad": "u5-busqueda",
+   "enunciado": "El método de búsqueda ciega que conviene cuando hay pocos nodos solución cercanos a la raíz es…",
+   "opciones": [
+    "Generación y Prueba.",
+    "Primero en Amplitud.",
+    "Primero en Profundidad.",
+    "Escalada Simple."
+   ],
+   "correcta": 2,
+   "explicacion": "Amplitud recorre por niveles, así que encuentra rápido las soluciones poco profundas (a costa de mucha memoria). Profundidad conviene con muchas soluciones lejos de la raíz.",
+   "basada_en": [],
+   "id": "gen-u5-07"
+  },
+  {
+   "unidad": "u5-busqueda",
+   "enunciado": "En la búsqueda Bidireccional…",
+   "opciones": [
+    "se usa la heurística de los nodos.",
+    "las dos búsquedas deben ser en profundidad.",
+    "al menos una de las dos búsquedas debe ser en amplitud.",
+    "no hace falta conocer el estado final."
+   ],
+   "correcta": 3,
+   "explicacion": "Se busca desde el inicio y desde la solución a la vez; al menos una en amplitud. Termina al encontrar un estado intermedio común.",
+   "basada_en": [],
+   "id": "gen-u5-08"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "En un Algoritmo Genético, el conocimiento sobre el problema se codifica principalmente en…",
+   "opciones": [
+    "la población inicial.",
+    "el operador de mutación.",
+    "el criterio de paro.",
+    "la función de aptitud."
+   ],
+   "correcta": 4,
+   "explicacion": "La función de aptitud evalúa las soluciones según lo que se busca y las restricciones: ahí está el conocimiento.",
+   "basada_en": [
+    "2023-1c-miercoles-t1-i",
+    "2023-1c-miercoles-t2-r"
+   ],
+   "id": "gen-u7-01"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "El método de selección que tiene MAYOR riesgo de producir convergencia prematura es…",
+   "opciones": [
+    "Control sobre número esperado.",
+    "Ranking.",
+    "Ruleta.",
+    "Torneo."
+   ],
+   "correcta": 2,
+   "explicacion": "Ranking siempre se queda con los mejores y deja afuera a los de baja aptitud: la población pierde diversidad rápido. Ruleta es la de menor riesgo.",
+   "basada_en": [
+    "2022-2c-lunes-t1-j",
+    "2022-2c-lunes-t2-r"
+   ],
+   "id": "gen-u7-02"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "Con el método de Ruleta…",
+   "opciones": [
+    "los individuos compiten de a pares.",
+    "solo pasan los individuos con aptitud mayor al promedio.",
+    "siempre pasa el mejor individuo.",
+    "un individuo con aptitud mayor al promedio puede no ser elegido."
+   ],
+   "correcta": 4,
+   "explicacion": "La ruleta depende del azar: da más chances a los más aptos pero no garantiza nada. Competir de a pares es el Torneo.",
+   "basada_en": [
+    "2020-2c-t1-a",
+    "2022-1c-miercoles-t1-i"
+   ],
+   "id": "gen-u7-03"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "Aptitudes 30, 20, 10 y 40 (total 100). En Control sobre Número Esperado, ¿cuántas copias directas recibe el individuo de aptitud 40?",
+   "opciones": [
+    "2",
+    "1",
+    "4",
+    "0"
+   ],
+   "correcta": 2,
+   "explicacion": "Promedio = 25. Valor de selección = 40 / 25 = 1,6 → parte entera 1 copia directa; el 0,6 entra a la ruleta.",
+   "basada_en": [
+    "2020-2c-t3-a",
+    "2023-1c-lunes-t2-r"
+   ],
+   "id": "gen-u7-04"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "La Cruza Simple…",
+   "opciones": [
+    "tiene siempre un único punto de corte.",
+    "usa una máscara para cada hijo.",
+    "puede tener varios puntos de corte.",
+    "permite repetir características entre los hijos."
+   ],
+   "correcta": 1,
+   "explicacion": "Simple = un punto de corte. Varios = multipunto. Máscara para cada hijo y repetir características = binomial con máscara doble.",
+   "basada_en": [
+    "2020-2c-t3-b"
+   ],
+   "id": "gen-u7-05"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "Si durante muchos ciclos todos los individuos de la población son idénticos, lo más probable es que…",
+   "opciones": [
+    "el criterio de paro sea por tiempo.",
+    "la función de aptitud sea perfecta.",
+    "la probabilidad de mutación sea demasiado alta.",
+    "la probabilidad de mutación sea demasiado baja."
+   ],
+   "correcta": 4,
+   "explicacion": "Sin mutación suficiente no aparecen genes nuevos y la población converge prematuramente. También puede deberse a selección por ranking.",
+   "basada_en": [
+    "2022-1c-lunes-t1-i",
+    "2022-1c-lunes-t2-q"
+   ],
+   "id": "gen-u7-06"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "Si la probabilidad de mutación es excesivamente alta…",
+   "opciones": [
+    "mejora la estabilidad del promedio.",
+    "aumenta la diversidad pero se pueden perder buenas soluciones.",
+    "la población converge prematuramente.",
+    "se limita la creación de combinaciones."
+   ],
+   "correcta": 2,
+   "explicacion": "Mucha mutación = mucha diversidad, casi búsqueda al azar: se destruyen las buenas soluciones encontradas.",
+   "basada_en": [
+    "2025-lunes-t1-l",
+    "2025-lunes-t2-v"
+   ],
+   "id": "gen-u7-07"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "Si el criterio de paro está basado en alcanzar un valor de aptitud…",
+   "opciones": [
+    "se garantiza la mejor solución.",
+    "la corrida termina siempre.",
+    "no hace falta mutación.",
+    "la corrida puede no terminar nunca."
+   ],
+   "correcta": 4,
+   "explicacion": "Si nunca se alcanza esa aptitud, el algoritmo sigue indefinidamente. Por cantidad de vueltas termina siempre, con o sin buena solución.",
+   "basada_en": [
+    "2024-1c-lunes-t1-j",
+    "2024-1c-lunes-t2-t"
+   ],
+   "id": "gen-u7-08"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "Para probar si un Algoritmo Genético sirve para resolver un problema, se deben evaluar los resultados de…",
+   "opciones": [
+    "una sola corrida.",
+    "un solo ciclo.",
+    "varias corridas.",
+    "la población inicial."
+   ],
+   "correcta": 3,
+   "explicacion": "Como hay azar, con los mismos parámetros se pueden obtener poblaciones finales distintas: hay que mirar varias corridas.",
+   "basada_en": [
+    "2022-2c-miercoles-t2-q",
+    "2020-2c-t4-b"
+   ],
+   "id": "gen-u7-09"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "El objetivo del operador de Mutación es…",
+   "opciones": [
+    "combinar los genes de dos padres.",
+    "elegir a los más aptos.",
+    "detener el algoritmo.",
+    "hacer aparecer valores de genes que no habían aparecido en la corrida."
+   ],
+   "correcta": 4,
+   "explicacion": "Mutación = variabilidad nueva. Combinar genes existentes es el cruzamiento; elegir a los aptos, la selección.",
+   "basada_en": [
+    "2022-2c-miercoles-t1-j",
+    "2022-2c-miercoles-t2-r"
+   ],
+   "id": "gen-u7-10"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "Para penalizar individuos inválidos sin descartarlos, lo recomendable es…",
+   "opciones": [
+    "eliminarlos de la población.",
+    "restar un valor pequeño en la aptitud por cada valor inválido.",
+    "duplicar su aptitud.",
+    "mutarlos hasta que sean válidos."
+   ],
+   "correcta": 2,
+   "explicacion": "Restar un poco por cada error mantiene la \"pendiente\": pequeños cambios en el individuo dan pequeños cambios en la aptitud.",
+   "basada_en": [
+    "2024-1c-miercoles-t1-k"
+   ],
+   "id": "gen-u7-11"
+  },
+  {
+   "unidad": "u7-ag",
+   "enunciado": "Un gráfico de aptitud por generación que oscila sin parar y nunca se acerca al valor esperado indica que…",
+   "opciones": [
+    "la mutación es demasiado baja.",
+    "hay convergencia prematura.",
+    "el algoritmo no converge: hay que revisar la función de aptitud.",
+    "el algoritmo ya encontró la solución."
+   ],
+   "correcta": 3,
+   "explicacion": "Si no hay tendencia a mejorar, la función de aptitud no está guiando la búsqueda. La convergencia prematura se ve como una curva que se aplana temprano en un valor malo.",
+   "basada_en": [
+    "2023-2c-lunes-t1-j",
+    "2023-2c-lunes-t2-r"
+   ],
+   "id": "gen-u7-12"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "En una RNA, el conocimiento aprendido durante el entrenamiento se almacena en…",
+   "opciones": [
+    "las neuronas de entrada.",
+    "los datos de prueba.",
+    "la función de activación.",
+    "los pesos de las conexiones."
+   ],
+   "correcta": 4,
+   "explicacion": "Todo lo aprendido queda en los pesos: por eso es implícito y la red es una caja negra.",
+   "basada_en": [
+    "2023-1c-lunes-t1-g",
+    "2023-1c-lunes-t2-p"
+   ],
+   "id": "gen-u8-01"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "La RNA que solo puede resolver problemas linealmente separables es…",
+   "opciones": [
+    "Hopfield.",
+    "Perceptrón.",
+    "Backpropagation.",
+    "Convolucional."
+   ],
+   "correcta": 2,
+   "explicacion": "El Perceptrón es una sola neurona: separa dos clases con una recta (no puede con el XOR).",
+   "basada_en": [
+    "2023-1c-miercoles-t2-o",
+    "2023-2c-lunes-t1-g"
+   ],
+   "id": "gen-u8-02"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Para construir una RNA de Hopfield se usa un aprendizaje…",
+   "opciones": [
+    "por refuerzo.",
+    "no supervisado de tipo hebbiano.",
+    "supervisado por corrección de error.",
+    "estocástico."
+   ],
+   "correcta": 2,
+   "explicacion": "Hopfield es autoasociativa: no supervisada, hebbiana, y aprende cada patrón en una sola pasada.",
+   "basada_en": [
+    "2022-2c-miercoles-t2-o"
+   ],
+   "id": "gen-u8-03"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Una red con 4 neuronas de entrada, una capa oculta de 3 y 2 de salida, todas conectadas hacia adelante, es…",
+   "opciones": [
+    "una red de Hopfield.",
+    "un sistema difuso.",
+    "un Multi-Perceptrón Backpropagation.",
+    "un Perceptrón."
+   ],
+   "correcta": 3,
+   "explicacion": "Varias capas con conexiones hacia adelante → Backpropagation. Hopfield es monocapa con conexiones laterales.",
+   "basada_en": [
+    "2022-2c-lunes-t2-o"
+   ],
+   "id": "gen-u8-04"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Backpropagation requiere que la función de activación de las neuronas sea…",
+   "opciones": [
+    "binaria.",
+    "derivable.",
+    "lineal.",
+    "escalón."
+   ],
+   "correcta": 2,
+   "explicacion": "Calcula el gradiente del error y lo propaga hacia atrás: necesita derivadas.",
+   "basada_en": [
+    "2020-2c-t3-t"
+   ],
+   "id": "gen-u8-05"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Para evaluar una RNA que estima la cantidad de entradas vendidas para un recital (un número), se usan…",
+   "opciones": [
+    "el error absoluto y/o el error relativo.",
+    "la exactitud.",
+    "la recuperación.",
+    "la matriz de confusión y la precisión."
+   ],
+   "correcta": 1,
+   "explicacion": "Salida continua → errores absoluto y relativo. La matriz de confusión es para clasificación.",
+   "basada_en": [
+    "2022-2c-miercoles-t1-h",
+    "2023-1c-lunes-t2-o"
+   ],
+   "id": "gen-u8-06"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "La métrica que indica qué proporción de los casos positivos reales el modelo identificó correctamente es…",
+   "opciones": [
+    "el error absoluto.",
+    "la precisión.",
+    "la exactitud.",
+    "la recuperación (recall)."
+   ],
+   "correcta": 4,
+   "explicacion": "Recall = VP / (VP + FN). La precisión es VP / (VP + FP): de lo que dijo positivo, cuánto era.",
+   "basada_en": [
+    "2025-miercoles-t1-i"
+   ],
+   "id": "gen-u8-07"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Un modelo de detección de fraude tiene 98% de exactitud, pero el 98% de las transacciones son legítimas. Eso significa que…",
+   "opciones": [
+    "la exactitud puede ser engañosa: un modelo que diga siempre \"legítima\" ya tendría 98%.",
+    "el modelo es excelente.",
+    "la precisión es 98%.",
+    "hay sobreentrenamiento."
+   ],
+   "correcta": 1,
+   "explicacion": "Con clases desbalanceadas la exactitud engaña. Hay que mirar precisión y recuperación de la clase minoritaria.",
+   "basada_en": [
+    "2025-lunes-t1-m"
+   ],
+   "id": "gen-u8-08"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Durante el entrenamiento, el error de entrenamiento baja siempre pero el de validación baja y luego empieza a subir. Esto indica…",
+   "opciones": [
+    "que la tasa de aprendizaje es muy baja.",
+    "que la red no tiene capacidad para aprender.",
+    "que faltan datos de prueba.",
+    "sobreentrenamiento por demasiadas épocas."
+   ],
+   "correcta": 4,
+   "explicacion": "La red memoriza los ejemplos de entrenamiento y pierde capacidad de generalizar: hay que cortar antes.",
+   "basada_en": [
+    "2023-2c-miercoles-t1-h",
+    "2025-lunes-t2-t"
+   ],
+   "id": "gen-u8-09"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Los errores de entrenamiento y validación bajan y se quedan planos en un valor alto. Lo que conviene es…",
+   "opciones": [
+    "entrenar más épocas con la misma red.",
+    "bajar la cantidad de neuronas de entrada.",
+    "modificar la topología de la red.",
+    "quitar los datos de validación."
+   ],
+   "correcta": 3,
+   "explicacion": "La red no tiene capacidad para el problema: agregar neuronas o capas.",
+   "basada_en": [
+    "2023-2c-miercoles-t2-p"
+   ],
+   "id": "gen-u8-10"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "La capacidad de generalización de un modelo de Machine Learning se evalúa con…",
+   "opciones": [
+    "la función de activación.",
+    "los datos de entrenamiento.",
+    "los datos de prueba.",
+    "los pesos iniciales."
+   ],
+   "correcta": 3,
+   "explicacion": "Prueba = datos que el modelo nunca vio. Entrenamiento y validación se usan para construirlo.",
+   "basada_en": [
+    "2020-2c-t2-q"
+   ],
+   "id": "gen-u8-11"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Para clasificar fotos en 5 clases excluyentes, la capa de salida puede ser…",
+   "opciones": [
+    "cinco neuronas con softmax.",
+    "una neurona escalón.",
+    "cinco neuronas con ReLU sin normalizar.",
+    "una neurona sigmoidal."
+   ],
+   "correcta": 1,
+   "explicacion": "Softmax convierte los puntajes en probabilidades que suman 1. Para 2 clases alcanza una neurona sigmoidal.",
+   "basada_en": [
+    "2025-miercoles-t1-k",
+    "2025-miercoles-t2-u"
+   ],
+   "id": "gen-u8-12"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Para una red convolucional que recibe fotos en color se recomienda que la capa de entrada…",
+   "opciones": [
+    "admita tres canales (R, G, B).",
+    "use kernels de 1x1 únicamente.",
+    "convierta todo a un canal.",
+    "tenga una sola neurona."
+   ],
+   "correcta": 1,
+   "explicacion": "Las fotos color tienen tres canales; la entrada tiene que admitirlos.",
+   "basada_en": [
+    "2025-lunes-t1-j"
+   ],
+   "id": "gen-u8-13"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Para encontrar las reglas que permiten decidir si un cliente pagará o no un crédito a partir del historial de clientes, se usa…",
+   "opciones": [
+    "un Perceptrón.",
+    "una RNA de Hopfield.",
+    "un Algoritmo de Inducción.",
+    "un Algoritmo Genético."
+   ],
+   "correcta": 3,
+   "explicacion": "Cuando se piden **reglas** a partir de datos etiquetados: árbol de decisión (algoritmo de inducción, TDIDT).",
+   "basada_en": [
+    "2022-2c-lunes-t1-m",
+    "2023-1c-miercoles-t2-u"
+   ],
+   "id": "gen-u8-14"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "Un modelo con entrenamiento online (dinámico) en producción…",
+   "opciones": [
+    "no tiene fase de entrenamiento.",
+    "no necesita monitoreo.",
+    "no puede aprender más.",
+    "puede seguir aprendiendo y con la misma entrada dar resultados distintos a los del entrenamiento."
+   ],
+   "correcta": 4,
+   "explicacion": "Sigue aprendiendo después de instalado; por eso hay que monitorearlo.",
+   "basada_en": [
+    "2023-1c-miercoles-t2-m"
+   ],
+   "id": "gen-u8-15"
+  },
+  {
+   "unidad": "u8-rna",
+   "enunciado": "La normalización de datos para entrenar una RNA se aplica sobre…",
+   "opciones": [
+    "los datos de entrenamiento, validación y prueba.",
+    "los pesos de la red.",
+    "solo los datos de entrenamiento.",
+    "solo los datos de prueba."
+   ],
+   "correcta": 1,
+   "explicacion": "Todo dato que entra a la red tiene que estar en la misma escala.",
+   "basada_en": [
+    "2022-1c-lunes-t2-p"
+   ],
+   "id": "gen-u8-16"
+  },
+  {
+   "unidad": "u9-logica",
+   "enunciado": "En Lógica Difusa, la conjunción (Y) entre dos valores de pertenencia toma…",
+   "opciones": [
+    "el máximo.",
+    "el mínimo.",
+    "la suma.",
+    "el producto."
+   ],
+   "correcta": 2,
+   "explicacion": "Y = mínimo; O = máximo; NO = 1 − μ.",
+   "basada_en": [
+    "2023-2c-miercoles-t1-x",
+    "2024-1c-miercoles-t2-y"
+   ],
+   "id": "gen-u9-01"
+  },
+  {
+   "unidad": "u9-logica",
+   "enunciado": "En Lógica Difusa, el operador de implicación…",
+   "opciones": [
+    "toma el máximo entre antecedente y consecuente.",
+    "multiplica las pertenencias.",
+    "siempre devuelve 1.",
+    "propaga el valor de pertenencia del antecedente al consecuente."
+   ],
+   "correcta": 4,
+   "explicacion": "Se resuelve el antecedente hasta un solo grado y ese grado pasa al consecuente.",
+   "basada_en": [
+    "2025-miercoles-t1-o"
+   ],
+   "id": "gen-u9-02"
+  },
+  {
+   "unidad": "u9-logica",
+   "enunciado": "La función de pertenencia de la Lógica Difusa…",
+   "opciones": [
+    "es una probabilidad.",
+    "solo vale 0 o 1.",
+    "indica el grado en que un elemento se ajusta a una definición.",
+    "debe sumar 1 entre todos los conjuntos."
+   ],
+   "correcta": 3,
+   "explicacion": "Es un grado de pertenencia, no una probabilidad: no tiene por qué sumar 1.",
+   "basada_en": [
+    "2025-lunes-t1-o"
+   ],
+   "id": "gen-u9-03"
+  },
+  {
+   "unidad": "u9-logica",
+   "enunciado": "\"El auto es bastante rápido\" se representaría en Lógica Difusa como…",
+   "opciones": [
+    "μ_RÁPIDO(auto) = 0,1",
+    "RÁPIDO(auto) = verdadero",
+    "μ_RÁPIDO(auto) = 1,5",
+    "μ_RÁPIDO(auto) = 0,8"
+   ],
+   "correcta": 4,
+   "explicacion": "\"Bastante\" es un grado alto pero no total: alrededor de 0,8. Los valores van entre 0 y 1.",
+   "basada_en": [
+    "2023-2c-lunes-t1-v",
+    "2024-1c-lunes-t2-y"
+   ],
+   "id": "gen-u9-04"
+  },
+  {
+   "unidad": "u9-logica",
+   "enunciado": "En Deducción Natural, se puede agregar una suposición cuando…",
+   "opciones": [
+    "la tesis no tiene implicación.",
+    "hay una hipótesis existencial.",
+    "la tesis tiene una implicación.",
+    "siempre que se quiera."
+   ],
+   "correcta": 3,
+   "explicacion": "Si la tesis tiene implicación se supone su antecedente (y se cierra con Introducción de la Implicación). Si no tiene, no se supone nada.",
+   "basada_en": [
+    "2024-1c-lunes-t2-x",
+    "2020-2c-t3-p"
+   ],
+   "id": "gen-u9-05"
+  },
+  {
+   "unidad": "u9-logica",
+   "enunciado": "El Modus Ponens (eliminación de la implicación) permite…",
+   "opciones": [
+    "unir dos fórmulas con ∧.",
+    "introducir un cuantificador universal.",
+    "negar el antecedente.",
+    "acceder al consecuente de una implicación a partir de un antecedente verdadero."
+   ],
+   "correcta": 4,
+   "explicacion": "De A → B y A se obtiene B.",
+   "basada_en": [
+    "2024-1c-lunes-t1-n"
+   ],
+   "id": "gen-u9-06"
+  },
+  {
+   "unidad": "u9-logica",
+   "enunciado": "Si una de las hipótesis tiene cuantificador existencial (∃) y las demás universal (∀), la tesis…",
+   "opciones": [
+    "tiene cuantificador existencial.",
+    "tiene cuantificador universal.",
+    "puede tener cualquiera.",
+    "no tiene cuantificador."
+   ],
+   "correcta": 1,
+   "explicacion": "Con un ∃ en las hipótesis, la tesis queda existencial. Si todas son ∀, la tesis puede ser ∀ o ∃.",
+   "basada_en": [
+    "2023-1c-miercoles-t2-x",
+    "2023-1c-miercoles-t1-x"
+   ],
+   "id": "gen-u9-07"
+  },
+  {
+   "unidad": "u9-logica",
+   "enunciado": "En Lógica de Primer Orden, los cuantificadores se utilizan para…",
+   "opciones": [
+    "representar características.",
+    "relacionar dos objetos.",
+    "identificar si una variable se refiere a un individuo o a muchos.",
+    "unir proposiciones."
+   ],
+   "correcta": 3,
+   "explicacion": "∀ = todos; ∃ = al menos uno. Las características se representan con funciones de verdad.",
+   "basada_en": [
+    "2024-1c-miercoles-t2-x",
+    "2024-1c-miercoles-t1-n"
+   ],
+   "id": "gen-u9-08"
+  },
+  {
+   "unidad": "u9-logica",
+   "enunciado": "Al traducir \"Algunos estudiantes que cursan IA programan en Python\" a lógica de primer orden, lo correcto es que la fórmula…",
+   "opciones": [
+    "tenga solo conjunciones, con ∃ como cuantificador principal.",
+    "use ∀ para estudiante.",
+    "tenga una implicación entre \"cursan IA\" y \"programan\".",
+    "use disyunciones."
+   ],
+   "correcta": 1,
+   "explicacion": "Con \"algunos\" el cuantificador principal es ∃ y no hay implicación: todo con ∧.",
+   "basada_en": [
+    "2023-2c-miercoles-t1-y"
+   ],
+   "id": "gen-u9-09"
+  },
+  {
+   "unidad": "u9-logica",
+   "enunciado": "La Lógica de Primer Orden, comparada con la Proposicional…",
+   "opciones": [
+    "representa menos conocimiento.",
+    "no puede usarse en IA.",
+    "no tiene operadores lógicos.",
+    "permite representar mayor cantidad de conocimiento."
+   ],
+   "correcta": 4,
+   "explicacion": "Agrega variables, constantes, funciones de verdad, relaciones y cuantificadores.",
+   "basada_en": [
+    "2022-2c-lunes-t1-v"
+   ],
+   "id": "gen-u9-10"
+  },
+  {
+   "unidad": "u10-pln",
+   "enunciado": "Una empresa quiere agrupar automáticamente los reclamos de sus clientes según su similitud, sin categorías definidas de antemano. El enfoque más adecuado es…",
+   "opciones": [
+    "un modelo de árboles y ensambles.",
+    "un modelo de representación de texto.",
+    "un modelo de clustering.",
+    "un modelo de regresión."
+   ],
+   "correcta": 3,
+   "explicacion": "Sin categorías previas y \"agrupar por similitud\" → no supervisado → clustering (K-Means, DBSCAN).",
+   "basada_en": [
+    "2025-miercoles-t2-t",
+    "2025-lunes-t1-n"
+   ],
+   "id": "gen-u10-01"
+  },
+  {
+   "unidad": "u10-pln",
+   "enunciado": "Para clasificar noticias en secciones ya definidas (deportes, política, economía) a partir de ejemplos etiquetados, conviene…",
+   "opciones": [
+    "un modelo de árboles y ensambles.",
+    "K-Means.",
+    "GloVe.",
+    "DBSCAN."
+   ],
+   "correcta": 1,
+   "explicacion": "Categorías conocidas + datos etiquetados → clasificación supervisada (árboles y ensambles, regresión logística).",
+   "basada_en": [
+    "2025-miercoles-t1-j"
+   ],
+   "id": "gen-u10-02"
+  },
+  {
+   "unidad": "u10-pln",
+   "enunciado": "GloVe y word2vec son…",
+   "opciones": [
+    "clasificadores supervisados.",
+    "modelos de representación de texto (embeddings).",
+    "técnicas de tokenización.",
+    "algoritmos de clustering."
+   ],
+   "correcta": 2,
+   "explicacion": "Convierten palabras en vectores densos donde palabras similares quedan cerca. Son el paso de representación.",
+   "basada_en": [
+    "2025-lunes-t1-n"
+   ],
+   "id": "gen-u10-03"
+  },
+  {
+   "unidad": "u10-pln",
+   "enunciado": "El algoritmo que asigna a un texto una etiqueta o un puntaje según la tarea (por ejemplo, la probabilidad de que una reseña sea positiva) es…",
+   "opciones": [
+    "DBSCAN.",
+    "la lematización.",
+    "K-Means.",
+    "la regresión logística."
+   ],
+   "correcta": 4,
+   "explicacion": "Regresión logística: supervisado, asigna etiquetas o valores. K-Means y DBSCAN agrupan.",
+   "basada_en": [
+    "2025-lunes-t2-x"
+   ],
+   "id": "gen-u10-04"
+  },
+  {
+   "unidad": "u10-pln",
+   "enunciado": "Llevar \"corriendo\", \"corrí\" y \"correrán\" a la forma de diccionario \"correr\" se llama…",
+   "opciones": [
+    "tokenización.",
+    "distancia de edición.",
+    "lematización.",
+    "segmentación."
+   ],
+   "correcta": 3,
+   "explicacion": "Lematización = forma canónica. Stemming solo recorta con reglas (puede dejar raíces que no son palabras).",
+   "basada_en": [],
+   "id": "gen-u10-05"
+  },
+  {
+   "unidad": "u10-pln",
+   "enunciado": "TF-IDF le da poco peso a una palabra que…",
+   "opciones": [
+    "aparece muchas veces en un documento.",
+    "aparece en casi todos los documentos de la colección.",
+    "aparece en un solo documento.",
+    "es un sustantivo."
+   ],
+   "correcta": 2,
+   "explicacion": "IDF penaliza las palabras comunes en toda la colección (\"el\", \"de\"): no sirven para distinguir documentos.",
+   "basada_en": [],
+   "id": "gen-u10-06"
+  }
+ ]
+}

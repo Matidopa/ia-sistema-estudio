@@ -1,0 +1,31 @@
+{
+  "intro": "Trece unidades en el orden en que conviene aprenderlas si arrancás de cero. Las tres técnicas prácticas (Protocolos, Emparrillado y Búsqueda) van temprano porque son 15 de las 25 preguntas de un parcial típico y se aprenden con práctica mecánica. Cada unidad se aprueba con un chequeo de 5 preguntas.",
+  "unidades": [
+    { "id": "u0-parcial", "num": 0, "corto": "El parcial", "titulo": "Cómo es la materia y cómo es el parcial", "archivo": "u00-parcial.md", "minutos": 6, "peso": "",
+      "resumen": "Qué temas entran, cómo se arma cada parcial (25 preguntas de opción múltiple con anexos) y una estrategia para estudiar y para rendir." },
+    { "id": "u1-intro", "num": 1, "corto": "Qué es la IA", "titulo": "Qué es la Inteligencia Artificial", "archivo": "u01-intro.md", "minutos": 12, "peso": "≈0–1 por parcial",
+      "resumen": "Definiciones de la cátedra: inteligencia, IA, conocimiento, experiencia, mente. IA fuerte y débil, paradoja de Moravec, historia e inviernos, ética." },
+    { "id": "u2-adquisicion", "num": 2, "corto": "Conocimiento", "titulo": "El conocimiento y cómo se adquiere", "archivo": "u02-adquisicion.md", "minutos": 10, "peso": "base de Protocolos y Emparrillado",
+      "resumen": "Dato, información y conocimiento. Fuentes públicas y privadas, conocimiento declarativo y procedimental, extracción contra educción y el rol del Ingeniero de Conocimiento." },
+    { "id": "u3-protocolos", "num": 3, "corto": "Análisis de Protocolos", "titulo": "Análisis de Protocolos", "archivo": "u03-protocolos.md", "minutos": 25, "peso": "≈5 por parcial",
+      "resumen": "La técnica de pensar en voz alta: transcripción, codificación (conceptos, características, valores, relaciones, operadores), sinónimos, metacomentarios, incertidumbres e interpretación en reglas." },
+    { "id": "u4-emparrillado", "num": 4, "corto": "Emparrillado", "titulo": "Emparrillado (Repertory Grid)", "archivo": "u04-emparrillado.md", "minutos": 30, "peso": "≈5 por parcial",
+      "resumen": "Parrilla, distancias entre elementos, d1 y d2 entre características, agrupamiento por mínima distancia, cómo se cuentan los grupos y cómo se tipifica cada relación." },
+    { "id": "u5-busqueda", "num": 5, "corto": "Métodos de Búsqueda", "titulo": "Métodos de Búsqueda", "archivo": "u05-busqueda.md", "minutos": 35, "peso": "≈4–5 por parcial",
+      "resumen": "Amplitud, profundidad, generación y prueba, escaladas, Primero el Mejor, Beam Search y A*, con las convenciones exactas que usa la cátedra para las listas de abiertos, cerrados y generados." },
+    { "id": "u6-sistemas", "num": 6, "corto": "Sistemas Inteligentes", "titulo": "Sistemas Inteligentes y sus tipos", "archivo": "u06-sistemas.md", "minutos": 20, "peso": "≈1–3 por parcial",
+      "resumen": "Qué hace inteligente a un sistema, Sistema Experto, SBC y SET con su arquitectura, IA Tradicional, Inteligencia Computacional y Machine Learning, tipos de problema y qué tecnología elegir." },
+    { "id": "u7-ag", "num": 7, "corto": "Algoritmos Genéticos", "titulo": "Algoritmos Genéticos", "archivo": "u07-ag.md", "minutos": 22, "peso": "≈2 por parcial",
+      "resumen": "Cromosoma, función de aptitud, selección (torneo, ranking, ruleta, control sobre número esperado), cruzas, mutación, criterio de paro y cómo leer los gráficos de convergencia." },
+    { "id": "u8-rna", "num": 8, "corto": "Machine Learning y RNA", "titulo": "Machine Learning y Redes Neuronales", "archivo": "u08-rna.md", "minutos": 30, "peso": "≈3 por parcial",
+      "resumen": "Aprendizaje supervisado y no supervisado, entrenamiento, validación y prueba, métricas, la neurona artificial, Perceptrón, Backpropagation, Hopfield, convolucionales, sobreajuste." },
+    { "id": "u9-logica", "num": 9, "corto": "Lógica", "titulo": "Lógica: primer orden, deducción natural y lógica difusa", "archivo": "u09-logica.md", "minutos": 25, "peso": "≈1 por parcial (más en parciales viejos)",
+      "resumen": "Por qué la IA usa lógica, cómo traducir frases a primer orden, las reglas y trucos de deducción natural y la lógica difusa (pertenencia, operadores, sistemas difusos)." },
+    { "id": "u10-pln", "num": 10, "corto": "Lenguaje Natural", "titulo": "Procesamiento de Lenguaje Natural", "archivo": "u10-pln.md", "minutos": 15, "peso": "≈1 por parcial (desde 2025)",
+      "resumen": "Preprocesamiento de texto, representación (bolsa de palabras, TF-IDF, embeddings) y qué modelo usar para clasificar, agrupar o puntuar textos." },
+    { "id": "u11-implementacion", "num": 11, "corto": "Implementación", "titulo": "Implementación de Sistemas Inteligentes", "archivo": "u11-implementacion.md", "minutos": 15, "peso": "≈1–2 por parcial",
+      "resumen": "Las fases del proceso: definición del problema, datos, selección de tecnología, construcción del modelo y aplicación, con qué se hace en cada una." },
+    { "id": "u12-ia2026", "num": 12, "corto": "IA en 2026", "titulo": "IA en 2026: agentes y tendencias", "archivo": "u12-ia2026.md", "minutos": 8, "peso": "tema nuevo del año",
+      "resumen": "IA agéntica, razonamiento, multimodalidad, modelos pequeños, IA embebida, gobernanza y el debate sobre la AGI." }
+  ]
+}
