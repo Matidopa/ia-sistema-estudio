@@ -41,7 +41,7 @@ export function sesion(cont, pool, { vacio = 'No hay preguntas con ese filtro.',
     zona.innerHTML = ''; pie.innerHTML = ''; btnSig = null;
     pintarCabeza();
     const p = pool[i];
-    tarjeta = tarjetaPregunta(p, { modo: 'inmediato', origen, onRespuesta: (id, n, c) => {
+    tarjeta = tarjetaPregunta(p, { modo: 'inmediato', origen, anexoAbierto: true, onRespuesta: (id, n, c) => {
       resultados.push(n === c);
       if (n === c) bien++;
       pintarCabeza();
@@ -80,8 +80,8 @@ export function sesion(cont, pool, { vacio = 'No hay preguntas con ese filtro.',
     raiz,
     elegir(n) {
       if (!tarjeta || tarjeta.cerrada() || n > tarjeta.pregunta.opciones.length) return false;
-      const r = tarjeta.querySelector('.opciones').getBoundingClientRect();
-      if (r.bottom < 0 || r.top > innerHeight) return false; // solo si las opciones están a la vista
+      const r = tarjeta.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return false; // solo si la pregunta está a la vista
       tarjeta.elegir(n); return true;
     },
     avanzar() { if (btnSig && document.body.contains(btnSig)) { btnSig.click(); return true; } return false; },

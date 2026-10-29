@@ -362,3 +362,10 @@ input, select, textarea { max-width: 100%; }
 
 .opcion.incorrecta { text-decoration: none; }
 .opcion.incorrecta .txt { text-decoration: line-through; text-decoration-thickness: 1px; }
+.etiqueta.frecuente { background: #efe7ff; color: #5b3cc4; }
+:root[data-tema="oscuro"] .etiqueta.frecuente { background: #2a2350; color: #c3b3ff; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) .etiqueta.frecuente { background: #2a2350; color: #c3b3ff; } }
+.campo-ancho { flex: 1 1 100%; }
+.contenido:focus, .contenido:focus-visible { outline: none; }
+:root[data-tema="oscuro"] .etiqueta.real { background: #4a3d0a; color: #ffe38a; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) .etiqueta.real { background: #4a3d0a; color: #ffe38a; } }

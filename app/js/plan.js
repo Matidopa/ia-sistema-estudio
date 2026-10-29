@@ -52,7 +52,7 @@ export function distribucion(total = 25) {
 const normal = s => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
   .replace(/[“”"«»'‘’]/g, '').replace(/\b(c|e)\d\b/g, 'x').replace(/\s+/g, ' ').trim();
 export function familia(p) {
-  const t = normal(p.enunciado);
+  const t = normal(p.enunciado).replace(/^(considerando|segun|de acuerdo (con|a)|teniendo en cuenta) [^,]{0,80}, /, '');
   if (!t) return p.unidad + ':img';
   return p.unidad + ':' + t.split(' ').slice(0, 6).join(' ');
 }
@@ -203,3 +203,15 @@ export function faltanteCompleto() {
 }
 
 export const fmtMin = m => m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? ' ' + (m % 60) + ' min' : ''}` : `${m} min`;
+
+// Tipos de pregunta (familias) de una unidad que salieron 3 veces o más, con un nombre legible.
+export function familiasDeUnidad(uid) {
+  return Object.entries(familias()).filter(([k, l]) => k.startsWith(uid + ':') && !k.endsWith(':img') && l.length >= 3)
+    .sort((a, b) => b[1].length - a[1].length)
+    .map(([clave, lista]) => {
+      let t = lista[0].enunciado.replace(/\s+/g, ' ').trim().replace(/^(Considerando|Según|De acuerdo (con|a)|Teniendo en cuenta) [^,]{0,80}, /i, '');
+      t = t.charAt(0).toUpperCase() + t.slice(1);
+      const corto = t.split(' ').slice(0, 9).join(' ');
+      return { clave, nombre: corto + (t.length > corto.length ? '…' : ''), n: lista.length };
+    });
+}

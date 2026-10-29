@@ -284,6 +284,7 @@ function vistaPractica(main, q) {
   let fuente = prm.f || 'ambas'; // real | ia | ambas | algo
   const filtro = prm.filtro || 'todas'; // todas | nuevas | falladas
   const cuantas = +(prm.n || 10);
+  const fam = prm.fam ? decodeURIComponent(prm.fam) : '';
   const tiposAlgo = TIPOS_ALGORITMICOS.filter(t => !unidades[0] || t.unidad === unidades[0]);
 
   const form = h('form', { class: 'hoja fila form-practica' },
@@ -291,12 +292,16 @@ function vistaPractica(main, q) {
     h('label', { class: 'campo' }, 'De dónde', h('select', { name: 'f' },
       opt('ambas', 'Reales + generadas', fuente), opt('real', 'Solo parciales reales', fuente), opt('ia', 'Solo generadas por IA', fuente), opt('algo', 'Ejercicios nuevos (búsqueda, emparrillado, ruleta, métricas, difusa)', fuente))),
     h('label', { class: 'campo' }, 'Cuáles', h('select', { name: 'filtro' }, opt('todas', 'Todas', filtro), opt('nuevas', 'Las que nunca hice', filtro), opt('falladas', 'Las que erré', filtro))),
+    unidades[0] && PL.familiasDeUnidad(unidades[0]).length ? h('label', { class: 'campo campo-ancho' }, 'Tipo de pregunta', h('select', { name: 'fam' },
+      h('option', { value: '' }, 'Todos los tipos'), ...PL.familiasDeUnidad(unidades[0]).map(f => opt(f.clave, `${f.nombre} (salió ${f.n} veces)`, fam)))) : null,
     h('label', { class: 'campo' }, 'Cantidad', h('select', { name: 'n' }, ...[5, 10, 20, 40].map(n => opt(String(n), String(n), String(cuantas))))),
     h('button', { class: 'boton', type: 'submit' }, q ? 'Otra tanda' : 'Empezar'));
+  form.querySelector('select[name=u]').addEventListener('change', () => { const c = form.querySelector('.campo-ancho'); if (c) c.remove(); });
   form.addEventListener('submit', ev => {
     ev.preventDefault();
     const fd = new FormData(form);
-    const nuevo = `#/practica?u=${fd.get('u')}&f=${fd.get('f')}&filtro=${fd.get('filtro')}&n=${fd.get('n')}`;
+    const famSel = fd.get('u') === (unidades[0] || '') && fd.get('fam') ? `&fam=${encodeURIComponent(fd.get('fam'))}` : '';
+    const nuevo = `#/practica?u=${fd.get('u')}&f=${fd.get('f')}&filtro=${fd.get('filtro')}&n=${fd.get('n')}${famSel}`;
     if (location.hash === nuevo) navegar(); else location.hash = nuevo;
   });
   const col = h('div', { class: 'columna texto' }, h('h1', {}, 'Práctica'));
@@ -322,6 +327,7 @@ function vistaPractica(main, q) {
     if (fuente !== 'ia') pool.push(...D.PARCIALES.preguntas);
     if (fuente !== 'real') pool.push(...D.GENERADAS.preguntas);
     if (unidades[0]) pool = pool.filter(p => unidades.includes(p.unidad));
+    if (fam) pool = pool.filter(p => p.tipo === 'real' && PL.familia(p) === fam);
     if (filtro === 'nuevas') pool = pool.filter(p => !(P.estadoPregunta(p.id) || {}).intentos);
     if (filtro === 'falladas') pool = pool.filter(p => { const e = P.estadoPregunta(p.id); return e && e.aciertos < e.intentos; });
     pool = mezclar(pool).slice(0, cuantas);

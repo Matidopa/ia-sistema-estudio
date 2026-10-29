@@ -76,7 +76,8 @@ export async function vistaPasoExpres(main, id) {
   const pasos = PL.pasosExpres();
   const k = pasos.findIndex(p => p.id === id);
   if (k < 0) { main.append(h('div', { class: 'vacio' }, 'No existe ese paso.')); return; }
-  const paso = pasos[k], sig = pasos[k + 1];
+  const paso = pasos[k];
+  let sig = pasos[k + 1];
   const hecho = PL.pasoHecho(paso);
   const cont = h('div', { class: 'columna' },
     h('p', { class: 'miga chico suave' }, h('a', { href: '#/expres' }, 'Plan exprés'), ` / Paso ${k + 1} de ${pasos.length}`),
@@ -89,6 +90,7 @@ export async function vistaPasoExpres(main, id) {
     if (aprobada) {
       P.marcarPasoExpres(paso.id, info);
       for (const u of paso.unidades) if (paso.tipo === 'mecanica' || paso.tipo === 'teoria') P.marcarUnidad(u, { aprobada: true, viaExpres: true });
+      sig = PL.siguientePasoExpres(); // el próximo que falta, no necesariamente el de al lado
     }
     zonaFin.innerHTML = '';
     zonaFin.append(h('div', { class: 'hoja paso-fin ' + (aprobada ? 'ok' : 'mal') },

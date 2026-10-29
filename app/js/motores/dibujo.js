@@ -65,7 +65,7 @@ export function svgArbol(t, resaltar = {}, estatico = false) {
     if ((resaltar.abiertos || []).includes(n)) fondo = amarillo;
     const esAct = resaltar.actual === n;
     s += `<g><rect x="${x[n] - AN / 2}" y="${y(n) - AL / 2}" width="${AN}" height="${AL}" rx="4" style="fill:${fondo};stroke:${esAct ? birome : tinta}" stroke-width="${sol ? 3.2 : esAct ? 3 : 1.2}"/>`;
-    s += `<text x="${x[n]}" y="${y(n) + 4}" font-size="13" font-weight="700" text-anchor="middle" ${pint('fill', estatico ? tinta : '#222')}>${n}</text>`;
+    s += `<text x="${x[n]}" y="${y(n) + 4}" font-size="13" font-weight="700" text-anchor="middle" ${pint('fill', tinta)}>${n}</text>`;
     s += `<text x="${x[n] + AN / 2 + 4}" y="${y(n) + 4}" font-size="12" ${pint('fill', tinta)}>${nd.h === Infinity ? '∞' : nd.h}</text></g>`;
   }
   s += '</svg>';

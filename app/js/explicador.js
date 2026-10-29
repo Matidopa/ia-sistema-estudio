@@ -47,10 +47,12 @@ function explicarEmparrillado(p) {
   const e = p.enunciado;
   const fmt = g => g.map(x => '(' + x.join(', ') + ')').join('; ');
   const pasos = arr => arr.map(s => `  nivel ${s.nivel}: une ${s.une.map(u => '[' + u.join(',') + ']').join(' + ')}`).join('\n');
+  const lista = (d, extra) => Object.entries(d).sort((a, b) => a[1] - b[1]).map(([k, v]) => `${k.replace('-', '–')} = ${v}${extra ? extra(k) : ''}`).join(', ');
+  const regla = 'Regla para contar: cada unión entre ítems sueltos forma un grupo; un ítem que se suma más tarde a un grupo ya formado queda como grupo propio.';
   if (/caracter[íi]stica/i.test(e) && /grupo/i.test(e))
-    return `Árbol de características (mínima distancia entre min(d1, d2)):\n${pasos(A.arbolC.pasos)}\nGrupos: ${fmt(A.gruposC)} → ${A.gruposC.length} grupo(s)`;
+    return `1) Para cada par de características se usa el MENOR entre d1 y d2 (de menor a mayor):\n   ${lista(A.dC, k => A.d1[k] !== A.d2[k] ? (A.dC[k] === A.d1[k] ? ' (d1)' : ' (d2)') : '')}\n2) Uniones por mínima distancia (los empates se unen juntos):\n${pasos(A.arbolC.pasos)}\n3) ${regla}\nGrupos: ${fmt(A.gruposC)} → ${A.gruposC.length} grupo(s)`;
   if (/elemento/i.test(e) && /grupo/i.test(e))
-    return `Árbol de elementos (mínima distancia):\n${pasos(A.arbolE.pasos)}\nGrupos: ${fmt(A.gruposE)} → ${A.gruposE.length} grupo(s)`;
+    return `1) Distancias entre elementos (de menor a mayor):\n   ${lista(A.dE)}\n2) Uniones por mínima distancia (los empates se unen juntos):\n${pasos(A.arbolE.pasos)}\n3) ${regla}\nGrupos: ${fmt(A.gruposE)} → ${A.gruposE.length} grupo(s)`;
   const m = e.match(/relaci[óo]n establecida entre (C\d) y (C\d)/i);
   if (m) {
     const g = A.gruposC.find(x => x.includes(m[1]));
