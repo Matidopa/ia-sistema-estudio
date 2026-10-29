@@ -33,7 +33,7 @@ export function vacio() {
 // Completa campos que faltan en progresos viejos (versión 1) sin perder nada.
 export function migrar(d) {
   d = d && typeof d === 'object' ? d : vacio();
-  for (const k of ['preguntas', 'examenes', 'unidades', 'catedra', 'ajustes', 'dias', 'notas']) d[k] = d[k] || {};
+  for (const k of ['preguntas', 'examenes', 'unidades', 'catedra', 'ajustes', 'dias', 'notas', 'tarjetas']) d[k] = d[k] || {};
   d.expres = d.expres || { pasos: {} };
   d.expres.pasos = d.expres.pasos || {};
   if (d.modo !== 'completo' && d.modo !== 'expres') d.modo = null;

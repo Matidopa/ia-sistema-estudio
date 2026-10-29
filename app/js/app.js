@@ -4,6 +4,7 @@ import { h, barra, mezclar, articuloTeoria } from './componentes.js';
 import { vistaCatedra, vistaEjercicio } from './vistas/catedra.js';
 import { vistaSimuladores } from './vistas/simuladores.js';
 import { vistaBienvenida } from './vistas/bienvenida.js';
+import { vistaTarjetas } from './vistas/tarjetas.js';
 import { vistaExpres, vistaPasoExpres, bloqueFaltante } from './vistas/expres.js';
 import { sesion, pistaTeclado } from './vistas/sesion.js';
 import { examen, armarSimulacro } from './vistas/examen.js';
@@ -26,6 +27,7 @@ const RUTAS = [
   [/^#\/parciales$/, vistaParciales],
   [/^#\/parcial\/([\w-]+)(\?.*)?$/, vistaParcial],
   [/^#\/repaso$/, vistaRepaso],
+  [/^#\/tarjetas(\?.*)?$/, vistaTarjetas],
   [/^#\/catedra$/, vistaCatedra],
   [/^#\/catedra\/([\w-]+)$/, vistaEjercicio],
   [/^#\/simuladores(\/[\w-]+)?$/, vistaSimuladores],
@@ -158,6 +160,7 @@ function vistaInicio(main) {
       modo === 'expres' && PL.resumenExpres().terminado ? bloqueFaltante(true) : null,
       h('div', { class: 'accesos' },
         acceso('#/examen', 'Simulacro de parcial', '25 preguntas mezcladas como en el parcial real, con cronómetro'),
+        acceso('#/tarjetas', 'Tarjetas de memoria', 'Definiciones, convenciones y trampas en ratos cortos'),
         acceso('#/practica', 'Práctica libre', 'Por tema, reales o generadas, con corrección al instante'),
         acceso('#/simuladores', 'Simuladores', 'Búsqueda iteración por iteración, emparrillado y ruleta'),
         acceso('#/catedra', 'Ejercicios de la cátedra', 'Las guías prácticas para resolver paso a paso'))));
@@ -229,6 +232,7 @@ async function vistaUnidad(main, uid) {
       h('div', { class: 'acciones' },
         h('a', { class: 'boton secundario', href: `#/practica?u=${uid}&f=real` }, `Preguntas reales (${s.reales})`),
         h('a', { class: 'boton secundario', href: `#/practica?u=${uid}&f=ia` }, `Práctica generada (${s.generadas})`),
+        h('a', { class: 'boton secundario', href: `#/tarjetas?u=${uid}` }, 'Tarjetas'),
         h('button', { class: 'boton secundario', type: 'button', onclick: () => document.getElementById('chequeo').scrollIntoView({ behavior: 'smooth' }) }, 'Ir al chequeo'))),
     h('div', { class: 'unidad-cuerpo' }, art, indice),
     h('h2', { id: 'chequeo' }, 'Chequeo de la unidad'),

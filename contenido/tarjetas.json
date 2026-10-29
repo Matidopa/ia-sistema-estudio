@@ -1,0 +1,881 @@
+{
+ "nota": "Tarjetas escritas con IA en base al material de la cátedra.",
+ "tarjetas": [
+  {
+   "id": "t-u3-01",
+   "unidad": "u3-protocolos",
+   "frente": "¿Qué se le pide al experto en el Análisis de Protocolos?",
+   "dorso": "Que **piense en voz alta** mientras resuelve un problema real. Se graba, se transcribe en frases numeradas, se codifica y se interpreta en reglas."
+  },
+  {
+   "id": "t-u3-02",
+   "unidad": "u3-protocolos",
+   "frente": "¿Cuáles son las cuatro etapas del Análisis de Protocolos?",
+   "dorso": "**Grabación** del protocolo, **transcripción** (frases numeradas), **codificación** (el análisis propiamente dicho) e **interpretación** (reglas de razonamiento en pseudocódigo)."
+  },
+  {
+   "id": "t-u3-03",
+   "unidad": "u3-protocolos",
+   "frente": "¿Qué es un concepto, una característica y un valor? Usá la analogía con una base de datos.",
+   "dorso": "**Concepto** = entidad del dominio (tabla). **Característica** = atributo del concepto (campo). **Valor** = lo que toma esa característica (valor del campo)."
+  },
+  {
+   "id": "t-u3-04",
+   "unidad": "u3-protocolos",
+   "frente": "¿Qué es un operador en el Análisis de Protocolos?",
+   "dorso": "La expresión con la que el experto pasa de un estado a otro más cerca de la solución, por ejemplo «deduzco que», «concluimos que se trata de»."
+  },
+  {
+   "id": "t-u3-05",
+   "unidad": "u3-protocolos",
+   "frente": "Si el experto dice un valor sin nombrar la característica, ¿cómo va en la tabla CCV?",
+   "dorso": "La característica se escribe **implícita, entre paréntesis**: filamentos → (tamaño) → pequeños. Todo lo implícito se **valida con el experto**."
+  },
+  {
+   "id": "t-u3-06",
+   "unidad": "u3-protocolos",
+   "frente": "¿Qué es un metacomentario?",
+   "dorso": "Algo que el experto dice pero que **no aporta un dato** a su razonamiento: comentarios, aclaraciones, consecuencias, justificaciones, comparaciones, opiniones o conectores como «asimismo»."
+  },
+  {
+   "id": "t-u3-07",
+   "unidad": "u3-protocolos",
+   "frente": "¿Qué es una incertidumbre en el Análisis de Protocolos?",
+   "dorso": "Una duda del experto **sobre el cambio de estado**, es decir sobre su conclusión: «deduzco que **se podría tratar** de…»."
+  },
+  {
+   "id": "t-u3-08",
+   "unidad": "u3-protocolos",
+   "frente": "Una frase dice «lo que podría indicar que…». ¿Es incertidumbre?",
+   "dorso": "**No.** Que tenga «podría» no la hace incertidumbre: si la duda no es sobre el estado al que llega el experto, es **metacomentario** (es una consecuencia)."
+  },
+  {
+   "id": "t-u3-09",
+   "unidad": "u3-protocolos",
+   "frente": "«Generalmente bien», «casi normal», «ligeramente rígidas»: ¿qué son?",
+   "dorso": "**Valores** de una característica. El matiz («generalmente», «casi», «ligeramente») va **dentro del valor**; no los convierte en incertidumbre."
+  },
+  {
+   "id": "t-u3-10",
+   "unidad": "u3-protocolos",
+   "frente": "¿Qué indican señales como «ya que», «dado que», «por lo que», «es decir», «similar a»?",
+   "dorso": "Casi siempre un **metacomentario**: explicación, justificación, consecuencia o comparación que no suma un dato al diagnóstico."
+  },
+  {
+   "id": "t-u3-11",
+   "unidad": "u3-protocolos",
+   "frente": "¿Qué son los sinónimos en un protocolo y qué restricciones tienen?",
+   "dorso": "Palabras distintas para **el mismo concepto** (alga y planta). **No tienen características propias** ni relaciones entre sí. «No existen sinónimos» es una respuesta que sale seguido."
+  },
+  {
+   "id": "t-u3-12",
+   "unidad": "u3-protocolos",
+   "frente": "¿Qué características tienen los conceptos que son estados?",
+   "dorso": "**Ninguna.** Los estados son las conclusiones (parciales o finales) a las que llega el experto, como «alga Corallina»; no llevan características en la tabla CCV."
+  },
+  {
+   "id": "t-u3-13",
+   "unidad": "u3-protocolos",
+   "frente": "¿Qué condiciones cumple una relación implícita válida?",
+   "dorso": "Une **dos conceptos** (o un concepto con un estado) con un verbo que el texto **no dice así**. No une sinónimos, no apunta a un valor y no sale de un metacomentario."
+  },
+  {
+   "id": "t-u3-14",
+   "unidad": "u3-protocolos",
+   "frente": "«El siguiente extracto de la tabla CCV es…»: ¿qué lo hace incorrecto?",
+   "dorso": "Que tenga un **valor salido de un metacomentario**, una característica de otro concepto o una relación puesta como característica. Las opciones «falta la característica X» suelen ser trampa."
+  },
+  {
+   "id": "t-u3-15",
+   "unidad": "u3-protocolos",
+   "frente": "«Si X fuera concepto, sus características serían…»: ¿qué opción conviene elegir?",
+   "dorso": "La lista **más corta** que tenga solo lo que el texto le atribuye a X. Las largas suelen colar algo de otro concepto, una relación o un metacomentario."
+  },
+  {
+   "id": "t-u3-16",
+   "unidad": "u3-protocolos",
+   "frente": "Algo que tiene sus propias características (batería, cámara), ¿es concepto o característica?",
+   "dorso": "Es **concepto**, no característica de otro. Se relaciona con el otro concepto (por ejemplo «dispositivo —tiene→ batería»)."
+  },
+  {
+   "id": "t-u3-17",
+   "unidad": "u3-protocolos",
+   "frente": "¿Qué conocimiento da el Análisis de Protocolos y de qué etapa sale cada uno?",
+   "dorso": "**Declarativo** (objetos, características, valores, relaciones) de la **codificación**; **procedimental** (cómo resuelve) de las **reglas de la interpretación**."
+  },
+  {
+   "id": "t-u3-18",
+   "unidad": "u3-protocolos",
+   "frente": "¿Cómo se escriben las reglas en la interpretación del protocolo?",
+   "dorso": "En pseudocódigo: **SI** (concepto.característica = valor) **Y** … **ENTONCES** asignar (…, estado). Por ejemplo SI (ramas.rígidas = ligeramente) Y … ENTONCES Alga Corallina."
+  },
+  {
+   "id": "t-u3-19",
+   "unidad": "u3-protocolos",
+   "frente": "En «En este protocolo se observan N estados», ¿qué se cuenta?",
+   "dorso": "Las **conclusiones** a las que llega el experto (las hipótesis entre las que decide), no cada concepto que nombra."
+  },
+  {
+   "id": "t-u4-01",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Qué es el Emparrillado (Repertory Grid)?",
+   "dorso": "Técnica de educción (Kelly) en la que el experto puntúa **elementos** contra **características bipolares**. Con eso se ve qué elementos se parecen y cómo se relacionan las características."
+  },
+  {
+   "id": "t-u4-02",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Qué condiciones deben cumplir los elementos de un emparrillado?",
+   "dorso": "Ser **representativos, homogéneos, separables y no solapados** (no se puede ser dos elementos a la vez)."
+  },
+  {
+   "id": "t-u4-03",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Qué tipos de parrilla hay y cuál se usa en los parciales?",
+   "dorso": "**Dicotómica** (0/1), **clasificatoria** (ranking 1 a n, sin empates) y **evaluativa** (escala 1 a N del experto). En el parcial es **evaluativa**, por ejemplo [1,5]."
+  },
+  {
+   "id": "t-u4-04",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Cómo se calcula la distancia entre dos elementos?",
+   "dorso": "**Suma de las diferencias absolutas** entre sus **columnas** (se baja en vertical): d(Ei,Ej) = Σ |Ei − Ej|."
+  },
+  {
+   "id": "t-u4-05",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Qué es d1 entre dos características?",
+   "dorso": "**d1(Ci,Cj)** = Σ |Ci − Cj| comparando las **filas** de la parrilla original (en horizontal)."
+  },
+  {
+   "id": "t-u4-06",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Qué es d2 entre dos características?",
+   "dorso": "**d2(Ci,Cj)** = Σ |Ci original − Cj opuesta|, donde la parrilla opuesta invierte la escala de Cj. Existe porque el orden de los polos es arbitrario."
+  },
+  {
+   "id": "t-u4-07",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Cómo se calcula el valor opuesto en la parrilla opuesta?",
+   "dorso": "**opuesto(v) = (máximo + 1) − v**. En [1,5]: 1↔5, 2↔4, 3↔3. En [1,4]: 1↔4, 2↔3."
+  },
+  {
+   "id": "t-u4-08",
+   "unidad": "u4-emparrillado",
+   "frente": "En la matriz de características del Anexo C, ¿dónde está d1 y dónde d2?",
+   "dorso": "**d1 arriba de la diagonal** y **d2 abajo**. Para agrupar se toma, para cada par, el **mínimo** entre los dos."
+  },
+  {
+   "id": "t-u4-09",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Qué criterio se usa para agrupar en el emparrillado?",
+   "dorso": "**Mínima distancia**: se une primero el par más cercano y se repite hasta que quede todo unido. Cuanto más bajo el nivel de unión, más parecidos según el experto."
+  },
+  {
+   "id": "t-u4-10",
+   "unidad": "u4-emparrillado",
+   "frente": "Al agrupar, ¿qué pasa si hay empates en la mínima distancia?",
+   "dorso": "Se unen **todos a la vez**. Si los pares empatados comparten un miembro (E1–E2 y E1–E3), forman **un solo grupo** [E1, E2, E3]."
+  },
+  {
+   "id": "t-u4-11",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Cómo se calcula la distancia de un grupo ya formado a otro ítem?",
+   "dorso": "Es la **mínima** entre sus miembros: d([E1,E4], E2) = mín(d(E1,E2), d(E4,E2))."
+  },
+  {
+   "id": "t-u4-12",
+   "unidad": "u4-emparrillado",
+   "frente": "Regla para contar grupos: ¿qué pasa si un ítem suelto se une tarde a un grupo ya formado?",
+   "dorso": "Ese ítem queda como **grupo propio**. Solo forman grupo los ítems sueltos que se unen entre sí; unir dos grupos ya formados **no crea** un grupo nuevo."
+  },
+  {
+   "id": "t-u4-13",
+   "unidad": "u4-emparrillado",
+   "frente": "C1–C2 se unen a nivel 1, después se suma C4 y después C3. ¿Cuántos grupos hay?",
+   "dorso": "**3 grupos**: (C1, C2); (C4); (C3). Cada ítem que se pega tarde a un grupo ya formado cuenta como grupo propio."
+  },
+  {
+   "id": "t-u4-14",
+   "unidad": "u4-emparrillado",
+   "frente": "Si dos características están en grupos distintos, ¿qué relación tienen?",
+   "dorso": "**No existe relación**, diga lo que diga el texto. Solo se tipifica la relación entre características **del mismo grupo**."
+  },
+  {
+   "id": "t-u4-15",
+   "unidad": "u4-emparrillado",
+   "frente": "Con Ci = (A/B) y Cj = (X/Y), ¿qué patrón es una relación paralela y cuál recíproca?",
+   "dorso": "**Paralela**: A→X y B→Y (o X→A e Y→B), mismo sentido. **Recíproca**: ida y vuelta en los dos pares, A↔X y B↔Y."
+  },
+  {
+   "id": "t-u4-16",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Qué patrones de flechas dan una relación ortogonal?",
+   "dorso": "**Una sola flecha derecha** (A→X, B→Y, X→A o Y→B), o **dos flechas que llegan al mismo polo** desde los dos polos de la otra (A→X y B→X)."
+  },
+  {
+   "id": "t-u4-17",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Qué patrón da una relación ambigua? ¿Y «no tiene relación directa, puede ser alta o baja»?",
+   "dorso": "**Ambigua**: un polo implica **los dos** polos de la otra (abanico), con o sin flecha derecha extra. «Puede ser alta o baja» es abanico: **ambigua**, no «no existe relación»."
+  },
+  {
+   "id": "t-u4-18",
+   "unidad": "u4-emparrillado",
+   "frente": "«Expertos → agresivas, inexpertos → conservadoras» con Estrategia (conservadora/agresiva): ¿qué relación es?",
+   "dorso": "**No tipificada.** Con los polos en el orden del enunciado quedan flechas **cruzadas** (A→Y y B→X). No es paralela: el orden de los polos importa."
+  },
+  {
+   "id": "t-u4-19",
+   "unidad": "u4-emparrillado",
+   "frente": "¿Qué conocimiento da el Emparrillado?",
+   "dorso": "Conocimiento **declarativo** y **privado**: agrupaciones de elementos, agrupaciones de características y relaciones entre las características agrupadas."
+  },
+  {
+   "id": "t-u5-01",
+   "unidad": "u5-busqueda",
+   "frente": "¿Qué es lo primero que hay que leer en el Anexo B?",
+   "dorso": "**Qué nodos son solución** y si conviene el valor heurístico **mayor o menor**. Si «menor es mejor», 650 le gana a 900."
+  },
+  {
+   "id": "t-u5-02",
+   "unidad": "u5-busqueda",
+   "frente": "¿Qué métodos de búsqueda son ciegos y cuáles heurísticos?",
+   "dorso": "**Ciegos**: amplitud, profundidad, generación y prueba, bidireccional. **Heurísticos**: escalada simple, máxima pendiente, primero el mejor, Beam Search y A*."
+  },
+  {
+   "id": "t-u5-03",
+   "unidad": "u5-busqueda",
+   "frente": "¿Cómo tratan los métodos ciegos a un nodo con dos padres?",
+   "dorso": "Recorren el grafo **como si fuera un árbol**: el nodo aparece **dos veces** en el recorrido."
+  },
+  {
+   "id": "t-u5-04",
+   "unidad": "u5-busqueda",
+   "frente": "¿Cuándo termina Primero en Profundidad y cuándo Primero en Amplitud?",
+   "dorso": "**Profundidad** termina en la **primera** solución que encuentra (pila LIFO). **Amplitud** recorre por niveles (cola FIFO) **todo** el árbol."
+  },
+  {
+   "id": "t-u5-05",
+   "unidad": "u5-busqueda",
+   "frente": "¿Qué tiene de particular Generación y Prueba?",
+   "dorso": "Recorre como profundidad pero **sin cortar**: recorre todo el árbol y encuentra **todas** las soluciones. Sirve para problemas sencillos."
+  },
+  {
+   "id": "t-u5-06",
+   "unidad": "u5-busqueda",
+   "frente": "¿Cuándo conviene la búsqueda bidireccional?",
+   "dorso": "Cuando se conocen el estado **inicial y el final**. Hace dos búsquedas a la vez (al menos una en amplitud) y termina cuando se encuentran en un estado intermedio."
+  },
+  {
+   "id": "t-u5-07",
+   "unidad": "u5-busqueda",
+   "frente": "¿Cuándo avanza una escalada y qué pasa si ningún hijo mejora?",
+   "dorso": "Solo avanza a un hijo **estrictamente mejor** que el actual (uno igual no sirve). Si ninguno mejora **se detiene**, y puede **no llegar a ninguna solución**."
+  },
+  {
+   "id": "t-u5-08",
+   "unidad": "u5-busqueda",
+   "frente": "¿Cuál es la diferencia entre Escalada Simple y Escalada por Máxima Pendiente?",
+   "dorso": "**Simple** genera los hijos **de a uno** y va al **primero** que mejora. **Máxima Pendiente** genera **todos**, elige el mejor y se mueve solo si es estrictamente mejor."
+  },
+  {
+   "id": "t-u5-09",
+   "unidad": "u5-busqueda",
+   "frente": "En Escalada Simple, ¿qué son los nodos generados y los visitados?",
+   "dorso": "**Generados**: la raíz y cada hijo que fue mirando hasta encontrar uno mejor. **Visitados**: el camino por el que se movió."
+  },
+  {
+   "id": "t-u5-10",
+   "unidad": "u5-busqueda",
+   "frente": "«El único método que no llega a ninguna solución» suele ser…",
+   "dorso": "Una **escalada** (en algún sentido), porque son los únicos que se traban en un máximo local sin poder volver atrás."
+  },
+  {
+   "id": "t-u5-11",
+   "unidad": "u5-busqueda",
+   "frente": "¿Qué listas usa Primero el Mejor y qué guarda cada una?",
+   "dorso": "**Abiertos**: generados todavía no expandidos, ordenados por h. **Cerrados**: los ya expandidos. En cada iteración el mejor de abiertos pasa a ser el actual."
+  },
+  {
+   "id": "t-u5-12",
+   "unidad": "u5-busqueda",
+   "frente": "En Primero el Mejor, ¿cuál es la iteración 1 y cómo se desempata?",
+   "dorso": "La **iteración 1** es cuando el actual es la **raíz**. Ante empate va primero el que **entró antes** a la lista (el más viejo)."
+  },
+  {
+   "id": "t-u5-13",
+   "unidad": "u5-busqueda",
+   "frente": "¿Cuándo se reconoce la solución en Primero el Mejor, Beam y A*?",
+   "dorso": "Cuando el nodo pasa a ser el **actual**, no cuando aparece en abiertos. Ahí termina."
+  },
+  {
+   "id": "t-u5-14",
+   "unidad": "u5-busqueda",
+   "frente": "¿Qué contiene la lista final de abiertos y la de cerrados?",
+   "dorso": "Es la fila en que el actual es la solución. **Cerrados incluye** la solución; **abiertos no** (queda lo que sobró)."
+  },
+  {
+   "id": "t-u5-15",
+   "unidad": "u5-busqueda",
+   "frente": "¿Un nodo que ya está en abiertos o cerrados se vuelve a agregar en Primero el Mejor?",
+   "dorso": "**No.** No se repite. En A* sí se **actualiza su f** si llegó por otro camino con mejor valor."
+  },
+  {
+   "id": "t-u5-16",
+   "unidad": "u5-busqueda",
+   "frente": "¿Primero el Mejor garantiza encontrar solución?",
+   "dorso": "**Sí, si existe**, porque puede volver atrás a cualquier nodo abierto aunque sea peor que el actual."
+  },
+  {
+   "id": "t-u5-17",
+   "unidad": "u5-busqueda",
+   "frente": "¿Qué es Beam Search (n) y qué riesgo tiene?",
+   "dorso": "Primero el Mejor con abiertos **recortada a los n mejores** antes de elegir; lo descartado **no vuelve nunca**. Usa menos memoria pero **puede no llegar** a la solución."
+  },
+  {
+   "id": "t-u5-18",
+   "unidad": "u5-busqueda",
+   "frente": "En Beam Search con n = 1, ¿cómo queda la lista final de abiertos?",
+   "dorso": "**Vacía.** Al elegir la solución se descartó todo lo demás. Esa opción sale seguido."
+  },
+  {
+   "id": "t-u5-19",
+   "unidad": "u5-busqueda",
+   "frente": "En A* con «menor es mejor», ¿cómo se calcula f?",
+   "dorso": "**f = h + g**, con g = suma de los costos de los arcos desde la raíz. Se anota C(770 + 70) = C(840)."
+  },
+  {
+   "id": "t-u5-20",
+   "unidad": "u5-busqueda",
+   "frente": "En A* con «mayor es mejor», ¿cómo se calcula f?",
+   "dorso": "**f = h − g**: el costo acumulado **resta**, porque es algo malo. No se suma."
+  },
+  {
+   "id": "t-u6-01",
+   "unidad": "u6-sistemas",
+   "frente": "¿Qué característica tienen en común el software tradicional y los sistemas inteligentes?",
+   "dorso": "Ambos **satisfacen los deseos y necesidades de los stakeholders** (resuelven problemas). Lo algorítmico es del tradicional; lo flexible y robusto, del inteligente."
+  },
+  {
+   "id": "t-u6-02",
+   "unidad": "u6-sistemas",
+   "frente": "¿Cuáles son las tres familias de tecnologías de la IA?",
+   "dorso": "**IA Tradicional** (reglas explícitas y búsqueda), **Inteligencia Computacional** (inspiración biológica: RNA, AG, enjambre) y **Machine Learning** (Datos → Algoritmo → Modelo)."
+  },
+  {
+   "id": "t-u6-03",
+   "unidad": "u6-sistemas",
+   "frente": "Si un sistema inteligente no tiene Base de Conocimientos, ¿cómo representa el conocimiento?",
+   "dorso": "En forma **implícita**. Si tiene Base de Conocimientos, en forma **explícita**."
+  },
+  {
+   "id": "t-u6-04",
+   "unidad": "u6-sistemas",
+   "frente": "¿Qué diferencia hay entre Sistema Experto, SBC y SET respecto de la Base de Conocimientos?",
+   "dorso": "El **SE** puede o no tenerla explícita. El **SBC** siempre la tiene explícita (fuentes **públicas**). El **SET** también, con fuentes **privadas y públicas**."
+  },
+  {
+   "id": "t-u6-05",
+   "unidad": "u6-sistemas",
+   "frente": "En un SBC, ¿qué hace la Base de Conocimientos y qué hace el Motor de Inferencias?",
+   "dorso": "La **BC guarda** hechos y reglas en **lógica de primer orden**. El **Motor de Inferencias elige** qué reglas aplicar usando **métodos de búsqueda**."
+  },
+  {
+   "id": "t-u6-06",
+   "unidad": "u6-sistemas",
+   "frente": "¿Qué sistemas tienen un componente para justificar sus resultados?",
+   "dorso": "Los **Sistemas Expertos Tradicionales**: el **Trazador de Explicaciones** lee la **Memoria de Trabajo** (la traza del razonamiento). Las RNA son caja negra."
+  },
+  {
+   "id": "t-u6-07",
+   "unidad": "u6-sistemas",
+   "frente": "¿Qué es un Sistema Experto Difuso y cuándo se usa?",
+   "dorso": "Aplica reglas con lógica difusa: usa **datos imprecisos** y evalúa cada dato **subjetivamente** como un experto («más sana», «mejor sabor»)."
+  },
+  {
+   "id": "t-u6-08",
+   "unidad": "u6-sistemas",
+   "frente": "¿Cómo se distingue clasificación, predicción y optimización?",
+   "dorso": "Por la **salida**: una **categoría** → clasificación; un **número** → predicción/estimación; la **mejor combinación** que maximiza o minimiza → optimización."
+  },
+  {
+   "id": "t-u6-09",
+   "unidad": "u6-sistemas",
+   "frente": "«Identificar la cantidad de lados de una figura»: ¿qué tipo de problema es?",
+   "dorso": "**Estimación/predicción**, porque la salida es un número, aunque el enunciado empiece con «identificar»."
+  },
+  {
+   "id": "t-u6-10",
+   "unidad": "u6-sistemas",
+   "frente": "¿Qué tecnología usar para clasificar o predecir con datos etiquetados? ¿Y para optimizar?",
+   "dorso": "Clasificar o predecir con datos → **RNA Multi-Perceptrón Backpropagation**. Mejor combinación que maximiza o minimiza → **Algoritmo Genético**."
+  },
+  {
+   "id": "t-u6-11",
+   "unidad": "u6-sistemas",
+   "frente": "Sin datos ni reglas pero con heurísticas, ¿qué se puede usar? ¿Y sin datos pero con reglas?",
+   "dorso": "Solo heurísticas → **Inteligencia Computacional**. Sin datos pero con reglas representativas → **todas** (con las reglas se pueden generar ejemplos)."
+  },
+  {
+   "id": "t-u6-12",
+   "unidad": "u6-sistemas",
+   "frente": "Un sistema definió automáticamente sus conocimientos desde una tabla de datos: ¿a qué familia pertenece?",
+   "dorso": "**Machine Learning.** Si en cambio aplica **reglas explícitas seleccionadas con búsqueda**, es **IA Tradicional**."
+  },
+  {
+   "id": "t-u6-13",
+   "unidad": "u6-sistemas",
+   "frente": "¿Qué diferencia hay entre un modelo offline y uno online en producción?",
+   "dorso": "**Offline** no aprende más: ante cambios hay que reentrenar a mano. **Online** sigue aprendiendo; hay que monitorearlo y puede responder distinto ante la misma entrada."
+  },
+  {
+   "id": "t-u6-14",
+   "unidad": "u6-sistemas",
+   "frente": "¿Cuándo un lavarropas o una heladera es «realmente inteligente»?",
+   "dorso": "Cuando **decide algo a partir de datos** (agua y tiempo según el peso de la ropa, lista de compras según el consumo). Wifi, pantalla o programas fijos no alcanzan."
+  },
+  {
+   "id": "t-u7-01",
+   "unidad": "u7-ag",
+   "frente": "¿Para qué tipo de problema se usa un Algoritmo Genético y qué garantiza?",
+   "dorso": "**Optimización**: «la mejor combinación que maximice/minimice…». Da **una buena solución**, no necesariamente la mejor."
+  },
+  {
+   "id": "t-u7-02",
+   "unidad": "u7-ag",
+   "frente": "En un AG, ¿qué representa un individuo y qué es la estructura del cromosoma?",
+   "dorso": "El individuo es **una posible solución**. La **estructura del cromosoma** es su representación y codificación: completa, coherente y consistente con la aptitud."
+  },
+  {
+   "id": "t-u7-03",
+   "unidad": "u7-ag",
+   "frente": "¿Dónde se guarda el conocimiento del problema en un AG? ¿Y la penalización?",
+   "dorso": "Ambos en la **función de aptitud**. La representación y codificación de las soluciones va en la **estructura del cromosoma**."
+  },
+  {
+   "id": "t-u7-04",
+   "unidad": "u7-ag",
+   "frente": "¿Cómo se deben tratar los individuos inválidos en la función de aptitud?",
+   "dorso": "**Penalizándolos por niveles** (por ejemplo −10 por cada gen inválido), no descartándolos ni con un −9999. Cambios chicos en el individuo → cambios chicos en la aptitud."
+  },
+  {
+   "id": "t-u7-05",
+   "unidad": "u7-ag",
+   "frente": "Con la misma población inicial y los mismos parámetros, ¿se obtiene la misma población final?",
+   "dorso": "**No se garantiza**, porque hay azar. Por eso, para saber si un AG sirve, se evalúan **varias corridas**."
+  },
+  {
+   "id": "t-u7-06",
+   "unidad": "u7-ag",
+   "frente": "¿Cómo funciona la selección por Torneo y qué garantiza?",
+   "dorso": "Los individuos compiten **de a pares** y pasa el de mayor aptitud. Siempre pasa el mejor, pero se puede perder el segundo mejor si le tocó contra el primero."
+  },
+  {
+   "id": "t-u7-07",
+   "unidad": "u7-ag",
+   "frente": "¿Qué tiene de malo la selección por Ranking?",
+   "dorso": "Siempre elige a los mejores y los de baja aptitud nunca participan: pierde diversidad y tiene **mayor riesgo de convergencia prematura**."
+  },
+  {
+   "id": "t-u7-08",
+   "unidad": "u7-ag",
+   "frente": "¿Qué garantiza la selección por Ruleta?",
+   "dorso": "**Nada**: cada individuo tiene porción = aptitud / total y se sortea, así que puede o no elegir al mejor. A cambio mantiene diversidad: **menor riesgo de convergencia prematura**."
+  },
+  {
+   "id": "t-u7-09",
+   "unidad": "u7-ag",
+   "frente": "¿Cómo funciona el Control sobre Número Esperado?",
+   "dorso": "Valor = **aptitud / promedio**. La **parte entera** son copias directas; con las **partes decimales** se completa usando **ruleta**. Garantiza que el mejor pase."
+  },
+  {
+   "id": "t-u7-10",
+   "unidad": "u7-ag",
+   "frente": "¿Qué diferencia hay entre cruza simple, multipunto y binomial con máscara doble?",
+   "dorso": "**Simple**: siempre un punto de corte. **Multipunto**: varios cortes, el hijo 2 es complemento del 1. **Máscara doble**: una máscara por hijo, se pueden repetir genes."
+  },
+  {
+   "id": "t-u7-11",
+   "unidad": "u7-ag",
+   "frente": "¿Cuál es el objetivo del operador de mutación?",
+   "dorso": "Hacer aparecer **valores de genes que no habían aparecido** en la corrida. Puede activarse pero no ejecutarse, y puede generar individuos inválidos."
+  },
+  {
+   "id": "t-u7-12",
+   "unidad": "u7-ag",
+   "frente": "¿Qué pasa con una probabilidad de mutación muy baja? ¿Y muy alta?",
+   "dorso": "**Muy baja**: se limitan las nuevas combinaciones y la población se vuelve idéntica (**convergencia prematura**). **Muy alta**: más diversidad pero se **pierden soluciones buenas**."
+  },
+  {
+   "id": "t-u7-13",
+   "unidad": "u7-ag",
+   "frente": "Todos los individuos son idénticos durante muchos ciclos. ¿Qué pasa y qué hacer?",
+   "dorso": "**Convergencia prematura** (mutación muy baja o selección por ranking). Conviene **aumentar la mutación** o usar ruleta."
+  },
+  {
+   "id": "t-u7-14",
+   "unidad": "u7-ag",
+   "frente": "El gráfico de aptitud oscila sin llegar nunca al valor buscado. ¿Qué indica?",
+   "dorso": "El algoritmo **no converge**: la función de aptitud está mal diseñada. Hay que revisarla."
+  },
+  {
+   "id": "t-u7-15",
+   "unidad": "u7-ag",
+   "frente": "¿Qué diferencia hay entre un criterio de paro por aptitud y uno por cantidad de vueltas?",
+   "dorso": "Por **aptitud** la corrida **puede no terminar nunca** si no la alcanza. Por **vueltas** termina siempre, haya o no una solución aceptable."
+  },
+  {
+   "id": "t-u8-01",
+   "unidad": "u8-rna",
+   "frente": "¿Qué se necesita siempre y qué se obtiene siempre con Machine Learning?",
+   "dorso": "Siempre se necesitan **ejemplos representativos** del problema, siempre se usan fórmulas matemáticas o estadísticas y siempre se obtiene **un modelo** (Datos → Algoritmo → Modelo)."
+  },
+  {
+   "id": "t-u8-02",
+   "unidad": "u8-rna",
+   "frente": "¿Qué diferencia hay entre aprendizaje supervisado y no supervisado?",
+   "dorso": "**Supervisado**: se dan entradas **y la salida deseada** (RNA heteroasociativa). **No supervisado**: solo las entradas; descubre grupos o patrones (autoasociativa)."
+  },
+  {
+   "id": "t-u8-03",
+   "unidad": "u8-rna",
+   "frente": "¿Para qué sirve cada conjunto: entrenamiento, validación y prueba?",
+   "dorso": "**Entrenamiento** ajusta el modelo; **validación** controla el entrenamiento y elige parámetros; **prueba** usa datos nunca vistos para medir la **generalización**. Siempre se usan los tres."
+  },
+  {
+   "id": "t-u8-04",
+   "unidad": "u8-rna",
+   "frente": "¿Para qué sirve la normalización y a qué datos se aplica?",
+   "dorso": "Lleva los datos a **escalas comparables** para facilitar el entrenamiento. Se hace **antes** de entrenar y se aplica igual a entrenamiento, validación **y** prueba."
+  },
+  {
+   "id": "t-u8-05",
+   "unidad": "u8-rna",
+   "frente": "¿Dónde se guarda todo el conocimiento aprendido por una RNA?",
+   "dorso": "En los **pesos de las conexiones**. Por eso es **caja negra**: el conocimiento queda implícito y no puede justificar sus resultados."
+  },
+  {
+   "id": "t-u8-06",
+   "unidad": "u8-rna",
+   "frente": "¿Qué significa un peso positivo, cero o negativo en una conexión?",
+   "dorso": "**Mayor que cero**: conexión excitadora. **Igual a cero**: neutra. **Menor que cero**: inhibitoria. La entrada neta es NET = Σ wi · xi."
+  },
+  {
+   "id": "t-u8-07",
+   "unidad": "u8-rna",
+   "frente": "¿Qué métrica se usa para una RNA con salida continua? ¿Y con salida discreta?",
+   "dorso": "**Continua** (un número): **error absoluto** o **relativo**. **Discreta** (una clase): **matriz de confusión** (exactitud, precisión, recuperación)."
+  },
+  {
+   "id": "t-u8-08",
+   "unidad": "u8-rna",
+   "frente": "¿Cuál es la diferencia entre precisión y recuperación (recall)?",
+   "dorso": "**Precisión** = VP / (VP + FP): de los que dijo positivos, cuántos lo eran. **Recall** = VP / (VP + FN): de los positivos reales, cuántos encontró."
+  },
+  {
+   "id": "t-u8-09",
+   "unidad": "u8-rna",
+   "frente": "¿Por qué una exactitud alta puede engañar?",
+   "dorso": "Con **clases desbalanceadas**: si el 90 % es «no tiene la enfermedad», un modelo que siempre dice «no» ya tiene 90 % de exactitud."
+  },
+  {
+   "id": "t-u8-10",
+   "unidad": "u8-rna",
+   "frente": "¿Qué caracteriza al Perceptrón y cuál es su limitación?",
+   "dorso": "**Una sola neurona**, monocapa, supervisado, corrección de error. Solo separa **dos clases linealmente separables**: no aprende funciones no lineales (XOR). Se mejora cambiando **α**."
+  },
+  {
+   "id": "t-u8-11",
+   "unidad": "u8-rna",
+   "frente": "¿Qué distingue al Multi-Perceptrón Backpropagation?",
+   "dorso": "Varias capas **hacia adelante**, supervisado offline, corrección de error. Aproxima **cualquier función**, lineal o no lineal. Necesita función de activación **derivable**: lo que va hacia atrás es el error."
+  },
+  {
+   "id": "t-u8-12",
+   "unidad": "u8-rna",
+   "frente": "¿Cómo se determina cuántas capas ocultas y neuronas tiene una Backpropagation?",
+   "dorso": "No hay regla: **prueba y error**, armando prototipos y mirando el error."
+  },
+  {
+   "id": "t-u8-13",
+   "unidad": "u8-rna",
+   "frente": "¿Qué caracteriza a la red de Hopfield?",
+   "dorso": "**Monocapa con conexiones laterales**, no supervisada, **hebbiana**, autoasociativa. Entrena en **una pasada**, funciona **iterando** hasta estabilizarse y requiere patrones **ortogonales**."
+  },
+  {
+   "id": "t-u8-14",
+   "unidad": "u8-rna",
+   "frente": "Topología: «3 entradas, 2 ocultas, 1 salida hacia adelante» vs «5 neuronas con conexiones laterales»: ¿qué redes son?",
+   "dorso": "La primera es **Backpropagation** (capa oculta hacia adelante). La segunda es **Hopfield** (laterales). Una sola neurona monocapa sería **Perceptrón**."
+  },
+  {
+   "id": "t-u8-15",
+   "unidad": "u8-rna",
+   "frente": "El error de validación baja y después sube mientras el de entrenamiento sigue bajando. ¿Qué pasa?",
+   "dorso": "**Sobreentrenamiento** (overfitting): demasiadas épocas, memorizó los ejemplos y no generaliza. Hay que **cortar antes**."
+  },
+  {
+   "id": "t-u8-16",
+   "unidad": "u8-rna",
+   "frente": "Los dos errores bajan y quedan planos en un valor alto. ¿Qué pasa?",
+   "dorso": "La red **no tiene capacidad** para aprender el problema: hay que **cambiar la topología** (más neuronas o capas)."
+  },
+  {
+   "id": "t-u8-17",
+   "unidad": "u8-rna",
+   "frente": "¿Cuándo se usa un Algoritmo de Inducción?",
+   "dorso": "Cuando hay que **encontrar las reglas** que permitan reconocer o clasificar algo a partir de datos históricos. Genera un árbol de decisión del que salen reglas SI-ENTONCES."
+  },
+  {
+   "id": "t-u9-01",
+   "unidad": "u9-logica",
+   "frente": "¿Para qué dos cosas usa la IA la lógica?",
+   "dorso": "Para **representar conocimiento** (en la Base de Conocimientos) y para **hacer deducciones** (el trabajo del Motor de Inferencias)."
+  },
+  {
+   "id": "t-u9-02",
+   "unidad": "u9-logica",
+   "frente": "¿Qué agrega la lógica de primer orden respecto de la proposicional?",
+   "dorso": "**Variables y constantes**, **funciones de verdad** (características de las entidades), **relaciones** entre objetos y **cuantificadores** (∀, ∃). Representa más conocimiento."
+  },
+  {
+   "id": "t-u9-03",
+   "unidad": "u9-logica",
+   "frente": "Traducción: frase con «Todos los…» vs «Algunos…»: ¿qué cambia en la fórmula?",
+   "dorso": "Con **∀** («Todos») la fórmula tiene **una implicación** →. Con **∃** («Algunos») **no hay implicación**: todo va unido con ∧."
+  },
+  {
+   "id": "t-u9-04",
+   "unidad": "u9-logica",
+   "frente": "¿Qué error típico tienen las opciones incorrectas de traducción?",
+   "dorso": "Cambian **una variable de lugar** (F(x,w) en vez de F(z,w)), encadenan varias →, ponen → con «algunos» o ∨ donde va ∧. Mirá quién se relaciona con quién."
+  },
+  {
+   "id": "t-u9-05",
+   "unidad": "u9-logica",
+   "frente": "Deducción natural: si la tesis tiene una implicación, ¿cómo se empieza?",
+   "dorso": "**Suponiendo el antecedente de la tesis**; al llegar al consecuente se cierra el supuesto con **Introducción de la Implicación (II)**."
+  },
+  {
+   "id": "t-u9-06",
+   "unidad": "u9-logica",
+   "frente": "Si la tesis no tiene implicación, ¿se puede suponer algo?",
+   "dorso": "**No**, salvo dentro de una **eliminación de la disyunción**, donde se supone cada término."
+  },
+  {
+   "id": "t-u9-07",
+   "unidad": "u9-logica",
+   "frente": "¿Qué reglas de cuantificadores vinculan hipótesis y tesis?",
+   "dorso": "**Una hipótesis ∃** ⇒ tesis ∃. **Todas ∀** ⇒ tesis ∀ o ∃. **Tesis ∀** ⇒ todas las hipótesis ∀."
+  },
+  {
+   "id": "t-u9-08",
+   "unidad": "u9-logica",
+   "frente": "¿Qué piden la Introducción de la Conjunción y la Introducción de la Disyunción?",
+   "dorso": "**IC**: que **todos** los términos ya estén demostrados. **ID**: alcanza con que **al menos uno** exista; por eso un predicado nuevo solo entra a la tesis con ∨."
+  },
+  {
+   "id": "t-u9-09",
+   "unidad": "u9-logica",
+   "frente": "En la eliminación de la disyunción, ¿qué vale lo deducido en un camino?",
+   "dorso": "Sirve **solo en ese camino**. A la tesis va solo lo que se llega por **todos** los caminos."
+  },
+  {
+   "id": "t-u9-10",
+   "unidad": "u9-logica",
+   "frente": "¿Qué condición debe cumplir una tesis válida respecto de las hipótesis?",
+   "dorso": "Debe **usar todas las hipótesis**. Una opción deducible que deja una hipótesis sin usar es incorrecta."
+  },
+  {
+   "id": "t-u9-11",
+   "unidad": "u9-logica",
+   "frente": "¿Para qué sirve la numeración de líneas en deducción natural?",
+   "dorso": "Da la **trazabilidad** de la demostración: cada línea justifica qué regla aplicó y sobre qué líneas."
+  },
+  {
+   "id": "t-u9-12",
+   "unidad": "u9-logica",
+   "frente": "¿Qué es la función de pertenencia en lógica difusa?",
+   "dorso": "El **grado** (entre 0 y 1) en que un elemento se ajusta a una definición. **No es una probabilidad**: los grados no tienen que sumar 1."
+  },
+  {
+   "id": "t-u9-13",
+   "unidad": "u9-logica",
+   "frente": "¿Qué valor de pertenencia corresponde a «bastante» y a «poco» o «bajo»?",
+   "dorso": "«Bastante» ≈ **0,8 o 0,9**. «Poco» o «bajo» ≈ **0,2**. μ = 0 no pertenece; μ = 1 pertenece totalmente."
+  },
+  {
+   "id": "t-u9-14",
+   "unidad": "u9-logica",
+   "frente": "¿Cómo se calculan Y, O y NO en lógica difusa?",
+   "dorso": "**Y = mínimo** de las pertenencias, **O = máximo**, **NO = 1 − μ**. En una implicación, el grado del antecedente se **propaga** al consecuente."
+  },
+  {
+   "id": "t-u11-01",
+   "unidad": "u11-implementacion",
+   "frente": "¿Cuáles son las cinco fases del proceso de implementación de un sistema inteligente?",
+   "dorso": "**Definición del Problema**, **Identificación y Transformación de los Datos**, **Selección de la Tecnología**, **Construcción del Modelo** y **Aplicación del Sistema Inteligente**."
+  },
+  {
+   "id": "t-u11-02",
+   "unidad": "u11-implementacion",
+   "frente": "¿Qué es lo primero que se hace al iniciar el proyecto?",
+   "dorso": "**Identificar las fuentes de información**: recursos propios, recursos externos, **stakeholders** y **expertos**."
+  },
+  {
+   "id": "t-u11-03",
+   "unidad": "u11-implementacion",
+   "frente": "¿En qué fase se evalúa la viabilidad y para qué sirve?",
+   "dorso": "En **Definición del Problema**. La viabilidad sirve para **delimitar y confirmar el alcance**: ¿se puede aplicar IA? ¿es la mejor alternativa?"
+  },
+  {
+   "id": "t-u11-04",
+   "unidad": "u11-implementacion",
+   "frente": "Diseñar los módulos vs construirlos: ¿en qué fase va cada uno?",
+   "dorso": "**Diseñar** los módulos es **Definición del Problema**. **Construirlos** con la tecnología de IA es **Construcción del Modelo**."
+  },
+  {
+   "id": "t-u11-05",
+   "unidad": "u11-implementacion",
+   "frente": "¿Qué implica comprender los requerimientos y para qué se usan los modelos conceptuales?",
+   "dorso": "**Abstraer, descomponer, proyectar y modularizar**. Los modelos conceptuales simplifican el problema para entenderlo, detectar metas y ver si falta conocimiento."
+  },
+  {
+   "id": "t-u11-06",
+   "unidad": "u11-implementacion",
+   "frente": "¿Qué fase es opcional y cuál se hace siempre?",
+   "dorso": "**Datos** es opcional: solo si hay datos (obligatoria para RNA, no para AG ni SET). **Construcción del Modelo** se hace **siempre**."
+  },
+  {
+   "id": "t-u11-07",
+   "unidad": "u11-implementacion",
+   "frente": "¿Qué se hace en la fase de Identificación y Transformación de los Datos?",
+   "dorso": "**Recolección, estudio** (¿son representativos y válidos?) **y preparación**: integración, formateo (incluida la **normalización**) y limpieza."
+  },
+  {
+   "id": "t-u11-08",
+   "unidad": "u11-implementacion",
+   "frente": "En Construcción del Modelo, ¿qué conocimiento se carga en un SBC y cuál en un SET?",
+   "dorso": "En el **SBC**, reglas de conocimientos **extraídos** (públicos). En el **SET**, reglas de conocimientos **educidos** (del experto). En una RNA: entrenamiento, validación y prueba."
+  },
+  {
+   "id": "t-u11-09",
+   "unidad": "u11-implementacion",
+   "frente": "¿Qué se hace en la fase de Aplicación del Sistema Inteligente?",
+   "dorso": "Desarrollar **canalizaciones** e interfaces con los sistemas existentes, **probar los modelos en forma integrada**, instalar en producción, monitorear y mantener."
+  },
+  {
+   "id": "t-u11-10",
+   "unidad": "u11-implementacion",
+   "frente": "¿Por qué puede fracasar un proyecto de sistema inteligente?",
+   "dorso": "Porque **no se integra** con los sistemas existentes o los **objetivos están mal identificados**. No fracasa por no usar ML ni por no tener datos."
+  },
+  {
+   "id": "t-u10-01",
+   "unidad": "u10-pln",
+   "frente": "¿Cuáles son las tres etapas del pipeline básico de PLN?",
+   "dorso": "**Preprocesamiento** (limpiar y normalizar) → **representación** (texto a números) → **modelo** (algoritmo de ML según la tarea)."
+  },
+  {
+   "id": "t-u10-02",
+   "unidad": "u10-pln",
+   "frente": "¿Qué diferencia hay entre stemming y lematización?",
+   "dorso": "**Stemming** recorta la palabra a su raíz con reglas («classes» → «class»). **Lematización** la lleva a su forma de diccionario («comiendo» → «comer»)."
+  },
+  {
+   "id": "t-u10-03",
+   "unidad": "u10-pln",
+   "frente": "¿Qué son GloVe y word2vec? ¿Clasifican textos?",
+   "dorso": "Son modelos de **representación** (embeddings: cada palabra es un vector denso). **No clasifican ni agrupan**: son el paso previo."
+  },
+  {
+   "id": "t-u10-04",
+   "unidad": "u10-pln",
+   "frente": "¿Qué mide TF-IDF?",
+   "dorso": "La frecuencia de una palabra en el documento (**TF**) ponderada por qué tan rara es en la colección (**IDF**): las palabras comunes pesan poco."
+  },
+  {
+   "id": "t-u10-05",
+   "unidad": "u10-pln",
+   "frente": "Agrupar comentarios por similitud sin categorías previas: ¿qué enfoque de PLN usar?",
+   "dorso": "**No supervisado**: **clustering** con **K-Means** o DBSCAN. Descubren grupos; no asignan etiquetas."
+  },
+  {
+   "id": "t-u10-06",
+   "unidad": "u10-pln",
+   "frente": "Clasificar textos en categorías ya conocidas o asignarles etiquetas: ¿qué modelo usar?",
+   "dorso": "**Supervisado**. Asignar etiquetas o valores (spam, sentimiento) → **regresión logística**. Categorías ya conocidas → **árboles de decisión y ensambles** (random forest, boosting)."
+  },
+  {
+   "id": "t-u2-01",
+   "unidad": "u2-adquisicion",
+   "frente": "¿Qué diferencia hay entre dato, información y conocimiento?",
+   "dorso": "**Dato**: valor suelto («38,5»). **Información**: dato con significado («tiene 38,5 °C»). **Conocimiento**: saber qué hacer con eso en el dominio."
+  },
+  {
+   "id": "t-u2-02",
+   "unidad": "u2-adquisicion",
+   "frente": "¿Cómo se obtiene el conocimiento de una fuente pública y de una privada?",
+   "dorso": "El de fuente **pública** (libros, manuales, normas) se **extrae**. El de fuente **privada** (la cabeza del experto) se **educe**."
+  },
+  {
+   "id": "t-u2-03",
+   "unidad": "u2-adquisicion",
+   "frente": "¿Qué diferencia hay entre conocimiento declarativo y procedimental?",
+   "dorso": "**Declarativo**: *qué* hay (objetos, características, valores, relaciones). **Procedimental**: *cómo* se resuelve (reglas y pasos del experto)."
+  },
+  {
+   "id": "t-u2-04",
+   "unidad": "u2-adquisicion",
+   "frente": "¿Para qué usa el Ingeniero de Conocimiento el Análisis de Protocolos? ¿Y el Emparrillado?",
+   "dorso": "**Protocolos**: identificar las **reglas** que aplica el experto. **Emparrillado**: identificar la **relación entre los conceptos** que usa el experto."
+  },
+  {
+   "id": "t-u2-05",
+   "unidad": "u2-adquisicion",
+   "frente": "Nombrá técnicas de extracción y de educción.",
+   "dorso": "**Extracción**: análisis de documentación y de datos. **Educción**: entrevistas, cuestionarios, observación, tormenta de ideas, clasificación de conceptos, Análisis de Protocolos y Emparrillado."
+  },
+  {
+   "id": "t-u2-06",
+   "unidad": "u2-adquisicion",
+   "frente": "Reglas subjetivas educidas de un experto («más sana», «mejor sabor»): ¿qué tecnología conviene?",
+   "dorso": "Un **Sistema Experto Difuso**. Una RNA o un algoritmo de inducción aprenden de ejemplos, no de reglas del experto."
+  },
+  {
+   "id": "t-u1-01",
+   "unidad": "u1-intro",
+   "frente": "¿Cómo define la cátedra la Inteligencia Artificial?",
+   "dorso": "Rama de las ciencias de la computación que estudia modelos de cómputo para construir software capaz de actividades humanas: **razonamiento, conducta y aprendizaje**."
+  },
+  {
+   "id": "t-u1-02",
+   "unidad": "u1-intro",
+   "frente": "¿Cómo define la cátedra la inteligencia?",
+   "dorso": "Capacidad de resolver de forma sistemática problemas no comunes o complejos **dentro de un dominio** determinado. No existe el «experto en todo»."
+  },
+  {
+   "id": "t-u1-03",
+   "unidad": "u1-intro",
+   "frente": "¿Qué diferencia hay entre IA fuerte e IA débil?",
+   "dorso": "**IA fuerte**: Hardware + Software = **Mente** (la máquina *es* una mente). **IA débil**: Hardware + Software = **Modelo** de una mente (la imita)."
+  },
+  {
+   "id": "t-u1-04",
+   "unidad": "u1-intro",
+   "frente": "¿Qué dice la paradoja de Moravec?",
+   "dorso": "Lo difícil para nosotros (ajedrez, cálculo) es fácil para la máquina, y lo fácil (percibir, agarrar un vaso) es difícil."
+  },
+  {
+   "id": "t-u1-05",
+   "unidad": "u1-intro",
+   "frente": "¿Qué diferencia hay entre conocimiento y experiencia?",
+   "dorso": "**Conocimiento**: comprender por la razón la naturaleza, cualidades y relaciones de las cosas. **Experiencia**: conocimiento adquirido por hacer una actividad **muchas veces**."
+  },
+  {
+   "id": "t-u1-06",
+   "unidad": "u1-intro",
+   "frente": "¿Qué pasó en la historia de la IA en Dartmouth, el primer invierno y los 80?",
+   "dorso": "**Dartmouth (1956)**: nace el término. **Primer invierno (70s)**: promesas incumplidas, se corta la inversión. **Años 80**: auge de la Ingeniería del Conocimiento y los sistemas expertos."
+  }
+ ]
+}

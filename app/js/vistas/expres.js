@@ -112,7 +112,8 @@ export async function vistaPasoExpres(main, id) {
       h('div', { class: 'ficha-cabeza' }, h('h2', {}, 'Ficha: lo esencial'), h('span', { class: 'chico suave' }, `${PL.minutosLectura(md)} min de lectura · resumen escrito con IA en base al material de la cátedra`)),
       md ? articuloTeoria(md, 'teoria ficha-texto') : h('p', { class: 'vacio' }, 'Esta ficha no está disponible.'),
       h('p', { class: 'chico' }, '¿Querés más detalle? ', h('a', { href: `#/unidad/${u}` }, `Teoría completa de ${un.corto} (${un.minutos} min)`),
-        SIM[u] ? [' · ', h('a', { href: SIM[u][0] }, SIM[u][1])] : null)));
+        SIM[u] ? [' · ', h('a', { href: SIM[u][0] }, SIM[u][1])] : null,
+        paso.tipo !== 'intro' ? [' · ', h('a', { href: `#/tarjetas?u=${u}` }, 'Tarjetas de memoria del tema')] : null)));
     if (paso.tipo === 'intro') {
       cont.append(h('div', { class: 'acciones' }, h('button', { class: 'boton', type: 'button', onclick: () => terminarPaso({}, true) }, 'Listo, entendido')), zonaFin);
       return;

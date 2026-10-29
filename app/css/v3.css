@@ -1,3 +1,4 @@
+[hidden] { display: none !important; }
 /* =====================================================================
    Capa v3: guardado visible, bienvenida y modos, sesiones con atajos,
    examen con anexo al costado, dominio por tema y celular.
@@ -369,3 +370,20 @@ input, select, textarea { max-width: 100%; }
 .contenido:focus, .contenido:focus-visible { outline: none; }
 :root[data-tema="oscuro"] .etiqueta.real { background: #4a3d0a; color: #ffe38a; }
 @media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) .etiqueta.real { background: #4a3d0a; color: #ffe38a; } }
+
+/* ---------- Tarjetas de memoria ---------- */
+.tarjetas-cabeza { align-items: center; justify-content: space-between; }
+.zona-tarjeta { display: grid; gap: 12px; justify-items: center; margin-top: 18px; }
+.carta { position: relative; display: grid; width: min(560px, 100%); min-height: 260px; border: none; padding: 0; background: none; cursor: pointer; perspective: 1200px; font: inherit; color: var(--tinta); }
+.cara { grid-area: 1 / 1; display: flex; flex-direction: column; justify-content: center; gap: 14px; padding: 28px 30px; border-radius: 20px;
+  background: var(--papel-2); border: 1px solid var(--linea); box-shadow: var(--sombra-alta); backface-visibility: hidden; transition: transform .45s cubic-bezier(.2,.7,.3,1); text-align: left; }
+.cara.dorso { transform: rotateY(180deg); background: linear-gradient(160deg, var(--papel-2), var(--birome-claro)); }
+.carta.girada .frente { transform: rotateY(-180deg); }
+.carta.girada .dorso { transform: rotateY(0); }
+.carta-tema { font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--birome); }
+.carta-texto { font-family: var(--titulo); font-size: 1.3rem; line-height: 1.35; letter-spacing: -.01em; }
+.dorso .carta-texto { font-family: var(--sans); font-size: 1.08rem; line-height: 1.55; }
+.carta-pista { font-size: .82rem; color: var(--tinta-suave); }
+.botones-carta { justify-content: center; margin: 4px 0; }
+.botones-carta .no-sabia { color: var(--mal); }
+@media (prefers-reduced-motion: reduce) { .cara { transition: none; } }
