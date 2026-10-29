@@ -387,3 +387,7 @@ input, select, textarea { max-width: 100%; }
 .botones-carta { justify-content: center; margin: 4px 0; }
 .botones-carta .no-sabia { color: var(--mal); }
 @media (prefers-reduced-motion: reduce) { .cara { transition: none; } }
+:root[data-tema="oscuro"] .boton:not(.secundario) { color: #0b1430; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) .boton:not(.secundario) { color: #0b1430; } }
+.destacada .boton:not(.secundario) { color: #1d2b66; }
+.lateral .btn-guardar { color: var(--pizarron); }

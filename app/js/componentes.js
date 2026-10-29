@@ -56,7 +56,7 @@ document.addEventListener('click', e => {
 
 // Los enunciados transcriptos del PDF traen cortes de línea a mitad de frase: se unen,
 // pero se respetan los saltos que separan bloques (listas, fórmulas, párrafos).
-const limpiarSaltos = t => t.trim().replace(/([^\n.:;)])\n(?=[a-záéíóúñ(“"«])/g, '$1 ');
+const limpiarSaltos = t => t.trim().replace(/([^\n.:;)?])\n(?=[A-Za-zÁÉÍÓÚÑáéíóúñ(“"«])(?![IVX]+[.)]\s)/g, '$1 ');
 
 // Pregunta interactiva.
 // opciones: modo 'inmediato' | 'examen'; onRespuesta(qid, elegida, correcta); historial: muestra "la última vez bien/mal".
