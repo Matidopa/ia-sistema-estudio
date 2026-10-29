@@ -50,6 +50,31 @@ def guardar_progreso(datos):
 
 
 class Manejador(http.server.SimpleHTTPRequestHandler):
+    # Tipos fijos: en Windows Python lee los tipos del registro y a veces sirve .js como
+    # text/plain, y el navegador se niega a ejecutar los módulos (la app queda "Cargando…").
+    extensions_map = {
+        "": "application/octet-stream",
+        ".html": "text/html; charset=utf-8",
+        ".js": "text/javascript; charset=utf-8",
+        ".mjs": "text/javascript; charset=utf-8",
+        ".css": "text/css; charset=utf-8",
+        ".json": "application/json; charset=utf-8",
+        ".md": "text/markdown; charset=utf-8",
+        ".svg": "image/svg+xml",
+        ".png": "image/png",
+        ".jpg": "image/jpeg",
+        ".jpeg": "image/jpeg",
+        ".webp": "image/webp",
+        ".woff2": "font/woff2",
+        ".woff": "font/woff",
+        ".ttf": "font/ttf",
+        ".ico": "image/x-icon",
+    }
+
+    def guess_type(self, path):
+        ext = os.path.splitext(str(path))[1].lower()
+        return self.extensions_map.get(ext, "application/octet-stream")
+
     def __init__(self, *a, **kw):
         super().__init__(*a, directory=RAIZ, **kw)
 

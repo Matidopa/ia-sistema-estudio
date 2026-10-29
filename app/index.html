@@ -33,5 +33,16 @@
     </main>
   </div>
   <script type="module" src="js/app.js"></script>
+  <script>
+    // Si a los 8 segundos la app no arrancó, mostramos por qué en vez de quedar "Cargando…" para siempre.
+    setTimeout(function () {
+      var c = document.querySelector('#principal .cargando');
+      if (!c) return;
+      var local = location.protocol === 'file:';
+      c.innerHTML = local
+        ? 'Abriste el archivo directamente. Cerrá esta pestaña y abrí la app con <b>iniciar.bat</b>.'
+        : 'La app no arrancó. Cerrá la ventana negra, volvé a abrir <b>iniciar.bat</b> y recargá con Ctrl+F5. Si sigue igual, apretá F12, pestaña Console, y pasame el error en rojo.';
+    }, 8000);
+  </script>
 </body>
 </html>
