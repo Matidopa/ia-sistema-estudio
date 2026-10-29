@@ -1,0 +1,2215 @@
+{
+ "nota": "Anotaciones línea por línea derivadas de la resolución de cada ejercicio (oficial o propuesta), armadas con IA.",
+ "ejercicios": {
+  "ga-01": [
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«alga»: concepto (lo que hay que reconocer)."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace: no aporta elementos."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«ramas»: concepto; «rígidas»: característica; «ligeramente»: valor."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«tonos»: característica; «verdes y amarillos»: valor."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«ramas»: concepto (se retoma)."
+   },
+   {
+    "tipos": [
+     "relacion"
+    ],
+    "nota": "«están formadas por»: relación entre ramas y filamentos."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«filamentos»: concepto; «pequeños»: valor (el tamaño queda implícito)."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«ancho»: característica; «3 mm»: valor."
+   },
+   {
+    "tipos": [
+     "incertidumbre"
+    ],
+    "nota": "«deduzco que se podría tratar»: incertidumbre."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«de una cualidad del»: operador hacia el primer estado."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Alga Corallina»: concepto, estado intermedio."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «asimismo» marca el paso a otra subetapa."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "sinonimo"
+    ],
+    "nota": "«planta»: concepto, sinónimo de «alga»."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace: no aporta elementos."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«paredes celulares»: concepto; «planas»: valor (la forma queda implícita)."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«celulosa»: valor (contenido implícito)."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«concluimos que se trata del»: operador hacia el estado final."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Alga Nostoc»: concepto, estado final."
+   }
+  ],
+  "ga-02": [
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica"
+    ],
+    "nota": "«forma»: característica; «araña»: concepto."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«araneomorfa»: valor de la forma."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«apariencia»: característica; «esbelta y elegante»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«abdomen»: concepto; «forma»: característica; «globosa»: valor."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«esto nos da la pauta»: arranca el operador."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador"
+    ],
+    "nota": "«que se trata de una»: cierre del operador; «Terídidos»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «continuando con el análisis» marca una nueva subetapa."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "sinonimo"
+    ],
+    "nota": "«arácnido»: concepto, sinónimo de «araña»."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«dientes»: característica; «quelicerales»: valor."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«abdomen»: concepto (se retoma)."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«forma»: característica; «más ovalada»: valor."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«todas estas características indican»: operador."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador",
+     "sinonimo"
+    ],
+    "nota": "«que»: cierre del operador; «insecto»: sinónimo de araña; «Steatoda»: concepto, estado."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica"
+    ],
+    "nota": "«tono»: característica; «cuerpo»: concepto."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«negro y marrón»: valor del tono."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«picadura»: concepto; «venenosa»: valor (tipo implícito)."
+   },
+   {
+    "tipos": [
+     "incertidumbre"
+    ],
+    "nota": "«esto podría indicar»: incertidumbre."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador"
+    ],
+    "nota": "«que se trata de una»: operador; «falsa viuda negra»: concepto, estado final."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: dónde se encuentran estas arañas."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: continúa el comentario sobre dónde viven."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: continúa el comentario sobre dónde viven."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario sobre dónde viven."
+   }
+  ],
+  "ga-03": [
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«hormiga»: concepto (lo que hay que reconocer)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador"
+    ],
+    "nota": "«es considerada una»: operador; «Hormiga Obrera»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«alas»: característica; «no posee»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«cuerpo»: concepto; «longitud»: característica; «5 mm»: valor."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: comentario general sobre las obreras."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue el comentario sobre las tareas de las obreras."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario sobre las obreras."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «observando más detalladamente» abre una subetapa."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«posee»: relación; «espinas»: concepto; «pequeñas» y «blancas»: valores."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«cuerpo» y «cabeza»: conceptos; «alargada»: valor (forma implícita)."
+   },
+   {
+    "tipos": [
+     "operador",
+     "incertidumbre"
+    ],
+    "nota": "«esto nos podría señalar»: operador con incertidumbre."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«que se trata de la»: continúa el operador."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Hormiga Gemella»: concepto, estado intermedio."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "sinonimo",
+     "metacomentario"
+    ],
+    "nota": "«también»: metacomentario de subetapa; «insecto»: concepto, sinónimo de «hormiga»."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«comportamiento»: característica; «agresivo y violento»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«tiene»: relación; «aguijón»: concepto; «grueso»: valor (grosor implícito)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «utilizado para defenderse», función del aguijón."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«dados estos atributos»: arranca el operador."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«podemos definir a la»: cierre del operador."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Hormiga Argentina»: concepto, estado final."
+   }
+  ],
+  "ga-04": [
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: comentario general sobre las tortugas marinas."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue el comentario general."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario general."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«tortuga»: concepto (lo que hay que reconocer)."
+   },
+   {
+    "tipos": [
+     "operador",
+     "incertidumbre"
+    ],
+    "nota": "«podría tratarse de la denominada»: operador con incertidumbre."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Tortuga Laud»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«cuerpo»: concepto; «está formado» introduce la composición (implícita)."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«pequeñas placas óseas»: valor de la composición."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«unidas entre sí»: completa el valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«piel»: concepto; «muy gruesa»: valor (grosor implícito)."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«impregnada de aceite»: valor (impregnación implícita)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: consecuencia que no aporta al diagnóstico."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra la consecuencia (temperatura interna)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «sin embargo» marca cambio de etapa."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«cabeza»: concepto; «pequeña»: valor (tamaño implícito)."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«forma»: característica; «rectangular y chata»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«pico»: concepto; «aserrado»: valor (borde implícito)."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«adaptado a dietas herbívoras»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador",
+     "sinonimo"
+    ],
+    "nota": "«podemos afirmar que este animal es una»: operador; «animal»: concepto, sinónimo de «tortuga»."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Tortuga Verde»: concepto, estado final."
+   }
+  ],
+  "ga-05": [
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«madera»: concepto (lo que hay que reconocer)."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace: no aporta elementos."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«color»: característica; «blanco cremoso»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«vetas»: concepto; «marrones y beiges»: valor (color implícito)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«posee»: relación; «fibras»: concepto; «estructura»: característica; «recta»: valor."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«peso»: característica; «ligero»: valor."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: consecuencia del peso."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue la consecuencia (no es resistente)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra la consecuencia (quebradiza)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «según esta información»."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«podemos afirmar»: arranca el operador."
+   },
+   {
+    "tipos": [
+     "operador",
+     "incertidumbre"
+    ],
+    "nota": "«que estaríamos ante un»: operador con incertidumbre."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Abeto»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «sin embargo» marca cambio de etapa."
+   },
+   {
+    "tipos": [
+     "caracteristica"
+    ],
+    "nota": "«peso específico»: característica."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«0,36 g/cm3»: valor del peso específico."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«textura»: característica; «fina»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«fibras»: concepto; «tamaño»: característica; «irregular»: valor."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«podemos concluir que es un»: operador hacia el estado final."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Agar»: concepto, estado final."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: comentario posterior a la conclusión (brillo)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue el comentario sobre el brillo."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue el comentario (uso)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario (adornos)."
+   }
+  ],
+  "ga-06": [
+   {
+    "tipos": [
+     "concepto",
+     "metacomentario"
+    ],
+    "nota": "«paciente»: concepto; «asistió a la guardia del sanatorio»: metacomentario de contexto."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«cuadro clínico»: concepto; «caracterizado por» introduce sus características."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«fiebre»: característica; «elevada persistente»: valor."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«dolor»: característica, «de cabeza»: valor; «tos»: característica, «abundante»: valor."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«pulmones»: concepto."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«dificultad para respirar»: valor (respiración implícita)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«labios»: concepto; «color»: característica; «azulado»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«garganta»: concepto; «inflamada» y «muy roja»: valores (implícitos)."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«me hicieron pensar»: arranca el operador."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador",
+     "incertidumbre"
+    ],
+    "nota": "«se podría tratar de una»: operador con incertidumbre; «gripe clase B»: concepto, estado."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: comentario general sobre la gripe B."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario general."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "metacomentario"
+    ],
+    "nota": "«pero de repente»: metacomentario (cambio de etapa); «mareo»: concepto; «repentino»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "sinonimo"
+    ],
+    "nota": "«presión»: concepto; «baja»: valor; «persona»: sinónimo de «paciente»."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«confusión temporal»: valor (estado del paciente, implícito)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: aclara la confusión."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica"
+    ],
+    "nota": "«análisis de laboratorio»: concepto; «resultado»: característica."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«virus tipo H1N1»: valor del resultado."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«entonces cambié mi diagnóstico»: operador."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador"
+    ],
+    "nota": "«es una»: cierre del operador; «gripe clase A»: concepto, estado final."
+   }
+  ],
+  "ga-07": [
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: historia de las naves de la Flota Imperial."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue la historia."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra la historia."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«nave»: concepto (lo que hay que reconocer)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador"
+    ],
+    "nota": "«es sin dudas un»: operador; «Destructor Estelar»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«fuertemente armada»: valor; «tamaño»: característica; «gran»: valor."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«forma»: característica; «daga»: valor."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «lo cual facilita la concentración del fuego»."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: abre la subetapa de la clase de Destructor."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra la subetapa."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«longitud» y «altura»: características; «752 m» y «200 m»: valores."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "relacion"
+    ],
+    "nota": "«está compuesta por»: relación; «hipermotor»: concepto."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«alcance»: característica; «250.000 años luz»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«nave»: concepto; «tiene»: relación; «hangar de ataque»: concepto; «amplio»: valor."
+   },
+   {
+    "tipos": [
+     "operador",
+     "incertidumbre"
+    ],
+    "nota": "«podríamos suponer que se trata de una»: operador con incertidumbre."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«nave clase Victoria»: concepto, estado intermedio."
+   },
+   {
+    "tipos": [
+     "relacion",
+     "metacomentario"
+    ],
+    "nota": "«sin embargo»: metacomentario; «tiene»: relación con los motores."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«motores principales» y «motores auxiliares»: conceptos; «dos»: valor."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«hangar de ataque»: concepto; «está ubicado» introduce la ubicación (implícita)."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«parte inferior de la nave»: valor de la ubicación."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«puertas blindadas»: valor (protección implícita)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "relacion"
+    ],
+    "nota": "«nave»: concepto; «está equipada»: relación."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«generador de pozo gravitatorio»: concepto."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: función del generador."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra la función del generador."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador"
+    ],
+    "nota": "«concluimos que es una»: operador; «nave clase Harrow»: concepto, estado final."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "sinonimo",
+     "metacomentario"
+    ],
+    "nota": "Metacomentario; «embarcaciones»: concepto, sinónimo de «nave»."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario final."
+   }
+  ],
+  "ga-08": [
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: introducción sobre los tipos de Terminators."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue la introducción."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue la introducción."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra la introducción."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace: no aporta elementos."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Terminator»: concepto (lo que hay que reconocer)."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«aspecto»: característica; «humanoide»: valor."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«bípedo»: valor (forma de desplazamiento implícita)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: aclaración «es decir»."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«posee»: relación; «endoesqueleto»: concepto; «sólido»: valor."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «dado esto es que en este video»."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «se lo ve caminar con dificultad»."
+   },
+   {
+    "tipos": [
+     "operador",
+     "incertidumbre"
+    ],
+    "nota": "«por lo tanto, podría ser un modelo»: operador con incertidumbre."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador"
+    ],
+    "nota": "«comprendido entre»: cierre del operador; «series 400 y 900»: concepto, estado."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: comparación con modelos más avanzados."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue la comparación (metal líquido)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra la comparación."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace (la resolución no la marca como metacomentario): no aporta elementos."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace: no aporta elementos."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«endoesqueleto»: concepto; «está recubierto» introduce el recubrimiento (implícito)."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«piel similar al tejido viviente»: valor del recubrimiento."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: la piel es una mejora de Skynet."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario sobre Skynet."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«no me queda dudas que»: arranca el operador."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador",
+     "sinonimo"
+    ],
+    "nota": "«se trata de un»: operador; «robot de la serie 8xx»: concepto, estado; «robot»: sinónimo de Terminator."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: anécdota personal."
+   },
+   {
+    "tipos": [],
+    "nota": "«Sin embargo»: enlace (esta resolución no lo marca como metacomentario)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor",
+     "sinonimo"
+    ],
+    "nota": "«exterminador»: concepto, sinónimo de Terminator; «pelo»: característica; «canoso»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«arrugas»: valor (estado implícito); «cara»: concepto."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«esto se corresponde con»: operador hacia el estado final."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«modelo T-850»: concepto, estado final."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «ha venido a matarme, esa es su misión»."
+   }
+  ],
+  "ga-09": [
+   {
+    "tipos": [
+     "sinonimo",
+     "metacomentario"
+    ],
+    "nota": "Metacomentario (descripción del trofeo); «trofeo»: sinónimo de «copa»."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue la descripción general del trofeo."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra la descripción general."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«copa»: concepto (lo que hay que reconocer)."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«altura»: característica; «36,8 centímetros»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«base»: concepto; «contiene»: relación; «anillos»: concepto; «malaquita»: valor (material implícito)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «que es una piedra semipreciosa»."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«anillos»: concepto; «color»: característica; «verde»: valor."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«ancho»: característica; «2 centímetros»: valor."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«base»: concepto; la leyenda es característica implícita."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«“FIFA World Cup”»: valor de la leyenda."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «que es el nombre actual de esta copa»."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace: no aporta elementos."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«peso»: característica; «menor a 3 kg»: valor."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «lo que indica que es una figura hueca»."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador"
+    ],
+    "nota": "«sin dudas, se trata de una»: operador; «réplica»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: subetapa: averiguar si la réplica es oficial."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«oro de 18 quilates»: valor (enchapado implícito)."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«cara inferior» y «copa»: conceptos; el grabado es característica implícita."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«los años y los nombres de todos los campeones»: valor del grabado."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«desde el año 1974»: completa el valor del grabado."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«copa»: concepto; «dorada» y «brillante»: valores."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«letras»: concepto; «en relieve»: valor."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«no son nítidas»: valor (nitidez implícita)."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«1mm más grandes»: valor (tamaño implícito)."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«que las letras de la copa original»: completa el valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador"
+    ],
+    "nota": "«concluimos que la réplica es»: operador; «falsa»: estado final «réplica falsa»."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «¡muy bien hecha!»."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: el aficionado promedio no la detectaría."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario final."
+   }
+  ],
+  "ga-10": [
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: contexto de la historia."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue el contexto."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue el contexto."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue el contexto (esferas del dragón)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el contexto."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«Pikoro»: concepto; «muy anciano»: valor (edad implícita)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«movimientos»: concepto; «lentos»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«tiene»: relación; «fuerza»: concepto; «extraordinaria»: valor."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «lo que indica que sus golpes causan un gran daño»."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«tres veces más alto que Goku»: valor (altura implícita)."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«sin dudas, la mejor técnica de ataque para Goku»: operador."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador"
+    ],
+    "nota": "«es la»: cierre del operador; «técnica de multi-imágenes»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«velocidad»: característica; «tan alta»: valor."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«que parece multiplicarse»: completa el valor de la velocidad."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «sin embargo» marca cambio de etapa."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«visión»: concepto; «muy aguda»: valor."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «lo que le permite seguir los movimientos»."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«técnicas de defensa»: concepto; «muchas»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«resistencia a los golpes»: concepto; «muy alta»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«sentido del oído»: concepto; «agudizado»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "sinonimo",
+     "metacomentario"
+    ],
+    "nota": "Metacomentario; «anciano»: concepto, sinónimo de «Pikoro»."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: explica para qué le sirve el oído."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra la explicación del oído."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«por lo tanto, la técnica más adecuada para Goku»: operador."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "operador"
+    ],
+    "nota": "«es el»: cierre del operador; «Kame-Hame-Ha»: concepto, estado final; «la más letal»: valor."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «ante semejante oponente, es la mejor técnica»."
+   }
+  ],
+  "ga-11": [
+   {
+    "tipos": [
+     "concepto",
+     "metacomentario"
+    ],
+    "nota": "«agrograma»: concepto; «que repentinamente apareció»: metacomentario."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «en los campos del aeroclub» (cierra el metacomentario)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«tres» y «brillantes»: valores; «anillos»: concepto; «tamaño»: característica; «grande»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«surco»: concepto; «uniforme» y «60 cm»: valores."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: lo que indica el surco."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario sobre herramientas."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«pasto»: concepto; «quemado»: valor (estado implícito)."
+   },
+   {
+    "tipos": [
+     "incertidumbre"
+    ],
+    "nota": "«podría no ser por fuego según mi experiencia»: incertidumbre."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica"
+    ],
+    "nota": "«color predominante»: característica; «pasto»: concepto."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«amarillo con tonalidades marrones»: valor."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«esto nos encuadra dentro del»: operador."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«fenómeno ovni»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «siguiendo con nuestro análisis» abre una subetapa."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«anillos»: concepto; «disposición»: característica; «triangular»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«olores»: concepto; «no... fuertes»: valor (intensidad implícita)."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«estudio de laboratorio»: concepto."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«presencia de un herbicida»: valor del resultado."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«suelo»: concepto; «PH»: característica; «muy elevado»: valor."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: efecto del PH sobre el desmalezante."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario sobre el desmalezante."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«pasto»: concepto; «aplastado»: valor."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«sentido antihorario»: valor (dirección implícita)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «aunque seguiremos investigando»."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra «cómo se han formado los anillos»."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«no quedan dudas que estamos ante un»: operador hacia el estado final."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«fenómeno creado por el hombre»: concepto, estado final."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: intervención de químicos."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «los anillos son demasiado perfectos…»."
+   }
+  ],
+  "ga-12": [
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: contexto sobre las hamburguesas gourmet."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue el contexto."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue el contexto."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el contexto."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace: no aporta elementos."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "sinonimo"
+    ],
+    "nota": "«sándwich»: concepto, sinónimo de «hamburguesa»; «posee» introduce los condimentos."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«hierbas y pimentón»: valor; «condimentos»: característica."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«pan»: concepto; «tostado» y «lateralmente»: valores."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«color»: característica; «maíz»: valor; «semillas de sésamo»: valor (cobertura)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«tiene»: relación; «queso»: concepto; «derretido frío»: valor."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«roquefort mezclado con manteca»: valor (composición)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«filete de carne»: concepto; «diámetro»: característica; «20 cm»: valor."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«250 grs» y «a punto»: valores (peso y cocción implícitos)."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor",
+     "metacomentario"
+    ],
+    "nota": "Metacomentario (justificación), pero la tabla toma «color… interior»: característica y «rojo»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«tiene»: relación; «pequeñas»: valor; «cebollas»: concepto; «estado»: característica; «caramelizado»: valor."
+   },
+   {
+    "tipos": [
+     "operador",
+     "incertidumbre"
+    ],
+    "nota": "«puede tratarse de una»: operador con incertidumbre."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«hamburguesa Dorothy»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «en una segunda observación» abre una subetapa."
+   },
+   {
+    "tipos": [
+     "relacion"
+    ],
+    "nota": "«posee»: relación con los tomates cherry."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«tomates cherry»: concepto; «confitados»: valor."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«salsa de mostaza con miel»: valor (cobertura)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: lo novedoso de los gustos agridulces."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario sobre los gustos."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«aderezos»: concepto."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«plato de degustación»: valor (ubicación)."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«aderezos»: concepto; «caseros»: valor (elaboración)."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «lo que indica que pueden mezclarse»."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario sobre acompañamientos."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace (la resolución no la incluye en el operador): no aporta elementos."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«podemos concluir que se trata de una»: operador hacia el estado final."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«hamburguesa Goldie»: concepto, estado final."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "sinonimo",
+     "metacomentario"
+    ],
+    "nota": "Metacomentario (concurso); «emparedado»: concepto, sinónimo de «hamburguesa»."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: nombre del concurso."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: fecha del concurso."
+   }
+  ],
+  "ga-r1": [
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «en nuestra primera observación» (subetapa)."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace: no aporta elementos."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«planeta»: concepto (lo que hay que reconocer)."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«densidad»: característica; «muy baja»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«presenta»: relación; «superficie»: concepto; «gaseosa»: valor."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«dadas estas características»: operador hacia el primer estado."
+   },
+   {
+    "tipos": [
+     "incertidumbre"
+    ],
+    "nota": "«se podría tratar de»: incertidumbre."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Urano»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «realizando una segunda observación» (subetapa)."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace: no aporta elementos."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«posee»: relación; «satélites»: concepto; «diez»: valor."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«período de rotación»: concepto."
+   },
+   {
+    "tipos": [
+     "valor"
+    ],
+    "nota": "«9 horas»: valor del período."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«podemos concluir»: arranca el operador."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "operador",
+     "sinonimo"
+    ],
+    "nota": "«que»: cierre del operador; «cuerpo celeste»: concepto, sinónimo de «planeta»."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Júpiter»: concepto, estado final."
+   }
+  ],
+  "ga-r2": [
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: comentario general sobre la menta."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: sigue el comentario sobre el género."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: cierra el comentario general."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«planta»: concepto (lo que hay que reconocer)."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«aroma»: característica; «refrescante»: valor."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor",
+     "relacion"
+    ],
+    "nota": "«contiene»: relación; «cantidad»: característica; «muy alta»: valor."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«aceite de mentol»: concepto."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«hojas»: concepto; «anchas»: valor (anchura implícita)."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«tamaño»: característica; «grande»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«flores»: concepto; «color»: característica; «púrpura claro»: valor."
+   },
+   {
+    "tipos": [
+     "incertidumbre"
+    ],
+    "nota": "«podríamos deducir»: incertidumbre."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«que estamos identificando a una»: operador."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Menta Arvensis»: concepto, primer estado."
+   },
+   {
+    "tipos": [
+     "metacomentario"
+    ],
+    "nota": "Metacomentario: «en una segunda observación más profunda» (subetapa)."
+   },
+   {
+    "tipos": [],
+    "nota": "Frase de enlace: no aporta elementos."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor",
+     "sinonimo"
+    ],
+    "nota": "«altura»: característica; «vegetal»: concepto, sinónimo de «planta»; «30 cm»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«hojas»: concepto; «4 mm»: valor; «longitud»: característica."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«borde»: característica; «aserrado»: valor."
+   },
+   {
+    "tipos": [
+     "concepto",
+     "valor"
+    ],
+    "nota": "«tallo»: concepto; «cuadrangular»: valor (forma implícita)."
+   },
+   {
+    "tipos": [
+     "caracteristica",
+     "valor"
+    ],
+    "nota": "«color»: característica; «verdoso claro»: valor."
+   },
+   {
+    "tipos": [
+     "operador"
+    ],
+    "nota": "«concluimos entonces que se trata de una»: operador hacia el estado final."
+   },
+   {
+    "tipos": [
+     "concepto"
+    ],
+    "nota": "«Menta Austríaca»: concepto, estado final."
+   }
+  ]
+ }
+}

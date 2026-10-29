@@ -224,15 +224,98 @@ function campoGrupos(lab, grupos, arbol, usarAyuda) {
 }
 
 // ---------------- Protocolos ----------------
+// ---------- Marcado interactivo de la transcripción ----------
+const TIPOS_AP = [
+  ['concepto', 'Concepto'], ['caracteristica', 'Característica'], ['valor', 'Valor'], ['relacion', 'Relación'],
+  ['operador', 'Operador'], ['sinonimo', 'Sinónimo'], ['metacomentario', 'Metacomentario'], ['incertidumbre', 'Incertidumbre'],
+];
+let anotaciones = null;
+async function cargarAnotaciones() {
+  if (!anotaciones) { try { anotaciones = JSON.parse(await D.texto('protocolos_anotados.json')).ejercicios; } catch { anotaciones = {}; } }
+  return anotaciones;
+}
+function marcadoProtocolo(zona, e, usarAyuda) {
+  cargarAnotaciones().then(an => {
+    const clave = an[e.id];
+    if (!clave || clave.length !== e.lineas.length) {
+      zona.append(h('h2', {}, 'Transcripción'), h('div', { class: 'hoja' }, h('ol', { class: 'transcripcion' }, ...e.lineas.map(l => h('li', {}, l)))));
+      return;
+    }
+    const elegidos = e.lineas.map(() => new Set());
+    const previo = P.marcadoProtocolo(e.id);
+    const res = h('div', { class: 'marcado-res', 'aria-live': 'polite' });
+    const filas = e.lineas.map((l, i) => {
+      const chips = TIPOS_AP.map(([k, t]) => {
+        const b = h('button', { class: 'chip-ap tipo-' + k, type: 'button', 'aria-pressed': 'false' }, t);
+        b.addEventListener('click', () => {
+          if (fila.classList.contains('corregida')) return;
+          const on = !elegidos[i].has(k); on ? elegidos[i].add(k) : elegidos[i].delete(k);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        b.dataset.k = k;
+        return b;
+      });
+      const nota = h('p', { class: 'nota-linea', hidden: true });
+      const fila = h('li', { class: 'linea-ap' },
+        h('span', { class: 'num-linea' }, String(i + 1)),
+        h('div', { class: 'linea-cuerpo' }, h('p', { class: 'linea-texto' }, l), h('div', { class: 'chips-ap', role: 'group', 'aria-label': `Elementos de la línea ${i + 1}` }, ...chips), nota));
+      fila._chips = chips; fila._nota = nota;
+      return fila;
+    });
+    const btnCorr = h('button', { class: 'boton', type: 'button' }, 'Corregir el marcado');
+    const btnOtra = h('button', { class: 'boton secundario', type: 'button', hidden: true }, 'Volver a intentar');
+    const btnVer = h('button', { class: 'boton secundario', type: 'button' }, 'Mostrar la respuesta');
+    function corregir(mostrandoRespuesta) {
+      let perfectas = 0;
+      filas.forEach((f, i) => {
+        const ok = new Set(clave[i].tipos);
+        if (mostrandoRespuesta) { elegidos[i] = new Set(ok); }
+        let bien = true;
+        f._chips.forEach(c => {
+          const k = c.dataset.k, sel = elegidos[i].has(k), deb = ok.has(k);
+          c.classList.toggle('acierto', sel && deb);
+          c.classList.toggle('falto', !sel && deb);
+          c.classList.toggle('sobra', sel && !deb);
+          c.setAttribute('aria-pressed', sel ? 'true' : 'false');
+          if (sel !== deb) bien = false;
+        });
+        if (bien) perfectas++;
+        f.classList.add('corregida'); f.classList.toggle('mal', !bien);
+        f._nota.textContent = clave[i].nota; f._nota.hidden = false;
+      });
+      if (mostrandoRespuesta) usarAyuda(); else P.registrarMarcadoProtocolo(e.id, perfectas, filas.length);
+      res.innerHTML = '';
+      res.append(h('div', { class: 'hoja resultado-marcado' },
+        h('b', {}, mostrandoRespuesta ? 'Esta es la respuesta, línea por línea.' : `${perfectas} de ${filas.length} líneas perfectas (${Math.round(100 * perfectas / filas.length)}%).`),
+        h('p', { class: 'chico suave' }, 'En verde lo que marcaste bien, con borde punteado lo que faltó y tachado lo que sobra. Debajo de cada línea está el porqué. Después armá la tabla CCV y las reglas abajo.')));
+      btnCorr.hidden = true; btnVer.hidden = true; btnOtra.hidden = false;
+    }
+    btnCorr.addEventListener('click', () => corregir(false));
+    btnVer.addEventListener('click', () => corregir(true));
+    btnOtra.addEventListener('click', () => {
+      filas.forEach((f, i) => { elegidos[i].clear(); f.classList.remove('corregida', 'mal'); f._nota.hidden = true; f._chips.forEach(c => { c.classList.remove('acierto', 'falto', 'sobra'); c.setAttribute('aria-pressed', 'false'); }); });
+      res.innerHTML = ''; btnCorr.hidden = false; btnVer.hidden = false; btnOtra.hidden = true;
+    });
+    zona.append(h('h2', {}, 'Paso 1: marcá la transcripción'),
+      h('p', { class: 'suave' }, 'Para cada línea, tocá qué elementos del protocolo tiene (puede ser más de uno o ninguno). Después corregí: la app compara con la resolución del ejercicio.',
+        previo ? ` Tu último intento: ${previo.bien} de ${previo.total} líneas perfectas.` : ''),
+      h('div', { class: 'leyenda-ap' }, ...TIPOS_AP.map(([k, t]) => h('span', { class: 'chip-ap tipo-' + k, 'aria-hidden': 'true' }, t))),
+      h('ol', { class: 'lineas-ap' }, ...filas),
+      h('div', { class: 'acciones' }, btnCorr, btnVer, btnOtra), res,
+      h('p', { class: 'firma' }, 'Corrección armada con IA a partir de la resolución del ejercicio (' + (e.fuente === 'oficial' ? 'oficial de la cátedra' : 'propuesta siguiendo el formato oficial') + ').'));
+  });
+}
+
 function ejercicioProtocolo(cont, e, usarAyuda) {
-  const t = h('ol', { class: 'transcripcion' }, ...e.lineas.map(l => h('li', {}, l)));
-  cont.append(h('h2', {}, 'Transcripción'), h('div', { class: 'hoja' }, t));
+  const zonaMarcado = h('div');
+  cont.append(zonaMarcado);
+  marcadoProtocolo(zonaMarcado, e, usarAyuda);
   const clave = 'ia-notas-' + e.id;
   let previo = P.nota(clave);
   if (!previo) { try { previo = localStorage.getItem(clave) || ''; } catch { /* sin almacenamiento */ } }
   const notas = h('textarea', { rows: 10, style: 'width:100%', placeholder: 'Escribí acá tu tabla CCV, relaciones, sinónimos, metacomentarios, incertidumbres y reglas. Se guarda con tu progreso.' }, previo);
   notas.addEventListener('input', () => P.setNota(clave, notas.value));
-  cont.append(h('h2', {}, 'Tu análisis'),
+  cont.append(h('h2', {}, 'Paso 2: tu análisis completo'),
     h('p', { class: 'chico suave' }, 'Seguí las etapas: tabla de conceptos-características-valores, relaciones implícitas, búsqueda (estados y operadores), sinónimos, metacomentarios, incertidumbres y reglas.'),
     notas,
     h('h2', {}, 'Resolución'),

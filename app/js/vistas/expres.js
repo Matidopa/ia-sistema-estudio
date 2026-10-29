@@ -6,7 +6,7 @@ import { sesion } from './sesion.js';
 import { examen, armarSimulacro } from './examen.js';
 import * as PL from '../plan.js';
 
-const SIM = { 'u5-busqueda': ['#/simuladores/busqueda', 'Simulador de búsqueda paso a paso'], 'u4-emparrillado': ['#/simuladores/emparrillado', 'Simulador de emparrillado'], 'u3-protocolos': ['#/catedra', 'Protocolos de la guía de la cátedra'], 'u7-ag': ['#/simuladores/ag', 'Ruleta de algoritmos genéticos'] };
+const SIM = { 'u5-busqueda': ['#/simuladores/busqueda', 'Simulador de búsqueda paso a paso'], 'u4-emparrillado': ['#/simuladores/emparrillado', 'Simulador de emparrillado'], 'u3-protocolos': ['#/catedra/ga-01', 'Protocolo interactivo de la guía (marcás y corrige)'], 'u7-ag': ['#/simuladores/ag', 'Ruleta de algoritmos genéticos'] };
 const CRITERIO = { mecanica: 0.7, teoria: 0.75 };
 
 export function vistaExpres(main) {

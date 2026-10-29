@@ -274,9 +274,14 @@ export function desmarcarPasoExpres(id) { delete datos.expres.pasos[id]; guardar
 
 // ---------- Ejercicios de la cátedra ----------
 export function marcarCatedra(id, estadoC) {
-  datos.catedra[id] = { estado: estadoC, fecha: new Date().toISOString() };
+  datos.catedra[id] = { ...(datos.catedra[id] || {}), estado: estadoC, fecha: new Date().toISOString() };
   guardar();
 }
+export function registrarMarcadoProtocolo(id, bien, total) {
+  datos.catedra[id] = { ...(datos.catedra[id] || {}), marcado: { bien, total, fecha: new Date().toISOString() } };
+  guardar();
+}
+export const marcadoProtocolo = id => (datos.catedra[id] || {}).marcado || null;
 export const estadoCatedra = id => (datos.catedra[id] || {}).estado || null;
 
 // ---------- Notas (por ejemplo, borradores de protocolos) ----------
