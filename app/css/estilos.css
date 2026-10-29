@@ -87,7 +87,7 @@ button { font: inherit; }
 .guardado b { color: var(--tinta); font-weight: 700; }
 .guardado.error b { color: var(--rojo); }
 
-.contenido { padding: 34px 48px 80px; min-width: 0; }
+.contenido { padding: 34px max(48px, calc((100% - 980px) / 2)) 80px; min-width: 0; }
 .columna { max-width: 980px; }
 .texto { max-width: var(--ancho-texto); }
 
@@ -255,3 +255,6 @@ select, input[type="text"], input[type="number"], textarea {
 
 .cargando { padding: 40px; color: var(--tinta-suave); }
 kbd { font-family: var(--sans); border: 1px solid var(--linea); border-bottom-width: 2px; border-radius: 3px; padding: 0 5px; font-size: 0.85em; }
+.campo { min-width: 0; max-width: 100%; }
+.campo select { width: 100%; max-width: 100%; }
+.campo input[type="text"] { max-width: 100%; }
