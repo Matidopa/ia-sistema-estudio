@@ -136,6 +136,8 @@ const MIN_POR_PREGUNTA = { mecanica: 3, teoria: 1.5 };
 export function pasosExpres() {
   const f = frecuencias();
   const pasos = [];
+  pasos.push({ id: 'x-diagnostico', tipo: 'diagnostico', unidades: [], titulo: 'Diagnóstico: qué ya sabés', minutos: 15,
+    detalle: '17 preguntas reales de los tipos que más se repiten. Los temas que ya dominás se saltean del plan (los podés hacer igual). Es opcional.' });
   pasos.push({ id: 'x-parcial', tipo: 'intro', unidades: ['u0-parcial'], titulo: 'Cómo es el parcial y cómo encararlo', minutos: 4,
     detalle: 'Qué entra, cómo se reparten las 25 preguntas y una estrategia para rendir.' });
   const mec = [...MECANICAS].sort((a, b) => f[b].reciente - f[a].reciente);
@@ -168,6 +170,8 @@ const redondo = x => (Math.round(x * 2) / 2).toString().replace('.', ',');
 // Un paso cuenta como hecho si se completó en exprés o si su unidad ya está aprobada en el camino completo.
 export function pasoHecho(paso) {
   if (P.pasoExpres(paso.id)) return true;
+  // el diagnóstico solo tiene sentido al principio: si ya avanzaste en el plan, no queda pendiente
+  if (paso.tipo === 'diagnostico') return Object.keys(P.get().expres.pasos).length > 0;
   if ((paso.tipo === 'mecanica' || paso.tipo === 'teoria') && paso.unidades.every(u => P.estadoUnidad(u).aprobada)) return true;
   return false;
 }
@@ -214,4 +218,14 @@ export function familiasDeUnidad(uid) {
       const corto = t.split(' ').slice(0, 9).join(' ');
       return { clave, nombre: corto + (t.length > corto.length ? '…' : ''), n: lista.length };
     });
+}
+
+// Diagnóstico del modo exprés: 3 preguntas por técnica y 1 o 2 por tema teórico, de las familias más repetidas.
+export function preguntasDiagnostico() {
+  const res = [];
+  for (const p of pasosExpres()) {
+    if (p.tipo === 'mecanica') res.push(...masRepetidas(p.unidades[0], 3).map(q => ({ q, paso: p.id })));
+    else if (p.tipo === 'teoria') res.push(...masRepetidas(p.unidades[0], p.frecuencia >= 2 ? 2 : 1).map(q => ({ q, paso: p.id })));
+  }
+  return res;
 }

@@ -15,7 +15,7 @@ Resumen para leer con el café. Para tenerlo en tu compu alcanza con `git pull` 
 
 **Dos modos de estudio** (se elige al entrar y se cambia desde Inicio o Ajustes)
 - **Completo:** la ruta de 13 unidades en orden, como antes.
-- **Exprés:** 13 pasos armados con la frecuencia real de cada tema en los 28 parciales:
+- **Exprés:** 14 pasos armados con la frecuencia real de cada tema en los 28 parciales:
   - Las tres técnicas (≈15 de 25 preguntas), cada una con su ficha «lo que sí o sí tenés que saber» (trampas, convenciones, cómo te lo preguntan) y 8 preguntas reales recientes.
   - Un mini simulacro de técnicas con los anexos de un parcial real.
   - La teoría que más se repite: una pregunta de cada tipo, del más repetido al menos.
@@ -47,13 +47,13 @@ Resumen para leer con el café. Para tenerlo en tu compu alcanza con `git pull` 
   - Las notas de protocolos ahora se guardan con tu progreso.
   - Un error en la teoría de Emparrillado: «no tiene relación directa» la cátedra la marca **ambigua**, no «sin flechas» (2025 Lunes T2 y Miércoles T2, pregunta d).
 
+## Segunda tanda (lo que había quedado pendiente)
+
+- **Diagnóstico inicial** como primer paso del exprés (opcional, ≈15 min): 17 preguntas reales de los tipos que más se repiten. Cada tema en el que acertás todas se saltea del plan y queda marcado «ya lo sabés (diagnóstico)»; lo podés hacer igual. En una prueba, acertando las técnicas y AG se ahorraba ≈ 1 h 43 min. No da unidades por aprobadas en el camino completo.
+- **Análisis de Protocolos interactivo** en los 14 protocolos de la guía: marcás cada línea con lo que tiene (concepto, característica, valor, relación, operador, sinónimo, metacomentario, incertidumbre) y al corregir ves qué estuvo bien, qué faltó y qué sobra, con el porqué de cada línea. El resultado queda en tu progreso. Las anotaciones salen de la resolución de cada ejercicio y están armadas con IA (lo dice abajo). El paso de Protocolos del exprés tiene el link directo.
+- **Preguntas pasadas a su unidad** (solo el campo unidad; respuestas intactas, queda el anterior en `unidad_original`): 2020-2c-t1-e, t2-e y t4-e → Protocolos; 2022-1c-lunes-t1-l, 2023-2c-miercoles-t1-m y t2-u, 2025-lunes-t2-q → Sistemas Inteligentes; 2023-1c-lunes-t1-e → Implementación.
+- **`iniciar.bat` revisado**: ahora además avisa si Windows abre el acceso directo de Python de la Microsoft Store en vez de Python. Lo revisé a mano (saltos de línea de Windows, `errorlevel`, rutas con espacios); probarlo en un Windows real no se pudo desde la nube.
+
 ## Quedó pendiente
 
-- Ejercicio de Análisis de Protocolos interactivo (marcar segmentos y que la app corrija). Hoy se practica con las 113 preguntas reales, filtrando por tipo de pregunta.
-- Diagnóstico inicial que saltee pasos del exprés que ya dominás.
-- Algunas preguntas parecen estar en una unidad que no es la suya; no las moví:
-  - 2025-lunes-t2-q (está en Intro y es de aprendizaje supervisado).
-  - 2023-2c-miercoles-t1-m y -t2-u (están en Conocimiento y son de elegir tecnología).
-  - 2020-2c-t1-e, -t2-e y -t4-e (están en Lógica y son de Protocolos).
-  - 2022-1c-lunes-t1-l (está en Lógica y es de Sistemas).
-- `iniciar.bat` no lo pude probar en Windows (la nube es Linux). Si algo raro pasa al abrir o cerrar, avisame.
+- Probar `iniciar.bat` en tu Windows: abrir con doble clic, estudiar un rato y apretar «Cerrar la app»; la ventana negra se tiene que cerrar sola. Si algo raro pasa, avisame qué dice la ventana.

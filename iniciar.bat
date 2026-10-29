@@ -25,6 +25,11 @@ exit /b 1
 :fin
 rem Si el servidor se cerro bien (boton "Cerrar la app"), la ventana se cierra sola.
 if %errorlevel%==0 exit /b 0
+if %errorlevel%==9009 (
+  echo.
+  echo Windows abrio el acceso directo de Python de la Microsoft Store en vez de Python.
+  echo Instalalo desde https://www.python.org/downloads/ tildando "Add python.exe to PATH" y volve a abrir este archivo.
+)
 echo.
 echo Algo fallo al abrir la app (mira el mensaje de arriba). Tu progreso guardado no se pierde.
 pause

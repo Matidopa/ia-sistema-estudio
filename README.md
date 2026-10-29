@@ -32,7 +32,7 @@ La carpeta `progreso/` no se sube al repo: con `git pull` tu progreso queda igua
 Al entrar elegís cómo estudiar (y lo cambiás cuando quieras desde Inicio o Ajustes):
 
 - **Modo completo (con tiempo):** las 13 unidades en orden, con toda la teoría, chequeo de cada unidad, ejercicios de la cátedra y práctica.
-- **Modo exprés (jugado de tiempo):** un plan de 13 pasos armado con la frecuencia real de cada tema en los 28 parciales. Primero Emparrillado, Protocolos y Búsqueda (≈15 de las 25 preguntas), con una ficha de lo que sí o sí tenés que saber y práctica dirigida; después un mini simulacro de técnicas, la teoría que más se repite, repaso y un simulacro final de 25. Muestra el tiempo estimado total y de cada paso.
+- **Modo exprés (jugado de tiempo):** un plan de 14 pasos armado con la frecuencia real de cada tema en los 28 parciales. Arranca con un diagnóstico opcional de 17 preguntas que saltea los temas que ya dominás. Después Emparrillado, Protocolos y Búsqueda (≈15 de las 25 preguntas), con una ficha de lo que sí o sí tenés que saber y práctica dirigida; después un mini simulacro de técnicas, la teoría que más se repite, repaso y un simulacro final de 25. Muestra el tiempo estimado total y de cada paso.
 
 El progreso es uno solo: una unidad aprobada en exprés cuenta en el completo. Cuando terminás el exprés, la app te muestra qué te queda del camino completo y te deja seguir desde ahí sin repetir.
 
@@ -47,7 +47,7 @@ El progreso es uno solo: una unidad aprobada en exprés cuenta en el completo. C
 | **Parciales reales** | 28 parciales de 2020 a 2025 (684 preguntas), en simulacro o guiado. |
 | **Repaso** | Las preguntas que erraste vuelven con repetición espaciada (1, 3, 7 y 16 días). |
 | **Tarjetas de memoria** | 146 tarjetas con definiciones, convenciones y trampas, con repaso espaciado. |
-| **Ejercicios de la cátedra** | Las guías prácticas (Búsqueda, Emparrillado, Análisis de Protocolos), los ejercicios de clase y el recuperatorio. |
+| **Ejercicios de la cátedra** | Las guías prácticas (Búsqueda, Emparrillado, Análisis de Protocolos), los ejercicios de clase y el recuperatorio. En los protocolos marcás cada línea (concepto, característica, valor, relación, operador, sinónimo, metacomentario, incertidumbre) y la app corrige. |
 | **Simuladores** | Búsqueda iteración por iteración (con reproducción automática), emparrillado con parrilla editable y ruleta de algoritmos genéticos. |
 
 ## De dónde sale el contenido

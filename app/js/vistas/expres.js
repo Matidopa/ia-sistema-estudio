@@ -34,7 +34,7 @@ export function vistaExpres(main) {
       h('div', { class: 'paso-cuerpo' },
         h('a', { class: 'titulo', href: `#/expres/${p.id}` }, p.titulo),
         h('div', { class: 'meta' }, h('span', { class: 'etiqueta' }, PL.fmtMin(p.minutos)), ' ', etiquetaTipo(p.tipo),
-          hecho ? h('span', { class: 'etiqueta ok' }, info && info.nota != null ? `hecho · ${info.nota}/${info.total}` : info ? 'hecho' : 'aprobada en la ruta') : null),
+          hecho ? h('span', { class: 'etiqueta ok' }, info && info.validado ? 'ya lo sabés (diagnóstico)' : info && info.salteado ? 'salteado' : info && info.nota != null ? `hecho · ${info.nota}/${info.total}` : info ? 'hecho' : p.tipo === 'diagnostico' ? 'no hace falta' : 'aprobada en la ruta') : null),
         h('p', { class: 'chico' }, p.detalle))));
   });
   cont.append(h('h2', {}, 'Los pasos'), ol);
@@ -42,7 +42,7 @@ export function vistaExpres(main) {
   main.append(cont);
 }
 const dato = (v, t) => h('div', { class: 'dato-chico' }, h('b', {}, v), h('span', {}, t));
-const etiquetaTipo = t => h('span', { class: 'etiqueta tipo-' + t }, { intro: 'lectura', mecanica: 'técnica + práctica', bloque: 'mini simulacro', teoria: 'teoría + preguntas', repaso: 'repaso', final: 'simulacro' }[t]);
+const etiquetaTipo = t => h('span', { class: 'etiqueta tipo-' + t }, { diagnostico: 'diagnóstico', intro: 'lectura', mecanica: 'técnica + práctica', bloque: 'mini simulacro', teoria: 'teoría + preguntas', repaso: 'repaso', final: 'simulacro' }[t]);
 
 // Lo que falta del camino completo, ordenado por peso en el parcial
 export function bloqueFaltante(destacado) {
@@ -103,6 +103,40 @@ export async function vistaPasoExpres(main, id) {
         h('a', { class: 'boton secundario', href: '#/expres' }, 'Volver al plan'))));
   };
 
+  if (paso.tipo === 'diagnostico') {
+    const items = PL.preguntasDiagnostico();
+    const z = h('section');
+    cont.append(h('p', { class: 'suave' }, 'Respondé sin mirar nada: si dudás, elegí la que te parezca. Para saltear un tema tenés que acertar todas las de ese tema.'),
+      h('div', { class: 'acciones' }, h('button', { class: 'boton secundario', type: 'button', onclick: () => { P.marcarPasoExpres(paso.id, { salteado: true }); location.hash = '#/expres'; } }, 'Prefiero no hacerlo y arrancar el plan')),
+      z, zonaFin);
+    sesion(z, items.map(x => x.q), { origen: 'diagnostico', titulo: 'Diagnóstico', onFin: () => {
+      const porPaso = {};
+      for (const { q, paso: pid } of items) {
+        const e = P.estadoPregunta(q.id);
+        const o = porPaso[pid] = porPaso[pid] || { bien: 0, total: 0 };
+        o.total++; if (e && e.ultimaBien) o.bien++;
+      }
+      const validados = [];
+      for (const [pid, o] of Object.entries(porPaso)) {
+        if (o.bien === o.total && !PL.pasoHecho(pasos.find(x => x.id === pid))) { P.marcarPasoExpres(pid, { validado: true, nota: o.bien, total: o.total }); validados.push(pid); }
+      }
+      P.marcarPasoExpres(paso.id, { nota: Object.values(porPaso).reduce((s, o) => s + o.bien, 0), total: items.length });
+      const ahorro = pasos.filter(x => validados.includes(x.id)).reduce((s, x) => s + x.minutos, 0);
+      zonaFin.innerHTML = '';
+      zonaFin.append(h('div', { class: 'hoja paso-fin ok' },
+        h('h3', {}, validados.length ? `Salteamos ${validados.length} paso${validados.length > 1 ? 's' : ''}: te ahorrás ≈ ${PL.fmtMin(ahorro)}` : 'Arrancamos el plan completo'),
+        h('ul', { class: 'por-tema diag' }, ...Object.entries(porPaso).map(([pid, o]) => {
+          const px = pasos.find(x => x.id === pid);
+          return h('li', {}, h('span', { class: 'tema-nombre' }, D.unidad(px.unidades[0]).corto),
+            h('span', { class: 'tema-barra' }, h('span', { class: o.bien === o.total ? 'ok' : 'mal', style: `width:${Math.round(100 * o.bien / o.total)}%` })),
+            h('span', { class: 'tema-n' }, `${o.bien}/${o.total}`),
+            h('span', { class: 'chico ' + (validados.includes(pid) ? 'ok-txt' : 'suave') }, validados.includes(pid) ? 'lo salteamos' : 'lo vemos'));
+        })),
+        h('p', { class: 'chico suave' }, 'Los pasos salteados quedan marcados en el plan y los podés hacer igual cuando quieras. Las unidades no se dan por aprobadas en el camino completo: eso sigue pidiendo su chequeo o su paso.'),
+        h('div', { class: 'acciones' }, h('a', { class: 'boton', href: '#/expres' }, 'Ver mi plan'))));
+    } });
+    return;
+  }
   if (paso.tipo === 'intro' || paso.tipo === 'mecanica' || paso.tipo === 'teoria') {
     const u = paso.unidades[0];
     let md = '';
