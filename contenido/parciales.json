@@ -1474,7 +1474,7 @@
    "examen": "2020-2c-t1",
    "ref": "2020 · 2º cuatrimestre · Lunes · Tema 1 · pregunta e",
    "letra": "e",
-   "unidad": "u9-logica",
+   "unidad": "u3-protocolos",
    "enunciado": "",
    "opciones": [
     "correcto.",
@@ -1484,7 +1484,8 @@
    ],
    "correcta": 1,
    "img": "img/parciales/2020-2c-t1/e.png",
-   "img_completa": "img/parciales/2020-2c-t1/e-completa.png"
+   "img_completa": "img/parciales/2020-2c-t1/e-completa.png",
+   "unidad_original": "u9-logica"
   },
   {
    "id": "2020-2c-t1-f",
@@ -1806,7 +1807,7 @@
    "examen": "2020-2c-t2",
    "ref": "2020 · 2º cuatrimestre · Lunes · Tema 2 · pregunta e",
    "letra": "e",
-   "unidad": "u9-logica",
+   "unidad": "u3-protocolos",
    "enunciado": "",
    "opciones": [
     "correcto.",
@@ -1816,7 +1817,8 @@
    ],
    "correcta": 1,
    "img": "img/parciales/2020-2c-t2/e.png",
-   "img_completa": "img/parciales/2020-2c-t2/e-completa.png"
+   "img_completa": "img/parciales/2020-2c-t2/e-completa.png",
+   "unidad_original": "u9-logica"
   },
   {
    "id": "2020-2c-t2-f",
@@ -2470,7 +2472,7 @@
    "examen": "2020-2c-t4",
    "ref": "2020 · 2º cuatrimestre · Lunes · Tema 4 · pregunta e",
    "letra": "e",
-   "unidad": "u9-logica",
+   "unidad": "u3-protocolos",
    "enunciado": "",
    "opciones": [
     "correcto.",
@@ -2480,7 +2482,8 @@
    ],
    "correcta": 1,
    "img": "img/parciales/2020-2c-t4/e.png",
-   "img_completa": "img/parciales/2020-2c-t4/e-completa.png"
+   "img_completa": "img/parciales/2020-2c-t4/e-completa.png",
+   "unidad_original": "u9-logica"
   },
   {
    "id": "2020-2c-t4-f",
@@ -2909,7 +2912,7 @@
    "examen": "2022-1c-lunes-t1",
    "ref": "2022 · 1º cuatrimestre · Lunes · Tema 1 · pregunta l",
    "letra": "l",
-   "unidad": "u9-logica",
+   "unidad": "u6-sistemas",
    "enunciado": "Los Sistemas Inteligentes que poseen internamente un repositorio para registrar pasos\naplicados en la resolución del problema son …",
    "opciones": [
     "los Sistemas Expertos.",
@@ -2917,7 +2920,8 @@
     "las Redes Neuronales Artificiales.",
     "los Sistemas Basados en Conocimiento."
    ],
-   "correcta": 2
+   "correcta": 2,
+   "unidad_original": "u9-logica"
   },
   {
    "id": "2022-1c-lunes-t1-m",
@@ -5911,7 +5915,7 @@
    "examen": "2023-1c-lunes-t1",
    "ref": "2023 · 1º cuatrimestre · Lunes · Tema 1 · pregunta e",
    "letra": "e",
-   "unidad": "u6-sistemas",
+   "unidad": "u11-implementacion",
    "enunciado": "Para que se pueda implementar un Sistema Inteligente que cumpla con las expectativas\nde la organización, es recomendable …",
    "opciones": [
     "identificar conocimientos disponibles de fuentes públicas y privadas.",
@@ -5919,7 +5923,8 @@
     "reconocer las suposiciones asociadas al proyecto.",
     "todas las opciones son correctas."
    ],
-   "correcta": 4
+   "correcta": 4,
+   "unidad_original": "u6-sistemas"
   },
   {
    "id": "2023-1c-lunes-t1-f",
@@ -8363,7 +8368,7 @@
    "examen": "2023-2c-miercoles-t1",
    "ref": "2023 · 2º cuatrimestre · Miércoles · Tema 1 · pregunta m",
    "letra": "m",
-   "unidad": "u2-adquisicion",
+   "unidad": "u6-sistemas",
    "enunciado": "Si se necesita elegir la sopa crema \"más sana\" usando las reglas (subjetivas) que fueron\neducidas de un experto sobre la combinación de los ingredientes indicados en el paquete,\nentonces sería adecuado aplicar …",
    "opciones": [
     "una RNA Perceptrón.",
@@ -8371,7 +8376,8 @@
     "un Algoritmo de Inducción.",
     "un Sistema Experto Difuso."
    ],
-   "correcta": 4
+   "correcta": 4,
+   "unidad_original": "u2-adquisicion"
   },
   {
    "id": "2023-2c-miercoles-t1-n",
@@ -8881,7 +8887,7 @@
    "examen": "2023-2c-miercoles-t2",
    "ref": "2023 · 2º cuatrimestre · Miércoles · Tema 2 · pregunta u",
    "letra": "u",
-   "unidad": "u2-adquisicion",
+   "unidad": "u6-sistemas",
    "enunciado": "Si se necesita elegir la sopa crema que tendrá el \"mejor sabor\" usando las reglas (subjetivas)\nque fueron educidas de un experto sobre la combinación de los ingredientes indicados\nen el paquete, entonces sería adecuado aplicar …",
    "opciones": [
     "una RNA Perceptrón.",
@@ -8889,7 +8895,8 @@
     "un Algoritmo de Inducción.",
     "un Sistema Experto Difuso."
    ],
-   "correcta": 4
+   "correcta": 4,
+   "unidad_original": "u2-adquisicion"
   },
   {
    "id": "2023-2c-miercoles-t2-v",
@@ -11163,7 +11170,7 @@
    "examen": "2025-lunes-t2",
    "ref": "2025 · Lunes · Tema 2 · pregunta q",
    "letra": "q",
-   "unidad": "u1-intro",
+   "unidad": "u6-sistemas",
    "enunciado": "Una empresa de e-commerce desea clasificar a sus clientes en tres tipos ya definidos y\ndisponibles en un historial de datos etiquetados, entonces podríamos utilizar …",
    "opciones": [
     "Algoritmos de Inducción de Aprendizaje No Supervisado.",
@@ -11171,7 +11178,8 @@
     "Redes Neuronales Artificiales de Aprendizaje Supervisado.",
     "Algoritmos Genéticos de Aprendizaje Supervisado."
    ],
-   "correcta": 3
+   "correcta": 3,
+   "unidad_original": "u1-intro"
   },
   {
    "id": "2025-lunes-t2-r",
