@@ -12,12 +12,13 @@ Funciona en tu compu, sin internet y sin instalar nada aparte de Python.
    ```
 2. Abrí la app:
    - **Windows:** doble clic en `iniciar.bat`.
-   - **Mac / Linux:** `./iniciar.sh` (o `python3 servidor.py`).
+   - **Mac:** doble clic en `iniciar.command`. La primera vez, si macOS dice que no puede abrirlo, hacé clic derecho → **Abrir** → **Abrir**.
+   - **Linux:** `./iniciar.sh` (o `python3 servidor.py`).
 3. Se abre el navegador en `http://127.0.0.1:8765`. Dejá la ventana negra abierta mientras estudiás; para cerrar, cerrala o apretá Ctrl+C.
 
-Necesitás **Python 3.8 o más nuevo**. Si `iniciar.bat` dice que no lo encuentra, instalalo desde [python.org](https://www.python.org/downloads/) y tildá *Add python.exe to PATH*.
+Necesitás **Python 3.8 o más nuevo**. Si no lo encuentra, instalalo desde [python.org](https://www.python.org/downloads/) (en Windows, tildá *Add python.exe to PATH*; en Mac también sirve `xcode-select --install`).
 
-> No abras `app/index.html` con doble clic: el navegador bloquea la carga del contenido. Siempre entrá con `iniciar.bat`.
+> No abras `app/index.html` con doble clic: el navegador bloquea la carga del contenido. Siempre entrá con el archivo `iniciar`.
 
 ## Qué tiene
 
