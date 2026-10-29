@@ -89,7 +89,7 @@ Para tipificar una relación:
 
 > Trampa: el orden de los polos importa. "Mecánicos (experto / inexperto)" y "Estrategia (conservadora / agresiva)" con "expertos → agresivas, inexpertos → conservadoras" da flechas **cruzadas** (A→Y, B→X) y la cátedra la marcó **no tipificada**, no paralela.
 
-> Trampa: "la usabilidad no tiene una relación directa con la portabilidad" o "pueden tener alta o baja sensibilidad de frenos" son frases para que veas que **no hay flechas** entre esas dos.
+> Trampa: "la usabilidad no tiene una relación directa con la portabilidad" o "pueden tener alta o baja sensibilidad de frenos" **no** significan "no existe relación": un polo lleva a los **dos** polos de la otra característica (abanico), así que la cátedra la marca **ambigua** (si están en el mismo grupo). Así está resuelto en los parciales 2025 Lunes T2 y Miércoles T2, pregunta d.
 
 ## Ejemplo resuelto completo (guía, Harinas)
 
