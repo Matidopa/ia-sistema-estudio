@@ -98,10 +98,10 @@ function vistaInicio(main) {
     h('div', { class: 'columna' },
       h('h1', {}, 'Inteligencia Artificial, de cero al parcial'),
       h('p', { class: 'bajada' }, 'Seguí la ruta en orden: cada unidad tiene la teoría explicada desde cero, un ejemplo resuelto, las trampas que más se repiten en los parciales y práctica. Después medite con los parciales reales.'),
-      h('div', { class: 'hoja' },
-        h('p', { class: 'suave chico', style: 'margin:0' }, 'Seguí por acá'),
-        h('h2', { style: 'margin:4px 0 6px' }, `${siguiente.num}. ${siguiente.titulo}`),
-        h('p', { style: 'margin:0 0 12px' }, siguiente.resumen),
+      h('div', { class: 'destacada' },
+        h('p', { class: 'previo' }, 'Seguí por acá'),
+        h('h2', {}, `${siguiente.num}. ${siguiente.titulo}`),
+        h('p', { style: 'margin:0 0 18px' }, siguiente.resumen),
         h('div', { class: 'acciones', style: 'margin:0' },
           h('a', { class: 'boton', href: `#/unidad/${siguiente.id}` }, 'Estudiar esta unidad'),
           rep ? h('a', { class: 'boton secundario', href: '#/repaso' }, `Repasar ${rep} pendiente${rep > 1 ? 's' : ''}`) : null)),
@@ -114,7 +114,7 @@ function vistaInicio(main) {
       tablaUnidades()));
 }
 function tarjetaDato(valor, texto, frac, verde) {
-  return h('div', { class: 'hoja' }, h('div', { style: 'font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--birome)' }, valor), h('p', { class: 'chico suave', style: 'margin:2px 0 10px' }, texto), barra(frac, verde));
+  return h('div', { class: 'hoja dato' }, h('div', { class: 'valor' }, valor), h('p', { class: 'chico suave', style: 'margin:2px 0 10px' }, texto), barra(frac, verde));
 }
 function tablaUnidades() {
   const t = h('table', { class: 'tabla' }, h('thead', {}, h('tr', {}, h('th', {}, 'Unidad'), h('th', {}, 'Teoría'), h('th', {}, 'Preguntas hechas'), h('th', {}, 'Acierto'), h('th', {}, 'En parciales'))));
