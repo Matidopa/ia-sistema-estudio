@@ -64,13 +64,17 @@ export function familias() {
   familiasCache = m;
   return m;
 }
-export const vecesQueSalio = p => (familias()[familia(p)] || []).length;
+// En cuántos parciales distintos apareció este tipo de pregunta (no cuántas preguntas: un mismo
+// parcial puede traer dos del mismo tipo, por ejemplo dos relaciones del emparrillado, y cuenta una vez).
+// Los PDF repetidos que había en el material ya se unificaron al armar parciales.json (45 archivos, 29 parciales distintos).
+export const parcialesDeFamilia = lista => new Set(lista.map(p => p.examen)).size;
+export const vecesQueSalio = p => parcialesDeFamilia(familias()[familia(p)] || []);
 
 // Las preguntas reales más repetidas de una unidad: una por familia, de la familia más grande a la más chica.
 // Dentro de cada familia prefiere una reciente que todavía no hiciste.
 export function masRepetidas(uid, n) {
   const fams = Object.entries(familias()).filter(([k]) => k.startsWith(uid + ':') && !k.endsWith(':img'))
-    .sort((a, b) => b[1].length - a[1].length);
+    .sort((a, b) => parcialesDeFamilia(b[1]) - parcialesDeFamilia(a[1]));
   const res = [];
   for (const [, lista] of fams) {
     const candidatas = lista.filter(p => !p.img_completa);
@@ -210,13 +214,14 @@ export const fmtMin = m => m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? ' ' + (m
 
 // Tipos de pregunta (familias) de una unidad que salieron 3 veces o más, con un nombre legible.
 export function familiasDeUnidad(uid) {
-  return Object.entries(familias()).filter(([k, l]) => k.startsWith(uid + ':') && !k.endsWith(':img') && l.length >= 3)
-    .sort((a, b) => b[1].length - a[1].length)
+  return Object.entries(familias()).filter(([k, l]) => k.startsWith(uid + ':') && !k.endsWith(':img') && parcialesDeFamilia(l) >= 3)
+    .sort((a, b) => parcialesDeFamilia(b[1]) - parcialesDeFamilia(a[1]))
     .map(([clave, lista]) => {
       let t = lista[0].enunciado.replace(/\s+/g, ' ').trim().replace(/^(Considerando|Según|De acuerdo (con|a)|Teniendo en cuenta) [^,]{0,80}, /i, '');
       t = t.charAt(0).toUpperCase() + t.slice(1);
+      let k = 0; t = t.replace(/\b([CE])\d\b/g, (_, l) => l + (k++ === 0 ? 'i' : 'j'));
       const corto = t.split(' ').slice(0, 9).join(' ');
-      return { clave, nombre: corto + (t.length > corto.length ? '…' : ''), n: lista.length };
+      return { clave, nombre: corto + (t.length > corto.length ? '…' : ''), n: parcialesDeFamilia(lista), preguntas: lista.length };
     });
 }
 

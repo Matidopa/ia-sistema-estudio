@@ -1,6 +1,6 @@
 // Componentes reutilizables de la interfaz
 import * as P from './progreso.js';
-import { porId, examen, unidad, EXPLICACIONES } from './datos.js';
+import { porId, examen, unidad, EXPLICACIONES, PARCIALES } from './datos.js';
 import { explicarReal } from './explicador.js';
 import { vecesQueSalio } from './plan.js';
 
@@ -67,7 +67,7 @@ export function tarjetaPregunta(p, { modo = 'inmediato', numero = null, onRespue
     h('span', { class: 'etiquetas' },
       numero ? h('b', { class: 'num-preg' }, `${numero}`) : null,
       p.tipo === 'real' ? h('span', { class: 'etiqueta real' }, 'Parcial real') : p.tipo === 'algo' ? h('span', { class: 'etiqueta ia' }, 'Ejercicio nuevo') : h('span', { class: 'etiqueta ia' }, 'Práctica generada'),
-      p.tipo === 'real' && historial && vecesQueSalio(p) >= 4 ? h('span', { class: 'etiqueta frecuente', title: 'Preguntas casi iguales en los parciales reales' }, `salió ${vecesQueSalio(p)} veces`) : null,
+      p.tipo === 'real' && historial && vecesQueSalio(p) >= 4 ? h('span', { class: 'etiqueta frecuente', title: `Este tipo de pregunta (mismo planteo, con otros datos u opciones) apareció en ${vecesQueSalio(p)} de los ${PARCIALES.examenes.length} parciales distintos` }, `tipo que salió en ${vecesQueSalio(p)} parciales`) : null,
       est && est.intentos ? h('span', { class: 'etiqueta ' + (est.ultimaBien ? 'ok' : 'mal'), title: `${est.aciertos} de ${est.intentos} bien` }, est.ultimaBien ? 'la última vez bien' : 'la última vez mal') : null),
     mostrarRef && ref ? h('span', { class: 'ref' }, ref) : null);
   const cuerpo = h('div', { class: 'pregunta', id: 'q-' + p.id, 'data-qid': p.id }, cab);

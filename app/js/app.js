@@ -297,7 +297,7 @@ function vistaPractica(main, q) {
       opt('ambas', 'Reales + generadas', fuente), opt('real', 'Solo parciales reales', fuente), opt('ia', 'Solo generadas por IA', fuente), opt('algo', 'Ejercicios nuevos (búsqueda, emparrillado, ruleta, métricas, difusa)', fuente))),
     h('label', { class: 'campo' }, 'Cuáles', h('select', { name: 'filtro' }, opt('todas', 'Todas', filtro), opt('nuevas', 'Las que nunca hice', filtro), opt('falladas', 'Las que erré', filtro))),
     unidades[0] && PL.familiasDeUnidad(unidades[0]).length ? h('label', { class: 'campo campo-ancho' }, 'Tipo de pregunta', h('select', { name: 'fam' },
-      h('option', { value: '' }, 'Todos los tipos'), ...PL.familiasDeUnidad(unidades[0]).map(f => opt(f.clave, `${f.nombre} (salió ${f.n} veces)`, fam)))) : null,
+      h('option', { value: '' }, 'Todos los tipos'), ...PL.familiasDeUnidad(unidades[0]).map(f => opt(f.clave, `${f.nombre} (en ${f.n} parciales)`, fam)))) : null,
     h('label', { class: 'campo' }, 'Cantidad', h('select', { name: 'n' }, ...[5, 10, 20, 40].map(n => opt(String(n), String(n), String(cuantas))))),
     h('button', { class: 'boton', type: 'submit' }, q ? 'Otra tanda' : 'Empezar'));
   form.querySelector('select[name=u]').addEventListener('change', () => { const c = form.querySelector('.campo-ancho'); if (c) c.remove(); });
