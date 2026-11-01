@@ -4,7 +4,15 @@ La IA usa la lógica para dos cosas:
 1. **Representar conocimiento** educido del experto y guardarlo en la Base de Conocimientos.
 2. **Hacer deducciones**, que es el trabajo del Motor de Inferencias.
 
-Hasta 2023 la lógica era un bloque entero del parcial (traducciones y deducción natural). En 2024 y 2025 quedó sobre todo **lógica difusa** dentro de teoría. Conviene saber las dos cosas.
+**Qué se toma hoy (contado en los 28 parciales):**
+
+| Período | Preguntas de lógica por parcial | Qué tipo |
+|---|---|---|
+| 2022 a 2023 | 3 a 4 | **Ejercicios**: traducir una frase a primer orden, "la única tesis válida", "la hipótesis faltante" |
+| 2024 | 2 a 3 | Teoría corta: Modus Ponens, cuándo se puede suponer, para qué sirven funciones de verdad y cuantificadores, y **lógica difusa** |
+| 2025 | **1** | **Solo lógica difusa** (operadores, implicación, qué permite) |
+
+La presentación de la cátedra de 2026 es **solo de Lógica Difusa** (la proposicional y la de primer orden aparecen como introducción). Prioridad: **difusa a fondo**; primer orden y deducción natural, **solo la teoría** (definiciones, cuantificadores, cuándo se supone, Modus Ponens). Los ejercicios de traducción y de deducción no salen desde 2023: dejalos para el final si te sobra tiempo.
 
 ## Lógica proposicional y de primer orden
 
