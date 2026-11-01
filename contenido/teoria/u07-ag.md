@@ -16,6 +16,10 @@ Son Inteligencia Computacional. Cuando en un caso del parcial aparece "la **mejo
 
 Ideas de Darwin que usa: las especies evolucionan de forma gradual, la selección natural favorece al más apto y la variabilidad aparece por modificaciones espontáneas (mutaciones).
 
+Biología mínima para no confundirse: el **genotipo** es el conjunto completo de la información genética y los **cromosomas** la portan; el **gen** es la unidad de información que codifica una característica; el **fenotipo** es la manifestación observable de ese genotipo en un entorno. Postulados de Darwin (1859) que retoma la presentación 2026: hay **variación** entre individuos, parte es **heredable**, nacen más individuos de los que el ambiente sostiene (**sobreproducción**), **compiten** por recursos, los más aptos tienen más probabilidad de dejar descendencia y los cambios se **acumulan** con el tiempo. La selección natural "no es una elección deliberada: es una consecuencia de la aptitud".
+
+Los AG los propuso **John Holland en 1975**. Son simples de implementar comparados con otros modelos de IA, pero exigen un diseño cuidadoso y un buen manejo de parámetros. Sirven para problemas no lineales, complejos y con muchas variables que no se pueden resolver con métodos exactos. Buscan en varias regiones del espacio a la vez una solución **suficientemente buena**, sin garantizar que sea la mejor.
+
 ## El ciclo
 
 ```
@@ -41,11 +45,21 @@ Población inicial
 - **Penalizar** las combinaciones de genes inválidas (por ejemplo, restar un valor chico como −10 por cada valor inválido, en vez de descartar al individuo).
 - Debe dar **pequeños cambios en la valoración ante pequeños cambios en el individuo** (así el algoritmo puede "subir la pendiente").
 
+**Cromosoma simple o compuesto**: en el ejemplo de clase, una empresa elige hasta 3 de 5 tecnologías con un presupuesto de $45.000. El cromosoma simple es una cadena de 5 bits (1 = la elige): [1, 0, 1, 0, 1]. Si además hay que decidir **cómo** implementar cada una (enfoque tradicional o avanzado, on-premise o cloud), cada gen principal lleva **genes auxiliares**: eso es un cromosoma compuesto.
+
+**Propiedades de un buen cromosoma** (presentación de Ingeniería de Sistemas Inteligentes): **conciso** (tamaño fijo y lo más corto posible, con poca redundancia), **completo** (todas las soluciones posibles se pueden representar), **coherente** (evita representar soluciones inválidas), **uniforme** (todas las soluciones tienen la misma posibilidad de generarse) y **sencillo** (fácil de interpretar).
+
+**Propiedades de una buena función de aptitud**: usar al máximo el conocimiento del problema (la **heurística**), ser **consistente** con el cromosoma, ser **robusta** (reducir la influencia del ruido), tener **causalidad fuerte o adyacencia** (pequeños cambios en el individuo → pequeños cambios en la aptitud) y manejar bien la **penalización** de soluciones inválidas: **pena de muerte** (aptitud 0, la "penalización dura" del ejemplo de tecnologías), **niveles de penas constantes**, o **penas adaptativas** en el tiempo o según la aptitud de la población. La aptitud se puede **maximizar** (beneficio, eficiencia) o **minimizar** (error, tiempo, costo): f(x): Cromosoma → ℝ.
+
+Ojo con esto que repite la cátedra: el cromosoma y la función de aptitud son un modelo simplificado del problema. No tienen que ser perfectos, pero **si no se corresponden con el problema, el algoritmo va a encontrar la solución correcta para el problema equivocado**.
+
 > Trampa: "el conocimiento necesario para resolver el problema se guarda en…" → **la función de aptitud**. "La representación y codificación de las soluciones se implementa en…" → **la estructura del cromosoma**. "La penalización por no cumplir una condición" → **la función de aptitud**.
 
 ## Población inicial
 
 Se puede generar **al azar** o **ad hoc** (individuos válidos armados a mano). Las dos son válidas, y puede o no definirse manualmente. Se define la cantidad de individuos y si es constante o variable. La cantidad ideal de individuos y de vueltas **solo se encuentra probando** en varias corridas.
+
+Al azar es lo más común y **promueve la diversidad**; ad hoc (dirigido, con soluciones conocidas o heurísticas) **mejora la calidad inicial pero puede limitar la exploración**. Parámetros: el **tamaño de la población** (afecta diversidad y tiempo de cómputo) y la **varianza inicial** (qué tan dispersos son los valores de los genes; constante o variable por atributo).
 
 ## Selección
 
@@ -60,6 +74,12 @@ Arma el subconjunto de individuos que pasa a reproducirse. Un mismo individuo pu
 
 **Ejemplo de control sobre número esperado**: aptitudes 40, 25, 20, 15 (total 100, promedio 25). Valores de selección: 1,6 / 1,0 / 0,8 / 0,6. Pasan directo: una copia del primero y una del segundo (partes enteras). Las otras dos plazas se sortean con una ruleta armada con 0,6 / 0 / 0,8 / 0,6.
 
+**Cómo se arma la ruleta**: proporción = aptitud / total; después se acumulan las proporciones fila por fila (29,61% → 34,95% → 50,97% → … → 100%) y se tira un número al azar: sale el individuo en cuyo tramo cae. Es **sensible a valores extremos** y puede pasar que se elija una población con todos individuos de baja aptitud. El control sobre número esperado **garantiza a los mejores manteniendo diversidad**, pero es menos directo, varía poco entre ejecuciones y en poblaciones chicas puede no reflejar bien las proporciones.
+
+**Convergencia prematura**: la población se vuelve homogénea demasiado rápido y queda atrapada en una solución subóptima. Un **máximo (o mínimo) local** es un pico o valle intermedio con buena aptitud pero que no es la mejor solución; el **óptimo global** es la mejor de todo el espacio de búsqueda.
+
+> Trampa: la **presentación 2026** define distinto dos métodos. **Torneo**: se eligen al azar k individuos (2, 3 o más) y gana el más apto; torneos grandes eliminan la diversidad muy rápido. **Ranking**: se ordenan por aptitud, se asignan **probabilidades según la posición** y se sortea; ahí dice que tiene **menor** riesgo de convergencia prematura que la ruleta, aunque tiende a perder heterogeneidad. **Todos los parciales 2020–2025 se corrigieron con la versión clásica**: torneo de a pares, ranking que siempre elige al mejor y **ranking con mayor** riesgo de convergencia prematura que la ruleta. Si te toman una de esas preguntas, respondé con la clásica salvo que el enunciado describa explícitamente la versión nueva.
+
 ## Cruzamiento
 
 Combina los genes de dos padres para generar dos hijos (los padres se eliminan).
@@ -69,6 +89,15 @@ Combina los genes de dos padres para generar dos hijos (los padres se eliminan).
 - **Cruza binomial con máscara complemento**: una máscara dice de qué padre sale cada gen del hijo 1; el hijo 2 es todo lo que el hijo 1 no es.
 - **Cruza binomial con máscara doble**: una máscara para cada hijo; **se pueden repetir características** (los dos hijos pueden heredar el mismo gen del mismo padre). Puede generar hijos iguales a un padre, iguales entre sí, etc.
 - **Cruza binomial al azar**: por cada gen se tira un número; si supera un valor, viene del padre, si no, de la madre. El segundo hijo puede ser complemento o también al azar.
+
+Pros y contras de cada cruza (presentación 2026):
+
+| Cruza | A favor | En contra |
+|---|---|---|
+| Simple | Muy sencilla y eficiente; conserva bloques de genes de los padres | **Sesgo posicional** (genes que siempre quedan del mismo lado del corte tardan en combinarse); puede romper una buena combinación |
+| Multipunto | Más diversidad; reduce el sesgo posicional | Cuantos más cortes, más probable romper bloques estables; más costosa |
+| Binomial con máscara | Máxima mezcla gen a gen; más robusta frente a la convergencia prematura | Más riesgo de combinaciones inconsistentes; la máscara complemento puede dar lo mismo que un multipunto; con máscara doble se pueden repetir genes de un solo padre |
+| Binomial al azar | Variabilidad genética máxima; útil contra el estancamiento | Alto riesgo de romper relaciones importantes entre genes; casi no preserva herencia estructural |
 
 ## Mutación
 
@@ -85,7 +114,11 @@ Cambia al azar algún gen de algún individuo de la población cruzada. Objetivo
 
 ## Criterio de paro
 
-Por cantidad de vueltas, por tiempo, porque un individuo supera cierta aptitud o porque el promedio la supera.
+Por cantidad de vueltas (generaciones), por tiempo, porque un individuo supera cierta aptitud, porque el promedio la supera, o por **estancamiento** (la aptitud no mejora durante varias generaciones seguidas). Sirve para evitar ciclos infinitos y decidir cuándo tomar la mejor solución encontrada.
+
+**La población final**: se elige el mejor individuo (o los N mejores) como solución, y se pueden analizar estadísticas (diversidad, promedio de aptitud) para ver si el algoritmo convergió, mantuvo diversidad o se estancó. También puede servir de punto de partida para otra ejecución. Lo que **no** es: no garantiza el óptimo global, no implica que todos sus individuos sean buenos o válidos y no debe tomarse como definitiva si el problema pide explorar más. En el ejemplo del **acertijo de Einstein** (¿quién es el dueño del pececito?), el AG llega a la respuesta: el alemán.
+
+Sobre la mutación: el mecanismo **siempre se activa** en cada ciclo, pero **se ejecuta o no** según la probabilidad (si el número al azar es menor o igual a la probabilidad de mutación, muta). Mutación baja favorece la estabilidad de las buenas soluciones pero puede estancar en óptimos locales; mutación alta explora más pero rompe la herencia y se parece a una búsqueda al azar. En la adaptativa por temperatura **descendente**, la probabilidad baja con el tiempo, favoreciendo la explotación de lo ya encontrado.
 
 > Trampa: si el criterio de paro se basa en la **aptitud**, la corrida **puede no terminar nunca** (si nunca la alcanza). Si se basa en la **cantidad de vueltas**, termina siempre, encuentre o no una solución aceptable.
 

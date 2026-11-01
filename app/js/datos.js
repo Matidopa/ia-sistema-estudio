@@ -14,6 +14,7 @@ export async function texto(ruta) {
 }
 
 export let RUTA = null, PARCIALES = null, GENERADAS = null, CATEDRA = null, EXPLICACIONES = {};
+export let TEORIA = { preguntas: [] }; // banco de práctica de teoría: solo preguntas inventadas
 export const porId = {}; // índice de todas las preguntas (reales y generadas)
 
 export async function cargarTodo() {
@@ -21,14 +22,18 @@ export async function cargarTodo() {
     json('ruta.json'), json('parciales.json'), json('preguntas_generadas.json'), json('catedra.json'),
   ]);
   try { EXPLICACIONES = await json('explicaciones_reales.json'); } catch { EXPLICACIONES = {}; }
+  try { TEORIA = await json('practica_teoria.json'); } catch { TEORIA = { preguntas: [] }; }
   for (const p of PARCIALES.preguntas) { p.tipo = 'real'; porId[p.id] = p; }
   for (const p of GENERADAS.preguntas) { p.tipo = 'ia'; porId[p.id] = p; }
+  for (const p of TEORIA.preguntas) { p.tipo = 'ia'; p.banco = 'teoria'; porId[p.id] = p; }
 }
 
 export const unidad = id => RUTA.unidades.find(u => u.id === id);
 export const examen = id => PARCIALES.examenes.find(e => e.id === id);
 export const realesDeUnidad = uid => PARCIALES.preguntas.filter(p => p.unidad === uid);
 export const generadasDeUnidad = uid => GENERADAS.preguntas.filter(p => p.unidad === uid);
+// Todo lo inventado para practicar teoría (nunca preguntas reales): el banco nuevo más las generadas por IA.
+export const inventadasDeTeoria = () => [...TEORIA.preguntas, ...GENERADAS.preguntas];
 export function refCorta(p) {
   return p.tipo === 'real' ? p.ref : 'Generada por IA';
 }

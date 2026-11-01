@@ -62,7 +62,7 @@ const limpiarSaltos = t => t.trim().replace(/([^\n.:;)?])\n(?=[A-Za-zÁÉÍÓÚ�
 // opciones: modo 'inmediato' | 'examen'; onRespuesta(qid, elegida, correcta); historial: muestra "la última vez bien/mal".
 export function tarjetaPregunta(p, { modo = 'inmediato', numero = null, onRespuesta = null, mostrarRef = true, anexo = true, historial = true, anexoAbierto = false, origen = null } = {}) {
   const est = historial ? P.estadoPregunta(p.id) : null;
-  const ref = p.tipo === 'real' ? p.ref : (p.basada_en && p.basada_en.length ? 'Basada en: ' + p.basada_en.map(id => (porId[id] ? porId[id].ref : id)).join('; ') : '');
+  const ref = p.tipo === 'real' ? p.ref : p.fuente ? 'Basada en: ' + p.fuente : (p.basada_en && p.basada_en.length ? 'Basada en: ' + p.basada_en.map(id => (porId[id] ? porId[id].ref : id)).join('; ') : '');
   const cab = h('div', { class: 'cabeza' },
     h('span', { class: 'etiquetas' },
       numero ? h('b', { class: 'num-preg' }, `${numero}`) : null,

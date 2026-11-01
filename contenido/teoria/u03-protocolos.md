@@ -1,6 +1,6 @@
 ## Para qué sirve
 
-El **Análisis de Protocolos** (AP) es una técnica de educción: se le pide al experto que **piense en voz alta mientras resuelve un problema real**, se graba, se transcribe y se analiza. Sirve para sacar lo que el experto usa pero no sabe explicar conscientemente: sus conceptos, cómo los describe y las reglas con las que decide.
+El **Análisis de Protocolos** (AP) es una técnica de educción: se le pide al experto que **piense en voz alta mientras resuelve un problema real**, se graba, se transcribe y se analiza. Sirve para sacar lo que el experto usa pero no sabe explicar conscientemente: sus conceptos, cómo los describe y las reglas con las que decide. El procedimiento lo definieron **Ericsson y Simon (1993)** sobre protocolos verbales. El objetivo para el experto es **informar todo lo que piensa en el momento** de la resolución; antes, en la **puesta en situación**, el ingeniero le da instrucciones y le propone ejercicios chicos para darle confianza.
 
 En el parcial te dan un **Anexo A** con la transcripción numerada por líneas y te hacen unas 5 preguntas: segmentos de frase, relaciones implícitas, sinónimos, extractos de la tabla y características de un concepto.
 

@@ -33,6 +33,9 @@ Los heurísticos usan una **función heurística** h (un número por nodo que di
 | **Bidireccional** | Dos búsquedas a la vez (desde arriba y desde la solución); al menos una en amplitud | Cuando se encuentran en un estado intermedio | — | Se conocen el estado inicial y el final |
 
 Detalles que usa la cátedra:
+- Amplitud, si el espacio es finito y hay solución, **la encuentra** (recorre todos los nodos). Generación y Prueba en un problema complejo puede consumir muchísimo tiempo.
+- La bidireccional cuesta lo mismo que **dos búsquedas unidireccionales sobre un grafo con la mitad de los nodos**.
+- Aplicaciones: el **motor de inferencias** de los SBC y SET, búsqueda de rutas, problemas de viaje y de optimización, y hasta pruebas de seguridad (el *whitebox fuzzing* SAGE de Microsoft).
 - Se pueden recorrer **de izquierda a derecha** o **de derecha a izquierda** (te lo dice la pregunta). Cambia el orden en que se exploran los hijos.
 - Los ciegos recorren el grafo **como si fuera un árbol**: si un nodo tiene dos padres, aparece dos veces en el recorrido.
 - En profundidad, el "recorrido" de la cátedra muestra los retrocesos: A, B, E, I, E, J (vuelve a E y baja por J).

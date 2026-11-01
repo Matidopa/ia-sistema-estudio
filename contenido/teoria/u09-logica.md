@@ -81,17 +81,38 @@ Ejemplos del parcial: "la poción es bastante poderosa" → μ_PODER(poción) = 
 |---|---|---|
 | Solo V (1) o F (0) | V, F y medio verdadero (0,5) | Cualquier valor continuo en [0, 1] |
 
+**Por qué hace falta** (presentación 2026): la lógica proposicional y la de primer orden usan valores discretos, necesitan datos precisos, **no imitan bien cómo piensan las personas** y es difícil agregarles conocimiento. El **razonamiento aproximado** busca imitar cómo piensan y deciden las personas. Hay dos grandes familias: los **modelos probabilistas** (**modelos de Markov**, que analizan cómo evoluciona un sistema en el tiempo, y **redes bayesianas**, que analizan dependencias probabilísticas) y la **lógica con valores continuos** (difusa). La difusa se basa en el "sentido común" y el lenguaje natural, tolera datos imprecisos, **no hay una transición brusca** de falso a verdadero y es fácil agregarle conocimiento nuevo. **No es un modelo probabilístico.**
+
+**Ejemplo completo de clase: altura y contextura**
+
+Funciones de pertenencia de la altura:
+- μ_ALTA(x) = 1 si x ≥ 1,80 m; entre 0 y 1 si 1,65 < x < 1,80; 0 si x ≤ 1,65.
+- μ_MEDIANA(x) = 1 si x = 1,65 m; entre 0 y 1 entre 1,50 y 1,65 y entre 1,65 y 1,80; 0 si x ≤ 1,50 o x ≥ 1,80.
+- μ_BAJA(x) = 1 si x ≤ 1,50 m y baja hasta 0 en 1,65.
+
+Para una persona de **1,78 m**: μ_ALTA = 0,8; μ_MEDIANA = 0,2; μ_BAJA = 0,0. Se interpreta: "casi alta, un poco mediana y nada baja". Para una muñeca de 14 cm: μ_FINA = 0,9; μ_GRUESA = 0,3; μ_MUY-GRUESA = 0,0.
+
+- SI muñeca fina ENTONCES contextura pequeña → μ_PEQUEÑA = 0,9.
+- SI (alta O mediana) Y muñeca gruesa ENTONCES mediana → min{ max(0,8; 0,2); 0,3 } = min{0,8; 0,3} = **0,3**.
+- SI baja Y NO muñeca fina ENTONCES grande → min{ 0,0; 1 − 0,9 } = **0,0**.
+
+Para resolver una implicación: (a) calcular la pertenencia de cada entrada del antecedente, (b) resolver los operadores del antecedente hasta tener **un solo valor**, (c) **propagar ese valor al consecuente**.
+
 **Operadores difusos**
 
 | Operador | Cálculo |
 |---|---|
 | Conjunción (Y, ∧) | **mínimo** de las pertenencias |
 | Disyunción (O, ∨) | **máximo** |
-| Negación (NO) | 1 − μ |
+| Negación (NO) | 1 − μ (en la presentación: \|1 − μ\|) |
 | Implicación (SI A ENTONCES B) | Se resuelven los operadores del antecedente hasta tener un solo grado y ese grado **se propaga al consecuente** |
 
 Ejemplo: SI (efectos.intensidad = graves) Y (efectos.molestia = molestos) ENTONCES hechizo muy poderoso → PODER(hechizo) = **mínimo**[INTENSIDAD, MOLESTIA]. Con (A ∨ B ∨ C) → D, μ_D = **máximo**(μ_A, μ_B, μ_C).
 
 **Sistemas difusos**: fuzzificación (pasar las entradas a pertenencias) → base de conocimientos con reglas difusas (del experto o de libros) → motor de inferencias → desfuzzificación. Dos modelos: **Mamdani** (simple, pero necesita muchas reglas; combina con centro de masa o promedio del máximo) y **Takagi-Sugeno** (el consecuente es una función lineal y se combina con media ponderada). Se usan en control (frenos ABS, tracción, aire acondicionado). Críticas: aprenden poco, funcionan peor que un modelo matemático cuando lo hay y las reglas no se refuerzan entre sí. Si no hay experto, las reglas se pueden sacar con algoritmos de inducción.
+
+**Aplicaciones** que nombra la cátedra: lavarropas (inferir el mejor modo de lavado), autos inteligentes (frenos y dirección), robots que interactúan con el mundo real, diagnóstico médico, control de semáforos en ciudades inteligentes y administración de energías renovables.
+
+**Sistemas neuro-difusos**: combinan la capacidad de las **redes neuronales para reconocer patrones** con la capacidad de la lógica difusa para **razonar como una persona**. Ganan dos cosas: patrones difusos y **explicabilidad** para lo que aprende la red.
 
 **Incertidumbre e imprecisión**: incertidumbre es falta de seguridad o certeza; imprecisión es vaguedad o desconocimiento del valor exacto de una variable. Vienen del mundo real (complejo, no determinista, con excepciones) y de deficiencias en la información (incompleta, errónea, contradictoria).

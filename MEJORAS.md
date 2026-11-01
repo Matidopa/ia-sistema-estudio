@@ -2,6 +2,12 @@
 
 Resumen para leer con el café. Para tenerlo en tu compu alcanza con `git pull` en la carpeta del sistema (o volver a bajar el repo). Tu `progreso.json` no se toca: la primera vez que abras la app te pide tu nombre y se pasa solo a ese nombre.
 
+## Nuevo: presentaciones de la cátedra y práctica de teoría
+
+- **Teoría revisada contra las 14 presentaciones 2026** (carpeta `teoria/ppt`). Se completó lo que faltaba, sobre todo en Redes Neuronales (Perceptrón paso a paso, cómo diseñar una Backpropagation, Hopfield, convolucionales, preparación de datos, épocas, funciones de error y optimizadores), Algoritmos Genéticos (cromosoma compuesto, propiedades del cromosoma y de la aptitud, pros y contras de cada cruza, población final), Lógica Difusa (ejemplo completo de altura y contextura, modelos probabilistas, neuro-difusos), PLN (lingüística, NLU/NLG, autocorrección, autocompletado, novedades 2026) e Implementación (articulación, formalización, preparación de datos, regla de oro).
+- **Ojo con Algoritmos Genéticos**: la presentación 2026 describe el torneo con k individuos y el ranking por probabilidades, con menos riesgo de convergencia prematura que la ruleta. Los parciales 2020–2025 se corrigieron con la versión clásica (torneo de a pares; ranking siempre elige al mejor y tiene más riesgo). Está marcado en la unidad.
+- **Práctica de teoría** (en el menú): 322 preguntas inventadas, nunca reales, para practicar sin gastar las de los parciales. 200 son nuevas, escritas a partir de las presentaciones, y cada una dice de cuál sale.
+
 ## Lo que pediste
 
 **Guardado simple y visible, todo en la página**

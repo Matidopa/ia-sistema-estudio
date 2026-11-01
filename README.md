@@ -43,6 +43,7 @@ El progreso es uno solo: una unidad aprobada en exprés cuenta en el completo. C
 | **Inicio** | Qué hacer hoy según tu modo, racha, meta diaria, nota estimada y tu dominio por tema (ordenado por cuánto se toma). |
 | **Plan exprés** / **Ruta completa** | Los dos modos. Cada unidad tiene teoría desde cero, las trampas típicas en rojo y un chequeo de 5 preguntas (4 bien = aprobada). |
 | **Práctica** | Por tema y por **tipo de pregunta** (las familias que más se repiten, por ejemplo «La relación establecida entre…», que salió 64 veces). Reales, generadas por IA o generadas por algoritmo. Atajos: <kbd>1</kbd>–<kbd>4</kbd> para responder y <kbd>Enter</kbd> para seguir. |
+| **Práctica de teoría** | 322 preguntas **inventadas** (nunca reales) sobre toda la teoría, basadas en las presentaciones 2026 y los apuntes: practicás sin gastar las preguntas de los parciales. Por tema, con «las que nunca hice» y «las que erré». |
 | **Simulacro de parcial** | 25 preguntas reales mezcladas con la distribución real por tema, con cronómetro, índice, «marcar para revisar», anexo fijo al costado y resultado por tema. |
 | **Parciales reales** | 28 parciales de 2020 a 2025 (684 preguntas), en simulacro o guiado. |
 | **Repaso** | Las preguntas que erraste vuelven con repetición espaciada (1, 3, 7 y 16 días). |
@@ -54,6 +55,8 @@ El progreso es uno solo: una unidad aprobada en exprés cuenta en el completo. C
 
 - **Preguntas reales:** transcriptas de los parciales resueltos. La respuesta correcta es la que marca la resolución.
 - **Explicaciones de las preguntas reales:** las de Búsqueda y Emparrillado las arma el motor paso a paso; las demás (Protocolos, Lógica, RNA, AG, Sistemas, Implementación, PLN y las relaciones de Emparrillado) están escritas con IA en base al material de la cátedra y lo dicen debajo. Las fichas del modo exprés y las tarjetas de memoria también están escritas con IA.
+- **Práctica de teoría:** 200 preguntas nuevas escritas con IA a partir de las presentaciones 2026 de la cátedra (cada una dice de qué presentación sale), más las 122 generadas por IA.
+- **Teoría de las unidades:** revisada contra las 14 presentaciones 2026 de la cátedra; donde la presentación nueva contradice cómo se corrigieron los parciales anteriores (por ejemplo, selección por ranking en AG), la unidad lo marca.
 - **Preguntas generadas por IA:** escritas imitando el estilo de las reales; cada una dice en qué preguntas reales se basa. Están marcadas como *IA*.
 - **Ejercicios de la cátedra:** cada uno indica si la resolución es *oficial* (de la cátedra), *calculada* (por los motores de la app) o *propuesta* (escrita por IA siguiendo el formato oficial).
 - **Motores de búsqueda y emparrillado:** siguen las convenciones de la cátedra y están validados contra 99 preguntas reales de búsqueda, 48 de emparrillado y todas las resoluciones oficiales de las guías (`node tests/test_*.mjs`).
