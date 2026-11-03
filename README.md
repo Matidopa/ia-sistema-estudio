@@ -32,7 +32,7 @@ La carpeta `progreso/` no se sube al repo: con `git pull` tu progreso queda igua
 Al entrar elegís cómo estudiar (y lo cambiás cuando quieras desde Inicio o Ajustes):
 
 - **Modo completo (con tiempo):** las 13 unidades en orden, con toda la teoría, chequeo de cada unidad, ejercicios de la cátedra y práctica.
-- **Modo exprés (jugado de tiempo):** un plan de 14 pasos armado con la frecuencia real de cada tema en los 28 parciales. Arranca con un diagnóstico opcional de 17 preguntas que saltea los temas que ya dominás. Después Emparrillado, Protocolos y Búsqueda (≈15 de las 25 preguntas), con una ficha de lo que sí o sí tenés que saber y práctica dirigida; después un mini simulacro de técnicas, la teoría que más se repite, repaso y un simulacro final de 25. Muestra el tiempo estimado total y de cada paso.
+- **Modo exprés (jugado de tiempo):** un plan de 14 pasos armado con la frecuencia real de cada tema en los parciales reales. Arranca con un diagnóstico opcional de 17 preguntas que saltea los temas que ya dominás. Después Emparrillado, Protocolos y Búsqueda (≈15 de las 25 preguntas), con una ficha de lo que sí o sí tenés que saber y práctica dirigida; después un mini simulacro de técnicas, la teoría que más se repite, repaso y un simulacro final de 25. Muestra el tiempo estimado total y de cada paso.
 
 El progreso es uno solo: una unidad aprobada en exprés cuenta en el completo. Cuando terminás el exprés, la app te muestra qué te queda del camino completo y te deja seguir desde ahí sin repetir.
 
@@ -45,7 +45,7 @@ El progreso es uno solo: una unidad aprobada en exprés cuenta en el completo. C
 | **Práctica** | Por tema y por **tipo de pregunta** (las familias que más se repiten, por ejemplo «La relación establecida entre…», que salió 64 veces). Reales, generadas por IA o generadas por algoritmo. Atajos: <kbd>1</kbd>–<kbd>4</kbd> para responder y <kbd>Enter</kbd> para seguir. |
 | **Práctica de teoría** | 422 preguntas **inventadas** (nunca reales), 100 de ellas **difíciles** (se elige la dificultad), sobre toda la teoría, basadas en las presentaciones 2026 y los apuntes: practicás sin gastar las preguntas de los parciales. Por tema, con «las que nunca hice» y «las que erré». |
 | **Simulacro de parcial** | 25 preguntas reales mezcladas con la distribución real por tema, con cronómetro, índice, «marcar para revisar», anexo fijo al costado y resultado por tema. |
-| **Parciales reales** | 28 parciales de 2020 a 2025 (684 preguntas), en simulacro o guiado. |
+| **Parciales reales** | 29 parciales de 2020 a 2026 (709 preguntas; el de 2026 cargado desde fotos, sin resolución oficial), en simulacro o guiado. |
 | **Repaso** | Las preguntas que erraste vuelven con repetición espaciada (1, 3, 7 y 16 días). |
 | **Tarjetas de memoria** | 146 tarjetas con definiciones, convenciones y trampas, con repaso espaciado. |
 | **Ejercicios de la cátedra** | Las guías prácticas (Búsqueda, Emparrillado, Análisis de Protocolos), los ejercicios de clase y el recuperatorio. En los protocolos marcás cada línea (concepto, característica, valor, relación, operador, sinónimo, metacomentario, incertidumbre) y la app corrige. |
@@ -59,7 +59,7 @@ El progreso es uno solo: una unidad aprobada en exprés cuenta en el completo. C
 - **Teoría de las unidades:** revisada contra las 14 presentaciones 2026 de la cátedra; donde la presentación nueva contradice cómo se corrigieron los parciales anteriores (por ejemplo, selección por ranking en AG), la unidad lo marca.
 - **Preguntas generadas por IA:** escritas imitando el estilo de las reales; cada una dice en qué preguntas reales se basa. Están marcadas como *IA*.
 - **Ejercicios de la cátedra:** cada uno indica si la resolución es *oficial* (de la cátedra), *calculada* (por los motores de la app) o *propuesta* (escrita por IA siguiendo el formato oficial).
-- **Motores de búsqueda y emparrillado:** siguen las convenciones de la cátedra y están validados contra 99 preguntas reales de búsqueda, 48 de emparrillado y todas las resoluciones oficiales de las guías (`node tests/test_*.mjs`).
+- **Motores de búsqueda y emparrillado:** siguen las convenciones de la cátedra y están validados contra 104 preguntas reales de búsqueda, 50 de emparrillado y todas las resoluciones oficiales de las guías (`node tests/test_*.mjs`).
 
 Es material de estudio armado por alumnos, no oficial. Si encontrás un error, avisá.
 

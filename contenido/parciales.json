@@ -1403,6 +1403,60 @@
     "2025-miercoles-t2-x",
     "2025-miercoles-t2-y"
    ]
+  },
+  {
+   "id": "2026-2c-lunes",
+   "titulo": "2026 · 2º cuatrimestre · Lunes",
+   "periodo": "2026-2C",
+   "dia": "Lunes",
+   "tema": "sin resolución oficial",
+   "formato": "actual",
+   "archivo_original": "fotos del parcial tomado el 2/11/2026 (sin resolución oficial)",
+   "nota": "Parcial tomado el 2/11/2026, cargado desde fotos. Todavía no hay resolución oficial: la respuesta marcada la calculó el motor (búsqueda y emparrillado) o se resolvió con IA según las convenciones de la cátedra.",
+   "anexos": {
+    "A": {
+     "titulo": "ANEXO A – ANÁLISIS DE PROTOCOLOS",
+     "img": "img/parciales/2026-2c-lunes/anexo-A.jpg",
+     "texto": "El siguiente texto es una transcripción de un protocolo realizado a un experto ciclista al que se le ha\npedido identificar la bicicleta ideal según las características del trayecto y la persona que la utilizará.\n1   Para realizar este recorrido en bicicleta,   14 Pero bueno... observando mejor el recorrido...\n2   podemos elegir distintos tipos de bicicletas...   15 vemos que algunas calles\n3   Observamos que el trayecto es sobre asfalto   16 están deterioradas y son muy angostas,\n4   lo que permitiría mantener una buena velocidad.   17 lo que podría obligar a\n5   La distancia del trayecto es bastante larga y   18 reducir la velocidad con frecuencia.\n6   hay pocos cruces durante el trayecto.   19 También hay cruces con visibilidad reducida y\n7   El camino tiene pocas pendientes,   20 muy complejos.\n8   lo que reduce el esfuerzo durante el recorrido.   21 El ciclista tiene una\n9   El ciclista tiene alta experiencia,   22 forma de conducción bastante agresiva y\n10 por lo cual, controla muy bien la bicicleta.   23 una capacidad de reacción rápida.\n11 A partir de estas condiciones,   24 Es preferible una bicicleta de montaña\n12 una bicicleta de ruta podría ser una alternativa,   25 para que el ciclista pueda mantener\n13 ya que permite frenadas bruscas en los cruces.   26 una buena estabilidad durante los cruces."
+    },
+    "B": {
+     "titulo": "ANEXO B – ÁRBOL DE BÚSQUEDA",
+     "img": "img/parciales/2026-2c-lunes/anexo-B.png",
+     "texto": "Tenga en cuenta las siguientes consideraciones para la resolución de este ejercicio:\n- Los nodos W y J son solución al problema.\n- El costo de transición de nodo a nodo (si corresponde aplicarlo) se encuentra señalado dentro del árbol.\n- Ante igualdad en el valor heurístico de más de un nodo se debe tomar el nodo más antiguo.\n- Cuanto mayor es el valor heurístico, más deseable es el nodo."
+    },
+    "C": {
+     "titulo": "ANEXO C – EMPARRILLADO: Tipos de Bicicletas",
+     "img": "img/parciales/2026-2c-lunes/anexo-C.jpg",
+     "texto": "(Resolver utilizando el criterio de mínima distancia)\nElementos   Características\nE1: Bicicleta de Ruta   C1: Velocidad (rápida / lenta)\nE2: Bicicleta de Montaña   C2: Peso (liviana / pesada)\nE3: Bicicleta BMX   C3: Versatilidad de Terreno (alta / baja)\nE4: Bicicleta Eléctrica   C4: Comodidad (alta / baja)\n   C5: Costo de Mantenimiento (alto / bajo)\nA partir de una parrilla evaluativa, evaluada en una escala del [1,5] se genera la matriz de distancias entre elementos y la matriz de distancias entre características donde se observan las distancias d1 y d2.\nElementos: E1-E2 11 · E1-E3 4 · E1-E4 10 · E2-E3 12 · E2-E4 5 · E3-E4 13\nCaracterísticas (d1 arriba de la diagonal, d2 abajo):\n      C1  C2  C3  C4  C5\nC1    –   3   12  10  8\nC2    7   –   8   11  9\nC3    9   11  –   4   8\nC4    13  13  12  –   13\nC5    3   6   11  10  –\nEn el mundo del ciclismo, existen distintos tipos de bicicletas diseñadas para necesidades muy diferentes, cada una con ventajas y limitaciones propias. En este sentido, se observa que las bicicletas más livianas logran alcanzar mayor velocidad, es decir que son más rápidas, debido a que su menor masa facilita la aceleración y requiere un menor esfuerzo del ciclista, mientras que las más pesadas resultan considerablemente más lentas al demandar una mayor fuerza para su desplazamiento. Además, las bicicletas más rápidas tienden a tener un costo de mantenimiento bajo, ya que suele apoyarse en una mecánica más simple. También se identificó que las bicicletas más livianas suelen tener un alto costo de mantenimiento, porque si bien tienen componentes más baratos, suelen romperse más seguido. En cuanto a la versatilidad del terreno, se observa que las bicicletas que tienen una alta versatilidad que son capaces de adaptarse a una mayor variedad de superficies suelen ofrecer también una alta comodidad, ya que incorporan diseños y componentes preparados para absorber mejor las irregularidades del camino. En cambio, los modelos de baja versatilidad tienen una baja comodidad fuera del terreno específico para el cual fueron diseñadas. Por otro lado, existen modelos livianos que pueden ser muy versátiles, y lo mismo ocurre entre los más pesados. Finalmente, en cuanto a la comodidad, se encontró que las opciones más livianas suelen ser más incómodas, dado que están pensadas para viajes de corta distancia, donde se prioriza la velocidad y el precio de venta."
+    }
+   },
+   "preguntas": [
+    "2026-2c-lunes-a",
+    "2026-2c-lunes-b",
+    "2026-2c-lunes-c",
+    "2026-2c-lunes-d",
+    "2026-2c-lunes-e",
+    "2026-2c-lunes-f",
+    "2026-2c-lunes-g",
+    "2026-2c-lunes-h",
+    "2026-2c-lunes-i",
+    "2026-2c-lunes-j",
+    "2026-2c-lunes-k",
+    "2026-2c-lunes-l",
+    "2026-2c-lunes-m",
+    "2026-2c-lunes-n",
+    "2026-2c-lunes-o",
+    "2026-2c-lunes-p",
+    "2026-2c-lunes-q",
+    "2026-2c-lunes-r",
+    "2026-2c-lunes-s",
+    "2026-2c-lunes-t",
+    "2026-2c-lunes-u",
+    "2026-2c-lunes-v",
+    "2026-2c-lunes-w",
+    "2026-2c-lunes-x",
+    "2026-2c-lunes-y"
+   ]
   }
  ],
  "preguntas": [
@@ -12083,6 +12137,421 @@
     "solo se cumple cuando ambos valores de pertenencia son 1."
    ],
    "correcta": 3
+  },
+  {
+   "id": "2026-2c-lunes-a",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta a",
+   "letra": "a",
+   "unidad": "u5-busqueda",
+   "enunciado": "La lista final de nodos generados que se obtiene utilizando el método de búsqueda “Escalada\nSimple (recorriendo de izquierda a derecha el árbol)” es …",
+   "opciones": [
+    "N, L, X.",
+    "N, L, X, J.",
+    "N, F, E, R.",
+    "N, F, P, E, R."
+   ],
+   "correcta": 4,
+   "nota": "Sin resolución oficial todavía.",
+   "anexo": "B"
+  },
+  {
+   "id": "2026-2c-lunes-b",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta b",
+   "letra": "b",
+   "unidad": "u5-busqueda",
+   "enunciado": "La lista final de nodos abiertos que se obtiene utilizando el método de búsqueda “Beam Search\nn=1” es …",
+   "opciones": [
+    "E (80), R (300).",
+    "E (80).",
+    "R (300).",
+    "la lista queda vacía."
+   ],
+   "correcta": 4,
+   "nota": "Sin resolución oficial todavía.",
+   "anexo": "B"
+  },
+  {
+   "id": "2026-2c-lunes-c",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta c",
+   "letra": "c",
+   "unidad": "u5-busqueda",
+   "enunciado": "Si se recorre el árbol utilizando el método de búsqueda “A*”, en la iteración N° 3 del algoritmo,\nel valor del nodo C es …",
+   "opciones": [
+    "C (40).",
+    "C (50).",
+    "C (55).",
+    "C (90)."
+   ],
+   "correcta": 1,
+   "nota": "Sin resolución oficial todavía.",
+   "anexo": "B"
+  },
+  {
+   "id": "2026-2c-lunes-d",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta d",
+   "letra": "d",
+   "unidad": "u5-busqueda",
+   "enunciado": "De los siguientes, el único método de búsqueda, que alcanza la solución J es …",
+   "opciones": [
+    "Beam Search n=2.",
+    "Escalada Simple (recorriendo de derecha a izquierda el árbol).",
+    "Escalada por Máxima Pendiente.",
+    "Primero en Profundidad (recorriendo de izquierda a derecha el árbol)."
+   ],
+   "correcta": 2,
+   "nota": "Sin resolución oficial todavía.",
+   "anexo": "B"
+  },
+  {
+   "id": "2026-2c-lunes-e",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta e",
+   "letra": "e",
+   "unidad": "u5-busqueda",
+   "enunciado": "De los siguientes, el único método de búsqueda, que no alcanza ninguna solución es …",
+   "opciones": [
+    "Escalada por Máxima Pendiente.",
+    "Primero en Profundidad (recorriendo de izquierda a derecha el árbol).",
+    "Primero en Profundidad (recorriendo de derecha a izquierda el árbol).",
+    "Primero en Amplitud (recorriendo de izquierda a derecha el árbol)."
+   ],
+   "correcta": 1,
+   "nota": "Sin resolución oficial todavía.",
+   "anexo": "B"
+  },
+  {
+   "id": "2026-2c-lunes-f",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta f",
+   "letra": "f",
+   "unidad": "u11-implementacion",
+   "enunciado": "[El enunciado de esta pregunta quedó cortado en la foto. Por las opciones, pregunta por las técnicas de extracción y educción en el proceso de implementación.] …",
+   "opciones": [
+    "se utilizan durante la fase de Definición del Problema.",
+    "permiten recolectar conocimientos, hechos y necesidades.",
+    "necesitan contar con fuentes de información privadas.",
+    "todas las opciones son correctas."
+   ],
+   "correcta": 4,
+   "nota": "El enunciado no se ve en la foto. La respuesta \"todas\" es la que marcó un compañero; ojo: \"necesitan fuentes privadas\" solo vale para la educción, así que si el enunciado habla de extracción y educción juntas, la respuesta podría cambiar. Sin resolución oficial todavía."
+  },
+  {
+   "id": "2026-2c-lunes-g",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta g",
+   "letra": "g",
+   "unidad": "u6-sistemas",
+   "enunciado": "Los Sistemas Inteligentes que cuentan con un módulo específico para poder solicitar al usuario\nmás datos sobre el problema a resolver son …",
+   "opciones": [
+    "los Algoritmos Genéticos.",
+    "los Sistemas Expertos Tradicionales.",
+    "los Sistemas Basados en Conocimientos.",
+    "las Redes Neuronales Artificiales."
+   ],
+   "correcta": 2,
+   "nota": "Sin resolución oficial todavía."
+  },
+  {
+   "id": "2026-2c-lunes-h",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta h",
+   "letra": "h",
+   "unidad": "u8-rna",
+   "enunciado": "Para evaluar la capacidad de generalización de un modelo construido mediante el uso de un\nAlgoritmo de Inducción se deben usar los datos …",
+   "opciones": [
+    "correspondientes al problema que fueron usados en el entrenamiento.",
+    "correspondientes al problema que no fueron usados en el entrenamiento.",
+    "correspondientes a otro problema del mismo dominio.",
+    "todas las opciones son correctas."
+   ],
+   "correcta": 2,
+   "nota": "Sin resolución oficial todavía."
+  },
+  {
+   "id": "2026-2c-lunes-i",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta i",
+   "letra": "i",
+   "unidad": "u11-implementacion",
+   "enunciado": "Si al estudiar la Viabilidad de los objetivos del Sistema Inteligente se determina que ninguna\ntecnología de la Inteligencia Artificial actual los puede cumplir por ser demasiados complejos,\nentonces …",
+   "opciones": [
+    "el proyecto es viable para ser implementado.",
+    "el proyecto NO es viable porque no es posible aplicar IA.",
+    "el proyecto NO es viable porque no se justifica aplicar IA.",
+    "el proyecto se considera viable sólo si el Retorno de Inversión (ROI) elevado al cuadrado no es positivo."
+   ],
+   "correcta": 2,
+   "nota": "Sin resolución oficial todavía."
+  },
+  {
+   "id": "2026-2c-lunes-j",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta j",
+   "letra": "j",
+   "unidad": "u8-rna",
+   "enunciado": "En RNAs supervisadas, si se usa un tamaño de lote (“batch size”) igual a la cantidad total de\nejemplos de entrenamiento, es decir con “Procesamiento Full Batch”, entonces los pesos de\nlas conexiones …",
+   "opciones": [
+    "se van a modificar una única vez y sólo en la primera época del proceso de entrenamiento.",
+    "se van a modificar una única vez por cada época del proceso de entrenamiento.",
+    "se van a modificar muchas veces por cada época del proceso de entrenamiento.",
+    "se van a modificar muchas veces pero sólo en la última época del proceso de entrenamiento."
+   ],
+   "correcta": 2,
+   "nota": "Sin resolución oficial todavía."
+  },
+  {
+   "id": "2026-2c-lunes-k",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta k",
+   "letra": "k",
+   "unidad": "u10-pln",
+   "enunciado": "Si un estudio cinematográfico necesita generar en forma automática guiones para futuras\npelículas aprendiendo de historias de películas exitosas, entonces se podría construir un\nSistema Inteligente con …",
+   "opciones": [
+    "una RNA Perceptrón.",
+    "un Sistema Difuso Tradicional.",
+    "Procesamiento del Lenguaje Natural.",
+    "un Sistema Basado en Conocimientos."
+   ],
+   "correcta": 3,
+   "nota": "Sin resolución oficial todavía."
+  },
+  {
+   "id": "2026-2c-lunes-l",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta l",
+   "letra": "l",
+   "unidad": "u7-ag",
+   "enunciado": "Si el mismo estudio cinematográfico además quiere utilizar un Algoritmo Genético, entonces\nse podría aplicar para …",
+   "opciones": [
+    "identificar el nombre del actor que aparece en una imagen de una película.",
+    "calcular las posibles demoras en el rodaje de una película en base a las características de su director.",
+    "estimar el costo que tendrá el rodaje de una película en base a un conjunto de características conocidas.",
+    "determinar la mejor combinación de actores disponibles para asignar a diferentes películas minimizando posibles interrupciones en el rodaje."
+   ],
+   "correcta": 4,
+   "nota": "Sin resolución oficial todavía."
+  },
+  {
+   "id": "2026-2c-lunes-m",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta m",
+   "letra": "m",
+   "unidad": "u8-rna",
+   "enunciado": "La principal ventaja de una RNA Convolucional es su capacidad para …",
+   "opciones": [
+    "encontrar la mejor combinación de valores de entrada que maximicen la función de activación.",
+    "determinar automáticamente la cantidad óptima de capas ocultas que se deben utilizar.",
+    "aprender a partir de ejemplos de datos del estilo (entrada, salida) disponibles.",
+    "explicar en forma sencilla la validez de la salida generada."
+   ],
+   "correcta": 3,
+   "nota": "Las otras tres son falsas para cualquier RNA (no optimiza entradas, no define sola su topología y es caja negra), por eso queda la 3 por descarte. Sin resolución oficial todavía."
+  },
+  {
+   "id": "2026-2c-lunes-n",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta n",
+   "letra": "n",
+   "unidad": "u7-ag",
+   "enunciado": "Si se compara el método de Control sobre Número Esperado con el método de Ruleta, se puede\nver que …",
+   "opciones": [
+    "ambos métodos siempre seleccionan al mejor individuo de la población actual.",
+    "uno siempre selecciona al mejor individuo de la población actual, y el otro puede seleccionarlo o no.",
+    "uno siempre selecciona al mejor individuo de la población actual, pero el otro nunca lo selecciona.",
+    "ninguno de los dos métodos selecciona al mejor individuo de la población actual."
+   ],
+   "correcta": 2,
+   "nota": "Sin resolución oficial todavía."
+  },
+  {
+   "id": "2026-2c-lunes-o",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta o",
+   "letra": "o",
+   "unidad": "u7-ag",
+   "enunciado": "En un Algoritmo Genético, cada individuo …",
+   "opciones": [
+    "sirve como entrada a la función de aptitud.",
+    "representa una posible solución al problema.",
+    "tiene un cromosoma formado por varios genes.",
+    "todas las opciones son correctas."
+   ],
+   "correcta": 4,
+   "nota": "Sin resolución oficial todavía."
+  },
+  {
+   "id": "2026-2c-lunes-p",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta p",
+   "letra": "p",
+   "unidad": "u3-protocolos",
+   "enunciado": "Una relación implícita podría ser …",
+   "opciones": [
+    "trayecto —(es un)→ camino",
+    "trayecto —(tiene)→ calles deterioradas",
+    "trayecto —(es realizado por)→ ciclista",
+    "trayecto —(tiene distancia)→ bastante largo"
+   ],
+   "correcta": 3,
+   "nota": "\"Camino\" es sinónimo de trayecto; \"calles deterioradas\" mezcla concepto y valor; la distancia es una característica explícita (línea 5). Que el ciclista realiza el trayecto nunca se dice: es la relación implícita. Sin resolución oficial todavía.",
+   "anexo": "A"
+  },
+  {
+   "id": "2026-2c-lunes-q",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta q",
+   "letra": "q",
+   "unidad": "u3-protocolos",
+   "enunciado": "El segmento de frase completo “lo que podría obligar a” …",
+   "opciones": [
+    "es parte de un metacomentario.",
+    "es una incertidumbre.",
+    "es un operador.",
+    "es una relación."
+   ],
+   "correcta": 1,
+   "nota": "Igual que en los parciales 2023–2025, los segmentos \"lo que podría…\" / \"lo que permitiría…\" que explican una consecuencia se codifican como metacomentarios, aunque tengan \"podría\". Sin resolución oficial todavía.",
+   "anexo": "A"
+  },
+  {
+   "id": "2026-2c-lunes-r",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta r",
+   "letra": "r",
+   "unidad": "u3-protocolos",
+   "enunciado": "El siguiente extracto de la tabla de conceptos-características-valores es …\nConceptos   Características   Valores\nciclista   experiencia   alta\nforma de conducción   bastante agresiva\ncapacidad de reacción   rápida",
+   "opciones": [
+    "correcto.",
+    "incorrecto porque falta la característica “estabilidad” con su valor “buena”.",
+    "incorrecto porque falta la característica implícita “control de la bicicleta” con su valor “muy bien”.",
+    "incorrecto porque falta la característica “velocidad” con su valor “buena”."
+   ],
+   "correcta": 1,
+   "nota": "\"Por lo cual, controla muy bien la bicicleta\" (línea 10) y \"para que el ciclista pueda mantener una buena estabilidad\" (líneas 25-26) son metacomentarios; la velocidad es del trayecto. La tabla está completa. Sin resolución oficial todavía.",
+   "anexo": "A"
+  },
+  {
+   "id": "2026-2c-lunes-s",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta s",
+   "letra": "s",
+   "unidad": "u3-protocolos",
+   "enunciado": "Si “cruce” fuera considerado como concepto, algunas de sus características\nimplícitas/explícitas asociadas serían …",
+   "opciones": [
+    "“cantidad”, “visibilidad”, “complejidad”, “tipo de frenadas”.",
+    "“cantidad”, “visibilidad”, “complejidad”, “tipo de estabilidad”.",
+    "“cantidad”, “visibilidad”, “complejidad”, “tipo de frenadas”, “tipo de estabilidad”.",
+    "“cantidad”, “visibilidad”, “complejidad”."
+   ],
+   "correcta": 4,
+   "nota": "Pocos cruces (cantidad), visibilidad reducida y muy complejos. Las frenadas bruscas y la estabilidad aparecen dentro de metacomentarios y son de la bicicleta, no del cruce. Sin resolución oficial todavía.",
+   "anexo": "A"
+  },
+  {
+   "id": "2026-2c-lunes-t",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta t",
+   "letra": "t",
+   "unidad": "u3-protocolos",
+   "enunciado": "El segmento de frase completo “son muy angostas” es …",
+   "opciones": [
+    "conocimiento procedimental",
+    "conocimiento declarativo.",
+    "conocimiento público.",
+    "metaconocimiento."
+   ],
+   "correcta": 2,
+   "nota": "Sin resolución oficial todavía.",
+   "anexo": "A"
+  },
+  {
+   "id": "2026-2c-lunes-u",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta u",
+   "letra": "u",
+   "unidad": "u4-emparrillado",
+   "enunciado": "Considerando los resultados del emparrillado, la cantidad de grupos resultantes del análisis de\nlas características es …",
+   "opciones": [
+    "1 grupo.",
+    "2 grupos.",
+    "3 grupos.",
+    "4 grupos."
+   ],
+   "correcta": 2,
+   "nota": "Sin resolución oficial todavía.",
+   "anexo": "C"
+  },
+  {
+   "id": "2026-2c-lunes-v",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta v",
+   "letra": "v",
+   "unidad": "u4-emparrillado",
+   "enunciado": "Considerando los resultados del emparrillado, los grupos resultantes del análisis de los\nelementos son …",
+   "opciones": [
+    "(E1, E2, E3, E4).",
+    "(E1, E4); (E2, E3).",
+    "(E1, E3); (E2, E4).",
+    "(E1, E2, E3); E4."
+   ],
+   "correcta": 3,
+   "nota": "Sin resolución oficial todavía.",
+   "anexo": "C"
+  },
+  {
+   "id": "2026-2c-lunes-w",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta w",
+   "letra": "w",
+   "unidad": "u4-emparrillado",
+   "enunciado": "Considerando los resultados del emparrillado, la relación establecida entre C1 y C2 es una …",
+   "opciones": [
+    "relación paralela.",
+    "relación ortogonal.",
+    "relación no tipificada.",
+    "no existe relación."
+   ],
+   "correcta": 1,
+   "nota": "Liviana → rápida y pesada → lenta: dos flechas en el mismo sentido (X→A, Y→B) → paralela. C1 y C2 están en el mismo grupo (C1, C2, C5). Sin resolución oficial todavía.",
+   "anexo": "C"
+  },
+  {
+   "id": "2026-2c-lunes-x",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta x",
+   "letra": "x",
+   "unidad": "u4-emparrillado",
+   "enunciado": "Considerando los resultados del emparrillado, la relación establecida entre C1 y C5 es una …",
+   "opciones": [
+    "relación paralela.",
+    "relación ortogonal.",
+    "relación no tipificada.",
+    "no existe relación."
+   ],
+   "correcta": 3,
+   "nota": "El texto solo dice \"las más rápidas tienden a tener costo de mantenimiento bajo\": una única flecha cruzada (rápida → bajo, A→Y). Con la tabla de patrones de la cátedra eso es no tipificada; la ortogonal es una flecha \"derecha\" (A→X o B→Y) o dos al mismo polo. Ojo: un compañero marcó ortogonal; conviene confirmarlo con la resolución oficial. Sin resolución oficial todavía.",
+   "anexo": "C"
+  },
+  {
+   "id": "2026-2c-lunes-y",
+   "examen": "2026-2c-lunes",
+   "ref": "2026 · 2º cuatrimestre · Lunes · pregunta y",
+   "letra": "y",
+   "unidad": "u4-emparrillado",
+   "enunciado": "Considerando los resultados del emparrillado, la relación establecida entre C2 y C3 es una …",
+   "opciones": [
+    "relación paralela.",
+    "relación ortogonal.",
+    "relación no tipificada.",
+    "no existe relación."
+   ],
+   "correcta": 4,
+   "nota": "C2 quedó en el grupo (C1, C2, C5) y C3 en (C3, C4): grupos distintos → no existe relación, aunque el texto diga algo de liviana y versátil. Sin resolución oficial todavía.",
+   "anexo": "C"
   }
  ]
 }
