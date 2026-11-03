@@ -6,6 +6,7 @@ import { vistaSimuladores } from './vistas/simuladores.js';
 import { vistaBienvenida } from './vistas/bienvenida.js';
 import { vistaTarjetas } from './vistas/tarjetas.js';
 import { vistaTeoria } from './vistas/teoria.js';
+import { vistaEstilo } from './vistas/estilo.js';
 import { vistaExpres, vistaPasoExpres, bloqueFaltante } from './vistas/expres.js';
 import { sesion, pistaTeclado } from './vistas/sesion.js';
 import { examen, armarSimulacro } from './vistas/examen.js';
@@ -25,6 +26,7 @@ const RUTAS = [
   [/^#\/unidad\/([\w-]+)$/, vistaUnidad],
   [/^#\/practica(\?.*)?$/, vistaPractica],
   [/^#\/teoria(\?.*)?$/, vistaTeoria],
+  [/^#\/estilo(\?.*)?$/, vistaEstilo],
   [/^#\/examen$/, vistaExamen],
   [/^#\/parciales$/, vistaParciales],
   [/^#\/parcial\/([\w-]+)(\?.*)?$/, vistaParcial],

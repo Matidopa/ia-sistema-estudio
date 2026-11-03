@@ -1,0 +1,1989 @@
+{
+ "nota": "Preguntas inventadas con IA imitando el estilo de las teóricas de los parciales 2024–2026 (casos, \"si pasa X, entonces…\", comparaciones y opciones gemelas). No son preguntas reales.",
+ "preguntas": [
+  {
+   "id": "ep-u6-01",
+   "unidad": "u6-sistemas",
+   "tema": "Qué tecnología elegir",
+   "enunciado": "Una cadena de farmacias quiere armar los turnos de sus 300 empleados en 40 sucursales respetando francos y licencias, y minimizando las horas extra …",
+   "opciones": [
+    "entonces se debe utilizar un Algoritmo Genético dado que es un problema de clasificación.",
+    "entonces se debe utilizar Algoritmos de Inducción dado que es un problema de optimización.",
+    "entonces se debe utilizar un Algoritmo Genético dado que es un problema de optimización.",
+    "entonces se debe utilizar una RNA Hetero-Asociativa dado que es un problema de predicción."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "\"Armar la mejor combinación… minimizando…\" es **optimización**, y para optimizar se usa un **Algoritmo Genético**. Fijate que en las opciones hay que acertar las dos cosas: la tecnología y el tipo de problema. La segunda tiene la tecnología bien pero el tipo mal; la tercera, el tipo bien pero la tecnología mal (inducción genera reglas de clasificación).",
+   "fuente": "Parciales 2024 (hospital) · estilo"
+  },
+  {
+   "id": "ep-u6-02",
+   "unidad": "u6-sistemas",
+   "tema": "Qué tecnología elegir",
+   "enunciado": "Una aseguradora tiene 5 años de siniestros ya marcados como \"fraude\" o \"no fraude\" y necesita conocer las reglas que permiten reconocer un fraude, para que los analistas las puedan leer …",
+   "opciones": [
+    "entonces se debe utilizar una RNA Backpropagation dado que es un problema de clasificación.",
+    "entonces se debe utilizar Algoritmos de Inducción dado que se buscan las reglas de una clasificación.",
+    "entonces se debe utilizar un Algoritmo Genético dado que es un problema de optimización.",
+    "entonces se debe utilizar un Sistema Experto Tradicional dado que las reglas ya están educidas."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Es clasificación con datos etiquetados, así que una RNA clasificaría bien… pero el caso pide **las reglas** y que se puedan **leer**: eso solo lo da un **Algoritmo de Inducción** (árbol de decisión → reglas SI-ENTONCES). La RNA es caja negra. El SET no sirve porque nadie edució las reglas: hay que descubrirlas en los datos.",
+   "fuente": "Clase 5 · Machine Learning"
+  },
+  {
+   "id": "ep-u6-03",
+   "unidad": "u6-sistemas",
+   "tema": "Según lo que tenga la organización",
+   "enunciado": "Una bodega no tiene datos históricos ni reglas escritas, pero su enólogo conoce criterios aproximados de qué hace \"mejor\" a una mezcla de uvas. Para encontrar la mezcla ideal, la tecnología que se podría utilizar en la construcción del Modelo es …",
+   "opciones": [
+    "Machine Learning.",
+    "Inteligencia Computacional.",
+    "IA Tradicional.",
+    "todas las anteriores."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Sin datos no hay ML; sin reglas no hay IA Tradicional. Lo que hay son **heurísticas** (\"criterios aproximados\"), y con heurísticas se puede armar la **función de aptitud** de un AG: **Inteligencia Computacional**. Es la misma lógica de la pregunta de 2025, disfrazada de caso.",
+   "fuente": "Parcial 2025 Miércoles T2 · estilo"
+  },
+  {
+   "id": "ep-u6-04",
+   "unidad": "u6-sistemas",
+   "tema": "Según lo que tenga la organización",
+   "enunciado": "Una empresa quiere un Sistema Inteligente para un problema del que no tiene datos, ni reglas, ni heurísticas conocidas. Entonces …",
+   "opciones": [
+    "se debe usar Machine Learning, porque aprende solo.",
+    "no es posible aplicar IA hasta conseguir al menos una de esas fuentes.",
+    "se debe usar Inteligencia Computacional, porque no necesita conocimiento previo.",
+    "se puede usar cualquier tecnología, porque todas aprenden del problema."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Toda tecnología necesita algo: ML necesita **datos**, IA Tradicional **reglas**, Inteligencia Computacional **heurísticas** (para la función de aptitud). Sin ninguna de las tres no hay de dónde sacar el conocimiento. \"Un AG no necesita conocimiento\" es falso: el conocimiento está en la aptitud.",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ep-u6-05",
+   "unidad": "u6-sistemas",
+   "tema": "Software tradicional vs SI",
+   "enunciado": "Si se compara un sistema de facturación con un Sistema Experto que diagnostica fallas, se puede ver que ambos …",
+   "opciones": [
+    "son flexibles y robustos ante cambios del dominio.",
+    "se aplican a tareas sistemáticas y procedimentales.",
+    "se implementan en forma declarativa.",
+    "buscan satisfacer los deseos y necesidades de sus stakeholders."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Lo **único en común** según la cátedra es resolver problemas y satisfacer deseos y necesidades de los stakeholders. Declarativo y flexible/robusto son solo del sistema inteligente; sistemático, procedimental y algorítmico, solo del software tradicional.",
+   "fuente": "Parcial 2025 Lunes T2 · estilo"
+  },
+  {
+   "id": "ep-u6-06",
+   "unidad": "u6-sistemas",
+   "tema": "Software tradicional vs SI",
+   "enunciado": "Si se compara el mantenimiento de un software tradicional con el de un Sistema Inteligente, se puede ver que …",
+   "opciones": [
+    "el Sistema Inteligente no requiere mantenimiento porque aprende solo.",
+    "ambos tienen mantenimiento perfectivo, porque los dos mejoran con el uso.",
+    "el del software tradicional es correctivo y adaptativo, y el del Sistema Inteligente es perfectivo.",
+    "el del software tradicional es perfectivo, y el del Sistema Inteligente es correctivo y adaptativo."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Tabla de la cátedra: tradicional → **correctivo y adaptativo**; inteligente → **perfectivo** (se mejora el conocimiento). La segunda es la misma frase invertida, la trampa típica. Y un SI sí se mantiene (puede cambiar hasta la tecnología).",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ep-u6-07",
+   "unidad": "u6-sistemas",
+   "tema": "Qué hace inteligente a un sistema",
+   "enunciado": "Un Sistema Inteligente recibe un caso que nunca había visto y da una respuesta razonable, aunque no la mejor posible. Esto es consistente con que los Sistemas Inteligentes son …",
+   "opciones": [
+    "flexibles y robustos, pero no infalibles.",
+    "deterministas, porque siempre responden algo.",
+    "omniscientes, porque resuelven casos que no conocían.",
+    "infalibles dentro de su dominio, porque son racionales."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Un SI es racional, **no omnisciente, no infalible**, puede aprender y es **flexible y robusto**. Responder bien ante lo nuevo es robustez; no dar la mejor respuesta es no ser infalible. Racional no quiere decir que nunca se equivoque.",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ep-u6-08",
+   "unidad": "u6-sistemas",
+   "tema": "Componentes del SET",
+   "enunciado": "Durante una consulta, el Sistema Experto Tradicional de una aseguradora necesita saber si el auto tiene equipo de GNC, y ese dato no fue cargado. El componente que interviene es …",
+   "opciones": [
+    "el Manejador de Comunicaciones.",
+    "el Trazador de Explicaciones.",
+    "el Trazador de Consultas.",
+    "la Memoria de Trabajo."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Pedirle **más datos al usuario** durante la resolución es el **Trazador de Consultas** (el módulo que diferencia al SET, como en el parcial de 2026). El de Explicaciones justifica el resultado; la Memoria de Trabajo guarda la traza; el Manejador de Comunicaciones es el ingreso inicial de datos del problema.",
+   "fuente": "Parcial 2026 Lunes · estilo"
+  },
+  {
+   "id": "ep-u6-09",
+   "unidad": "u6-sistemas",
+   "tema": "Componentes del SET",
+   "enunciado": "Después de recibir un diagnóstico, el usuario de un Sistema Experto Tradicional pregunta \"¿por qué?\". El sistema le responde usando …",
+   "opciones": [
+    "el Trazador de Consultas, que lee la Base de Datos.",
+    "el Trazador de Explicaciones, que lee la Base de Conocimientos.",
+    "el Motor de Inferencias, que vuelve a aplicar todas las reglas.",
+    "el Trazador de Explicaciones, que lee la Memoria de Trabajo."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "La **Memoria de Trabajo** registra lo que el motor fue aplicando (la traza) y el **Trazador de Explicaciones** la lee para explicar cómo llegó. La primera opción es gemela: componente correcto, fuente equivocada (la Base de Conocimientos tiene todas las reglas, no las que se usaron en este caso).",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ep-u6-10",
+   "unidad": "u6-sistemas",
+   "tema": "SBC y SET",
+   "enunciado": "Si se compara un Sistema Basado en Conocimientos con un Sistema Experto Tradicional, se puede ver que …",
+   "opciones": [
+    "ninguno de los dos puede justificar sus resultados ante el usuario.",
+    "ambos usan conocimiento privado de expertos, pero solo uno tiene base de conocimientos explícita.",
+    "ambos tienen base de conocimientos explícita, pero solo uno usa conocimiento privado de expertos.",
+    "solo uno tiene base de conocimientos explícita, y es el que usa fuentes públicas."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "SBC y SET **siempre** tienen base de conocimientos explícita. La diferencia es **la fuente**: el SBC usa fuentes **públicas**; el SET, **privadas y públicas**. La primera distractora invierte justo eso. Y el SET sí justifica (Trazador de Explicaciones).",
+   "fuente": "Parcial 2024 · estilo"
+  },
+  {
+   "id": "ep-u6-11",
+   "unidad": "u6-sistemas",
+   "tema": "Sistema Experto",
+   "enunciado": "Un banco entrenó una Red Neuronal con miles de operaciones que sus analistas expertos marcaron como sospechosas o no. Ese sistema …",
+   "opciones": [
+    "es un Sistema Experto Tradicional, porque usa conocimiento privado.",
+    "no es un Sistema Experto, porque no tiene base de conocimientos.",
+    "es un Sistema Experto, aunque no tiene base de conocimientos explícita.",
+    "es un Sistema Basado en Conocimientos, porque su conocimiento sale de los datos."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Un Sistema Experto emula a un experto en un dominio acotado y **puede o no** tener base de conocimientos explícita: una RNA entrenada con el criterio de los analistas lo es. No es SBC ni SET porque esos **siempre** tienen base de conocimientos explícita.",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ep-u6-12",
+   "unidad": "u6-sistemas",
+   "tema": "Explícito e implícito",
+   "enunciado": "Si el usuario de un Sistema Inteligente puede leer el conocimiento que el sistema usa para resolver un problema, entonces …",
+   "opciones": [
+    "el sistema representa el conocimiento en forma implícita, pero lo muestra con el trazador.",
+    "el sistema tiene base de conocimientos y representa el conocimiento en forma explícita.",
+    "el sistema fue construido con Machine Learning, que guarda reglas legibles.",
+    "el sistema usa fuentes públicas, porque las privadas no se pueden leer."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Que se pueda leer = **explícito** = hay base de conocimientos (visión tradicional). En ML el conocimiento queda guardado en la tecnología (por ejemplo, en los pesos) y no se lee. Público/privado es otra cosa: habla del origen, no de la forma.",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ep-u6-13",
+   "unidad": "u6-sistemas",
+   "tema": "Familias de tecnologías",
+   "enunciado": "Un sistema que optimiza rutas de reparto imitando cómo las hormigas dejan feromonas en los caminos más cortos pertenece a …",
+   "opciones": [
+    "el Machine Learning, porque mejora con los recorridos.",
+    "la IA Tradicional, porque usa heurísticas.",
+    "la Inteligencia Computacional.",
+    "ninguna familia, porque no es un AG ni una RNA."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Inteligencia Computacional = tecnologías de **inspiración biológica**: RNA, computación evolutiva, **inteligencia de enjambre** (como las hormigas) y sistemas inmunológicos artificiales. No se limita a AG y RNA.",
+   "fuente": "Parcial 2025 Lunes T2 · estilo"
+  },
+  {
+   "id": "ep-u6-14",
+   "unidad": "u6-sistemas",
+   "tema": "Tipos de problema",
+   "enunciado": "Una app de delivery quiere identificar cuántos minutos va a tardar cada pedido en llegar, usando el historial de entregas …",
+   "opciones": [
+    "entonces se podría utilizar una RNA Backpropagation dado que es un problema de clasificación.",
+    "entonces se podría utilizar un Algoritmo Genético dado que hay que encontrar el mejor tiempo.",
+    "entonces se podría utilizar una RNA de Hopfield dado que hay que completar un dato faltante.",
+    "entonces se podría utilizar una RNA Backpropagation dado que es un problema de predicción."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Empieza con \"identificar\", pero la salida es **un número** (minutos): es **predicción/estimación**. Con datos históricos etiquetados → Backpropagation. La primera opción tiene la tecnología bien y el tipo mal, por la palabra \"identificar\". El AG no estima: busca la mejor combinación.",
+   "fuente": "Clase 2 · Tipos de problema"
+  },
+  {
+   "id": "ep-u6-15",
+   "unidad": "u6-sistemas",
+   "tema": "Tipos de problema",
+   "enunciado": "Un municipio quiere derivar cada reclamo vecinal a una de sus 6 áreas, que ya están definidas, usando 3 años de reclamos que ya fueron derivados a mano. Entonces podríamos utilizar …",
+   "opciones": [
+    "Redes Neuronales Artificiales de Aprendizaje Supervisado.",
+    "Algoritmos de Clustering de Aprendizaje No Supervisado.",
+    "Algoritmos de Inducción de Aprendizaje No Supervisado.",
+    "Algoritmos Genéticos de Aprendizaje Supervisado."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Clases **ya definidas** y datos **ya etiquetados** → clasificación **supervisada**. Clustering sería si hubiera que descubrir los grupos. La inducción existe pero es supervisada (por eso la tercera está mal en el detalle). Los AG no son \"de aprendizaje supervisado\".",
+   "fuente": "Parcial 2025 Lunes T2 · estilo"
+  },
+  {
+   "id": "ep-u6-16",
+   "unidad": "u6-sistemas",
+   "tema": "Qué es inteligente",
+   "enunciado": "De estas heladeras, la que muestra un comportamiento realmente inteligente es la que …",
+   "opciones": [
+    "se conecta por wifi y se controla con una app.",
+    "muestra recetas predefinidas en una pantalla.",
+    "arma la lista de compras según el consumo que fue registrando.",
+    "suena una alarma siempre que la puerta queda abierta 2 minutos."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Inteligente = **decide algo a partir de datos**. Wifi, pantalla o una regla fija (\"siempre a los 2 minutos\") son funcionalidades de software común, no inteligencia.",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ep-u6-17",
+   "unidad": "u6-sistemas",
+   "tema": "Qué tecnología elegir",
+   "enunciado": "Un control de acceso recibe fotos de credenciales con partes borroneadas y debe reconstruir el patrón completo de la credencial original …",
+   "opciones": [
+    "entonces se podría utilizar una RNA Backpropagation de aprendizaje No Supervisado.",
+    "entonces se podría utilizar una RNA de Hopfield dado que hay que completar patrones con ruido.",
+    "entonces se podría utilizar una RNA Perceptrón dado que hay que separar dos clases.",
+    "entonces se podría utilizar un Algoritmo Genético dado que hay que optimizar la imagen."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "**Completar datos faltantes** o reconocer patrones con ruido es el uso típico de **Hopfield** (autoasociativa). La Backpropagation existe, pero es supervisada: la tercera opción falla en ese detalle.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u6-18",
+   "unidad": "u6-sistemas",
+   "tema": "Qué tecnología elegir",
+   "enunciado": "Un club quiere separar a sus socios en prioridad Alta, Media o Baja para un sorteo, usando criterios del presidente como \"antigüedad bastante alta\" o \"asistencia regular\" …",
+   "opciones": [
+    "entonces se debe utilizar una RNA Auto-Asociativa dado que es un problema de optimización.",
+    "entonces se debe utilizar un Algoritmo Genético dado que es un problema de clasificación.",
+    "entonces se debe utilizar un Sistema Experto Difuso dado que es un problema de clasificación.",
+    "entonces se debe utilizar Algoritmos de Inducción dado que es un problema de optimización."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Tres categorías → **clasificación**. Reglas **subjetivas** de una persona sobre datos imprecisos (\"bastante alta\", \"regular\") → **Sistema Experto Difuso**. Es el mismo esqueleto que la guardia del hospital de 2024.",
+   "fuente": "Parcial 2024 Lunes T2 · estilo"
+  },
+  {
+   "id": "ep-u6-19",
+   "unidad": "u6-sistemas",
+   "tema": "ML o IA Tradicional",
+   "enunciado": "Un sistema generó automáticamente sus reglas SI-ENTONCES a partir de una tabla de ventas, y ahora las aplica a clientes nuevos. Ese sistema es …",
+   "opciones": [
+    "Inteligencia Computacional, porque descubre conocimiento.",
+    "un Sistema Experto Tradicional, porque usa reglas SI-ENTONCES.",
+    "Machine Learning, aunque termine usando reglas.",
+    "IA Tradicional, porque aplica reglas explícitas."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "La pregunta clave es **de dónde salió el conocimiento**: si el sistema lo **definió automáticamente** a partir de datos, es **ML** (por ejemplo, inducción). Que el resultado sean reglas no lo convierte en IA Tradicional: ahí las reglas las carga una persona y se eligen con métodos de búsqueda.",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ep-u6-20",
+   "unidad": "u6-sistemas",
+   "tema": "Cuándo usar un SI",
+   "enunciado": "Un Sistema Inteligente se justifica más que un software tradicional cuando …",
+   "opciones": [
+    "los requerimientos se conocen por completo desde el inicio.",
+    "se necesita que el sistema sea determinista.",
+    "no se pueden anticipar todas las situaciones que se van a presentar en el dominio.",
+    "la tarea es sistemática y con datos numéricos precisos."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Los SI se usan en **dominios complejos**: el problema no se entiende del todo, no se anticipan todas las situaciones, hay demasiadas soluciones posibles. Las otras tres describen el terreno del software tradicional.",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ep-u11-01",
+   "unidad": "u11-implementacion",
+   "tema": "Viabilidad",
+   "enunciado": "Si al estudiar la Viabilidad se determina que la IA podría cumplir los objetivos, pero que una regla simple en el sistema actual logra lo mismo con mucho menor costo, entonces …",
+   "opciones": [
+    "el proyecto es viable sólo si se reemplaza la regla por Machine Learning.",
+    "el proyecto es viable porque es posible aplicar IA.",
+    "el proyecto NO es viable porque no es posible aplicar IA.",
+    "el proyecto NO es viable porque la IA no es la mejor alternativa."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Viabilidad = tres preguntas: ¿**se puede**?, ¿es la **mejor alternativa**?, ¿se **justifica**? Acá la primera da sí y la segunda da no. \"No es posible\" sería si ninguna tecnología pudiera cumplir los objetivos (la pregunta del parcial de 2026).",
+   "fuente": "Parcial 2026 Lunes · estilo"
+  },
+  {
+   "id": "ep-u11-02",
+   "unidad": "u11-implementacion",
+   "tema": "Viabilidad",
+   "enunciado": "Una fábrica quería detectar cajas de jabón vacías con un sistema de visión inteligente, y terminó resolviéndolo con un ventilador que las vuela de la cinta. En el proceso de implementación, la IA quedó descartada al estudiar …",
+   "opciones": [
+    "la Viabilidad, porque no era la mejor alternativa.",
+    "los Datos, porque no eran representativos.",
+    "el Alcance, porque incluía demasiadas funcionalidades.",
+    "la Selección de la Tecnología, porque no había reglas."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Es la anécdota de la cátedra: \"no trates a la IA como un martillo para todos tus problemas\". Se podía aplicar IA, pero **no era la mejor alternativa** → falla la Viabilidad, dentro de la Definición del Problema.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-03",
+   "unidad": "u11-implementacion",
+   "tema": "Fases",
+   "enunciado": "Dentro de la fase \"Identificación y Transformación de los Datos\" del proceso de implementación de un Sistema Inteligente se realiza …",
+   "opciones": [
+    "entrenar, validar y probar el modelo.",
+    "diseñar las canalizaciones entre los modelos.",
+    "elicitar los requerimientos con técnicas de educción.",
+    "estudiar si los datos son representativos y prepararlos."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Fase 2 = **recolección, estudio y preparación** de los datos. Elicitar es fase 1; entrenar/validar/probar es Construcción del Modelo (fase 4); las canalizaciones son Aplicación (fase 5).",
+   "fuente": "Parcial 2025 Miércoles · estilo"
+  },
+  {
+   "id": "ep-u11-04",
+   "unidad": "u11-implementacion",
+   "tema": "Fases",
+   "enunciado": "La fase \"Identificación y Transformación de los Datos\" es obligatoria cuando el modelo del Sistema Inteligente se construye con …",
+   "opciones": [
+    "una Red Neuronal Artificial.",
+    "un Algoritmo Genético.",
+    "un Sistema Experto Tradicional.",
+    "todas las anteriores."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "La fase de datos es **opcional**: solo se hace si hay datos. Una **RNA** no se puede construir sin datos; un AG usa heurísticas en la aptitud y un SET usa reglas educidas. \"Todas\" es la trampa para el que cree que siempre se hace.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-05",
+   "unidad": "u11-implementacion",
+   "tema": "Aplicación",
+   "enunciado": "Un modelo funcionaba muy bien en desarrollo, pero en producción da resultados extraños. Se descubre que en producción las entradas no se normalizan igual que en el entrenamiento. Lo que no se respetó es …",
+   "opciones": [
+    "la Regla de Oro de la fase de Aplicación.",
+    "la capacidad de generalización, por sobreentrenamiento.",
+    "el Modelo del Pan de Pasas.",
+    "el criterio de éxito definido en el alcance."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "**Regla de Oro**: en producción se hacen **exactamente las mismas** acciones de recolección y preparación que en el desarrollo. No es sobreentrenamiento: el modelo está bien, lo que cambió fue lo que le llega.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-06",
+   "unidad": "u11-implementacion",
+   "tema": "Aplicación",
+   "enunciado": "Un sistema de reconocimiento de patentes identifica muy bien los autos, pero genera multas erróneas porque consulta un padrón desactualizado de otro sistema. Esto muestra que …",
+   "opciones": [
+    "una integración incorrecta lleva a la falta de confianza en el sistema, aunque el modelo funcione.",
+    "el modelo está sobreentrenado y hay que reentrenarlo.",
+    "se eligió mal la tecnología en la fase de Selección.",
+    "el problema está en la fase de Identificación y Transformación de los Datos del modelo."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Es el ejemplo de la cátedra (reconocimiento facial con pedidos judiciales mal cargados): el modelo anda, pero **la integración con los sistemas existentes** falla y el sistema pierde confianza. Un proyecto puede fracasar justamente por eso.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-07",
+   "unidad": "u11-implementacion",
+   "tema": "Articulación",
+   "enunciado": "En el proyecto de un sistema de recomendación, ¿cuál de estas frases está bien formulada como criterio de éxito?",
+   "opciones": [
+    "Que solo se usen los datos de los últimos 6 meses.",
+    "Que el sistema recomiende productos a clientes nuevos y existentes.",
+    "Que el sitio venda más productos que el año pasado gracias a la IA.",
+    "Que al menos el 70% de los clientes haga clic en una recomendación durante el primer mes."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Un criterio de éxito necesita una **métrica objetiva**. \"Vender más\" es una **expectativa**; \"recomendar a clientes nuevos y existentes\" es un **objetivo**; \"solo 6 meses de datos\" es una **restricción**.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-08",
+   "unidad": "u11-implementacion",
+   "tema": "Articulación",
+   "enunciado": "En el proyecto de una tienda online, la frase \"el comportamiento de compra de los clientes no va a cambiar durante el año\" es …",
+   "opciones": [
+    "un criterio de éxito.",
+    "una restricción.",
+    "un riesgo.",
+    "una suposición."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Es algo que **no se sabe con certeza** y se da por cierto: **suposición**. Ojo con la gemela: \"las preferencias de los clientes pueden cambiar\" sería un **riesgo**. Restricción es un límite operativo o legal.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-09",
+   "unidad": "u11-implementacion",
+   "tema": "Articulación",
+   "enunciado": "En el proyecto de un banco, la frase \"por ley no se pueden usar datos de clientes menores de edad para entrenar el modelo\" es …",
+   "opciones": [
+    "una expectativa.",
+    "un riesgo.",
+    "una restricción.",
+    "una suposición."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Una **limitación legal u operativa** del proyecto es una **restricción**. No es incierta (no es suposición) ni algo que puede salir mal (riesgo).",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-10",
+   "unidad": "u11-implementacion",
+   "tema": "Comprender los requerimientos",
+   "enunciado": "Un ingeniero describe el mismo proceso de compras desde la visión del gerente, la del vendedor y la del cliente, para encontrar conflictos entre ellas. Está aplicando …",
+   "opciones": [
+    "descomponer.",
+    "modularizar.",
+    "proyectar.",
+    "abstraer."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "**Proyectar** = describir distintas visiones de los mismos elementos para ver patrones y **conflictos entre stakeholders**. Abstraer agrupa ignorando diferencias; descomponer divide en partes; modularizar combina lo entendido en módulos.",
+   "fuente": "Parcial 2025 Lunes T1 · estilo"
+  },
+  {
+   "id": "ep-u11-11",
+   "unidad": "u11-implementacion",
+   "tema": "Comprender los requerimientos",
+   "enunciado": "Un ingeniero trata \"pedido web\", \"pedido telefónico\" y \"pedido en el local\" como un único concepto \"pedido\", ignorando sus diferencias. Está aplicando …",
+   "opciones": [
+    "proyectar.",
+    "modularizar.",
+    "descomponer.",
+    "abstraer."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "**Abstraer** = ignorar las diferencias entre conceptos parecidos para agruparlos y quedarse con lo esencial. El riesgo es elegir mal qué es lo importante.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-12",
+   "unidad": "u11-implementacion",
+   "tema": "Definición del problema",
+   "enunciado": "Al iniciar un proyecto de Sistema Inteligente, antes de recolectar ningún hecho o necesidad, se debería …",
+   "opciones": [
+    "elegir la tecnología de IA a utilizar.",
+    "definir los criterios de éxito del proyecto.",
+    "preparar los datos disponibles en la organización.",
+    "identificar las fuentes de información, incluidos los stakeholders y los expertos."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "**Lo primero** es identificar las fuentes de información: recursos propios, externos, **stakeholders** y **expertos**. La tecnología es fase 3, los datos fase 2 y los criterios de éxito salen recién en la articulación.",
+   "fuente": "Parcial 2024 1C Lunes T1 · estilo"
+  },
+  {
+   "id": "ep-u11-13",
+   "unidad": "u11-implementacion",
+   "tema": "Formalización",
+   "enunciado": "Al formalizar los requerimientos, cada tarea de un módulo se especifica con …",
+   "opciones": [
+    "su propósito, entradas, acción y salida.",
+    "su estructura de cromosoma y función de aptitud.",
+    "sus precondiciones y poscondiciones.",
+    "sus expectativas, restricciones y suposiciones."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Gemelas: el **módulo** tiene **precondiciones y poscondiciones**; la **tarea** tiene **propósito, entradas, acción y salida**. Expectativas/restricciones/suposiciones son de la articulación.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-14",
+   "unidad": "u11-implementacion",
+   "tema": "Formalización",
+   "enunciado": "Una tarea que consiste en \"a partir del historial, armar grupos de clientes con hábitos de compra parecidos\" tiene una acción de tipo …",
+   "opciones": [
+    "clustering.",
+    "reglas de asociación.",
+    "optimización.",
+    "clasificación."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Los grupos **no existen de antemano**: hay que descubrirlos por similitud → **clustering**. Si los grupos ya estuvieran definidos y hubiera que asignar a cada cliente, sería clasificación.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-15",
+   "unidad": "u11-implementacion",
+   "tema": "Mantenimiento",
+   "enunciado": "Un Sistema Inteligente usaba un Sistema Experto Tradicional, y durante el mantenimiento se reemplaza por una RNA porque aparecieron datos históricos. Esto …",
+   "opciones": [
+    "obliga a descartar el sistema y empezar un proyecto nuevo.",
+    "no es posible, porque la tecnología queda fija en la fase de Selección.",
+    "es posible, porque el mantenimiento puede modificar incluso la tecnología de un modelo.",
+    "indica que la Definición del Problema estuvo mal hecha."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Según la cátedra, el mantenimiento puede cambiar **las interfaces, la cantidad de modelos, los datos y hasta la tecnología**. En los parciales 2025 la respuesta fue \"todas las anteriores\".",
+   "fuente": "Parcial 2025 Miércoles · estilo"
+  },
+  {
+   "id": "ep-u11-16",
+   "unidad": "u11-implementacion",
+   "tema": "Fracaso",
+   "enunciado": "Un proyecto para la implementación de un Sistema Inteligente puede fracasar si …",
+   "opciones": [
+    "el alcance incluye todas las funcionalidades que pidieron los stakeholders, aunque muchas no necesiten IA.",
+    "no existen datos asociados al problema en la organización.",
+    "no se utiliza Machine Learning para construir algún modelo.",
+    "el modelo se construye con IA Tradicional en vez de Machine Learning."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "El alcance hay que fijarlo con cuidado para que **tenga sentido usar IA**: meter todo lo pedido es un error típico. No usar ML o no tener datos **no** hace fracasar un proyecto: hay otras tecnologías.",
+   "fuente": "Parcial 2024 1C · estilo"
+  },
+  {
+   "id": "ep-u11-17",
+   "unidad": "u11-implementacion",
+   "tema": "Elicitación",
+   "enunciado": "Para recolectar hechos y necesidades, un ingeniero analiza la base de datos de ventas y además observa a los vendedores mientras atienden. Usó …",
+   "opciones": [
+    "extracción y educción, dentro de la Identificación y Transformación de los Datos.",
+    "extracción y educción, dentro de la Definición del Problema.",
+    "solo técnicas de extracción, porque observar no requiere hablar con el experto.",
+    "solo técnicas de educción, porque las dos involucran a la organización."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Analizar datos o documentos = **extracción**; observar a las personas = **educción** (como entrevistas o cuestionarios). Las dos se usan en la **Definición del Problema** (era la pregunta f del parcial de 2026). La primera distractora acierta las técnicas y erra la fase.",
+   "fuente": "Parcial 2026 Lunes · estilo"
+  },
+  {
+   "id": "ep-u11-18",
+   "unidad": "u11-implementacion",
+   "tema": "Construcción del modelo",
+   "enunciado": "En la Construcción del Modelo, las reglas que se cargan en la Base de Conocimientos de un Sistema Experto Tradicional salen de los conocimientos …",
+   "opciones": [
+    "preparados en la fase de datos, en los dos tipos de sistema.",
+    "educidos, mientras que en un Sistema Basado en Conocimientos salen de los extraídos.",
+    "extraídos, mientras que en un Sistema Basado en Conocimientos salen de los educidos.",
+    "educidos, en los dos tipos de sistema."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "SET → conocimiento **privado** del experto → **educción**. SBC → fuentes **públicas** → **extracción**. La segunda es la misma frase con los sistemas invertidos.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-19",
+   "unidad": "u11-implementacion",
+   "tema": "Preparación de datos",
+   "enunciado": "Al preparar los datos, la columna \"edad\" tiene un 3% de valores nulos. Según la cátedra, una opción válida es …",
+   "opciones": [
+    "eliminar los ejemplos que tienen la edad vacía.",
+    "reemplazar los nulos por un valor especial que indique \"sin dato\".",
+    "reemplazar los nulos por el promedio de la columna.",
+    "todas las anteriores."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "En la limpieza se puede **asignar un valor nuevo** (mínimo, promedio, máximo, especial o estimado) o **eliminar** el ejemplo o el atributo. Las tres son válidas.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-20",
+   "unidad": "u11-implementacion",
+   "tema": "Elicitación",
+   "enunciado": "Según Joe Goguen, las principales dificultades para elicitar los requerimientos de un sistema son …",
+   "opciones": [
+    "de falta de datos representativos.",
+    "técnicas, por las herramientas de modelado.",
+    "de elección de la tecnología de IA.",
+    "sociales, políticas y culturales."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Para Goguen los requerimientos están en el **sistema social** de la organización y se construyen entre cliente, usuarios y desarrolladores: las dificultades son **sociales, políticas y culturales**, no técnicas.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u11-21",
+   "unidad": "u11-implementacion",
+   "tema": "Aplicación",
+   "enunciado": "Definir cómo se ejecutan en producción, de forma integrada, la recolección de datos, la preparación, la ejecución del modelo y el ajuste de sus resultados corresponde a …",
+   "opciones": [
+    "la Construcción del Modelo.",
+    "diseñar las canalizaciones, en la fase de Aplicación.",
+    "la preparación, en la fase de Datos.",
+    "modularizar, en la Definición del Problema."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Esa es la definición de **canalización** (pipeline), y se diseña en la **Aplicación** del Sistema Inteligente, junto con las interfaces externas.",
+   "fuente": "Clase 8 - Implementación"
+  },
+  {
+   "id": "ep-u2-01",
+   "unidad": "u2-adquisicion",
+   "tema": "Técnicas",
+   "enunciado": "Si el Ingeniero de Conocimiento necesita las reglas que el experto aplica paso a paso usa ___, y si necesita saber cómo se relacionan las características que el experto usa para distinguir elementos usa ___.",
+   "opciones": [
+    "Análisis de Protocolos; Análisis de Protocolos.",
+    "Emparrillado; Emparrillado.",
+    "Emparrillado; Análisis de Protocolos.",
+    "Análisis de Protocolos; Emparrillado."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Parciales 2024: Análisis de Protocolos → **identificar las reglas** aplicadas por el experto. Emparrillado → **identificar la relación entre los conceptos**. La segunda opción las invierte.",
+   "fuente": "Parcial 2024 1C Miércoles · estilo"
+  },
+  {
+   "id": "ep-u2-02",
+   "unidad": "u2-adquisicion",
+   "tema": "Fuentes",
+   "enunciado": "Un ingeniero solo lee las normas y los manuales de una planta, sin hablar con nadie. El conocimiento que probablemente le falte es …",
+   "opciones": [
+    "el público, porque los manuales son de uso interno.",
+    "ninguno, porque los manuales tienen todo el conocimiento del dominio.",
+    "el declarativo, porque los manuales solo tienen procedimientos.",
+    "el privado: los trucos y heurísticas que aplica el experto."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Manuales y normas son fuentes **públicas** (extracción). Lo que el experto sabe por experiencia (heurísticas, \"trucos\") es **privado** y solo sale con **educción**.",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ep-u2-03",
+   "unidad": "u2-adquisicion",
+   "tema": "Declarativo y procedimental",
+   "enunciado": "De una entrevista se obtiene: \"las bombas centrífugas tienen rodete\" y \"si la bomba vibra y la presión cae, primero revisar el rodete\". En ese orden, son conocimiento …",
+   "opciones": [
+    "declarativo y procedimental.",
+    "procedimental, las dos, porque salen de la misma entrevista.",
+    "procedimental y declarativo.",
+    "declarativo, las dos."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Describir cómo **es** algo (concepto–característica) es **declarativo**; una regla de **cómo resolver** (\"si… entonces revisar…\") es **procedimental**. La fuente no decide el tipo.",
+   "fuente": "Clase 3 - Análisis de Protocolos"
+  },
+  {
+   "id": "ep-u12-01",
+   "unidad": "u12-ia2026",
+   "tema": "Agentes",
+   "enunciado": "Un sistema recibe un pedido de un cliente, decide por su cuenta qué sistemas consultar, redacta la respuesta y la envía. Según la clase 2026 es …",
+   "opciones": [
+    "un agente.",
+    "un pipeline.",
+    "un modelo.",
+    "un sistema multi-agente."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Un **modelo** responde; un **pipeline** encadena pasos **fijos**; un **agente decide qué pasos dar** y actúa. Multi-agente sería si varios agentes colaboraran.",
+   "fuente": "Clase IA 2026"
+  },
+  {
+   "id": "ep-u12-02",
+   "unidad": "u12-ia2026",
+   "tema": "Tendencias",
+   "enunciado": "Un banco ejecuta un modelo de lenguaje chico dentro de sus propios servidores para no sacar datos sensibles. Esto es un ejemplo de la tendencia de …",
+   "opciones": [
+    "gobernanza.",
+    "IA embebida.",
+    "modelos pequeños (SLM).",
+    "especialización por dominio."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Ejecución local, eficiencia y **privacidad** son las banderas de los **modelos pequeños**. IA embebida es integrarla dentro de los sistemas existentes (un CRM con IA); especialización es entrenar por dominio; gobernanza es regulación y auditoría.",
+   "fuente": "Clase IA 2026"
+  },
+  {
+   "id": "ep-u12-03",
+   "unidad": "u12-ia2026",
+   "tema": "AGI",
+   "enunciado": "Según la postura de la clase de actualización 2026, la Inteligencia Artificial General (AGI) …",
+   "opciones": [
+    "existe solo en los sistemas multi-agente.",
+    "todavía no tiene evidencia de existir: los sistemas actuales no aprenden en forma continua ni son totalmente autónomos.",
+    "ya existe, porque los modelos actuales resuelven cualquier tarea intelectual humana.",
+    "quedó demostrada con los benchmarks de generalidad como ARC-AGI."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "La clase dice que **no hay evidencia de AGI real**: hay sistemas avanzados, pero sin aprendizaje continuo, sin autonomía total y con errores de consistencia; ARC-AGI justamente muestra bajo rendimiento.",
+   "fuente": "Clase IA 2026"
+  },
+  {
+   "id": "ep-u8-01",
+   "unidad": "u8-rna",
+   "tema": "Procesamiento por lotes",
+   "enunciado": "En RNAs supervisadas, si hay 1.000 ejemplos de entrenamiento y se usa un tamaño de lote (\"batch size\") de 100, entonces en cada época los pesos de las conexiones …",
+   "opciones": [
+    "se van a modificar 10 veces.",
+    "se van a modificar 100 veces.",
+    "se van a modificar 1.000 veces.",
+    "se van a modificar una única vez."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Los pesos se ajustan **una vez por lote** (cada lote es un *step*). 1.000 / 100 = **10 lotes por época**. Con full batch sería 1 (la pregunta de 2026) y ejemplo por ejemplo serían 1.000.",
+   "fuente": "Parcial 2026 Lunes · estilo"
+  },
+  {
+   "id": "ep-u8-02",
+   "unidad": "u8-rna",
+   "tema": "Procesamiento por lotes",
+   "enunciado": "Una RNA se entrena procesando ejemplo por ejemplo (lote de tamaño 1), con 500 ejemplos y durante 20 épocas. La cantidad total de veces que se modifican los pesos es …",
+   "opciones": [
+    "20.",
+    "500.",
+    "10.000.",
+    "25."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Lote de 1 → una actualización por ejemplo: 500 por época. En 20 épocas: 500 × 20 = **10.000**. 20 sería full batch; 500 es una sola época; 25 sale de dividir mal.",
+   "fuente": "Parcial 2026 Lunes · estilo"
+  },
+  {
+   "id": "ep-u8-03",
+   "unidad": "u8-rna",
+   "tema": "Entrenamiento, validación y prueba",
+   "enunciado": "Para elegir cuántas neuronas ocultas debe tener una RNA, se deben comparar los resultados de los distintos prototipos sobre los datos de …",
+   "opciones": [
+    "prueba.",
+    "entrenamiento.",
+    "validación.",
+    "todas las anteriores."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Elegir parámetros es **validar**. Los datos de **prueba no se usan para ninguna decisión de diseño**: se guardan para medir la generalización al final. Con entrenamiento solo ves cuánto memorizó.",
+   "fuente": "Parcial 2025 Lunes T1 · estilo"
+  },
+  {
+   "id": "ep-u8-04",
+   "unidad": "u8-rna",
+   "tema": "Entrenamiento, validación y prueba",
+   "enunciado": "Si se usan los datos de prueba para decidir en qué época cortar el entrenamiento, entonces …",
+   "opciones": [
+    "no cambia nada, porque la prueba se hace igual al final.",
+    "es lo recomendado, porque es la técnica de early stopping.",
+    "la medición de la capacidad de generalización deja de ser confiable.",
+    "mejora la capacidad de generalización del modelo."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "El corte adaptativo (early stopping) se hace mirando el error de **validación**. Si se decide con la **prueba**, el modelo ya \"vio\" indirectamente esos datos y el resultado final queda optimista: se pierde la medición limpia de la generalización.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-05",
+   "unidad": "u8-rna",
+   "tema": "Diagnóstico del entrenamiento",
+   "enunciado": "Durante el entrenamiento, el error de entrenamiento sigue bajando pero el de validación empieza a subir a partir de la época 40. Lo más adecuado es …",
+   "opciones": [
+    "aumentar la tasa de aprendizaje.",
+    "cortar el entrenamiento alrededor de la época 40.",
+    "seguir entrenando más épocas hasta que el error de validación vuelva a bajar.",
+    "agregar neuronas ocultas para aumentar la capacidad."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Error de entrenamiento que baja y de validación que **sube** = **sobreentrenamiento**: memoriza y deja de generalizar. Se corta antes. Agregar neuronas o épocas lo empeora.",
+   "fuente": "Parcial 2025 Lunes T2 · estilo"
+  },
+  {
+   "id": "ep-u8-06",
+   "unidad": "u8-rna",
+   "tema": "Diagnóstico del entrenamiento",
+   "enunciado": "Los errores de entrenamiento y de validación de una RNA bajan y se quedan planos en un valor alto, sin importar cuántas épocas se agreguen. Lo más probable es que …",
+   "opciones": [
+    "la red no tenga capacidad para aprender el problema, y haya que cambiar la topología.",
+    "la red esté sobreentrenada y haya que cortar antes.",
+    "falten datos de prueba.",
+    "la tasa de aprendizaje sea demasiado chica."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Los dos errores **planos y altos** → la red no puede representar el problema: más neuronas o capas. El sobreentrenamiento se ve con el error de validación **subiendo**. Una tasa chica hace que aprenda lento, pero el error seguiría bajando.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-07",
+   "unidad": "u8-rna",
+   "tema": "Diagnóstico del entrenamiento",
+   "enunciado": "Una RNA heteroasociativa tiene una topología apropiada, pero su error sube y baja bruscamente de una época a otra sin llegar a aprender todos los ejemplos. Lo más probable es que …",
+   "opciones": [
+    "se esté usando un valor de tasa de aprendizaje muy alto.",
+    "se estén usando funciones no lineales en las capas ocultas.",
+    "se hayan normalizado los datos de entrada.",
+    "se estén usando muy pocas épocas de entrenamiento."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Tasa muy alta → los ajustes son tan grandes que **esquivan el óptimo**: el error oscila. Pocas épocas también impiden aprender todo, pero el error bajaría de forma estable, sin oscilar. Normalizar y usar funciones no lineales son recomendaciones, no problemas.",
+   "fuente": "Parcial 2025 Miércoles · estilo"
+  },
+  {
+   "id": "ep-u8-08",
+   "unidad": "u8-rna",
+   "tema": "Perceptrón",
+   "enunciado": "Si una RNA Perceptrón no logra separar dos clases que no son linealmente separables, entonces …",
+   "opciones": [
+    "hay que entrenarla durante más épocas.",
+    "hay que subir el coeficiente α hasta 0,35.",
+    "ningún ajuste del coeficiente α lo va a resolver: hay que usar otra red, como una Backpropagation.",
+    "hay que agregar más neuronas a su única capa."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "El Perceptrón **nunca** aprende funciones no lineales (como XOR). Ajustar α mejora el entrenamiento cuando el problema sí es lineal, pero no cambia lo que la red puede representar. La Backpropagation aproxima funciones lineales y no lineales.",
+   "fuente": "Parcial 2024 1C Lunes T1 · estilo"
+  },
+  {
+   "id": "ep-u8-09",
+   "unidad": "u8-rna",
+   "tema": "Modelos de RNA",
+   "enunciado": "La Red Neuronal Artificial que se entrena en una sola pasada por patrón, pero que al funcionar itera hasta estabilizarse, es …",
+   "opciones": [
+    "la red Perceptrón.",
+    "la red Multi-Perceptrón Backpropagation.",
+    "la red de Hopfield.",
+    "todas las redes anteriores."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Hopfield: **aprende en una pasada** (suma de Vᵀ·V) y **funciona iterando** hasta que la salida no cambia. Perceptrón y Backpropagation son al revés: varias iteraciones para aprender y una sola pasada para funcionar.",
+   "fuente": "Parcial 2024 1C · estilo"
+  },
+  {
+   "id": "ep-u8-10",
+   "unidad": "u8-rna",
+   "tema": "Modelos de RNA",
+   "enunciado": "Las Redes Neuronales Artificiales de Hopfield …",
+   "opciones": [
+    "son Auto-Asociativas y de aprendizaje No Supervisado.",
+    "son Hetero-Asociativas y de aprendizaje Supervisado.",
+    "son Hetero-Asociativas y de aprendizaje No Supervisado.",
+    "son Auto-Asociativas y de aprendizaje Supervisado."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Las cuatro combinaciones, como en 2024. Hopfield: **autoasociativa**, **no supervisada** (hebbiana), monocapa con conexiones laterales. Backpropagation y Perceptrón son heteroasociativas y supervisadas.",
+   "fuente": "Parcial 2024 1C Lunes · estilo"
+  },
+  {
+   "id": "ep-u8-11",
+   "unidad": "u8-rna",
+   "tema": "Backpropagation",
+   "enunciado": "En una RNA Multi-Perceptrón Backpropagation, lo que viaja hacia atrás durante el entrenamiento es …",
+   "opciones": [
+    "la salida deseada de las neuronas ocultas.",
+    "el error, para ajustar los pesos; las conexiones siguen siendo hacia adelante.",
+    "solo la corrección de los pesos de la capa de salida.",
+    "la salida de cada neurona, por conexiones hacia atrás."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Las conexiones son **hacia adelante**; lo que se **propaga hacia atrás es el error**, según el aporte de cada neurona, para ajustar también las capas ocultas (cuya salida deseada no se conoce).",
+   "fuente": "Parcial 2025 Lunes T2 · estilo"
+  },
+  {
+   "id": "ep-u8-12",
+   "unidad": "u8-rna",
+   "tema": "Funciones de activación",
+   "enunciado": "Si en todas las capas ocultas de una RNA se usa la función identidad, entonces …",
+   "opciones": [
+    "la red solo puede tener una neurona de salida.",
+    "la red pasa a funcionar como una red de Hopfield.",
+    "la red aprende más rápido cualquier tipo de función.",
+    "la red no puede aprender funciones no lineales, aunque tenga muchas capas."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Con identidad, escalón o lineal mixta los cálculos son más simples, pero **la red no aprende funciones no lineales**. Apilar capas lineales sigue dando algo lineal. Por eso se usan sigmoidal, tangente hiperbólica o ReLU.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-13",
+   "unidad": "u8-rna",
+   "tema": "Capa de salida",
+   "enunciado": "La capa de salida de una RNA que debe indicar a cuál de 5 especies (excluyentes entre sí) pertenece un pájaro podría implementarse con …",
+   "opciones": [
+    "5 neuronas con función Softmax.",
+    "una neurona con función Sigmoidal.",
+    "una neurona con función Softmax.",
+    "5 neuronas con función Escalón."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Varias clases excluyentes → **C neuronas softmax** (C = cantidad de clases), que dan probabilidades que suman 1. Una sigmoidal es para dos clases. Una sola neurona softmax no tiene sentido (siempre daría 1).",
+   "fuente": "Parcial 2025 Miércoles T1 · estilo"
+  },
+  {
+   "id": "ep-u8-14",
+   "unidad": "u8-rna",
+   "tema": "Capa de salida",
+   "enunciado": "La capa de salida de una RNA que estima el precio en dólares de un departamento podría implementarse con …",
+   "opciones": [
+    "varias neuronas con función Softmax.",
+    "una neurona con función Escalón.",
+    "una neurona con función Sigmoidal y un umbral.",
+    "una neurona con función Identidad."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Salida **continua** (un número) → **una neurona identidad**. La sigmoidal con umbral es para salida binaria; softmax, para varias clases; escalón solo da 0 o 1.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-15",
+   "unidad": "u8-rna",
+   "tema": "Neuronas de entrada",
+   "enunciado": "En una Backpropagation, el atributo de entrada \"color del auto\" tiene 8 valores posibles y se codifica en binario. Para ese atributo se necesitan …",
+   "opciones": [
+    "4 neuronas de entrada.",
+    "8 neuronas de entrada.",
+    "3 neuronas de entrada.",
+    "1 neurona de entrada."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Atributo binario → **N neuronas, con N = bits necesarios**. Para 8 valores hacen falta 3 bits (2³ = 8). Una sola neurona es para un atributo real.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-16",
+   "unidad": "u8-rna",
+   "tema": "Métricas",
+   "enunciado": "Un modelo detecta productos defectuosos. En la prueba obtuvo VP = 8, FP = 2, FN = 12 y VN = 78. La recuperación (recall) del modelo es …",
+   "opciones": [
+    "50%.",
+    "86%.",
+    "80%.",
+    "40%."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Recuperación = VP / (VP + FN) = 8 / 20 = **40%**: de los defectuosos reales encontró menos de la mitad. 80% es la **precisión** (8 / 10) y 86% la **exactitud** ((8 + 78) / 100).",
+   "fuente": "Parcial 2025 Miércoles · estilo"
+  },
+  {
+   "id": "ep-u8-17",
+   "unidad": "u8-rna",
+   "tema": "Métricas",
+   "enunciado": "Con los mismos resultados (VP = 8, FP = 2, FN = 12, VN = 78), se puede afirmar que el modelo …",
+   "opciones": [
+    "encuentra el 80% de los defectuosos reales, pero solo acierta el 40% de lo que marca.",
+    "acierta el 80% de lo que marca como defectuoso, pero solo encuentra el 40% de los defectuosos reales.",
+    "tiene la misma precisión que recuperación, porque FP + FN = 14.",
+    "es adecuado para producción, porque su exactitud es del 86%."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Precisión 80% (de lo que **dijo** positivo), recuperación 40% (de lo **real** positivo). La segunda opción es la misma frase con las métricas invertidas. Una exactitud alta no alcanza: igual que el ejemplo de la cátedra, el modelo deja pasar la mayoría de los defectuosos.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-18",
+   "unidad": "u8-rna",
+   "tema": "Métricas",
+   "enunciado": "En un banco, el 98% de las transacciones son legítimas. Un modelo que siempre responde \"no es fraude\" tiene …",
+   "opciones": [
+    "una exactitud del 98% y una recuperación del 0% para la clase fraude.",
+    "una precisión del 98% para la clase fraude.",
+    "una recuperación del 98%, porque acierta casi siempre.",
+    "una exactitud del 2% y una recuperación del 98%."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Acierta todas las legítimas → **exactitud 98%**. Pero no encuentra ningún fraude → **recuperación 0%**. Es la trampa de las **clases desbalanceadas**: la exactitud engaña.",
+   "fuente": "Parcial 2025 Lunes T1 · estilo"
+  },
+  {
+   "id": "ep-u8-19",
+   "unidad": "u8-rna",
+   "tema": "Métricas",
+   "enunciado": "Para la detección temprana de una enfermedad grave, donde es mucho peor no detectar a un enfermo que dar una falsa alarma, conviene priorizar …",
+   "opciones": [
+    "la recuperación (recall).",
+    "la precisión (precision).",
+    "el error absoluto.",
+    "la exactitud (accuracy)."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "No detectar a un enfermo = **falso negativo**, y la métrica que los castiga es la **recuperación**: VP / (VP + FN). La precisión castiga los falsos positivos (las falsas alarmas). El error absoluto es para salidas continuas.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-20",
+   "unidad": "u8-rna",
+   "tema": "Redes convolucionales",
+   "enunciado": "Para entrenar una RNA Convolucional con fotos de distintos tamaños, algunas en color y otras en blanco y negro, se recomienda …",
+   "opciones": [
+    "aplicar las capas de pooling antes de las convolucionales.",
+    "usar filtros convolucionales con kernel 1x1.",
+    "dejar cada imagen como está, porque la convolución se adapta al tamaño.",
+    "llevar todas las imágenes al mismo alto, ancho y cantidad de canales."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "La capa de entrada tiene **tamaño fijo**: todas las imágenes deben tener el mismo alto × ancho y los mismos canales (RGB = 3, grises = 1). Es la misma idea de la pregunta de las frutas de 2025.",
+   "fuente": "Parcial 2025 Lunes T1 · estilo"
+  },
+  {
+   "id": "ep-u8-21",
+   "unidad": "u8-rna",
+   "tema": "Redes convolucionales",
+   "enunciado": "En una capa de una RNA Convolucional, la etapa cuyos valores se ajustan durante el entrenamiento es …",
+   "opciones": [
+    "la etapa detectora, que aplica la función no lineal.",
+    "el pooling, que elige qué valores conservar.",
+    "la convolución, cuyos pesos son los valores de los filtros.",
+    "todas las etapas por igual."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Cada capa convolucional tiene convolución, detector y pooling, y **solo la convolución se entrena**: los pesos son los valores de los filtros (kernels). El detector aplica una función fija y el pooling toma el máximo o el promedio.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-22",
+   "unidad": "u8-rna",
+   "tema": "Redes convolucionales",
+   "enunciado": "Frente a una red totalmente conectada, una RNA Convolucional necesita muchos menos pesos porque …",
+   "opciones": [
+    "usa la función ReLU, que no necesita pesos.",
+    "no tiene capas ocultas.",
+    "el pooling elimina pesos de la red.",
+    "cada neurona mira solo una zona de la imagen y el mismo filtro se comparte en toda la imagen."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Ventajas de la CNN: **conexión escasa** (cada neurona mira una zona chica) y **parámetros compartidos** (un filtro para toda la imagen). En el ejemplo de clase se pasa de 160 millones de pesos a 1,6 millones.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-23",
+   "unidad": "u8-rna",
+   "tema": "Tipos de entrenamiento",
+   "enunciado": "Una RNA de recomendaciones sigue ajustando sus pesos con cada compra nueva mientras está en producción. Esto implica que …",
+   "opciones": [
+    "ya no necesita datos de validación ni de prueba.",
+    "tiene entrenamiento offline: hay que reentrenarla a mano ante cada cambio.",
+    "es necesariamente una red de aprendizaje No Supervisado.",
+    "tiene entrenamiento online: puede responder distinto a la misma entrada con el tiempo y hay que monitorearla."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "**Online** = sigue aprendiendo en producción; puede romper lo que andaba y dar resultados distintos ante la misma entrada, por eso se monitorea. **Offline** aprende una vez y para adaptarse se reentrena a mano. Online no implica no supervisado.",
+   "fuente": "Parcial 2024 1C Lunes T2 · estilo"
+  },
+  {
+   "id": "ep-u8-24",
+   "unidad": "u8-rna",
+   "tema": "Pesos iniciales",
+   "enunciado": "Si todos los pesos de una capa oculta se inicializan con el mismo valor …",
+   "opciones": [
+    "es lo recomendado, siempre que el valor esté entre 0,00 y 0,50.",
+    "no influye en el resultado, porque el error los corrige.",
+    "el entrenamiento converge más rápido.",
+    "las neuronas de esa capa tienden a aprender lo mismo, porque no se rompe la simetría."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Los pesos iniciales van en un rango chico (0,00 a 0,50) **y distintos entre neuronas de la misma capa**, para **romper simetrías**. Si son iguales, reciben las mismas correcciones y terminan haciendo lo mismo.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-25",
+   "unidad": "u8-rna",
+   "tema": "Reglas de aprendizaje",
+   "enunciado": "Una regla de aprendizaje que refuerza la conexión entre dos neuronas cada vez que se activan juntas, sin conocer ninguna salida deseada, es …",
+   "opciones": [
+    "el aprendizaje hebbiano, que usa la red de Hopfield.",
+    "el aprendizaje por refuerzo, que usa la red de Hopfield.",
+    "el aprendizaje hebbiano, que usa la red Perceptrón.",
+    "la corrección de error, que usa la Backpropagation."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Esa es la definición de **Hebb**, y la red que lo usa es **Hopfield**. El Perceptrón aprende por corrección de error (conoce la salida deseada). La primera distractora acierta la regla y erra la red.",
+   "fuente": "Parcial 2025 Lunes T1 · estilo"
+  },
+  {
+   "id": "ep-u8-26",
+   "unidad": "u8-rna",
+   "tema": "Separar los datos",
+   "enunciado": "Al separar los datos al azar, en el conjunto de prueba no quedó ningún ejemplo de una de las clases. Para evitarlo convenía usar …",
+   "opciones": [
+    "data augmentation.",
+    "un muestreo estratificado.",
+    "la normalización Min-Max.",
+    "el método de retención."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "El **método de retención** es justamente el muestreo al azar que causó el problema. El **estratificado** cuida que cada clase esté representada en cada conjunto. Data augmentation genera más imágenes; Min-Max escala valores.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-27",
+   "unidad": "u8-rna",
+   "tema": "Hopfield",
+   "enunciado": "Una red de Hopfield de 100 neuronas puede recuperar con error mínimo hasta aproximadamente …",
+   "opciones": [
+    "50 patrones.",
+    "100 patrones.",
+    "5 patrones.",
+    "15 patrones."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Capacidad: con **error mínimo** hasta ≈ 0,15·N = **15**. **Sin error**, menos de N / (4·ln N) ≈ 100 / 18,4 ≈ 5. La distractora de 5 es la otra cota. Y los patrones tienen que ser ortogonales.",
+   "fuente": "Clase 5 · RNA"
+  },
+  {
+   "id": "ep-u8-28",
+   "unidad": "u8-rna",
+   "tema": "Machine Learning",
+   "enunciado": "Según el teorema de \"No Free Lunch\", para un problema nuevo de Machine Learning …",
+   "opciones": [
+    "las redes neuronales profundas siempre superan al resto.",
+    "basta con elegir el algoritmo con mejor resultado en otro problema del mismo dominio.",
+    "el mejor algoritmo es el que tiene más parámetros.",
+    "no existe un algoritmo que sea el mejor para todos los problemas, así que hay que probar alternativas."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "**No Free Lunch**: ningún algoritmo es el mejor para todos los problemas. Por eso se prototipa y se experimenta. Que haya andado en otro problema no garantiza nada en este.",
+   "fuente": "Clase 5 · Machine Learning"
+  },
+  {
+   "id": "ep-u7-01",
+   "unidad": "u7-ag",
+   "tema": "Selección",
+   "enunciado": "Si se compara la selección por Torneo (de a pares) con la selección por Ruleta, se puede ver que …",
+   "opciones": [
+    "ambos siempre dejan pasar al mejor individuo de la población.",
+    "ninguno de los dos garantiza que pase el mejor individuo.",
+    "uno siempre deja pasar al mejor individuo de la población, y el otro puede dejarlo pasar o no.",
+    "uno siempre deja pasar al mejor individuo, pero el otro nunca lo deja pasar."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "En el **Torneo** clásico el mejor gana siempre su pareja, así que pasa seguro. En la **Ruleta** tiene más chances, pero depende del azar. Es la misma estructura que Número Esperado vs Ruleta del parcial 2026.",
+   "fuente": "Parcial 2026 Lunes · estilo"
+  },
+  {
+   "id": "ep-u7-02",
+   "unidad": "u7-ag",
+   "tema": "Selección",
+   "enunciado": "Si se compara la selección por Ranking (versión de los parciales) con el Control sobre Número Esperado, se puede ver que …",
+   "opciones": [
+    "ambos métodos siempre seleccionan al mejor individuo de la población.",
+    "ninguno de los dos selecciona siempre al mejor individuo.",
+    "uno siempre selecciona al mejor individuo, pero el otro nunca lo selecciona.",
+    "uno siempre selecciona al mejor individuo, y el otro puede seleccionarlo o no."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "**Ranking** (clásico): ordena y pasan los mejores → el mejor siempre. **Número Esperado**: el mejor tiene valor aptitud/promedio ≥ 1 → al menos una copia directa. Los dos lo garantizan, aunque Número Esperado use una ruleta para completar.",
+   "fuente": "Parcial 2026 Lunes · estilo"
+  },
+  {
+   "id": "ep-u7-03",
+   "unidad": "u7-ag",
+   "tema": "Selección",
+   "enunciado": "Si en un Algoritmo Genético se reemplaza la selección por Ruleta por la selección por Ranking (versión de los parciales), es esperable que …",
+   "opciones": [
+    "aumente la diversidad de la población.",
+    "disminuya el riesgo de convergencia prematura.",
+    "aumente el riesgo de convergencia prematura.",
+    "no cambie el comportamiento, porque ambos usan la aptitud."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Ranking clásico: siempre pasan los mejores y los de baja aptitud nunca participan → **pierde diversidad** → **más** riesgo de convergencia prematura que la Ruleta. (La presentación 2026 define otro Ranking, pero los parciales se corrigieron con este.)",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-04",
+   "unidad": "u7-ag",
+   "tema": "Selección",
+   "enunciado": "Una población de 4 individuos tiene aptitudes 50, 30, 15 y 5. Con Control sobre Número Esperado, las copias directas son …",
+   "opciones": [
+    "dos del primero, una del segundo y una del tercero.",
+    "una de cada individuo.",
+    "dos del primero y dos del segundo.",
+    "dos del primero y una del segundo; la plaza que queda se sortea con ruleta."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Promedio = 100 / 4 = 25. Valores: 2,0 / 1,2 / 0,6 / 0,2. Las **partes enteras** dan las copias directas: 2 del primero y 1 del segundo (3 plazas). La cuarta se sortea con una ruleta armada con las **partes decimales**: 0 / 0,2 / 0,6 / 0,2.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-05",
+   "unidad": "u7-ag",
+   "tema": "Selección",
+   "enunciado": "En el caso anterior (aptitudes 50, 30, 15 y 5, Control sobre Número Esperado), el individuo de aptitud 15 …",
+   "opciones": [
+    "siempre es seleccionado, porque 0,6 se redondea a 1.",
+    "puede ser seleccionado o no, y es el que más probabilidad tiene en la ruleta de las partes decimales.",
+    "nunca es seleccionado, porque su valor es menor que 1.",
+    "puede ser seleccionado o no, con la misma probabilidad que los demás."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Su valor es 0,6: no tiene copia directa, pero entra en la ruleta de los decimales (0 / 0,2 / 0,6 / 0,2) con la porción más grande (60%). No se redondea y no es equiprobable.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-06",
+   "unidad": "u7-ag",
+   "tema": "Selección",
+   "enunciado": "Con la selección por Ruleta y aptitudes 40, 30, 20 y 10, el tramo acumulado que le corresponde al tercer individuo va de …",
+   "opciones": [
+    "50% a 70%.",
+    "70% a 90%.",
+    "60% a 80%.",
+    "20% a 40%."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Proporciones: 40%, 30%, 20%, 10%. Acumulado: 0–40, 40–70, **70–90**, 90–100. Si el número al azar cae en ese tramo, sale el tercero.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-07",
+   "unidad": "u7-ag",
+   "tema": "Mutación",
+   "enunciado": "Durante una corrida, la aptitud promedio de la población sube y baja bruscamente en cada ciclo y nunca se estabiliza, aunque la función de aptitud está bien diseñada. Lo más probable es que …",
+   "opciones": [
+    "la probabilidad de mutación sea excesivamente alta.",
+    "se esté usando selección por Ranking.",
+    "la probabilidad de mutación sea excesivamente baja.",
+    "el criterio de paro esté basado en la aptitud."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Mutación **muy alta** → mucha diversidad, pero se rompen las buenas soluciones y el AG se parece a una búsqueda al azar: la aptitud no se estabiliza. Mutación baja o Ranking producen lo contrario (estabilización temprana).",
+   "fuente": "Parcial 2025 Lunes · estilo"
+  },
+  {
+   "id": "ep-u7-08",
+   "unidad": "u7-ag",
+   "tema": "Convergencia prematura",
+   "enunciado": "Después de 15 generaciones, todos los individuos tienen el mismo cromosoma y la aptitud es mediocre. Dos cambios que podrían ayudar son …",
+   "opciones": [
+    "usar selección por Ranking y una población inicial ad hoc.",
+    "aumentar la probabilidad de mutación y usar selección por Ruleta.",
+    "aumentar los puntos de corte y usar selección por Ranking.",
+    "disminuir la probabilidad de mutación y usar selección por Ranking."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Es **convergencia prematura**: hay que devolver diversidad. Más mutación y Ruleta (menos riesgo de convergencia prematura que Ranking). En cada distractora aparece Ranking o menos mutación, que la empeoran.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-09",
+   "unidad": "u7-ag",
+   "tema": "Convergencia lenta",
+   "enunciado": "Si al utilizar un Algoritmo Genético para un problema de optimización se nota que converge muy lento, se podría acelerar este proceso …",
+   "opciones": [
+    "incrementando los puntos de corte en el cruzamiento.",
+    "eliminando los individuos de aptitud media.",
+    "usando una cruza simple con un único punto de corte.",
+    "bajando a cero la probabilidad de mutación."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Converge lento por **poca combinación entre individuos** → más puntos de corte o máscara doble (las respuestas de 2025). Volver a cruza simple es lo contrario; mutación cero lleva a convergencia prematura; eliminar individuos no es un operador del AG.",
+   "fuente": "Parcial 2025 Miércoles · estilo"
+  },
+  {
+   "id": "ep-u7-10",
+   "unidad": "u7-ag",
+   "tema": "Criterio de paro",
+   "enunciado": "Si en un Algoritmo Genético se utiliza como criterio de paro \"que la aptitud promedio de la población supere 900\" …",
+   "opciones": [
+    "la corrida puede ejecutar para siempre, nunca finalizando.",
+    "la corrida finaliza encontrando o no una solución aceptable.",
+    "la corrida finaliza en una cantidad de ciclos conocida de antemano.",
+    "la corrida finaliza encontrando siempre la solución óptima."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Un criterio por **aptitud** (individual o promedio) puede no cumplirse nunca → la corrida podría no terminar. Por cantidad de vueltas termina siempre, encuentre o no algo aceptable.",
+   "fuente": "Parcial 2024 1C · estilo"
+  },
+  {
+   "id": "ep-u7-11",
+   "unidad": "u7-ag",
+   "tema": "Criterio de paro",
+   "enunciado": "Una corrida usa como criterio de paro \"llegar a 500 generaciones o que algún individuo supere una aptitud de 900\". Entonces …",
+   "opciones": [
+    "la corrida finaliza siempre, encontrando una solución con aptitud mayor a 900.",
+    "la corrida puede ejecutar para siempre, nunca finalizando.",
+    "la corrida finaliza siempre en la generación 500.",
+    "la corrida finaliza siempre, encontrando o no una solución aceptable."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Con el \"o\", alcanza con que se cumpla una condición: las **500 generaciones** aseguran que termine. Puede cortar antes si aparece un individuo de más de 900, pero nada garantiza que aparezca.",
+   "fuente": "Parcial 2024 1C · estilo"
+  },
+  {
+   "id": "ep-u7-12",
+   "unidad": "u7-ag",
+   "tema": "Mutación",
+   "enunciado": "En una vuelta de un Algoritmo Genético, el mecanismo de mutación se activó pero ningún gen cambió. Esto …",
+   "opciones": [
+    "demuestra que la población ya convergió.",
+    "es posible: la mutación siempre se activa, pero se ejecuta o no según la probabilidad.",
+    "indica un error, porque si se activa siempre modifica un gen.",
+    "significa que la población cruzada tenía individuos inválidos."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "La cátedra lo remarca: la mutación **puede activarse pero no ejecutarse**. Se tira un número al azar y solo muta si es menor o igual a la probabilidad.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-13",
+   "unidad": "u7-ag",
+   "tema": "Corridas",
+   "enunciado": "Si se ejecutan dos corridas de un Algoritmo Genético con la misma población inicial y los mismos parámetros …",
+   "opciones": [
+    "se pueden obtener poblaciones finales distintas.",
+    "se obtiene siempre la misma población final.",
+    "se obtiene la misma mejor solución, aunque cambie el resto de la población.",
+    "se obtienen poblaciones distintas solo si la mutación es mayor a 0,5."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Selección, cruza y mutación tienen **azar**, así que no se garantiza el mismo resultado. Por eso un AG se evalúa sobre **varias corridas**.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-14",
+   "unidad": "u7-ag",
+   "tema": "Función de aptitud",
+   "enunciado": "Una solución viola 3 restricciones del problema. Para reducir las soluciones inválidas sin perder la información de qué tan cerca está de ser válida, la función de aptitud debería …",
+   "opciones": [
+    "restar un valor pequeño por cada restricción que viola.",
+    "eliminar al individuo de la población.",
+    "asignarle un valor constante muy bajo, como −1000.",
+    "evitar que el cruzamiento y la mutación generen ese individuo."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Recomendación de la cátedra (2024): **restar un valor chico por cada valor inválido**. Así una solución con 1 violación queda mejor que una con 3, y el AG puede ir corrigiendo. Un −1000 constante las iguala a todas; eliminar individuos o \"cuidar\" los operadores no es lo que se recomienda.",
+   "fuente": "Parcial 2024 1C Miércoles T1 · estilo"
+  },
+  {
+   "id": "ep-u7-15",
+   "unidad": "u7-ag",
+   "tema": "Función de aptitud",
+   "enunciado": "Una función de aptitud vale 100 si la solución es perfecta y 0 en cualquier otro caso. El principal problema es que …",
+   "opciones": [
+    "es demasiado robusta frente al ruido.",
+    "no penaliza las soluciones inválidas.",
+    "no cumple la adyacencia: pequeños cambios en el individuo no producen pequeños cambios en la aptitud.",
+    "no es consistente con la estructura del cromosoma."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Casi todas las soluciones valen 0, así que el AG no tiene \"pendiente\" para mejorar. La función debe dar **pequeños cambios en la valoración ante pequeños cambios en el individuo** (causalidad fuerte o adyacencia).",
+   "fuente": "Parcial 2025 Miércoles · estilo"
+  },
+  {
+   "id": "ep-u7-16",
+   "unidad": "u7-ag",
+   "tema": "Función de aptitud",
+   "enunciado": "Una agencia arma itinerarios de viaje con un Algoritmo Genético. El conocimiento de que \"no conviene visitar dos museos el mismo día\" debería quedar en …",
+   "opciones": [
+    "la función de aptitud.",
+    "la población inicial ad hoc.",
+    "el operador de cruzamiento.",
+    "la estructura del cromosoma."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "**El conocimiento del problema está en la función de aptitud**: ahí se premia lo que conviene y se resta lo que no. El cromosoma representa la solución, pero no evalúa si es buena.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-17",
+   "unidad": "u7-ag",
+   "tema": "Cromosoma",
+   "enunciado": "Un cromosoma para armar turnos permite representar soluciones con dos empleados en el mismo puesto y horario, cuando eso está prohibido. Ese cromosoma no es …",
+   "opciones": [
+    "uniforme.",
+    "completo.",
+    "coherente.",
+    "conciso."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "**Coherente** = evita representar soluciones inválidas. **Completo** es el caso contrario: que se puedan representar todas las soluciones posibles. Conciso es corto y sin redundancia; uniforme, que todas tengan la misma chance de generarse.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-18",
+   "unidad": "u7-ag",
+   "tema": "Cromosoma",
+   "enunciado": "Si con la estructura del cromosoma elegida hay soluciones válidas del problema que no se pueden representar, ese cromosoma no es …",
+   "opciones": [
+    "conciso.",
+    "coherente.",
+    "sencillo.",
+    "completo."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "**Completo** = todas las soluciones posibles se pueden representar. Si falta alguna, el AG nunca la va a poder encontrar, aunque sea la mejor.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-19",
+   "unidad": "u7-ag",
+   "tema": "Parámetros",
+   "enunciado": "En los Algoritmos Genéticos, un factor que solo se puede definir probando y evaluando a lo largo de varias corridas es …",
+   "opciones": [
+    "el orden en que se ejecutan los operadores genéticos.",
+    "la cantidad de hijos que genera cada cruzamiento.",
+    "la cantidad adecuada de vueltas de la corrida.",
+    "los genes que siempre debe modificar la mutación."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "La cantidad ideal de **individuos** y de **vueltas** solo se encuentra **probando** en varias corridas. El orden de los operadores es fijo (selección, cruza, mutación), la mutación es al azar y cada cruza da dos hijos.",
+   "fuente": "Parcial 2024 1C Miércoles · estilo"
+  },
+  {
+   "id": "ep-u7-20",
+   "unidad": "u7-ag",
+   "tema": "Cruzamiento",
+   "enunciado": "Con una cruza binomial con máscara doble se puede obtener …",
+   "opciones": [
+    "dos hijos idénticos entre sí.",
+    "un hijo idéntico a uno de los padres.",
+    "dos hijos que heredan el mismo gen del mismo padre.",
+    "todas las anteriores."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Con **máscara doble** cada hijo tiene su propia máscara, así que **se pueden repetir características**: los dos hijos pueden heredar el mismo gen del mismo padre, ser iguales entre sí o iguales a un padre.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-21",
+   "unidad": "u7-ag",
+   "tema": "Aplicación",
+   "enunciado": "Si un club de fútbol quiere utilizar un Algoritmo Genético, entonces se podría aplicar para …",
+   "opciones": [
+    "clasificar las lesiones según su gravedad a partir de estudios previos.",
+    "identificar a qué jugador corresponde una imagen de un partido.",
+    "predecir cuántos goles va a hacer un delantero en la temporada.",
+    "armar el cronograma de uso de las canchas minimizando superposiciones entre categorías."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Un AG busca **la mejor combinación** que maximice o minimice algo: **optimización**. Predecir goles es estimación, identificar al jugador es clasificación de imágenes y clasificar lesiones también es clasificación. Es el esquema del estudio de cine del parcial 2026.",
+   "fuente": "Parcial 2026 Lunes · estilo"
+  },
+  {
+   "id": "ep-u7-22",
+   "unidad": "u7-ag",
+   "tema": "Cruzamiento",
+   "enunciado": "Una desventaja de la cruza simple frente a la cruza multipunto es …",
+   "opciones": [
+    "el sesgo posicional: los genes que quedan del mismo lado del corte tardan en combinarse.",
+    "que no conserva bloques de genes de los padres.",
+    "que el punto de corte puede caer en medio de un gen.",
+    "que mezcla gen a gen y rompe relaciones entre genes."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "La simple conserva bloques y es eficiente, pero tiene **sesgo posicional**. La mezcla gen a gen es de la binomial. Y el corte **nunca** cae en medio de un gen.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u7-23",
+   "unidad": "u7-ag",
+   "tema": "Población inicial",
+   "enunciado": "Si la población inicial de un Algoritmo Genético se arma ad hoc con soluciones ya conocidas, entonces …",
+   "opciones": [
+    "promueve la diversidad más que una población al azar.",
+    "mejora la calidad inicial, pero puede limitar la exploración del espacio de soluciones.",
+    "garantiza encontrar el óptimo global.",
+    "deja de ser necesaria la función de aptitud."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Al azar promueve la **diversidad**; ad hoc arranca con mejor **calidad** pero puede **limitar la exploración**. Las dos son válidas, y ninguna garantiza el óptimo global.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ep-u9-01",
+   "unidad": "u9-logica",
+   "tema": "Representación difusa",
+   "enunciado": "En Lógica Difusa, la frase \"el tráfico está algo congestionado\" se puede representar como …",
+   "opciones": [
+    "μcongestión(tráfico) = VERDADERO",
+    "μcongestión(tráfico) = 0,4",
+    "μcongestión(tráfico) = 40 autos por cuadra",
+    "μcongestión(tráfico) = 40% de probabilidad"
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "La pertenencia es un **grado entre 0 y 1**, no una medida física, ni una probabilidad, ni un valor de verdad binario. \"Algo\" es un grado medio-bajo. Mismo esquema que la glucosa (2024).",
+   "fuente": "Parcial 2024 1C · estilo"
+  },
+  {
+   "id": "ep-u9-02",
+   "unidad": "u9-logica",
+   "tema": "Función de pertenencia",
+   "enunciado": "Para un mismo día, μ_CALUROSO = 0,7 y μ_TEMPLADO = 0,6. Esto …",
+   "opciones": [
+    "obliga a normalizarlos a 0,54 y 0,46.",
+    "es válido, porque los grados de pertenencia no tienen que sumar 1.",
+    "significa que hay un 70% de probabilidad de que el día sea caluroso.",
+    "es inválido, porque los grados tienen que sumar 1."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "La función de pertenencia es **el grado en que un elemento se ajusta a una definición**, no una probabilidad. Un día puede ser bastante caluroso y bastante templado a la vez.",
+   "fuente": "Parcial 2025 Lunes T1 · estilo"
+  },
+  {
+   "id": "ep-u9-03",
+   "unidad": "u9-logica",
+   "tema": "Operadores difusos",
+   "enunciado": "Con μA = 0,7, μB = 0,4 y μC = 0,9, la regla SI (A Y NO B) O C ENTONCES D da …",
+   "opciones": [
+    "μD = 0,9",
+    "μD = 0,4",
+    "μD = 0,6",
+    "μD = 0,7"
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "NO B = 1 − 0,4 = 0,6. A Y NO B = mín(0,7; 0,6) = 0,6. (…) O C = máx(0,6; 0,9) = **0,9**, y la implicación lo **propaga** a D. 0,6 es el resultado si te olvidás del O.",
+   "fuente": "Parcial 2024 1C Miércoles · estilo"
+  },
+  {
+   "id": "ep-u9-04",
+   "unidad": "u9-logica",
+   "tema": "Operadores difusos",
+   "enunciado": "Con μA = 0,8, μB = 0,3 y μC = 0,6, la regla SI A Y (B O NO C) ENTONCES D da …",
+   "opciones": [
+    "μD = 0,3",
+    "μD = 0,8",
+    "μD = 0,6",
+    "μD = 0,4"
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "NO C = 1 − 0,6 = 0,4. B O NO C = máx(0,3; 0,4) = 0,4. A Y (…) = mín(0,8; 0,4) = **0,4**. 0,3 sale si no negás C.",
+   "fuente": "Clase 6 - Lógica"
+  },
+  {
+   "id": "ep-u9-05",
+   "unidad": "u9-logica",
+   "tema": "Implicación difusa",
+   "enunciado": "En Lógica Difusa, si el antecedente de una regla, ya resuelto, tiene un grado de pertenencia de 0,35, el consecuente …",
+   "opciones": [
+    "toma un grado de 1, porque la regla se activó.",
+    "toma un grado de 0,65.",
+    "toma un grado de 0, porque 0,35 es menor que 0,5.",
+    "toma un grado de 0,35."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "La implicación **propaga** el valor del antecedente al consecuente (respuesta de 2025). No se niega, no se redondea y no hay un corte en 0,5.",
+   "fuente": "Parcial 2025 Miércoles T1 · estilo"
+  },
+  {
+   "id": "ep-u9-06",
+   "unidad": "u9-logica",
+   "tema": "Sistemas difusos",
+   "enunciado": "Un sistema difuso cuyo consecuente es una función lineal de las entradas, y que combina las reglas con una media ponderada, es del modelo …",
+   "opciones": [
+    "Mamdani.",
+    "de Hopfield.",
+    "Takagi-Sugeno.",
+    "neuro-difuso."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "**Takagi-Sugeno**: consecuente = función lineal, combinación por media ponderada. **Mamdani**: más simple, necesita muchas reglas y combina con centro de masa o promedio del máximo.",
+   "fuente": "Clase 6 - Lógica"
+  },
+  {
+   "id": "ep-u9-07",
+   "unidad": "u9-logica",
+   "tema": "Sistemas difusos",
+   "enunciado": "El orden de las etapas de un sistema difuso es …",
+   "opciones": [
+    "inferencia con reglas difusas, fuzzificación y desfuzzificación.",
+    "fuzzificación, desfuzzificación e inferencia con reglas difusas.",
+    "fuzzificación, inferencia con reglas difusas y desfuzzificación.",
+    "desfuzzificación, inferencia con reglas difusas y fuzzificación."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Primero se pasan las entradas a pertenencias (**fuzzificación**), después el motor aplica las reglas difusas y al final se vuelve a un valor concreto (**desfuzzificación**).",
+   "fuente": "Clase 6 - Lógica"
+  },
+  {
+   "id": "ep-u9-08",
+   "unidad": "u9-logica",
+   "tema": "Razonamiento aproximado",
+   "enunciado": "Un modelo que analiza cómo evoluciona un sistema en el tiempo usando probabilidades de transición entre estados es …",
+   "opciones": [
+    "una red bayesiana, porque usa probabilidades.",
+    "una lógica polivalente.",
+    "un modelo de Lógica Difusa, porque trabaja con valores continuos.",
+    "un modelo de Markov, que es razonamiento aproximado probabilista."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "Razonamiento aproximado tiene dos familias: **probabilistas** (Markov para la evolución en el tiempo; redes bayesianas para dependencias) y **difusa**. La difusa **no es probabilística**. La red bayesiana es probabilista, pero analiza dependencias, no evolución en el tiempo.",
+   "fuente": "Clase 6 - Lógica"
+  },
+  {
+   "id": "ep-u9-09",
+   "unidad": "u9-logica",
+   "tema": "Tipos de lógica",
+   "enunciado": "Una lógica que admite como valores de verdad solo verdadero, falso y \"medio verdadero\" (0,5) es …",
+   "opciones": [
+    "la lógica de primer orden.",
+    "la lógica tradicional.",
+    "una lógica polivalente.",
+    "la Lógica Difusa."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Tradicional: solo 0 y 1. **Polivalente**: agrega valores intermedios fijos, como 0,5. **Difusa**: cualquier valor continuo en [0, 1].",
+   "fuente": "Clase 6 - Lógica"
+  },
+  {
+   "id": "ep-u9-10",
+   "unidad": "u9-logica",
+   "tema": "Sistemas neuro-difusos",
+   "enunciado": "Combinar una Red Neuronal Artificial con Lógica Difusa en un sistema neuro-difuso permite …",
+   "opciones": [
+    "reconocer patrones con la red y aportar explicabilidad con las reglas difusas.",
+    "trabajar solo con valores binarios para ganar precisión.",
+    "garantizar que se encuentre el óptimo global.",
+    "eliminar la necesidad de datos de entrenamiento."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "La red aporta el **reconocimiento de patrones**; la difusa, el razonamiento al estilo humano. Juntas suman patrones difusos y **explicabilidad** para lo que aprendió la red.",
+   "fuente": "Clase 6 - Lógica"
+  },
+  {
+   "id": "ep-u9-11",
+   "unidad": "u9-logica",
+   "tema": "Sistemas difusos",
+   "enunciado": "Si no hay un experto disponible para definir las reglas de un sistema difuso, las reglas se pueden obtener …",
+   "opciones": [
+    "de ninguna forma: sin experto no se puede construir.",
+    "con algoritmos de inducción a partir de datos.",
+    "con una red de Hopfield que complete las reglas faltantes.",
+    "solo con un Algoritmo Genético."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "La cátedra lo dice textual: si no hay experto, las reglas se pueden sacar con **algoritmos de inducción**.",
+   "fuente": "Clase 6 - Lógica"
+  },
+  {
+   "id": "ep-u9-12",
+   "unidad": "u9-logica",
+   "tema": "Primer orden",
+   "enunciado": "En la frase \"algunos alumnos aprobaron todas las materias\", los cuantificadores indican que …",
+   "opciones": [
+    "\"alumno\" se refiere a todos los individuos (∀) y \"materia\" al menos a uno (∃).",
+    "los dos se refieren a todos los individuos (∀).",
+    "\"alumno\" se refiere al menos a un individuo (∃) y \"materia\" a todos los individuos (∀).",
+    "los dos se refieren al menos a un individuo (∃)."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Los cuantificadores sirven para **identificar si una variable se refiere a un individuo o a muchos** (2024). \"Algunos\" → ∃; \"todas\" → ∀. La segunda opción invierte justo eso.",
+   "fuente": "Parcial 2024 1C Miércoles T2 · estilo"
+  },
+  {
+   "id": "ep-u9-13",
+   "unidad": "u9-logica",
+   "tema": "Deducción Natural",
+   "enunciado": "En Deducción Natural, si la tesis es P ∧ Q (no tiene implicación) …",
+   "opciones": [
+    "se puede suponer el antecedente de cualquier hipótesis.",
+    "se debe empezar suponiendo P.",
+    "no se puede suponer nada, salvo dentro de una eliminación de la disyunción.",
+    "se debe suponer la negación de la tesis."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Solo se supone el **antecedente de la tesis** cuando la tesis **tiene implicación** (después se cierra con Introducción de la Implicación). Sin implicación no se supone nada, salvo en la eliminación de la disyunción.",
+   "fuente": "Parcial 2024 1C Lunes T2 · estilo"
+  },
+  {
+   "id": "ep-u9-14",
+   "unidad": "u9-logica",
+   "tema": "Deducción Natural",
+   "enunciado": "Si las hipótesis son ∀x (Ax → Bx) y ∃y Ay, la tesis …",
+   "opciones": [
+    "no puede tener cuantificador.",
+    "tiene que tener cuantificador existencial.",
+    "tiene que tener cuantificador universal.",
+    "puede tener cualquier cuantificador."
+   ],
+   "correcta": 2,
+   "dificultad": "parcial",
+   "explicacion": "Si **una** hipótesis es existencial (y el resto universales), la tesis **tiene que ser existencial**. Solo si todas fueran ∀ podría ser ∀ o ∃.",
+   "fuente": "Clase 6 - Lógica"
+  },
+  {
+   "id": "ep-u9-15",
+   "unidad": "u9-logica",
+   "tema": "Primer orden",
+   "enunciado": "En lógica de primer orden, \"Ana es ingeniera\" y \"Ana trabaja en una fábrica\" se representan, respectivamente, como …",
+   "opciones": [
+    "una función de verdad y una relación.",
+    "una relación y una función de verdad.",
+    "dos relaciones.",
+    "dos funciones de verdad."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Una **función de verdad** dice una característica de un objeto: I(Ana). Una **relación** vincula objetos: T(Ana, fábrica). Las funciones de verdad sirven para **representar características de las entidades** (2024).",
+   "fuente": "Parcial 2024 1C Miércoles T1 · estilo"
+  },
+  {
+   "id": "ep-u10-01",
+   "unidad": "u10-pln",
+   "tema": "Qué modelo usar",
+   "enunciado": "Una editorial quiere separar automáticamente reseñas en positivas o negativas, y tiene 20.000 reseñas ya etiquetadas. Entonces, el enfoque de NLP más adecuado sería …",
+   "opciones": [
+    "DBSCAN.",
+    "GloVe.",
+    "Regresión logística.",
+    "K-Means."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Asignar una **etiqueta binaria** con datos etiquetados → supervisado → **regresión logística**. K-Means y DBSCAN agrupan sin etiquetas; GloVe solo representa el texto.",
+   "fuente": "Parcial 2025 Lunes T2 · estilo"
+  },
+  {
+   "id": "ep-u10-02",
+   "unidad": "u10-pln",
+   "tema": "Qué modelo usar",
+   "enunciado": "Una consultora debe descubrir de qué temas habla la gente en 50.000 publicaciones, sin categorías previas, y además detectar publicaciones atípicas que no encajan en ningún tema. El algoritmo más adecuado sería …",
+   "opciones": [
+    "Random forest.",
+    "Regresión lineal.",
+    "DBSCAN.",
+    "K-Means."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "Sin categorías previas → **clustering**. Entre los dos de clustering, **DBSCAN** encuentra grupos de cualquier forma y **detecta ruido o atípicos**; K-Means agrupa pero no marca atípicos. Random forest es supervisado.",
+   "fuente": "Parcial 2025 Miércoles T2 · estilo"
+  },
+  {
+   "id": "ep-u10-03",
+   "unidad": "u10-pln",
+   "tema": "Qué modelo usar",
+   "enunciado": "Una plataforma quiere predecir la calificación numérica (de 1 a 5) que tendría una reseña a partir de su texto. Según la presentación, un modelo adecuado es …",
+   "opciones": [
+    "word2vec.",
+    "K-Means.",
+    "la regresión lineal.",
+    "la regresión logística."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "La **regresión lineal** predice un **número** a partir del texto (el ejemplo de la cátedra es justo la calificación de una reseña). La logística clasifica, sobre todo en problemas binarios.",
+   "fuente": "Presentación NLP 2026"
+  },
+  {
+   "id": "ep-u10-04",
+   "unidad": "u10-pln",
+   "tema": "Qué modelo usar",
+   "enunciado": "Una empresa desea clasificar sus correos internos en las 8 áreas ya definidas de la organización, a partir de un historial de correos ya derivados. Entonces, el enfoque de NLP más adecuado sería …",
+   "opciones": [
+    "un Modelo de Árboles y Ensambles.",
+    "un Modelo de Regresión Lineal.",
+    "un Modelo de Clustering.",
+    "un Modelo de Representación de Texto."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Categorías **ya conocidas** con datos de ejemplo → clasificación supervisada → **árboles y ensambles** (random forest), como en el parcial de 2025. Clustering sería para descubrir los grupos.",
+   "fuente": "Parcial 2025 Miércoles T1 · estilo"
+  },
+  {
+   "id": "ep-u10-05",
+   "unidad": "u10-pln",
+   "tema": "Representación",
+   "enunciado": "Un equipo usa GloVe dentro de un sistema que clasifica correos por área. En ese sistema, GloVe cumple el rol de …",
+   "opciones": [
+    "representar las palabras como vectores, antes de clasificar.",
+    "clasificar los correos en áreas.",
+    "tokenizar el texto de los correos.",
+    "agrupar los correos por similitud."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "GloVe y word2vec son **modelos de representación**: transforman palabras en vectores densos. **No clasifican ni agrupan**: son el paso previo al modelo.",
+   "fuente": "Presentación NLP 2026"
+  },
+  {
+   "id": "ep-u10-06",
+   "unidad": "u10-pln",
+   "tema": "Representación",
+   "enunciado": "En \"encendí una vela\" y \"se rompió la vela del barco\", la palabra \"vela\" …",
+   "opciones": [
+    "tiene representaciones distintas con cualquier técnica, porque cambia el significado.",
+    "tiene la misma representación con embeddings contextuales y distintas con GloVe.",
+    "tiene representaciones distintas con embeddings contextuales y la misma representación con GloVe.",
+    "tiene la misma representación con cualquier técnica, porque es la misma palabra."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "GloVe/word2vec dan **un vector por palabra**, sin importar el contexto. Los **embeddings contextuales** cambian la representación según la oración. Es el ejemplo de la clase de actualización 2026.",
+   "fuente": "Clase NLP 2026"
+  },
+  {
+   "id": "ep-u10-07",
+   "unidad": "u10-pln",
+   "tema": "Lenguaje artificial",
+   "enunciado": "Para procesar las consultas SQL que escriben los usuarios de una aplicación hace falta …",
+   "opciones": [
+    "un modelo de lenguaje grande (LLM).",
+    "un Sistema Inteligente de Procesamiento de Lenguaje Natural.",
+    "una red de Hopfield que complete las consultas incompletas.",
+    "un procesador de lenguaje común, basado en autómatas y lenguajes formales."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "SQL es un **lenguaje artificial**: reglas estrictas y estructura predecible. **No hace falta un sistema inteligente**: alcanza con autómatas y lenguajes formales. El lenguaje natural sí lo necesita.",
+   "fuente": "Presentación NLP 2026"
+  },
+  {
+   "id": "ep-u10-08",
+   "unidad": "u10-pln",
+   "tema": "Preprocesamiento",
+   "enunciado": "Llevar \"corrieron\", \"corriendo\" y \"corrió\" a \"correr\" es …",
+   "opciones": [
+    "tokenización.",
+    "segmentación.",
+    "lematización.",
+    "stemming."
+   ],
+   "correcta": 3,
+   "dificultad": "parcial",
+   "explicacion": "**Lematización** = forma de diccionario. **Stemming** recorta a una raíz con reglas (que puede no ser una palabra real). Tokenizar es partir en unidades; segmentar, agrupar en oraciones.",
+   "fuente": "Presentación NLP 2026"
+  },
+  {
+   "id": "ep-u10-09",
+   "unidad": "u10-pln",
+   "tema": "Autocorrección",
+   "enunciado": "En la autocorrección, después de detectar que \"inteligenca\" no está en el vocabulario, el paso siguiente es …",
+   "opciones": [
+    "proponer las palabras más cercanas usando una distancia de edición.",
+    "elegir la palabra de mayor probabilidad según el contexto.",
+    "tokenizar el texto.",
+    "calcular el n-grama más probable para completarla."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "Los 4 pasos: (1) detectar la palabra fuera del vocabulario, (2) **proponer las más cercanas con distancia de edición** (Levenshtein), (3) sustituir, (4) elegir por contexto. La primera distractora es el paso 4.",
+   "fuente": "Presentación NLP 2026"
+  },
+  {
+   "id": "ep-u10-10",
+   "unidad": "u10-pln",
+   "tema": "NLU y NLG",
+   "enunciado": "Un sistema que genera automáticamente el resumen escrito de un informe de ventas a partir de los datos del mes es un ejemplo de …",
+   "opciones": [
+    "NLG (generación de lenguaje natural).",
+    "NLU, porque hace análisis semántico.",
+    "extracción de información.",
+    "análisis de sentimiento."
+   ],
+   "correcta": 1,
+   "dificultad": "parcial",
+   "explicacion": "**Generar texto** a partir de una entrada (informes, resúmenes) es **NLG**. NLU es comprender: análisis sintáctico, semántico, de sentimiento, extracción.",
+   "fuente": "Presentación NLP 2026"
+  },
+  {
+   "id": "ep-u10-11",
+   "unidad": "u10-pln",
+   "tema": "Modelos grandes y chicos",
+   "enunciado": "Un banco necesita clasificar reclamos con baja latencia y sin que los datos salgan de sus servidores. Según la clase de actualización 2026 …",
+   "opciones": [
+    "conviene un modelo multilingüe, porque garantiza el mismo rendimiento en todos los idiomas.",
+    "no se puede usar NLP con datos sensibles.",
+    "siempre conviene el LLM más grande disponible, porque es más preciso.",
+    "un modelo pequeño o especializado desplegado localmente puede alcanzar para esa tarea."
+   ],
+   "correcta": 4,
+   "dificultad": "parcial",
+   "explicacion": "\"**Más grande no siempre es mejor**\": un modelo chico tiene menos latencia, se despliega localmente y cuida la privacidad. Y \"multilingüe\" describe cobertura, **no garantiza equidad** entre idiomas.",
+   "fuente": "Clase NLP 2026"
+  }
+ ]
+}

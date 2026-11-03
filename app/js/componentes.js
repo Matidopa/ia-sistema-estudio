@@ -62,12 +62,13 @@ const limpiarSaltos = t => t.trim().replace(/([^\n.:;)?])\n(?=[A-Za-zÁÉÍÓÚ�
 // opciones: modo 'inmediato' | 'examen'; onRespuesta(qid, elegida, correcta); historial: muestra "la última vez bien/mal".
 export function tarjetaPregunta(p, { modo = 'inmediato', numero = null, onRespuesta = null, mostrarRef = true, anexo = true, historial = true, anexoAbierto = false, origen = null } = {}) {
   const est = historial ? P.estadoPregunta(p.id) : null;
-  const ref = p.tipo === 'real' ? p.ref : p.fuente ? 'Basada en: ' + p.fuente : (p.basada_en && p.basada_en.length ? 'Basada en: ' + p.basada_en.map(id => (porId[id] ? porId[id].ref : id)).join('; ') : '');
+  const ref = p.tipo === 'real' ? p.ref : p.fuente ? (p.banco === 'estilo' ? 'Inspirada en: ' : 'Basada en: ') + p.fuente : (p.basada_en && p.basada_en.length ? 'Basada en: ' + p.basada_en.map(id => (porId[id] ? porId[id].ref : id)).join('; ') : '');
   const cab = h('div', { class: 'cabeza' },
     h('span', { class: 'etiquetas' },
       numero ? h('b', { class: 'num-preg' }, `${numero}`) : null,
       p.tipo === 'real' ? h('span', { class: 'etiqueta real' }, 'Parcial real') : p.tipo === 'algo' ? h('span', { class: 'etiqueta ia' }, 'Ejercicio nuevo') : h('span', { class: 'etiqueta ia' }, 'Práctica generada'),
       p.dificultad === 'dificil' ? h('span', { class: 'etiqueta mal', title: 'Pregunta difícil: casos combinados y opciones muy parecidas' }, 'Difícil') : null,
+      p.dificultad === 'parcial' ? h('span', { class: 'etiqueta mal', title: 'Inventada imitando las teóricas de los parciales 2024–2026: casos, "si pasa X, entonces…" y opciones gemelas' }, 'Estilo parcial') : null,
       p.tipo === 'real' && historial && vecesQueSalio(p) >= 4 ? h('span', { class: 'etiqueta frecuente', title: `Este tipo de pregunta (mismo planteo, con otros datos u opciones) apareció en ${vecesQueSalio(p)} de los ${PARCIALES.examenes.length} parciales distintos` }, `tipo que salió en ${vecesQueSalio(p)} parciales`) : null,
       est && est.intentos ? h('span', { class: 'etiqueta ' + (est.ultimaBien ? 'ok' : 'mal'), title: `${est.aciertos} de ${est.intentos} bien` }, est.ultimaBien ? 'la última vez bien' : 'la última vez mal') : null),
     mostrarRef && ref ? h('span', { class: 'ref' }, ref) : null);
