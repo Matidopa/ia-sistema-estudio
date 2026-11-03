@@ -13,6 +13,7 @@
     "realizar actividades propias de los seres humanos, como razonar, comportarse y aprender."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "La definición de la cátedra habla de razonamiento, conducta y aprendizaje. Velocidad o volumen de datos no definen a la IA.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -28,6 +29,7 @@
     "no comunes o complejos dentro de un dominio determinado."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "La inteligencia siempre se define dentro de un dominio: un experto en cardiología no es experto en todo.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -43,6 +45,7 @@
     "un ingeniero de conocimiento."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Esa es la definición de experto. El ingeniero de conocimiento es quien le educe ese conocimiento.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -58,6 +61,7 @@
     "inteligencia."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Es la definición de experiencia que da la cátedra.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -73,6 +77,7 @@
     "la mente se limita al cerebro y no puede representarse."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "IA fuerte: Hardware + Software = Mente. La débil dice que es un modelo de una mente, con capacidad reducida.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -88,6 +93,7 @@
     "la paradoja de Moravec."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "La IA débil dice que la máquina modela una mente, no que la tiene.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -103,6 +109,7 @@
     "es fácil reconocer caras y muy difícil jugar al ajedrez."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Lo que para nosotros es difícil (cálculo, lógica) es fácil para la máquina, y al revés.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -118,6 +125,7 @@
     "el primer invierno de la IA, en los años 70."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Dartmouth (1956) es el nacimiento del término. El test de Turing es anterior; Deep Blue es de 1996–97.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -133,6 +141,7 @@
     "la aparición de los modelos de lenguaje actuales."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Entre 1980 y 1990 la IA vive el auge de la Ingeniería del Conocimiento; después llega el segundo invierno.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -148,6 +157,7 @@
     "las computadoras no funcionaban por el frío."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Son épocas de desilusión y recorte de financiamiento: el primero en los 70 y el segundo a principios de los 90.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -163,6 +173,7 @@
     "solo los humanos tienen cerebro, pero las máquinas tienen mente."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "El cerebro es tangible; la mente incluye pensamiento, percepción, emoción, memoria e imaginación.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -178,6 +189,7 @@
     "transparencia para poder explicar cómo se llegó a un resultado."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Entre los principios: IA centrada en el ser humano, transparencia, responsabilidad, no discriminación y robustez técnica.",
    "fuente": "Clase 1 - Introducción a la IA"
   },
@@ -193,6 +205,7 @@
     "datos en conocimiento útil dentro de un dominio."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "El software tradicional transforma datos en información; el sistema inteligente les encuentra significado y utilidad en el dominio.",
    "fuente": "Clase 2 - Conceptos Iniciales"
   },
@@ -208,6 +221,7 @@
     "públicas, y se obtiene por extracción."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Lo público se extrae (análisis de documentación y de datos); lo privado, que está en la cabeza del experto, se educe.",
    "fuente": "Clase 2 - Conceptos Iniciales"
   },
@@ -223,6 +237,7 @@
     "educción."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Educción, con c: entrevistas, cuestionarios, observación, tormenta de ideas, emparrillado, análisis de protocolos.",
    "fuente": "Clase 2 - Conceptos Iniciales"
   },
@@ -238,6 +253,7 @@
     "El análisis de protocolos."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "La extracción trabaja sobre fuentes públicas: análisis de documentación y análisis de datos. Las otras son técnicas de educción.",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -253,6 +269,7 @@
     "El análisis de datos."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "El análisis de datos es extracción (fuente pública). Las demás se aplican sobre el experto.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -268,6 +285,7 @@
     "procedimental."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Declarativo = el qué. Procedimental = el cómo (las reglas y pasos que aplica el experto).",
    "fuente": "Clase 2 - Conceptos Iniciales"
   },
@@ -283,6 +301,7 @@
     "declarativo."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Las reglas de razonamiento son el conocimiento procedimental; en el Análisis de Protocolos salen de la interpretación.",
    "fuente": "Clase 2 - Conceptos Iniciales"
   },
@@ -298,6 +317,7 @@
     "seleccionar, cruzar, mutar y evaluar."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Grabar/transcribir/codificar/interpretar son las etapas del Análisis de Protocolos; recolectar/estudiar/preparar son de los datos.",
    "fuente": "Clase 2 - Conceptos Iniciales"
   },
@@ -313,6 +333,7 @@
     "encontrar datos que el experto no mencionó."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Emparrillado → relación entre conceptos (elementos y características). Análisis de Protocolos → reglas.",
    "fuente": "Clase 7 - Emparrillado"
   },
@@ -328,6 +349,7 @@
     "pedirle al experto que puntúe elementos contra características bipolares."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Es pensar en voz alta durante la resolución real. Puntuar elementos contra características es el Emparrillado.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -343,6 +365,7 @@
     "la opinión de los usuarios sobre el sistema."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "La técnica revela lo que el experto sabe y aplica sin poder explicarlo conscientemente.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -358,6 +381,7 @@
     "grabación, transcripción, codificación e interpretación."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Primero se graba, después se transcribe segmentado, se codifica y finalmente se interpretan las reglas.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -373,6 +397,7 @@
     "le explica al experto qué espera de él y le propone ejercicios chicos para darle confianza."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Antes de grabar se le dan instrucciones y ejercicios cortos para que se sienta cómodo pensando en voz alta.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -388,6 +413,7 @@
     "el texto se segmenta en frases numeradas y se registran también las acciones que el experto hace sin hablar."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "La transcripción segmenta y numera. Sinónimos y metacomentarios van en la codificación; las reglas, en la interpretación.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -403,6 +429,7 @@
     "un sinónimo."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Los metacomentarios separan subetapas o comentan el propio razonamiento. Una incertidumbre expresa duda (\"podríamos pensar\").",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -418,6 +445,7 @@
     "un operador."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Expresa duda sobre la conclusión: es una incertidumbre.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -433,6 +461,7 @@
     "conceptos distintos."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "En el ejemplo de la cátedra, \"paciente\" y \"persona\" se identifican como sinónimos.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -448,6 +477,7 @@
     "concepto: 38°; valor: fiebre."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "El concepto es el paciente; fiebre es una característica y \"superior a 38°\" su valor.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -463,6 +493,7 @@
     "f' = h + g."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "La interpretación genera pseudo-reglas con concepto.característica = valor en las condiciones.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -478,6 +509,7 @@
     "conocimiento declarativo y procedimental."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "El declarativo sale de la codificación (conceptos, características, valores, relaciones) y el procedimental de las reglas.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -493,6 +525,7 @@
     "John Holland."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Ericsson y Simon (1993). Kelly es el Emparrillado, Holland los AG y Rosenblatt el Perceptrón.",
    "fuente": "Presentación Análisis de Protocolos 2026"
   },
@@ -508,6 +541,7 @@
     "George Kelly, en 1955."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Kelly lo presentó en 1955, basado en un modelo de pensamiento humano: cada persona ve el mundo a su manera.",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -523,6 +557,7 @@
     "con sus valores de pertenencia difusa."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Los elementos deben ser homogéneos, representativos, separables y no solapados; las características, bipolares.",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -538,6 +573,7 @@
     "Diseñar la parrilla, identificar elementos, identificar características y formalizar."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Primero elementos, después características, la parrilla, la formalización (distancias y árboles) y el análisis.",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -553,6 +589,7 @@
     "evaluativa."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Dicotómica: binaria. Clasificatoria: ordena los elementos de 1 a n sin empates. Evaluativa: escala [1, n] según el grado de satisfacción.",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -568,6 +605,7 @@
     "\"n\" debe ser igual a la cantidad de características."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "En la clasificatoria n es la cantidad de elementos (y no hay empates); en la evaluativa n es libre.",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -583,6 +621,7 @@
     "No hace reflexionar al experto sobre el tema."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Inconvenientes: valores subjetivos, conocimiento superficial, complejo con muchos elementos y no alcanza sola para una BC.",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -598,6 +637,7 @@
     "Los valores asignados son objetivos."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Ventajas: reflexión del experto, representación gráfica, asociación entre elementos y características, refina el problema.",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -613,6 +653,7 @@
     "heurístico: el valor de cada nodo de un árbol."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "El emparrillado da conocimiento declarativo (y privado). Las reglas salen del Análisis de Protocolos.",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -628,6 +669,7 @@
     "4."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Opuesto = máximo + 1 − v = 4 + 1 − 1 = 4.",
    "fuente": "Clase 7 - Emparrillado"
   },
@@ -643,6 +685,7 @@
     "solo la distancia d1."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Se toma el mínimo entre d1 y d2 porque una característica puede estar relacionada de forma directa o invertida.",
    "fuente": "Clase 7 - Emparrillado"
   },
@@ -658,6 +701,7 @@
     "se elige al azar uno de los pares."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Los empates se unen a la vez. En la presentación: con E1-E2 y E1-E3 empatados, queda [E1, E2, E3].",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -673,6 +717,7 @@
     "paralela."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Dos flechas del mismo sentido: A→X y B→Y. Si además volvieran (X→A y Y→B), sería recíproca.",
    "fuente": "Presentación Emparrillado 2026"
   },
@@ -688,6 +733,7 @@
     "no existe (no se analiza)."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Solo se analizan relaciones entre características del mismo grupo.",
    "fuente": "Clase 7 - Emparrillado"
   },
@@ -703,6 +749,7 @@
     "los elementos y las características bipolares."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Búsqueda = espacio de estados + operadores. La estrategia de control elige qué regla aplicar.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -718,6 +765,7 @@
     "el costo acumulado de un camino."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Si hay dos o más reglas aplicables, la estrategia de control (el método) elige cuál aplicar.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -733,6 +781,7 @@
     "Una cola FIFO."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Amplitud recorre por niveles: cola FIFO. Profundidad usa pila LIFO.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -748,6 +797,7 @@
     "se conocen el estado inicial y el final."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Profundidad usa poca memoria (una rama por vez) y conviene con soluciones profundas. No garantiza la óptima.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -763,6 +813,7 @@
     "Generación y Prueba."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Generación y Prueba recorre todo: encuentra todas las soluciones, pero en problemas complejos tarda mucho.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -778,6 +829,7 @@
     "las dos búsquedas deben ser en profundidad."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Termina cuando ambas encuentran un estado intermedio común. Su costo es el de dos búsquedas sobre la mitad del grafo.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -793,6 +845,7 @@
     "la parrilla original y la opuesta."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Los heurísticos usan h; A* además suma el costo g de los arcos.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -808,6 +861,7 @@
     "la lista de abiertos queda vacía."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Solo avanzan a un hijo estrictamente mejor; si no hay, se traban en un máximo local.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -823,6 +877,7 @@
     "la simple tiene retroceso y la de máxima pendiente no."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Simple: primer mejor hijo generado. Máxima pendiente: el mejor de todos (nunca con igual valor). Ninguna tiene retroceso.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -838,6 +893,7 @@
     "es el más nuevo de la lista de abiertos."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Elige el mejor abierto, venga de donde venga. Ante empate, la cátedra prioriza el más viejo.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -853,6 +909,7 @@
     "Primero el Mejor más el costo de las transiciones."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Beam = Primero el Mejor + lista de abiertos limitada. A* = Primero el Mejor + costos.",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -868,6 +925,7 @@
     "f' = h + g, donde g es lo que costó llegar hasta el nodo."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Con \"menor es mejor\" se suma el costo; con \"mayor es mejor\", la cátedra resta (h − g).",
    "fuente": "Presentación Métodos de Búsqueda 2026"
   },
@@ -883,6 +941,7 @@
     "Para explicar los resultados al usuario."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "El motor de inferencias de un SBC o SET usa métodos de búsqueda para seleccionar reglas.",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -898,6 +957,7 @@
     "siempre acierta."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Racional: decide en línea con su objetivo. No es omnisciente ni infalible.",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -913,6 +973,7 @@
     "no soporta cambios en el dominio."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "No omnisciente = no lo sabe todo. No infalible = no siempre acierta.",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -928,6 +989,7 @@
     "infalible."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Flexible y robusto: soporta cambios. Determinista es el software tradicional.",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -943,6 +1005,7 @@
     "algoritmos que generalizan a partir de ejemplos."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Sus prestaciones dependen de la presencia explícita de un cuerpo de conocimientos.",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -958,6 +1021,7 @@
     "mayoritariamente de inspiración biológica, en contraposición al razonamiento simbólico."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Incluye redes neuronales, computación evolutiva, inteligencia de enjambre y sistemas inmunológicos artificiales.",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -973,6 +1037,7 @@
     "Una red neuronal artificial."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "El sistema experto tradicional es IA tradicional (simbólica).",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -988,6 +1053,7 @@
     "una Base de Conocimientos explícita."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Como cultivar una planta: el algoritmo con los datos produce un modelo, que es el sistema inteligente.",
    "fuente": "Presentación Introducción a ML 2026"
   },
@@ -1003,6 +1069,7 @@
     "supervisado."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "No hay etiqueta: el algoritmo descubre los grupos. Clasificar flores iris en tres especies conocidas sería supervisado.",
    "fuente": "Presentación Introducción a ML 2026"
   },
@@ -1018,6 +1085,7 @@
     "atributo clase, objetivo o etiqueta."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Los atributos de entrada (largo y ancho de pétalo y sépalo) se usan para predecir el atributo clase.",
    "fuente": "Presentación Introducción a ML 2026"
   },
@@ -1033,6 +1101,7 @@
     "aprende en una fase de entrenamiento y, una vez instalado, no sigue aprendiendo."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Offline: entrena y después opera. Online: sigue aprendiendo en producción.",
    "fuente": "Presentación Introducción a ML 2026"
   },
@@ -1048,6 +1117,7 @@
     "no existe un algoritmo de Machine Learning que sea el mejor para todos los problemas."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Hay que elegir y probar el algoritmo según el problema.",
    "fuente": "Presentación Introducción a ML 2026"
   },
@@ -1063,6 +1133,7 @@
     "población, selección, cruzamiento y mutación."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "El SBC tiene esos tres. El SET agrega base de datos, memoria de trabajo, trazadores y manejador de comunicaciones.",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -1078,6 +1149,7 @@
     "el manejador de comunicaciones."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "La memoria de trabajo guarda la traza; el trazador de explicaciones la lee para justificar el resultado.",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -1093,6 +1165,7 @@
     "el trazador de explicaciones."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Consultas: pregunta al usuario. Explicaciones: justifica el resultado.",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -1108,6 +1181,7 @@
     "resolver cualquier problema de cualquier dominio."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "El SE usa conocimiento privado (del experto); el SBC usa fuentes públicas.",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -1123,6 +1197,7 @@
     "offline y online."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Por tecnología: las tres familias. Por conocimientos: SE (privado) y SBC (público).",
    "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
   },
@@ -1138,6 +1213,7 @@
     "ninguna: no se puede aplicar IA."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Con heurísticas se puede armar la función de aptitud de un AG. Sin datos no hay ML; sin reglas no hay SBC.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -1153,6 +1229,7 @@
     "optimización de propósito general basados en mecanismos naturales de selección y genética."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Es la definición de la cátedra. Dan buenas soluciones en problemas complejos con muchos parámetros.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1168,6 +1245,7 @@
     "John Holland, en 1975."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Holland, \"Adaptation in Natural and Artificial Systems\" (1975). Darwin es la teoría que los inspira.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1183,6 +1261,7 @@
     "una característica de la solución."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Ecosistema = problema; individuo = posible solución; cromosoma = descripción; gen = característica.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1198,6 +1277,7 @@
     "el criterio de paro."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "El gen es la unidad mínima de información del cromosoma.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1213,6 +1293,7 @@
     "todas las soluciones posibles."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Busca en varias regiones una solución suficientemente buena. Por el azar, cada corrida puede dar otra cosa.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1228,6 +1309,7 @@
     "no está permitido en un Algoritmo Genético."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Al azar es lo más común y promueve la diversidad; ad hoc parte de mejores individuos pero explora menos.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1243,6 +1325,7 @@
     "inválido."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "En el ejemplo de clase, cada gen principal lleva genes auxiliares (enfoque y arquitectura).",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1258,6 +1341,7 @@
     "completitud."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Completitud: todas representadas. Coherencia: evitar las inválidas. Uniformidad: misma probabilidad de generarse.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -1273,6 +1357,7 @@
     "convergencia prematura."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Así el algoritmo puede ir mejorando de a poco. Robustez es reducir la influencia del ruido.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -1288,6 +1373,7 @@
     "pena de muerte (penalización dura)."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "En el ejemplo de las tecnologías, el individuo inválido tiene aptitud 0.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1303,6 +1389,7 @@
     "encuentra igual la mejor solución del problema real."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Frase de la cátedra: el cromosoma y la aptitud son un modelo simplificado y son la principal fuente de conocimiento.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -1318,6 +1405,7 @@
     "igual para todos los individuos."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Proporción = aptitud / total; después se acumulan y se tira un número al azar.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1333,6 +1421,7 @@
     "nunca le da oportunidad a los individuos de baja aptitud."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Depende del azar: mantiene diversidad, pero no garantiza que pasen los mejores. También es sensible a valores extremos.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1348,6 +1437,7 @@
     "la probabilidad de mutación de ese individuo."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Las partes enteras son copias directas; con las partes decimales (mantisas) se completa por ruleta.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1363,6 +1453,7 @@
     "el algoritmo encuentra el óptimo global en la primera vuelta."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Suele venir de mutación muy baja o de una selección que pierde diversidad.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1378,6 +1469,7 @@
     "que es muy costosa computacionalmente."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "La cruza simple es eficiente y conserva bloques, pero tiene sesgo posicional. La multipunto lo reduce.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1393,6 +1485,7 @@
     "hay un único punto de corte."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Cada hijo tiene su máscara, así que ambos pueden heredar el mismo gen del mismo padre.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1408,6 +1501,7 @@
     "solo puede aplicarse al mejor individuo."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Se tira un número al azar: si es menor o igual a la probabilidad, muta; si no, no.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1423,6 +1517,7 @@
     "disminuye a medida que pasan las generaciones, favoreciendo la explotación."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Por temperatura depende de las vueltas (ascendente o descendente); por convergencia, del promedio de aptitud.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1438,6 +1533,7 @@
     "aptitud alcanzada."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Son los cuatro criterios comunes de la presentación 2026.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1453,6 +1549,7 @@
     "No garantiza que todos sus individuos sean buenos ni válidos."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Se toma el mejor (o los N mejores) como solución; la población puede incluir individuos malos o inválidos.",
    "fuente": "Presentación Algoritmos Genéticos 2026"
   },
@@ -1468,6 +1565,7 @@
     "solo resuelve problemas de optimización."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Está muy relacionado con ambas, pero su foco es la complejidad computacional.",
    "fuente": "Presentación Introducción a ML 2026"
   },
@@ -1483,6 +1581,7 @@
     "se finaliza sin generar nada."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Si T está vacío se termina; si tiene un único valor objetivo, hoja; si no, se parte por el atributo de mayor ganancia.",
    "fuente": "Presentación Introducción a ML 2026"
   },
@@ -1498,6 +1597,7 @@
     "mayor valor numérico."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Ganancia = Entropía(O) − Entropía(O, A): el atributo que más ordena los datos.",
    "fuente": "Presentación Introducción a ML 2026"
   },
@@ -1513,6 +1613,7 @@
     "los mismos datos con los que se ajustaron los pesos."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Probar = medir la generalización con datos nuevos. Validar = elegir parámetros.",
    "fuente": "Presentación Procesos de ML 2026"
   },
@@ -1528,6 +1629,7 @@
     "se usan para elegir la cantidad de neuronas ocultas."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Si se usan para decidir el diseño, dejan de medir la generalización.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1543,6 +1645,7 @@
     "normalización Min-Max."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "El método de retención separa al azar; el estratificado respeta la proporción de cada clase.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1558,6 +1661,7 @@
     "early stopping."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Data augmentation genera variaciones de las imágenes existentes.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1573,6 +1677,7 @@
     "(x − promedio) / desvío estándar."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Min-Max lleva a [0; 1] (o [−1; 1] con negativos). Standard Scaler centra en cero con el desvío.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1588,6 +1693,7 @@
     "el error absoluto."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Precisión = VP / (VP + FP). Recall = VP / (VP + FN).",
    "fuente": "Presentación Procesos de ML 2026"
   },
@@ -1603,6 +1709,7 @@
     "la exactitud."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Recall = VP / (VP + FN): de todos los que eran positivos, cuántos encontró.",
    "fuente": "Presentación Procesos de ML 2026"
   },
@@ -1618,6 +1725,7 @@
     "es bueno porque la precisión es del 50%."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Es el ejemplo de clase: 9 compradores de 100. Una buena exactitud no significa que el modelo sea confiable.",
    "fuente": "Presentación Procesos de ML 2026"
   },
@@ -1633,6 +1741,7 @@
     "mide el error de un modelo con salida continua."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "F1 = 2·P·R / (P + R). La variante Fβ da más peso a la recuperación según β.",
    "fuente": "Presentación Procesos de ML 2026"
   },
@@ -1648,6 +1757,7 @@
     "el error absoluto y el error relativo."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "La matriz de confusión es para salidas discretas.",
    "fuente": "Presentación Procesos de ML 2026"
   },
@@ -1663,6 +1773,7 @@
     "el promedio de los pesos."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "NET = Σ wji · xj. Después se aplica la función de activación y salida.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1678,6 +1789,7 @@
     "lateral."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Mayor que cero: excitadora; igual a cero: neutra; menor que cero: inhibitoria.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1693,6 +1805,7 @@
     "no puede clasificar en dos clases."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Esas funciones facilitan los cálculos, pero hace falta no linealidad (sigmoidal, tanh, ReLU).",
    "fuente": "Presentación RNA 2026"
   },
@@ -1708,6 +1821,7 @@
     "ReLU, que es máx(0, x)."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Se parece a una lineal sin serlo y genera gradientes grandes y consistentes.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1723,6 +1837,7 @@
     "estocástica."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Estocástico: cambios al azar. Hebbiano: refuerza conexiones que se activan juntas.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1738,6 +1853,7 @@
     "ΔWi = (Y + Yd) / Xi."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Después W'i = Wi − ΔWi. α es el coeficiente de entrenamiento (recomendado entre 0,05 y 0,35).",
    "fuente": "Presentación RNA 2026"
   },
@@ -1753,6 +1869,7 @@
     "0,85."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "ΔW1 = (1 − 0)·1·0,35 = 0,35 → W1 = 0,50 − 0,35 = 0,15. Es el ejemplo de clase de la función AND.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1768,6 +1885,7 @@
     "debe ser siempre igual a cero."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Recomendación de clase: umbral constante, valores binarios normalizados en [0; 1] y pesos iniciales entre 0 y 0,50.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1783,6 +1901,7 @@
     "exige al menos cinco capas ocultas."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Por eso la cantidad de capas y neuronas se define experimentando.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1798,6 +1917,7 @@
     "eliminar la necesidad de datos de prueba."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Una capa oculta suele alcanzar; dos aprenden más rápido; más de tres traen el vanishing gradient problem.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1813,6 +1933,7 @@
     "una neurona de entrada."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Real: 1 neurona. Binario: N neuronas (N = bits para codificarlo).",
    "fuente": "Presentación RNA 2026"
   },
@@ -1828,6 +1949,7 @@
     "una capa con conexiones laterales."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Softmax da la probabilidad de cada clase. Para dos clases alcanza una sigmoidal; para salida continua, una identidad.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1843,6 +1965,7 @@
     "acelerar el sobreentrenamiento."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Si todas arrancan iguales, aprenden lo mismo. Se usan aleatorios en un rango chico (0 a 0,50).",
    "fuente": "Presentación RNA 2026"
   },
@@ -1858,6 +1981,7 @@
     "cambiar el orden en que se ingresan los patrones de entrenamiento."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "También: otros pesos iniciales, normalizar, cambiar parámetros, agregar capas o neuronas, revisar los datos.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1873,6 +1997,7 @@
     "guarda el umbral de cada neurona."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Se suman los Vᵀ·V de cada patrón y se anula la diagonal.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1888,6 +2013,7 @@
     "ajusta sus pesos por corrección de error."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Entrena en una sola pasada, pero funciona iterando.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1903,6 +2029,7 @@
     "2·N patrones."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Sin error, menos de N / (4·ln N); con error mínimo, alrededor de 0,15·N. Los patrones deben ser ortogonales.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1918,6 +2045,7 @@
     "convolución, detector y pooling."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Convolución (filtros), detector (función no lineal, como ReLU) y pooling (máximo o promedio).",
    "fuente": "Presentación RNA 2026"
   },
@@ -1933,6 +2061,7 @@
     "solo a la etapa de pooling."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Detector y pooling son funciones fijas.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1948,6 +2077,7 @@
     "calcular la probabilidad de cada clase."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "La no linealidad la agrega la etapa detector; los filtros, la convolución.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1963,6 +2093,7 @@
     "conviene una red muy ancha y muy profunda a la vez."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Las capas se achican de a poco con la profundidad y hay que equilibrar ancho y profundidad.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1978,6 +2109,7 @@
     "el procesamiento de un solo lote."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Un paso (step) procesa un lote; una época, todos los ejemplos.",
    "fuente": "Presentación RNA 2026"
   },
@@ -1993,6 +2125,7 @@
     "overfitting: error de entrenamiento bajo pero error de prueba alto."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Pocas épocas → underfitting; demasiadas → overfitting. Early stopping corta mirando la validación.",
    "fuente": "Presentación RNA 2026"
   },
@@ -2008,6 +2141,7 @@
     "la ganancia de información."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "MSE para salidas con función identidad; entropía cruzada para sigmoidal o softmax.",
    "fuente": "Presentación RNA 2026"
   },
@@ -2023,6 +2157,7 @@
     "procesa lotes chicos de ejemplos antes de ajustar los pesos y puede converger rápidamente."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Full batch usa mucha memoria; estocástico elige uno al azar; ejemplo por ejemplo requiere muchos cálculos.",
    "fuente": "Presentación RNA 2026"
   },
@@ -2038,6 +2173,7 @@
     "parálisis o inestabilidad: la red esquiva el óptimo."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Muy grande: inestable; muy chica: lenta. Se recomiendan valores entre 0,01 y 0,40 o una tasa adaptativa.",
    "fuente": "Presentación RNA 2026"
   },
@@ -2053,6 +2189,7 @@
     "Adam."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "SGD, Momentum, NAG, Adagrad, AdaDelta, RMSProp, Adam y Nadam son optimizadores.",
    "fuente": "Presentación RNA 2026"
   },
@@ -2068,6 +2205,7 @@
     "probabilista."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Markov analiza la evolución de un sistema en el tiempo; las redes bayesianas, dependencias probabilísticas.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2083,6 +2221,7 @@
     "no es un modelo probabilístico: el grado de pertenencia no es una probabilidad."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "La pertenencia indica en qué grado algo cumple una definición; los grados no tienen que sumar 1.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2098,6 +2237,7 @@
     "siempre funciona mejor que un modelo matemático."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Se basa en el sentido común y el lenguaje natural. Su capacidad de aprendizaje es limitada.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2113,6 +2253,7 @@
     "nada alta."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Es un grado de pertenencia, no una probabilidad. Ejemplo de clase: casi alta, un poco mediana y nada baja.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2128,6 +2269,7 @@
     "0,2."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "min{ max(0,8; 0,2); 0,3 } = min{0,8; 0,3} = 0,3.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2143,6 +2285,7 @@
     "1,9."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Negación: 1 − μ = 1 − 0,9 = 0,1.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2158,6 +2301,7 @@
     "el mínimo de ambas."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "O → máximo; Y → mínimo; NO → 1 − μ.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2173,6 +2317,7 @@
     "se resuelven los operadores del antecedente hasta un único valor y ese valor se propaga al consecuente."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Pasos: entradas difusas del antecedente, operadores del antecedente, propagar al consecuente.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2188,6 +2333,7 @@
     "decodificación (defuzzification)."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Codificación al entrar, decodificación al salir para obtener el problema resuelto.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2203,6 +2349,7 @@
     "No tolera datos imprecisos."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Además, tiende a funcionar peor que un modelo matemático cuando lo hay, y combinar reglas no aumenta la performance.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2218,6 +2365,7 @@
     "la capacidad de reconocer patrones de las redes neuronales con el razonamiento similar al humano de la lógica difusa."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Aporta patrones difusos y explicabilidad a lo que aprende la red.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2233,6 +2381,7 @@
     "Un ordenamiento de una lista por burbuja."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "También: autos inteligentes, robots, diagnóstico médico, semáforos y energías renovables.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2248,6 +2397,7 @@
     "imprecisión."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Incertidumbre es falta de seguridad o certeza; imprecisión es vaguedad sobre el valor.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2263,6 +2413,7 @@
     "una función de verdad de un solo objeto."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "H(x) sería una función de verdad (característica de un objeto); P(x, y) o T(x, y), relaciones.",
    "fuente": "Presentación Lógica Difusa 2026"
   },
@@ -2278,6 +2429,7 @@
     "hace falta un procesador de lenguaje natural."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Los lenguajes artificiales tienen reglas estrictas y estructura predecible. El lenguaje natural sí necesita IA.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2293,6 +2445,7 @@
     "la morfología."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Fonología: sonidos. Sintaxis: estructura de las oraciones. Semántica: significado.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2308,6 +2461,7 @@
     "las reglas para combinar palabras en oraciones."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Sintaxis es la estructura; semántica es el significado.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2323,6 +2477,7 @@
     "la tokenización."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "NLU comprende; NLG genera texto (los modelos generativos).",
    "fuente": "Presentación PLN 2026"
   },
@@ -2338,6 +2493,7 @@
     "NLG (generación del lenguaje natural)."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "NLG incluye generación de contenido personalizado, informes y resúmenes, y control de estilo y tono.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2353,6 +2509,7 @@
     "análisis de sentimiento."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "El análisis de sentimiento identifica el tono emocional y la polaridad.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2368,6 +2525,7 @@
     "segmentación."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Los tokens pueden ser palabras, frases o caracteres. La segmentación agrupa tokens en oraciones.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2383,6 +2541,7 @@
     "la lematización lleva la palabra a su forma de diccionario y el stemming la recorta a su raíz."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Lema: \"corriendo\" → \"correr\". Stem: un recorte con reglas.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2398,6 +2557,7 @@
     "reducir las palabras a su raíz."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Después de tokenizar, normalizar y segmentar queda un vocabulario normalizado y agrupado en oraciones.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2413,6 +2573,7 @@
     "El pronombre."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Abiertas: sustantivo, adjetivo, verbo y adverbio. Cerradas: pronombres, preposiciones, conjunciones, interjecciones, determinantes.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2428,6 +2589,7 @@
     "una red de Hopfield."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Pasos: identificar el error, proponer palabras cercanas, sustituir y elegir la más probable según el contexto.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2443,6 +2605,7 @@
     "el modelo de n-gramas."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Se construye un corpus y se aprende la probabilidad de cada palabra dadas las n anteriores.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2458,6 +2621,7 @@
     "Necesita mucha infraestructura de alto rendimiento."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Sus límites son la ambigüedad, la dependencia entre palabras y la falta de contexto.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2473,6 +2637,7 @@
     "falta de datos de entrenamiento."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "No queda claro quién tiene los binoculares: la estructura admite dos lecturas.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2488,6 +2653,7 @@
     "traducir texto entre idiomas."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Es una técnica de representación; el agrupamiento lo hace después un modelo como K-Means.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2503,6 +2669,7 @@
     "la regresión logística."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "La lineal predice un número continuo (por ejemplo la calificación); la logística clasifica.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2518,6 +2685,7 @@
     "DBSCAN."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "K-Means agrupa por distancia en un espacio vectorial; DBSCAN detecta ruido.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2533,6 +2701,7 @@
     "un modelo de representación vectorial de palabras."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Se usa, por ejemplo, para clasificar noticias en deportes, política o tecnología.",
    "fuente": "Presentación PLN 2026"
   },
@@ -2548,6 +2717,7 @@
     "solo importa en lenguajes de programación."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Los tokenizadores se degradan mucho en esos casos y eso condiciona el rendimiento final.",
    "fuente": "Presentación PLN upgrade 2026"
   },
@@ -2563,6 +2733,7 @@
     "describe su cobertura de idiomas, pero no garantiza el mismo rendimiento en todos."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Evidencia 2026: modelos evaluados en 12 idiomas mostraron diferencias de comprensión.",
    "fuente": "Presentación PLN upgrade 2026"
   },
@@ -2578,6 +2749,7 @@
     "siempre hace falta el LLM más grande disponible."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Más grande no siempre es mejor: elegir el modelo vuelve a ser una decisión de ingeniería.",
    "fuente": "Presentación PLN upgrade 2026"
   },
@@ -2593,6 +2765,7 @@
     "eliminan la palabra por ser ambigua."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Se pasó de contar palabras a representar contexto. La ambigüedad sigue; cambió la representación.",
    "fuente": "Presentación PLN upgrade 2026"
   },
@@ -2608,6 +2781,7 @@
     "de hardware."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Los requerimientos están en el sistema social de la organización y se construyen en forma cooperativa.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2623,6 +2797,7 @@
     "proyectar."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Descomponer divide en partes; proyectar describe distintas visiones; modularizar combina en módulos.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2638,6 +2813,7 @@
     "formalizar."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Ojo: las visiones pueden ser inconsistentes entre sí.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2653,6 +2829,7 @@
     "La parrilla opuesta."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "También: diagramas UML, tablas y árboles de decisión, fórmulas y pseudo-reglas.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2668,6 +2845,7 @@
     "expectativa."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Suposición: algo de lo que no se está totalmente seguro o puede cambiar.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2683,6 +2861,7 @@
     "suposición."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Restricción: limitación operativa o legal que se debe respetar.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2698,6 +2877,7 @@
     "detallarse con métricas objetivas."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Ejemplo: tres recomendaciones por cliente, 75% de probabilidad de que acceda a una y 10% de que la compre.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2713,6 +2893,7 @@
     "hay que analizar si la IA es la mejor alternativa antes de aplicarla."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "\"No la trates como un martillo para todos tus problemas\" y \"no tengas miedo de lanzar tu producto sin IA\".",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2728,6 +2909,7 @@
     "precondiciones y poscondiciones solamente."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Los módulos tienen pre y poscondiciones; las tareas, propósito, entradas, acción y salida.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2743,6 +2925,7 @@
     "detección de anomalías."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Clustering agrupa similares; regresión busca una función numérica; reglas de asociación infieren relaciones.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2758,6 +2941,7 @@
     "regresión."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Ejemplo: regresión lineal y = a·x + b.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2773,6 +2957,7 @@
     "un atributo del problema."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Columna = atributo (de entrada o clase); fila = tupla o ejemplo.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2788,6 +2973,7 @@
     "se hace después de construir el modelo."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Incluye integración, limpieza y formateo. Conviene diseñarla en papel y automatizarla.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2803,6 +2989,7 @@
     "cambiar el atributo clase."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Son las dos acciones posibles de la limpieza.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2818,6 +3005,7 @@
     "código numérico único."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Igual ancho: rangos de la misma longitud. Igual frecuencia: misma cantidad de ejemplos por rango.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2833,6 +3021,7 @@
     "aplicarle la función de aptitud."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "También se puede asignar un código numérico por valor, cuidando que los parecidos queden cerca.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2848,6 +3037,7 @@
     "en producción hay que hacer las mismas acciones de recolección y preparación de datos que en el desarrollo."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Si no, el modelo puede comportarse de forma inesperada.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2863,6 +3053,7 @@
     "la IA reemplaza por completo al software tradicional."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Coincide con la idea de que los sistemas inteligentes exitosos están integrados al software existente.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2878,6 +3069,7 @@
     "el orden de los genes en el cromosoma."
    ],
    "correcta": 3,
+   "dificultad": "normal",
    "explicacion": "Son las interfaces entre los modelos y con el resto del sistema.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2893,6 +3085,7 @@
     "no tiene consecuencias si el modelo es preciso."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Los errores venían de datos judiciales desactualizados o mal cargados, no del reconocimiento en sí.",
    "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
   },
@@ -2908,6 +3101,7 @@
     "encadena pasos fijos sin decidir."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "La versión actual agrega: razona, decide y ejecuta acciones de forma autónoma, total o parcialmente.",
    "fuente": "Presentación IA upgrade 2026"
   },
@@ -2923,6 +3117,7 @@
     "son lo mismo con distinto nombre."
    ],
    "correcta": 1,
+   "dificultad": "normal",
    "explicacion": "Modelo responde; pipeline encadena pasos fijos; agente decide; multi-agente combina varios agentes.",
    "fuente": "Presentación IA upgrade 2026"
   },
@@ -2938,6 +3133,7 @@
     "no pueden procesar texto."
    ],
    "correcta": 2,
+   "dificultad": "normal",
    "explicacion": "Ejemplo: bancos usando IA local para datos sensibles. No siempre el más grande es mejor.",
    "fuente": "Presentación IA upgrade 2026"
   },
@@ -2953,6 +3149,7 @@
     "la IA deja de ser un producto aparte y se integra en los sistemas existentes."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Ejemplo: un CRM con IA integrada. \"La mejor tecnología de IA es la que no se nota\".",
    "fuente": "Presentación IA upgrade 2026"
   },
@@ -2968,6 +3165,7 @@
     "regulaciones como el EU AI Act, auditorías de modelos y evaluación de riesgos."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "La IA se trata como un problema socio-técnico; la ventaja competitiva incluye el cumplimiento normativo.",
    "fuente": "Presentación IA upgrade 2026"
   },
@@ -2983,6 +3181,7 @@
     "no hay evidencia de AGI real: hay sistemas avanzados, pero sin aprendizaje continuo ni autonomía total."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Hay mucho hype y poca evidencia sólida; benchmarks como ARC-AGI muestran bajo rendimiento en generalidad.",
    "fuente": "Presentación IA upgrade 2026"
   },
@@ -2998,7 +3197,1608 @@
     "sistema multi-agente."
    ],
    "correcta": 4,
+   "dificultad": "normal",
    "explicacion": "Se pasa de modelos a arquitecturas de varios agentes colaborando.",
+   "fuente": "Presentación IA upgrade 2026"
+  },
+  {
+   "id": "ptd-u1-01",
+   "unidad": "u1-intro",
+   "tema": "IA fuerte y débil",
+   "enunciado": "Un investigador sostiene que un sistema que conversa de forma indistinguible de una persona solo simula comprensión, aunque reproduzca bien su comportamiento. Esa postura es compatible con…",
+   "opciones": [
+    "la IA fuerte, porque el sistema pasa el test de Turing.",
+    "la IA débil, porque el sistema es un modelo de una mente y no una mente.",
+    "la paradoja de Moravec, porque conversar es una habilidad perceptiva.",
+    "ninguna postura, porque la IA débil niega que se pueda simular el comportamiento humano."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "La IA débil acepta que la máquina modele o simule la mente; la fuerte afirma que hardware + software ES una mente. Pasar un test no decide la discusión.",
+   "fuente": "Clase 1 - Introducción a la IA"
+  },
+  {
+   "id": "ptd-u1-02",
+   "unidad": "u1-intro",
+   "tema": "Inteligencia",
+   "enunciado": "Según la definición de la cátedra, ¿cuál de estos casos muestra inteligencia?",
+   "opciones": [
+    "Un experto en cardiología resolviendo un problema legal complejo, porque es experto.",
+    "Una persona que resuelve más rápido que el resto un tipo de problema que muchos saben resolver.",
+    "Una calculadora que suma correctamente, porque nadie suma tan rápido.",
+    "Una persona que memoriza una tabla de datos sin saber para qué sirve."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Inteligencia: hacer lo que casi nadie puede o lo que muchos hacen pero más eficiente, siempre dentro de un dominio. Ser experto en un dominio no lo hace inteligente en otro.",
+   "fuente": "Clase 1 - Introducción a la IA"
+  },
+  {
+   "id": "ptd-u1-03",
+   "unidad": "u1-intro",
+   "tema": "Moravec",
+   "enunciado": "¿Cuál de estas tareas sería, según la paradoja de Moravec, la más difícil de lograr para una computadora?",
+   "opciones": [
+    "Resolver un sistema de ecuaciones de 100 variables.",
+    "Ganarle a un campeón de ajedrez.",
+    "Agarrar un vaso de una mesa desordenada sin tirar nada.",
+    "Aprobar un test de razonamiento lógico para adultos."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Lo que para nosotros es trivial (percepción y motricidad de un bebé) es lo más difícil para la máquina.",
+   "fuente": "Clase 1 - Introducción a la IA"
+  },
+  {
+   "id": "ptd-u1-04",
+   "unidad": "u1-intro",
+   "tema": "Aplicación",
+   "enunciado": "La Inteligencia Artificial…",
+   "opciones": [
+    "permite construir Sistemas Expertos Tradicionales.",
+    "permite construir Sistemas Inteligentes en general.",
+    "permite construir Sistemas Expertos.",
+    "todas las opciones son correctas."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Igual que en el parcial: los SET son SE, los SE son SI y todos se construyen con IA. Ojo con elegir una sola cuando todas valen.",
+   "fuente": "Parciales 2022–2023 (estilo)"
+  },
+  {
+   "id": "ptd-u2-01",
+   "unidad": "u2-adquisicion",
+   "tema": "Fuentes",
+   "enunciado": "Un ingeniero lee los manuales de una planta y además entrevista al jefe de mantenimiento sobre los \"trucos\" que usa para detectar fallas. En ese orden, aplicó…",
+   "opciones": [
+    "educción y extracción.",
+    "dos técnicas de extracción.",
+    "dos técnicas de educción.",
+    "extracción y educción."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Manuales = fuente pública → extracción. Los trucos del jefe = conocimiento privado → educción (entrevista).",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ptd-u2-02",
+   "unidad": "u2-adquisicion",
+   "tema": "Declarativo y procedimental",
+   "enunciado": "Del Análisis de Protocolos de un mecánico se obtiene \"SI ruido = metálico Y temperatura = alta ENTONCES revisar rulemán\". Ese conocimiento es…",
+   "opciones": [
+    "procedimental, y sale de la etapa de transcripción.",
+    "procedimental, y sale de la etapa de interpretación.",
+    "declarativo, y sale de la etapa de codificación.",
+    "declarativo, porque menciona características y valores."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Que la regla use características y valores no la vuelve declarativa: es una regla de resolución (procedimental) y se escribe en la interpretación.",
+   "fuente": "Presentación Análisis de Protocolos 2026"
+  },
+  {
+   "id": "ptd-u2-03",
+   "unidad": "u2-adquisicion",
+   "tema": "Técnicas",
+   "enunciado": "El Ingeniero de Conocimiento NO usa las técnicas de educción para…",
+   "opciones": [
+    "identificar la relación entre los conceptos que usa el experto.",
+    "identificar las reglas que aplica el experto.",
+    "conocer los conceptos y su terminología en el dominio.",
+    "encontrar datos que el experto no mencionó para definirlos él mismo."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Educir es sacar lo que el experto sabe. \"Encontrar datos faltantes\" o \"generar un mecanismo automático\" son los distractores clásicos.",
+   "fuente": "Parciales 2022–2023 (estilo)"
+  },
+  {
+   "id": "ptd-u3-01",
+   "unidad": "u3-protocolos",
+   "tema": "Codificación",
+   "enunciado": "En el protocolo: \"Ahora voy a ver el segundo análisis. Creo que el valor está apenas por encima de lo normal\". Las dos frases se codifican, respectivamente, como…",
+   "opciones": [
+    "sinónimo y metacomentario.",
+    "relación implícita y valor.",
+    "metacomentario e incertidumbre.",
+    "incertidumbre y metacomentario."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "\"Ahora voy a ver…\" organiza el propio razonamiento (metacomentario). \"Creo que…\" expresa duda (incertidumbre).",
+   "fuente": "Presentación Análisis de Protocolos 2026"
+  },
+  {
+   "id": "ptd-u3-02",
+   "unidad": "u3-protocolos",
+   "tema": "Etapas",
+   "enunciado": "¿En qué etapa del Análisis de Protocolos se decide que \"paciente\" y \"persona\" refieren al mismo concepto?",
+   "opciones": [
+    "En la grabación, al pedirle al experto que lo aclare.",
+    "En la transcripción.",
+    "En la interpretación.",
+    "En la codificación."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Sinónimos, metacomentarios e incertidumbres se identifican en la codificación, junto con conceptos, características, valores y relaciones.",
+   "fuente": "Presentación Análisis de Protocolos 2026"
+  },
+  {
+   "id": "ptd-u3-03",
+   "unidad": "u3-protocolos",
+   "tema": "Etapas",
+   "enunciado": "Si durante la grabación el experto se queda callado varios segundos, el ingeniero de conocimiento…",
+   "opciones": [
+    "lo incentiva a seguir hablando, porque el objetivo es que informe todo lo que piensa en el momento.",
+    "espera en silencio para no influir en el protocolo.",
+    "completa él mismo lo que el experto estaría pensando.",
+    "detiene la grabación y la vuelve a empezar."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "La técnica busca el pensamiento en voz alta continuo; los silencios se interrumpen pidiéndole que siga verbalizando.",
+   "fuente": "Clase 3 - Análisis de Protocolos"
+  },
+  {
+   "id": "ptd-u3-04",
+   "unidad": "u3-protocolos",
+   "tema": "Conocimiento",
+   "enunciado": "Un Análisis de Protocolos bien hecho NO permite obtener directamente…",
+   "opciones": [
+    "las relaciones entre conceptos, incluso las implícitas.",
+    "la cantidad de grupos de conceptos similares según el experto.",
+    "las reglas que aplica el experto.",
+    "los conceptos con sus características y valores."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Agrupar por similitud (con distancias y árboles) es lo que hace el Emparrillado.",
+   "fuente": "Clase 3 - Análisis de Protocolos"
+  },
+  {
+   "id": "ptd-u3-05",
+   "unidad": "u3-protocolos",
+   "tema": "Codificación",
+   "enunciado": "En \"el agua presenta un color verdoso y un olor fuerte\", la mejor codificación es…",
+   "opciones": [
+    "concepto: agua; características: color y olor; valores: verdoso y fuerte.",
+    "concepto: color verdoso; característica: agua; valor: olor fuerte.",
+    "conceptos: verdoso y fuerte; característica: agua.",
+    "conceptos: agua, color y olor; valores: verdoso y fuerte."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "El objeto es el agua; color y olor son características; verdoso y fuerte, sus valores. \"Presenta\" es la relación.",
+   "fuente": "Presentación Análisis de Protocolos 2026"
+  },
+  {
+   "id": "ptd-u4-01",
+   "unidad": "u4-emparrillado",
+   "tema": "Distancias",
+   "enunciado": "En una parrilla con escala [1, 5], C1 = (1, 2, 5) y C2 = (5, 4, 1) para tres elementos. ¿Qué se puede afirmar?",
+   "opciones": [
+    "d1 = 0 y d2 = 10: están relacionadas en forma directa.",
+    "d1 = 10 y d2 = 10: no están relacionadas.",
+    "d1 = 10 y d2 = 0: están fuertemente relacionadas, pero en forma invertida.",
+    "d1 = 10 y d2 = 0: no están relacionadas porque d1 es alta."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Opuesto de C2 = 6 − v = (1, 2, 5), igual a C1 → d2 = 0. Para agrupar se usa mín(d1, d2) = 0: van juntas (relación inversa).",
+   "fuente": "Clase 7 - Emparrillado"
+  },
+  {
+   "id": "ptd-u4-02",
+   "unidad": "u4-emparrillado",
+   "tema": "Parrilla opuesta",
+   "enunciado": "En una parrilla con escala [1, 4], la característica C = (2, 4, 1, 3) tiene como opuesta…",
+   "opciones": [
+    "(2, 0, 3, 1).",
+    "(4, 2, 3, 1).",
+    "(3, 1, 4, 2).",
+    "(3, 1, 4, 2) solo si C tiene polos invertidos."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Opuesto = máx + 1 − v = 5 − v: 3, 1, 4, 2. Siempre se calcula igual, sin importar el significado de los polos.",
+   "fuente": "Clase 7 - Emparrillado"
+  },
+  {
+   "id": "ptd-u4-03",
+   "unidad": "u4-emparrillado",
+   "tema": "Tipos de parrilla",
+   "enunciado": "Un experto ordena 6 elementos del 1 al 6 según cuánto cumplen cada característica, sin repetir valores. Usó una parrilla…",
+   "opciones": [
+    "evaluativa, porque usa una escala numérica.",
+    "clasificatoria.",
+    "evaluativa.",
+    "dicotómica."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Escala [1, n] con n = cantidad de elementos y sin empates → clasificatoria. En la evaluativa n es libre y puede haber empates.",
+   "fuente": "Presentación Emparrillado 2026"
+  },
+  {
+   "id": "ptd-u4-04",
+   "unidad": "u4-emparrillado",
+   "tema": "Grupos",
+   "enunciado": "En el árbol de características: C1–C2 a nivel 1, después C3 se une a [C1, C2] a nivel 2, después C4–C5 a nivel 3 y todo se une a nivel 4. ¿Cuántos grupos quedan?",
+   "opciones": [
+    "2 grupos: (C1, C2, C3) y (C4, C5).",
+    "4 grupos: (C1), (C2), (C3) y (C4, C5).",
+    "3 grupos: (C1, C2), (C3) y (C4, C5).",
+    "1 grupo con las cinco características."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Sueltos que se unen forman grupo (C1-C2, C4-C5). Un suelto que se suma a un grupo (C3) queda como grupo propio. Unir dos grupos no crea uno nuevo.",
+   "fuente": "Clase 7 - Emparrillado"
+  },
+  {
+   "id": "ptd-u4-05",
+   "unidad": "u4-emparrillado",
+   "tema": "Relaciones",
+   "enunciado": "El texto dice: \"las de precio alto son de mejor calidad; las de precio bajo pueden ser de calidad buena o mala\". Con C1 = precio (alto/bajo) y C2 = calidad (buena/mala), la relación es…",
+   "opciones": [
+    "ortogonal.",
+    "recíproca.",
+    "ambigua.",
+    "paralela."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Hay A→X (alto→buena) y desde B salen dos flechas (bajo→buena y bajo→mala): un abanico más una flecha → ambigua.",
+   "fuente": "Clase 7 - Emparrillado"
+  },
+  {
+   "id": "ptd-u4-06",
+   "unidad": "u4-emparrillado",
+   "tema": "Relaciones",
+   "enunciado": "Si el texto afirma que precio alto implica calidad buena, y también que calidad buena implica precio alto, y lo mismo entre precio bajo y calidad mala, la relación es…",
+   "opciones": [
+    "paralela.",
+    "recíproca.",
+    "ortogonal.",
+    "ambigua."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Las cuatro flechas de ida y vuelta (A↔X y B↔Y) forman una recíproca. Con solo A→X y B→Y sería paralela.",
+   "fuente": "Clase 7 - Emparrillado"
+  },
+  {
+   "id": "ptd-u4-07",
+   "unidad": "u4-emparrillado",
+   "tema": "Usos",
+   "enunciado": "El Emparrillado aplicado solo, sin otras técnicas, NO alcanza para…",
+   "opciones": [
+    "saber qué elementos considera parecidos el experto.",
+    "tener una representación gráfica del conocimiento del experto.",
+    "agrupar características relacionadas.",
+    "construir una base de conocimientos con las reglas del experto."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Da conocimiento declarativo superficial (agrupaciones y relaciones), no reglas de resolución.",
+   "fuente": "Presentación Emparrillado 2026"
+  },
+  {
+   "id": "ptd-u5-01",
+   "unidad": "u5-busqueda",
+   "tema": "A*",
+   "enunciado": "En A* donde conviene el valor heurístico mayor, un nodo con h = 50 al que se llegó con costo acumulado 12 tiene un valor de…",
+   "opciones": [
+    "50.",
+    "62.",
+    "38.",
+    "12."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Con \"mayor es mejor\" la cátedra usa f = h − g = 50 − 12 = 38. Con \"menor es mejor\" sería h + g.",
+   "fuente": "Presentación Métodos de Búsqueda 2026"
+  },
+  {
+   "id": "ptd-u5-02",
+   "unidad": "u5-busqueda",
+   "tema": "Escaladas",
+   "enunciado": "Un nodo actual vale 10 (mayor es mejor) y sus hijos, de izquierda a derecha, valen 10, 14 y 18. ¿A dónde va cada escalada (izq → der)?",
+   "opciones": [
+    "Las dos al de 18.",
+    "Escalada Simple al de 14; Máxima Pendiente al de 18.",
+    "Las dos se detienen porque el primer hijo no mejora.",
+    "Escalada Simple al de 10; Máxima Pendiente al de 18."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "La simple avanza al primer hijo estrictamente mejor (el 10 no mejora, el 14 sí). Máxima pendiente elige el mejor de todos.",
+   "fuente": "Presentación Métodos de Búsqueda 2026"
+  },
+  {
+   "id": "ptd-u5-03",
+   "unidad": "u5-busqueda",
+   "tema": "Comparación",
+   "enunciado": "¿Cuál de estos métodos puede elegir como nodo actual uno que es PEOR que el nodo actual anterior?",
+   "opciones": [
+    "Escalada Simple.",
+    "Primero el Mejor.",
+    "Ninguno de los heurísticos.",
+    "Escalada por Máxima Pendiente."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Primero el Mejor toma el mejor de todos los abiertos, aunque no supere al actual. Las escaladas solo avanzan si mejora estrictamente.",
+   "fuente": "Presentación Métodos de Búsqueda 2026"
+  },
+  {
+   "id": "ptd-u5-04",
+   "unidad": "u5-busqueda",
+   "tema": "Beam",
+   "enunciado": "En Beam Search con n = 1, la lista final de nodos abiertos…",
+   "opciones": [
+    "queda vacía, porque se recorta a 1 antes de elegir y ese único nodo pasa a ser el actual.",
+    "tiene siempre un único nodo.",
+    "es igual a la de Primero el Mejor.",
+    "contiene todos los hijos del último nodo actual."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Convención de la cátedra: se recorta la lista a n antes de seleccionar; los descartados no vuelven.",
+   "fuente": "Convenciones validadas con los parciales"
+  },
+  {
+   "id": "ptd-u5-05",
+   "unidad": "u5-busqueda",
+   "tema": "Ciegos",
+   "enunciado": "Un grafo tiene un nodo G con dos padres (C y D). Al recorrerlo en amplitud, la cátedra…",
+   "opciones": [
+    "solo cuenta a G por su padre más a la izquierda.",
+    "lo cuenta una sola vez porque ya fue visitado.",
+    "descarta la segunda rama completa.",
+    "lo trata como árbol: G aparece dos veces en el recorrido."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Los ciegos recorren el grafo como si fuera árbol; por eso en los recorridos de la cátedra se repiten nodos.",
+   "fuente": "Convenciones validadas con los parciales"
+  },
+  {
+   "id": "ptd-u5-06",
+   "unidad": "u5-busqueda",
+   "tema": "Elección de método",
+   "enunciado": "Hay muchísimas soluciones, todas muy profundas en el árbol, y poca memoria disponible. El método ciego más conveniente es…",
+   "opciones": [
+    "Primero en Profundidad.",
+    "Bidireccional con amplitud en ambos sentidos.",
+    "Generación y Prueba.",
+    "Primero en Amplitud."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Profundidad usa poca memoria (una rama por vez) y conviene con soluciones lejos de la raíz. Amplitud gasta mucha memoria.",
+   "fuente": "Presentación Métodos de Búsqueda 2026"
+  },
+  {
+   "id": "ptd-u6-01",
+   "unidad": "u6-sistemas",
+   "tema": "Tipo de problema",
+   "enunciado": "¿Cuál de estos es un problema de ESTIMACIÓN, aunque esté redactado como reconocimiento?",
+   "opciones": [
+    "Identificar cuántas personas hay en la foto de una tribuna.",
+    "Encontrar el orden de visitas que minimice los kilómetros recorridos.",
+    "Reconocer la patente de un auto en una foto borrosa.",
+    "Identificar si en una foto aparece un perro o un gato."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "La salida es un número (cantidad) → estimación. Perro/gato y la patente son clasificación; el orden de visitas, optimización.",
+   "fuente": "Parciales (estilo \"identificar la cantidad\")"
+  },
+  {
+   "id": "ptd-u6-02",
+   "unidad": "u6-sistemas",
+   "tema": "Tipo de problema",
+   "enunciado": "Un banco quiere asignar a cada cliente la combinación de cuotas y tasa que maximice su ganancia sin superar el riesgo aceptado. Es un problema de…",
+   "opciones": [
+    "clasificación, porque asigna a cada cliente una opción.",
+    "optimización.",
+    "predicción, porque se trata de una ganancia futura.",
+    "clustering, porque agrupa clientes por riesgo."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Buscar la mejor combinación que maximiza algo con restricciones es optimización (AG), aunque \"asigne\" algo a cada cliente.",
+   "fuente": "Parciales (estilo)"
+  },
+  {
+   "id": "ptd-u6-03",
+   "unidad": "u6-sistemas",
+   "tema": "Tecnología",
+   "enunciado": "Una empresa no tiene datos históricos ni reglas escritas, pero sus técnicos saben decir si una distribución de turnos \"es mejor o peor\" que otra. La tecnología más adecuada es…",
+   "opciones": [
+    "un Sistema Basado en Conocimientos con las reglas de los técnicos.",
+    "una RNA Backpropagation, porque aprende de los técnicos.",
+    "un Algoritmo Genético que use ese criterio en su función de aptitud.",
+    "ninguna, porque sin datos no se puede aplicar IA."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Sin datos no hay ML; sin reglas no hay SBC. Con heurísticas para comparar soluciones → Inteligencia Computacional (AG).",
+   "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u6-04",
+   "unidad": "u6-sistemas",
+   "tema": "Tecnología",
+   "enunciado": "Una organización tiene reglas representativas del experto, pero ningún dato histórico. ¿Qué familias de tecnologías se podrían aplicar?",
+   "opciones": [
+    "Solo Machine Learning, porque las reglas son datos.",
+    "Solo IA tradicional, porque es la única que usa reglas.",
+    "Todas: IA tradicional directamente, y también ML o Inteligencia Computacional generando ejemplos a partir de las reglas.",
+    "Ninguna, porque sin datos no se puede entrenar."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Es la respuesta \"todas\" de la cátedra: con reglas se pueden generar ejemplos para ML o heurísticas para un AG.",
+   "fuente": "Clase 2 - Conceptos Iniciales"
+  },
+  {
+   "id": "ptd-u6-05",
+   "unidad": "u6-sistemas",
+   "tema": "SBC / SE / SET",
+   "enunciado": "Una red neuronal entrenada con los diagnósticos de un médico experto, sin base de conocimientos explícita, es…",
+   "opciones": [
+    "un Sistema Experto Tradicional, porque usa conocimiento del experto.",
+    "un Sistema Basado en Conocimientos, porque tiene conocimiento.",
+    "un Sistema Experto, pero no un Sistema Experto Tradicional.",
+    "no es un Sistema Experto, porque no tiene base de conocimientos."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "El SE emula al experto y puede no tener BC explícita. El SET y el SBC sí la tienen siempre.",
+   "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u6-06",
+   "unidad": "u6-sistemas",
+   "tema": "SET",
+   "enunciado": "Un médico pide que el sistema le muestre por qué recomendó un tratamiento. Los componentes de un SET que lo hacen posible son…",
+   "opciones": [
+    "la memoria de trabajo, que guarda la traza, y el trazador de explicaciones, que la lee.",
+    "el motor de inferencias y la interfaz de entrada/salida, que existen también en el SBC.",
+    "la base de conocimientos y el manejador de comunicaciones.",
+    "la base de datos y el trazador de consultas."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "El SET es el único que justifica: la memoria de trabajo registra los pasos y el trazador de explicaciones se los cuenta al usuario.",
+   "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u6-07",
+   "unidad": "u6-sistemas",
+   "tema": "SBC",
+   "enunciado": "¿Cuál de las siguientes afirmaciones sobre los Sistemas Basados en Conocimientos es correcta?",
+   "opciones": [
+    "Deben tener una base de conocimientos explícita y su motor de inferencias usa métodos de búsqueda.",
+    "Deben tener memoria de trabajo y trazador de explicaciones.",
+    "Usan solo conocimiento de fuentes privadas.",
+    "Pueden o no tener base de conocimientos explícita."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "SBC: BC explícita siempre, fuentes públicas, motor de inferencias con búsqueda. Memoria de trabajo y trazadores son del SET.",
+   "fuente": "Parciales 2022 (estilo)"
+  },
+  {
+   "id": "ptd-u6-08",
+   "unidad": "u6-sistemas",
+   "tema": "Características",
+   "enunciado": "¿Qué afirmación sobre los sistemas inteligentes es FALSA?",
+   "opciones": [
+    "Pueden equivocarse aunque decidan de forma racional.",
+    "Soportan cambios del dominio.",
+    "Son infalibles dentro de su dominio porque deciden de forma racional.",
+    "No poseen todos los conocimientos ni todos los datos."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Racional no implica infalible: decide en línea con su objetivo, pero no siempre acierta.",
+   "fuente": "Presentación Tipos de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u6-09",
+   "unidad": "u6-sistemas",
+   "tema": "Software tradicional",
+   "enunciado": "¿Qué tienen en común el software tradicional y un sistema inteligente?",
+   "opciones": [
+    "Ambos deben satisfacer los deseos y necesidades de sus stakeholders.",
+    "Ambos se implementan en forma algorítmica.",
+    "Ambos tienen mantenimiento solo perfectivo.",
+    "Ambos son deterministas."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Lo determinista y algorítmico es del tradicional; el mantenimiento perfectivo, del inteligente.",
+   "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u6-10",
+   "unidad": "u6-sistemas",
+   "tema": "Electrodomésticos",
+   "enunciado": "¿Cuál de estas heladeras es realmente un sistema inteligente?",
+   "opciones": [
+    "Una que arma sola la lista de compras según lo que se fue consumiendo en las últimas semanas.",
+    "Una con pantalla táctil y recetas precargadas.",
+    "Una que manda una notificación al celular cuando la puerta queda abierta.",
+    "Una con wifi que se puede encender desde una app."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Es inteligente si decide a partir de datos. Pantalla, wifi o una alarma fija no son inteligencia.",
+   "fuente": "Parciales (estilo)"
+  },
+  {
+   "id": "ptd-u6-11",
+   "unidad": "u6-sistemas",
+   "tema": "Explícito / implícito",
+   "enunciado": "Si un sistema define automáticamente su conocimiento a partir de una tabla de datos, y nadie puede leer ese conocimiento como reglas, entonces…",
+   "opciones": [
+    "es Machine Learning y representa el conocimiento en forma implícita.",
+    "es un SBC con base de conocimientos implícita.",
+    "es Machine Learning y su base de conocimientos es explícita.",
+    "es IA tradicional y representa el conocimiento en forma explícita."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Aprender de datos = ML; sin BC legible = implícito. Un SBC siempre es explícito.",
+   "fuente": "Parciales (estilo)"
+  },
+  {
+   "id": "ptd-u7-01",
+   "unidad": "u7-ag",
+   "tema": "Control número esperado",
+   "enunciado": "Tres individuos con aptitudes 30, 20 y 10 (población de 3) usan Control sobre Número Esperado. ¿Cuál es la probabilidad de que el de aptitud 10 pase a la selección?",
+   "opciones": [
+    "100%, porque el método garantiza a todos un lugar.",
+    "0%, porque su valor de selección es menor que 1.",
+    "50%, porque compite por el único lugar libre con el de aptitud 30 en una ruleta de partes decimales 0,5 y 0,5.",
+    "17%, que es su porción de la ruleta común (10/60)."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Promedio 20 → valores 1,5 / 1,0 / 0,5. Pasan directo uno del primero y uno del segundo. El tercer lugar se sortea con decimales 0,5 / 0 / 0,5.",
+   "fuente": "Presentación Algoritmos Genéticos 2026"
+  },
+  {
+   "id": "ptd-u7-02",
+   "unidad": "u7-ag",
+   "tema": "Ruleta",
+   "enunciado": "Con aptitudes 50, 30 y 20, en una sola tirada de ruleta el individuo de aptitud 30 tiene una probabilidad de salir de…",
+   "opciones": [
+    "60%, porque supera al de 20.",
+    "0%, porque está por debajo del promedio.",
+    "30%.",
+    "33%, porque son tres individuos."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Porción = aptitud / total = 30 / 100. Ojo: el promedio es 33,3, pero la ruleta no usa el promedio.",
+   "fuente": "Presentación Algoritmos Genéticos 2026"
+  },
+  {
+   "id": "ptd-u7-03",
+   "unidad": "u7-ag",
+   "tema": "Convergencia",
+   "enunciado": "Durante 40 ciclos todos los individuos son casi idénticos y la mejor aptitud no cambia, aunque está lejos del valor buscado. La combinación de parámetros más probable es…",
+   "opciones": [
+    "criterio de paro por cantidad de vueltas.",
+    "selección por ranking y probabilidad de mutación muy baja.",
+    "cruza binomial al azar y población inicial al azar.",
+    "selección por ruleta y probabilidad de mutación muy alta."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Convergencia prematura: ranking pierde diversidad y la mutación baja no la recupera.",
+   "fuente": "Parciales 2022–2023 (estilo)"
+  },
+  {
+   "id": "ptd-u7-04",
+   "unidad": "u7-ag",
+   "tema": "Diagnóstico",
+   "enunciado": "La mejor aptitud de la población sube y baja de forma errática durante toda la corrida, sin acercarse nunca al valor buscado. Lo primero que conviene revisar es…",
+   "opciones": [
+    "la cantidad de individuos de la población inicial.",
+    "la función de aptitud.",
+    "el método de selección, cambiándolo por ranking.",
+    "el criterio de paro."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Si no converge oscilando, la función de aptitud no está guiando la búsqueda (mal diseñada).",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ptd-u7-05",
+   "unidad": "u7-ag",
+   "tema": "Cruzamiento",
+   "enunciado": "Con cruza binomial con máscara COMPLEMENTO entre los padres A y B, NO puede pasar que…",
+   "opciones": [
+    "cada hijo tenga una mezcla de genes de A y de B.",
+    "un hijo sea idéntico a A y el otro idéntico a B.",
+    "los dos hijos hereden el mismo gen del mismo padre en la misma posición.",
+    "el resultado sea igual al de una cruza multipunto."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Con complemento, lo que un hijo toma de A el otro lo toma de B. Repetir un gen del mismo padre en ambos hijos solo pasa con máscara doble.",
+   "fuente": "Presentación Algoritmos Genéticos 2026"
+  },
+  {
+   "id": "ptd-u7-06",
+   "unidad": "u7-ag",
+   "tema": "Cruzamiento",
+   "enunciado": "En una cruza simple entre A = 1111 1111 y B = 0000 0000 con el punto de corte después del tercer gen, los hijos son…",
+   "opciones": [
+    "1111 0000 y 0000 1111.",
+    "1110 0000 y 0001 1111.",
+    "1110 0000 y 1110 0000.",
+    "1010 1010 y 0101 0101."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Hijo 1 = primeros 3 genes de A + resto de B; hijo 2 = primeros 3 de B + resto de A.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ptd-u7-07",
+   "unidad": "u7-ag",
+   "tema": "Mutación",
+   "enunciado": "Con probabilidad de mutación del 5%, en un ciclo el número al azar sale 0,08. Entonces…",
+   "opciones": [
+    "la mutación no se activó en ese ciclo.",
+    "la mutación se activó pero no se ejecutó.",
+    "la mutación se ejecutó sobre el mejor individuo.",
+    "se produjo una convergencia prematura."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Siempre se activa; se ejecuta solo si el número es menor o igual a la probabilidad (0,08 > 0,05).",
+   "fuente": "Presentación Algoritmos Genéticos 2026"
+  },
+  {
+   "id": "ptd-u7-08",
+   "unidad": "u7-ag",
+   "tema": "Conocimiento",
+   "enunciado": "En un AG para armar el horario de una facultad, la regla \"un profesor no puede dar dos materias a la misma hora\" se implementa en…",
+   "opciones": [
+    "la estructura del cromosoma.",
+    "el criterio de paro.",
+    "la función de aptitud, como penalización.",
+    "el operador de mutación."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Las restricciones del problema son conocimiento: van en la función de aptitud. El cromosoma solo representa la solución.",
+   "fuente": "Parciales (estilo)"
+  },
+  {
+   "id": "ptd-u7-09",
+   "unidad": "u7-ag",
+   "tema": "Criterio de paro",
+   "enunciado": "Un AG usa como criterio de paro \"detenerse cuando algún individuo alcance aptitud 1000\", pero el máximo posible del problema es 950. Entonces…",
+   "opciones": [
+    "termina cuando se alcanza la cantidad de vueltas por defecto.",
+    "la corrida no termina nunca.",
+    "termina en la primera vuelta.",
+    "termina cuando la población converge."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Un paro basado en aptitud puede no cumplirse nunca. Por cantidad de vueltas, en cambio, siempre termina.",
+   "fuente": "Clase 4 - Algoritmos Genéticos"
+  },
+  {
+   "id": "ptd-u7-10",
+   "unidad": "u7-ag",
+   "tema": "Parámetros",
+   "enunciado": "En un AG, un parámetro que solo se puede ajustar probando y evaluando varias corridas es…",
+   "opciones": [
+    "la estructura del cromosoma una vez definida.",
+    "qué genes muta siempre la mutación.",
+    "la cantidad de individuos de la población.",
+    "el orden de los operadores genéticos."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "La cantidad ideal de individuos y de vueltas se encuentra experimentando.",
+   "fuente": "Parciales 2025 (estilo)"
+  },
+  {
+   "id": "ptd-u7-11",
+   "unidad": "u7-ag",
+   "tema": "Resultados",
+   "enunciado": "Se cruzan los dos mejores individuos de la población. Sus hijos…",
+   "opciones": [
+    "pueden ser mejores, peores o iguales que los padres.",
+    "son siempre idénticos a los padres.",
+    "siempre son peores, por eso se usa la mutación.",
+    "siempre son mejores que los padres."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "El cruzamiento no garantiza mejora: por eso la respuesta habitual es \"todas las anteriores pueden pasar\".",
+   "fuente": "Parciales (estilo)"
+  },
+  {
+   "id": "ptd-u7-12",
+   "unidad": "u7-ag",
+   "tema": "Versión 2026",
+   "enunciado": "Según la presentación 2026 (no según los parciales anteriores), el método de selección por Ranking…",
+   "opciones": [
+    "asigna probabilidades según la posición y tiene menos riesgo de convergencia prematura que la ruleta.",
+    "usa las partes decimales de aptitud dividido el promedio.",
+    "hace competir a los individuos de a pares.",
+    "siempre elige al mejor individuo de la población."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "La 2026 lo define probabilístico. En los parciales 2020–2025 se corrigió como \"siempre elige al mejor\" y con MÁS riesgo.",
+   "fuente": "Presentación Algoritmos Genéticos 2026"
+  },
+  {
+   "id": "ptd-u7-13",
+   "unidad": "u7-ag",
+   "tema": "Población final",
+   "enunciado": "Si tras una corrida la población final tiene un individuo excelente y muchos inválidos, se puede afirmar que…",
+   "opciones": [
+    "la corrida falló porque la población final debe ser toda válida.",
+    "hay que repetir la corrida con la misma población hasta que no queden inválidos.",
+    "el individuo excelente es el óptimo global.",
+    "el resultado es válido: se toma el mejor individuo, y que haya inválidos no lo descarta."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "La población final no garantiza el óptimo ni que todos sean válidos; se elige el mejor.",
+   "fuente": "Presentación Algoritmos Genéticos 2026"
+  },
+  {
+   "id": "ptd-u8-01",
+   "unidad": "u8-rna",
+   "tema": "Métricas",
+   "enunciado": "Un modelo da VP = 40, FP = 10, FN = 40 y VN = 10. Su exactitud, precisión y recall son, en ese orden…",
+   "opciones": [
+    "50%, 50% y 80%.",
+    "40%, 80% y 50%.",
+    "50%, 80% y 50%.",
+    "80%, 50% y 50%."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Exactitud = (40+10)/100. Precisión = 40/(40+10). Recall = 40/(40+40).",
+   "fuente": "Presentación Procesos de ML 2026"
+  },
+  {
+   "id": "ptd-u8-02",
+   "unidad": "u8-rna",
+   "tema": "Métricas",
+   "enunciado": "En un sistema para detectar una enfermedad grave, donde es mucho peor no detectar a un enfermo que dar una falsa alarma, conviene priorizar…",
+   "opciones": [
+    "el recall (recuperación).",
+    "la precisión.",
+    "el error relativo.",
+    "la exactitud."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "No detectar a un enfermo es un falso negativo; el recall = VP/(VP+FN) es el que lo castiga.",
+   "fuente": "Presentación Procesos de ML 2026"
+  },
+  {
+   "id": "ptd-u8-03",
+   "unidad": "u8-rna",
+   "tema": "Perceptrón",
+   "enunciado": "Un Perceptrón con w1 = 0,5, w2 = 0,6, Θ = 0,2 y α = 0,2 recibe x = (0, 1) con salida deseada 0. Después de UNA corrección…",
+   "opciones": [
+    "no cambia ningún peso porque la salida ya es correcta.",
+    "w1 y w2 bajan 0,2 y el patrón queda aprendido.",
+    "w1 pasa a 0,3 y w2 no cambia.",
+    "w2 pasa a 0,4 y el patrón todavía no está aprendido."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "A = 0,6 − 0,2 = 0,4 → salida 1 (error). ΔW1 = 0 (x1 = 0); ΔW2 = 1·1·0,2 → w2 = 0,4. Nuevo A = 0,2 > 0: sigue dando 1.",
+   "fuente": "Presentación RNA 2026"
+  },
+  {
+   "id": "ptd-u8-04",
+   "unidad": "u8-rna",
+   "tema": "Perceptrón",
+   "enunciado": "Un Perceptrón con w1 = 0,3, w2 = 0,4 y Θ = 0,5 recibe x = (1, 1) con salida deseada 1. Sus pesos…",
+   "opciones": [
+    "cambian solo en w2, por ser el mayor.",
+    "no cambian, porque A = 0,2 > 0 da salida 1, que es la deseada.",
+    "bajan, porque A es positivo.",
+    "suben, porque la salida deseada es 1."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Sin error no hay corrección: ΔW = (Y − Yd)·X·α = 0.",
+   "fuente": "Presentación RNA 2026"
+  },
+  {
+   "id": "ptd-u8-05",
+   "unidad": "u8-rna",
+   "tema": "Hopfield",
+   "enunciado": "Una red de Hopfield de 100 neuronas puede recuperar sin error, aproximadamente…",
+   "opciones": [
+    "25 patrones, la cuarta parte de las neuronas.",
+    "100 patrones, uno por neurona.",
+    "5 patrones ortogonales.",
+    "15 patrones ortogonales."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "N / (4·ln N) = 100 / (4 · 4,6) ≈ 5,4. Con error mínimo serían ≈ 0,15·N = 15.",
+   "fuente": "Presentación RNA 2026"
+  },
+  {
+   "id": "ptd-u8-06",
+   "unidad": "u8-rna",
+   "tema": "Elección de red",
+   "enunciado": "Se quiere reconstruir huellas digitales parcialmente borradas a partir de un conjunto de huellas guardadas. La red más adecuada es…",
+   "opciones": [
+    "Hopfield: autoasociativa, completa patrones a partir de los aprendidos.",
+    "Backpropagation: aproxima cualquier función.",
+    "Perceptrón: clasifica en dos clases.",
+    "Una convolucional de clasificación con softmax."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Completar datos faltantes de patrones conocidos es el uso típico de Hopfield.",
+   "fuente": "Presentación RNA 2026"
+  },
+  {
+   "id": "ptd-u8-07",
+   "unidad": "u8-rna",
+   "tema": "Elección de red",
+   "enunciado": "Se quiere predecir cuántos alumnos aprueban un examen a partir del histórico de exámenes corregidos. La red debe ser…",
+   "opciones": [
+    "heteroasociativa con aprendizaje no supervisado.",
+    "autoasociativa con aprendizaje no supervisado.",
+    "autoasociativa con aprendizaje supervisado.",
+    "heteroasociativa con aprendizaje supervisado."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Hay entradas y una salida conocida (cuántos aprobaron) → supervisado y heteroasociativo.",
+   "fuente": "Parciales 2025 (estilo)"
+  },
+  {
+   "id": "ptd-u8-08",
+   "unidad": "u8-rna",
+   "tema": "Arquitectura",
+   "enunciado": "¿Cuál de estas afirmaciones sobre una Backpropagation es FALSA?",
+   "opciones": [
+    "Puede aproximar funciones lineales y no lineales.",
+    "Puede tener una o más capas ocultas.",
+    "La función de las neuronas debe ser derivable.",
+    "Las conexiones van hacia atrás, porque el error se propaga hacia atrás."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Las conexiones son hacia adelante; lo que se propaga hacia atrás al entrenar es el error.",
+   "fuente": "Presentación RNA 2026"
+  },
+  {
+   "id": "ptd-u8-09",
+   "unidad": "u8-rna",
+   "tema": "Diagnóstico",
+   "enunciado": "El error de entrenamiento baja sin parar, y el de validación baja hasta la época 300 y después sube. Lo correcto es…",
+   "opciones": [
+    "subir la tasa de aprendizaje.",
+    "quedarse con el modelo de alrededor de la época 300 (early stopping), porque después sobreentrena.",
+    "entrenar más épocas hasta que el error de validación vuelva a bajar.",
+    "agregar neuronas ocultas, porque la red no tiene capacidad."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Validación que sube mientras entrenamiento baja = overfitting.",
+   "fuente": "Presentación RNA 2026"
+  },
+  {
+   "id": "ptd-u8-10",
+   "unidad": "u8-rna",
+   "tema": "Diagnóstico",
+   "enunciado": "Los errores de entrenamiento y validación bajan juntos y quedan planos en un valor alto. Lo más probable es que…",
+   "opciones": [
+    "la tasa de aprendizaje sea demasiado chica y alcance con esperar.",
+    "esté sobreentrenando.",
+    "falten datos de prueba.",
+    "la red no tenga capacidad suficiente y haya que cambiar la topología."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Error alto y estable en ambos conjuntos = no puede aprender el problema (underfitting por topología).",
+   "fuente": "Parciales (estilo)"
+  },
+  {
+   "id": "ptd-u8-11",
+   "unidad": "u8-rna",
+   "tema": "Diagnóstico",
+   "enunciado": "Una red tiene recall 23% en entrenamiento y 22% en validación, y ambos vienen subiendo. Lo más razonable es…",
+   "opciones": [
+    "seguir entrenando con los pesos actuales, porque todavía no terminó de aprender.",
+    "quitar capas ocultas.",
+    "cortar porque está sobreentrenada.",
+    "reiniciar los pesos al azar."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Valores bajos y parecidos que mejoran juntos indican un entrenamiento sin terminar.",
+   "fuente": "Parciales (estilo)"
+  },
+  {
+   "id": "ptd-u8-12",
+   "unidad": "u8-rna",
+   "tema": "Capa de salida",
+   "enunciado": "Para clasificar fotos de frutas en 5 clases excluyentes, la capa de salida debería tener…",
+   "opciones": [
+    "1 neurona con softmax.",
+    "1 neurona sigmoidal con umbral 0,5.",
+    "5 neuronas con softmax.",
+    "5 neuronas con función escalón, una por fruta, sin normalizar."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Varias clases excluyentes → C neuronas softmax (probabilidades que suman 1). Para 2 clases alcanzaría 1 sigmoidal.",
+   "fuente": "Parciales 2025 (estilo)"
+  },
+  {
+   "id": "ptd-u8-13",
+   "unidad": "u8-rna",
+   "tema": "CNN",
+   "enunciado": "Si se reemplaza la etapa detector de una convolucional por la función identidad…",
+   "opciones": [
+    "la red deja de poder entrenarse.",
+    "los filtros dejan de aplicarse.",
+    "el pooling deja de reducir dimensiones.",
+    "la red pierde no linealidad y su capacidad de aproximar funciones no lineales."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "La etapa detector agrega la no linealidad (ReLU, sigmoide, tanh). Sin ella las capas se combinan linealmente.",
+   "fuente": "Presentación RNA 2026"
+  },
+  {
+   "id": "ptd-u8-14",
+   "unidad": "u8-rna",
+   "tema": "Datos",
+   "enunciado": "Se normalizan los datos de entrenamiento con Min-Max, pero los de prueba se usan sin normalizar. Lo esperable es que…",
+   "opciones": [
+    "no cambie nada, porque la normalización solo acelera el entrenamiento.",
+    "la prueba dé mejores resultados, porque son datos originales.",
+    "la red se vuelva autoasociativa.",
+    "el modelo funcione mal en la prueba, porque recibe valores en otra escala."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "La misma normalización va en entrenamiento, validación y prueba (y en producción: regla de oro).",
+   "fuente": "Presentación RNA 2026"
+  },
+  {
+   "id": "ptd-u8-15",
+   "unidad": "u8-rna",
+   "tema": "Datos",
+   "enunciado": "Un equipo eligió la cantidad de neuronas ocultas mirando qué configuración daba mejor resultado en los datos de prueba. El problema es que…",
+   "opciones": [
+    "no hay problema: para eso están los datos de prueba.",
+    "la prueba dejó de medir la generalización, porque se usó para decidir el diseño.",
+    "la cantidad de neuronas no influye en el resultado.",
+    "debería haber usado los datos de entrenamiento."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Esa decisión se toma con validación; la prueba se reserva para medir con datos nunca usados.",
+   "fuente": "Presentación RNA 2026"
+  },
+  {
+   "id": "ptd-u8-16",
+   "unidad": "u8-rna",
+   "tema": "Inducción",
+   "enunciado": "En un conjunto donde la mitad de los ejemplos es \"Sí\" y la mitad \"No\", la entropía del atributo objetivo es…",
+   "opciones": [
+    "2.",
+    "0, porque hay la misma cantidad de cada clase.",
+    "1 (máxima incertidumbre para dos clases).",
+    "0,5."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Entropía = −0,5·log₂0,5 − 0,5·log₂0,5 = 1. Sería 0 si todos tuvieran el mismo valor (y ahí se genera una hoja).",
+   "fuente": "Presentación Introducción a ML 2026"
+  },
+  {
+   "id": "ptd-u8-17",
+   "unidad": "u8-rna",
+   "tema": "Inducción",
+   "enunciado": "Se tienen jugadas históricas de tenistas y se quieren obtener reglas legibles para saber si un saque será ace. Lo indicado es…",
+   "opciones": [
+    "una red de Hopfield.",
+    "un algoritmo genético.",
+    "un algoritmo de inducción (árbol de decisión).",
+    "una RNA Backpropagation, porque clasifica mejor."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "La palabra clave es \"reglas\" a partir de datos → inducción. Una RNA clasificaría, pero su conocimiento queda implícito.",
+   "fuente": "Parciales 2022 (estilo)"
+  },
+  {
+   "id": "ptd-u8-18",
+   "unidad": "u8-rna",
+   "tema": "Backpropagation",
+   "enunciado": "Un atributo \"provincia\" con 24 valores posibles, codificado en binario, en la capa de entrada de una Backpropagation necesita…",
+   "opciones": [
+    "1 neurona.",
+    "5 neuronas (5 bits alcanzan para 24 valores).",
+    "2 neuronas, una por polo.",
+    "24 neuronas."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Binario → N neuronas con N = bits necesarios: 2⁵ = 32 ≥ 24. Codificado como real sería 1 neurona.",
+   "fuente": "Presentación RNA 2026"
+  },
+  {
+   "id": "ptd-u9-01",
+   "unidad": "u9-logica",
+   "tema": "Difusa",
+   "enunciado": "Con μA = 0,7, μB = 0,4 y μC = 0,9, el valor de (A ∧ ¬B) ∨ C es…",
+   "opciones": [
+    "0,7.",
+    "0,6.",
+    "0,9.",
+    "0,4."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "¬B = 0,6; A ∧ ¬B = mín(0,7; 0,6) = 0,6; 0,6 ∨ C = máx(0,6; 0,9) = 0,9.",
+   "fuente": "Presentación Lógica Difusa 2026"
+  },
+  {
+   "id": "ptd-u9-02",
+   "unidad": "u9-logica",
+   "tema": "Difusa",
+   "enunciado": "Con μA = 0,7, μB = 0,4 y μC = 0,9, el valor de (A ∨ B) ∧ ¬C es…",
+   "opciones": [
+    "0,4.",
+    "0,7.",
+    "0,1.",
+    "0,9."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "A ∨ B = 0,7; ¬C = 0,1; mín(0,7; 0,1) = 0,1.",
+   "fuente": "Presentación Lógica Difusa 2026"
+  },
+  {
+   "id": "ptd-u9-03",
+   "unidad": "u9-logica",
+   "tema": "Difusa",
+   "enunciado": "Una persona tiene μ_ALTA = 0,6 y μ_MEDIANA = 0,4. ¿Qué afirmación es correcta?",
+   "opciones": [
+    "Los grados de pertenencia deben sumar siempre 1.",
+    "Es alta, porque 0,6 es el valor mayor.",
+    "Tiene 60% de probabilidad de ser alta.",
+    "Pertenece en grado 0,6 a \"alta\" y 0,4 a \"mediana\"; que sumen 1 es casualidad, no una regla."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "La pertenencia no es probabilidad y los grados de un mismo elemento no tienen por qué sumar 1.",
+   "fuente": "Presentación Lógica Difusa 2026"
+  },
+  {
+   "id": "ptd-u9-04",
+   "unidad": "u9-logica",
+   "tema": "Difusa",
+   "enunciado": "Para la regla SI (A ∧ B ∧ C) ENTONCES D, con μA = 0,8, μB = 0,3 y μC = 0,6, el grado de D es…",
+   "opciones": [
+    "0,3.",
+    "0,8.",
+    "0,57 (el promedio).",
+    "0,144 (el producto)."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Conjunción = mínimo de las pertenencias, y ese valor se propaga al consecuente.",
+   "fuente": "Parciales 2024 (estilo)"
+  },
+  {
+   "id": "ptd-u9-05",
+   "unidad": "u9-logica",
+   "tema": "Difusa",
+   "enunciado": "¿Cuál de estas afirmaciones sobre la lógica difusa es FALSA?",
+   "opciones": [
+    "Su grado de verdad está entre 0 y 1.",
+    "Aprende y mejora sola con el uso, como una red neuronal.",
+    "Es fácil agregarle conocimiento nuevo.",
+    "Tolera datos imprecisos."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Su capacidad de aprendizaje es limitada; para eso se combina con RNA (sistemas neuro-difusos).",
+   "fuente": "Presentación Lógica Difusa 2026"
+  },
+  {
+   "id": "ptd-u9-06",
+   "unidad": "u9-logica",
+   "tema": "Difusa",
+   "enunciado": "Hay un modelo matemático exacto del proceso y además reglas difusas del experto. Según las críticas a la lógica difusa…",
+   "opciones": [
+    "probablemente el modelo matemático funcione mejor.",
+    "siempre conviene la lógica difusa, porque imita al experto.",
+    "hay que combinar ambas reglas para que se refuercen.",
+    "conviene la difusa porque aprende con el uso."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Críticas: aprende poco, funciona peor que un modelo matemático cuando lo hay, y combinar reglas no aumenta la performance.",
+   "fuente": "Presentación Lógica Difusa 2026"
+  },
+  {
+   "id": "ptd-u9-07",
+   "unidad": "u9-logica",
+   "tema": "Primer orden",
+   "enunciado": "En lógica de primer orden, los cuantificadores se usan para…",
+   "opciones": [
+    "representar las características de un objeto.",
+    "relacionar dos objetos entre sí.",
+    "unir proposiciones con conectores.",
+    "indicar si una propiedad se refiere a todos los objetos o a alguno."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Características → funciones de verdad. Relación entre objetos → relaciones. Cuantificadores → todos (∀) o alguno (∃).",
+   "fuente": "Parciales 2024 (estilo)"
+  },
+  {
+   "id": "ptd-u9-08",
+   "unidad": "u9-logica",
+   "tema": "Deducción natural",
+   "enunciado": "En deducción natural, se puede agregar una suposición cuando…",
+   "opciones": [
+    "alguna hipótesis tiene una implicación.",
+    "la tesis usa el cuantificador existe.",
+    "la tesis usa el cuantificador para todos.",
+    "la tesis tiene una implicación (o dentro de una eliminación de la disyunción)."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Se supone el antecedente de la tesis para cerrar con introducción de la implicación. Que la implicación esté en una hipótesis no habilita suponer.",
+   "fuente": "Parciales 2024 (estilo)"
+  },
+  {
+   "id": "ptd-u9-09",
+   "unidad": "u9-logica",
+   "tema": "Deducción natural",
+   "enunciado": "Si una de las hipótesis tiene cuantificador existencial y las demás universal, la tesis…",
+   "opciones": [
+    "tiene que tener cuantificador universal.",
+    "no puede tener cuantificador.",
+    "tiene que tener cuantificador existencial.",
+    "puede tener cualquier cuantificador."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Con una hipótesis existencial no se puede concluir algo para todos.",
+   "fuente": "Clase 6 - Lógica"
+  },
+  {
+   "id": "ptd-u10-01",
+   "unidad": "u10-pln",
+   "tema": "Enfoque",
+   "enunciado": "Un diario quiere clasificar sus notas en secciones ya definidas (deportes, política, economía) a partir de miles de notas ya etiquetadas. Lo más adecuado es…",
+   "opciones": [
+    "un modelo de representación de texto como GloVe.",
+    "un modelo de clustering, porque agrupa notas parecidas.",
+    "un modelo de árboles y ensambles, como random forest.",
+    "una regresión lineal."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Categorías ya conocidas y datos etiquetados → clasificación supervisada (árboles y ensambles). Clustering es para descubrir grupos.",
+   "fuente": "Parciales 2025 (estilo)"
+  },
+  {
+   "id": "ptd-u10-02",
+   "unidad": "u10-pln",
+   "tema": "Enfoque",
+   "enunciado": "Una marca quiere descubrir de qué temas habla la gente en millones de comentarios, sin tener temas definidos de antemano, y además detectar comentarios raros. Lo más adecuado es…",
+   "opciones": [
+    "DBSCAN.",
+    "K-Means, porque detecta comentarios raros.",
+    "TF-IDF solo.",
+    "regresión logística."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Descubrir grupos → clustering; DBSCAN además detecta ruido o atípicos. TF-IDF solo representa el texto.",
+   "fuente": "Presentación PLN 2026"
+  },
+  {
+   "id": "ptd-u10-03",
+   "unidad": "u10-pln",
+   "tema": "Enfoque",
+   "enunciado": "Se quiere predecir el puntaje de 1 a 10 que un usuario le pondrá a una película a partir del texto de su reseña. El modelo más adecuado es…",
+   "opciones": [
+    "K-Means.",
+    "GloVe.",
+    "una regresión logística.",
+    "una regresión lineal."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Predecir un número continuo → regresión lineal. La logística clasifica (sobre todo binario).",
+   "fuente": "Presentación PLN 2026"
+  },
+  {
+   "id": "ptd-u10-04",
+   "unidad": "u10-pln",
+   "tema": "Representación",
+   "enunciado": "GloVe aplicado a un conjunto de comentarios…",
+   "opciones": [
+    "los clasifica en positivos y negativos.",
+    "corrige sus errores de ortografía.",
+    "los agrupa por similitud semántica.",
+    "no los agrupa ni los clasifica: los convierte en vectores para que otro modelo trabaje."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "GloVe y TF-IDF son modelos de representación de texto: el paso previo.",
+   "fuente": "Parciales 2025 (estilo)"
+  },
+  {
+   "id": "ptd-u10-05",
+   "unidad": "u10-pln",
+   "tema": "Preprocesamiento",
+   "enunciado": "Un sistema reduce \"corriendo\", \"corrió\" y \"corren\" a \"corr\". Aplicó…",
+   "opciones": [
+    "tokenización.",
+    "lematización.",
+    "segmentación.",
+    "stemming."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Recortar a una raíz que puede no ser una palabra real es stemming; la lematización daría \"correr\".",
+   "fuente": "Presentación PLN 2026"
+  },
+  {
+   "id": "ptd-u10-06",
+   "unidad": "u10-pln",
+   "tema": "NLP tradicional",
+   "enunciado": "\"El cartero mordió al perro\" y \"El perro mordió al cartero\" tienen las mismas palabras y distinto significado. Esto ilustra la limitación del NLP tradicional por…",
+   "opciones": [
+    "dependencia entre palabras.",
+    "ambigüedad léxica.",
+    "falta de datos de entrenamiento.",
+    "errores de tokenización."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "El significado depende de cómo se relacionan las palabras en la estructura de la oración.",
+   "fuente": "Presentación PLN 2026"
+  },
+  {
+   "id": "ptd-u10-07",
+   "unidad": "u10-pln",
+   "tema": "Lenguajes",
+   "enunciado": "Un compilador de Python no necesita técnicas de Inteligencia Artificial porque…",
+   "opciones": [
+    "los compiladores usan redes neuronales internas.",
+    "un lenguaje de programación es artificial: tiene reglas estrictas y una estructura predecible.",
+    "Python ya incluye un sistema inteligente.",
+    "el lenguaje natural es más simple que Python."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Para lenguajes artificiales alcanza con la teoría de autómatas y lenguajes formales.",
+   "fuente": "Presentación PLN 2026"
+  },
+  {
+   "id": "ptd-u10-08",
+   "unidad": "u10-pln",
+   "tema": "Categorización",
+   "enunciado": "¿Cuál de estos grupos contiene SOLO clases cerradas?",
+   "opciones": [
+    "Adjetivo, adverbio y determinante.",
+    "Verbo, interjección y sustantivo.",
+    "Sustantivo, verbo y preposición.",
+    "Preposición, conjunción y pronombre."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Abiertas: sustantivo, adjetivo, verbo, adverbio. Todo lo demás (preposición, conjunción, pronombre, determinante, interjección) es cerrado.",
+   "fuente": "Presentación PLN 2026"
+  },
+  {
+   "id": "ptd-u10-09",
+   "unidad": "u10-pln",
+   "tema": "Novedades 2026",
+   "enunciado": "Un banco necesita clasificar reclamos en tres categorías, con datos sensibles que no pueden salir de sus servidores. Según la actualización 2026, lo más razonable es…",
+   "opciones": [
+    "NLP tradicional sin ningún modelo, porque es más simple.",
+    "un modelo pequeño o especializado desplegado localmente.",
+    "el LLM más grande disponible en la nube.",
+    "esperar a que exista una AGI."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Tarea concreta + privacidad + costo → modelo chico local. Más grande no siempre es mejor.",
+   "fuente": "Presentación PLN upgrade 2026"
+  },
+  {
+   "id": "ptd-u11-01",
+   "unidad": "u11-implementacion",
+   "tema": "Fases",
+   "enunciado": "Ordená estas actividades según el proceso: (a) desarrollar las canalizaciones, (b) estudiar la viabilidad, (c) entrenar y validar, (d) normalizar los datos.",
+   "opciones": [
+    "d, b, c, a.",
+    "b, d, a, c.",
+    "b, d, c, a.",
+    "b, c, d, a."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Viabilidad (definición del problema) → normalizar (datos) → entrenar (modelo) → canalizaciones (aplicación).",
+   "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u11-02",
+   "unidad": "u11-implementacion",
+   "tema": "Fases",
+   "enunciado": "Un proyecto va a usar un Sistema Experto Tradicional y no hay ningún dato histórico. ¿Qué fase del proceso puede no hacerse?",
+   "opciones": [
+    "Identificación y transformación de los datos.",
+    "Construcción del modelo.",
+    "Aplicación del sistema inteligente.",
+    "Definición del problema."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "La fase de datos es opcional (solo si hay datos). La construcción del modelo se hace siempre: en un SET, cargando las reglas educidas.",
+   "fuente": "Parciales (estilo)"
+  },
+  {
+   "id": "ptd-u11-03",
+   "unidad": "u11-implementacion",
+   "tema": "Fases",
+   "enunciado": "Durante la fase de Definición del Problema NO se hace…",
+   "opciones": [
+    "el estudio de viabilidad de aplicar IA.",
+    "el diseño de los módulos del sistema.",
+    "la elicitación de requerimientos con extracción y educción.",
+    "la ejecución del entrenamiento, validación y prueba."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Entrenar y validar es construcción del modelo. Viabilidad, elicitación y formalización de módulos son definición del problema.",
+   "fuente": "Parciales 2023 (estilo)"
+  },
+  {
+   "id": "ptd-u11-04",
+   "unidad": "u11-implementacion",
+   "tema": "Construcción",
+   "enunciado": "En la construcción del modelo, los conocimientos EXTRAÍDOS se usan para identificar las reglas que se cargan en…",
+   "opciones": [
+    "un Sistema Experto Tradicional.",
+    "un Algoritmo Genético.",
+    "un Sistema Basado en Conocimientos.",
+    "una Red Neuronal Artificial."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Extraídos (fuentes públicas) → SBC. Educidos (experto) → SET.",
+   "fuente": "Parciales (estilo)"
+  },
+  {
+   "id": "ptd-u11-05",
+   "unidad": "u11-implementacion",
+   "tema": "Articulación",
+   "enunciado": "\"Al menos el 70% de los reclamos deben clasificarse correctamente en la primera semana de uso\" es…",
+   "opciones": [
+    "una expectativa.",
+    "una restricción.",
+    "una suposición.",
+    "un criterio de éxito."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Dice qué debe cumplirse para considerar exitoso el proyecto, con una métrica objetiva.",
+   "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u11-06",
+   "unidad": "u11-implementacion",
+   "tema": "Articulación",
+   "enunciado": "\"Los proveedores van a seguir enviando las facturas en el mismo formato\" es, en la articulación…",
+   "opciones": [
+    "una restricción.",
+    "un riesgo.",
+    "una suposición.",
+    "un criterio de éxito."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "Es algo que se da por cierto pero puede cambiar. Si se planteara como \"puede que cambien el formato\" sería un riesgo.",
+   "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u11-07",
+   "unidad": "u11-implementacion",
+   "tema": "Comprensión",
+   "enunciado": "Un ingeniero dibuja cómo ve el proceso de compras el área de finanzas y cómo lo ve el depósito, y encuentra contradicciones. Aplicó…",
+   "opciones": [
+    "abstraer.",
+    "proyectar.",
+    "modularizar.",
+    "descomponer."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "Proyectar es describir distintas visiones de los mismos elementos e identificar conflictos entre stakeholders.",
+   "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u11-08",
+   "unidad": "u11-implementacion",
+   "tema": "Viabilidad",
+   "enunciado": "Para cumplir un objetivo bastaría con una regla simple en una planilla. Según la cátedra…",
+   "opciones": [
+    "hay que usar IA igual para modernizar el proceso.",
+    "conviene no usar IA: hay que analizar si es la mejor alternativa y si se justifica.",
+    "hay que armar un SET con esa única regla.",
+    "conviene una RNA porque aprende la regla sola."
+   ],
+   "correcta": 2,
+   "dificultad": "dificil",
+   "explicacion": "\"No la trates como un martillo\" y \"no tengas miedo de lanzar tu producto sin IA\" (la anécdota del ventilador).",
+   "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u11-09",
+   "unidad": "u11-implementacion",
+   "tema": "Aplicación",
+   "enunciado": "Un modelo funcionaba muy bien en desarrollo, pero en producción da resultados raros. Se descubre que en desarrollo se eliminaban los nulos y en producción no. Se violó…",
+   "opciones": [
+    "la regla de oro: hacer en producción la misma preparación de datos que en desarrollo.",
+    "el teorema de No Free Lunch.",
+    "el criterio de éxito del proyecto.",
+    "la separación entre datos de validación y de prueba."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Golden Rule de la fase de aplicación.",
+   "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u11-10",
+   "unidad": "u11-implementacion",
+   "tema": "Aplicación",
+   "enunciado": "Para aumentar las chances de éxito, después de construir los modelos con la tecnología de IA se debe…",
+   "opciones": [
+    "volver a estudiar los datos usados.",
+    "identificar más conocimiento declarativo público.",
+    "evaluar si la tecnología elegida era la adecuada.",
+    "diseñar y desarrollar las canalizaciones entre los modelos."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Pregunta clásica de la fase 5: canalizaciones e integración.",
+   "fuente": "Parciales 2024 (estilo)"
+  },
+  {
+   "id": "ptd-u11-11",
+   "unidad": "u11-implementacion",
+   "tema": "Fracaso",
+   "enunciado": "Un proyecto de IA técnicamente correcto fracasa porque los usuarios no confían en él. Según la cátedra, la causa más probable es…",
+   "opciones": [
+    "una integración incorrecta con los sistemas y datos existentes.",
+    "no tener suficientes datos históricos.",
+    "no haber usado Machine Learning.",
+    "haber elegido un Algoritmo Genético en vez de una RNA."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Fracasa por mala integración u objetivos mal identificados, no por la tecnología elegida en sí.",
+   "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u11-12",
+   "unidad": "u11-implementacion",
+   "tema": "Datos",
+   "enunciado": "Una columna \"fecha de compra\" se convierte en \"días desde la compra\" y \"es fin de semana (sí/no)\". Esa tarea es parte de…",
+   "opciones": [
+    "el formateo, dentro de la preparación de los datos.",
+    "la integración de los datos.",
+    "la recolección de los datos.",
+    "la limpieza de los datos."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "Crear atributos nuevos para cambiar el tipo o representar combinaciones es formateo.",
+   "fuente": "Presentación Ingeniería de Sistemas Inteligentes 2026"
+  },
+  {
+   "id": "ptd-u12-01",
+   "unidad": "u12-ia2026",
+   "tema": "Agentes",
+   "enunciado": "Un sistema recibe un pedido, decide sola qué herramientas usar, en qué orden, y ejecuta las acciones hasta cumplirlo. Es…",
+   "opciones": [
+    "un agente.",
+    "un pipeline.",
+    "un modelo de lenguaje sin herramientas.",
+    "un sistema experto tradicional."
+   ],
+   "correcta": 1,
+   "dificultad": "dificil",
+   "explicacion": "El pipeline sigue pasos fijos; el agente decide qué pasos dar y los ejecuta.",
+   "fuente": "Presentación IA upgrade 2026"
+  },
+  {
+   "id": "ptd-u12-02",
+   "unidad": "u12-ia2026",
+   "tema": "Tendencias",
+   "enunciado": "Un hospital integra un modelo entrenado solo con imágenes de radiología dentro de su sistema clínico, sin un chatbot aparte. Combina las tendencias de…",
+   "opciones": [
+    "IA agéntica y sistemas multi-agente.",
+    "multimodalidad y modelos pequeños.",
+    "gobernanza y razonamiento.",
+    "especialización e IA embebida."
+   ],
+   "correcta": 4,
+   "dificultad": "dificil",
+   "explicacion": "Modelo de un dominio = especialización (verticalización); integrado e invisible = IA embebida.",
+   "fuente": "Presentación IA upgrade 2026"
+  },
+  {
+   "id": "ptd-u12-03",
+   "unidad": "u12-ia2026",
+   "tema": "AGI",
+   "enunciado": "¿Qué afirmación es coherente con la postura de la clase de actualización 2026?",
+   "opciones": [
+    "La AGI ya existe en los modelos de razonamiento.",
+    "El escenario \"2028 Global Intelligence Crisis\" es un paper validado que confirma la AGI.",
+    "Hay sistemas muy avanzados, pero no evidencia de AGI: no tienen aprendizaje continuo ni autonomía total.",
+    "La AGI es imposible por definición."
+   ],
+   "correcta": 3,
+   "dificultad": "dificil",
+   "explicacion": "La clase habla de mucho hype y poca evidencia; ese escenario circula como prospectiva, no como paper validado.",
    "fuente": "Presentación IA upgrade 2026"
   }
  ]
